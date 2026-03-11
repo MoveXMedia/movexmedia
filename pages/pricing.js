@@ -8,7 +8,7 @@ const packages = [
     icon: '🌱',
     adSpend: '$1,000',
     management: '$200',
-    setup: '$200',
+    setup: '$400',
     monthly: '$200',
     highlight: false,
     desc: 'Perfect for practices new to digital marketing or looking to test the water with a focused, low-risk campaign.',
@@ -26,9 +26,9 @@ const packages = [
     tag: 'Most Popular',
     icon: '🚀',
     adSpend: '$5,000',
-    management: '$500',
-    setup: '$500',
-    monthly: '$500',
+    management: '$750',
+    setup: '$750',
+    monthly: '$750',
     highlight: true,
     desc: 'For established practices ready to scale. Multi-platform campaigns with deeper optimisation and broader reach.',
     includes: [
@@ -47,9 +47,9 @@ const packages = [
     tag: 'Maximum Growth',
     icon: '⚡',
     adSpend: '$10,000',
-    management: '$1,000',
-    setup: '$500',
-    monthly: '$1,000',
+    management: '$1,500',
+    setup: '$1,000',
+    monthly: '$1,500',
     highlight: false,
     desc: 'Full-scale digital marketing for high-growth practices or multi-location clinics serious about market dominance.',
     includes: [
@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     q: 'What is the minimum term?',
-    a: 'All packages have a 6-month minimum term. Campaigns need time to gather data and optimise — results improve significantly from month 2–3 onwards. You can downgrade to a lower package at any time within your term.',
+    a: 'All packages have a 6-month minimum term. Campaigns need time to gather data and optimise — results improve significantly from month 2–3 onwards.',
   },
   {
     q: 'Can I upgrade my package?',
@@ -89,7 +89,7 @@ const faqs = [
   },
   {
     q: 'What happens after 6 months?',
-    a: 'After your minimum term you move to a rolling monthly arrangement. You can continue, upgrade, downgrade, or exit with 30 days notice.',
+    a: 'After your minimum term you move to a rolling monthly arrangement. You can continue, upgrade, or exit with 30 days notice.',
   },
 ];
 
@@ -256,7 +256,7 @@ export default function Pricing() {
                     fontWeight: 300,
                     textAlign: 'center',
                   }}>
-                    6-month minimum term · Downgrade anytime
+                    6-month minimum term
                   </div>
                 </div>
 
@@ -353,7 +353,6 @@ export default function Pricing() {
                   { label: 'Dedicated Account Manager', values: ['—', '—', '✓'] },
                   { label: 'Weekly Reviews', values: ['—', '—', '✓'] },
                   { label: 'Monthly Strategy Session', values: ['—', '—', '✓'] },
-                  { label: 'Downgrade Anytime', values: ['✓', '✓', '✓'] },
                 ].map((row, i) => (
                   <tr key={row.label} style={{ background: i % 2 === 0 ? 'transparent' : 'rgba(15,37,64,0.2)' }}>
                     <td style={tdLabelStyle}>{row.label}</td>

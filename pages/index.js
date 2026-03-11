@@ -104,16 +104,6 @@ export default function Home() {
         `}</style>
       </section>
 
-      {/* ── TRUST BAR (mid-dark) ── */}
-      <div style={{ background: '#0d1f35', padding: '1.4rem 2rem', borderBottom: '1px solid rgba(91,196,245,0.08)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-          {[['✅', 'AHPRA compliant by default'], ['🏥', 'Allied health specialists only'], ['📍', 'Perth-based team'], ['📞', 'Real people, no account managers'], ['🔒', 'No lock-in contracts']].map(([icon, text]) => (
-            <div key={text} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'rgba(255,255,255,0.5)', fontSize: '0.83rem' }}>
-              <span>{icon}</span><span>{text}</span>
-            </div>
-          ))}
-        </div>
-      </div>
 
       {/* ── SERVICES (light) ── */}
       <section style={{ padding: '6rem 2rem', background: '#f4f7fb' }}>

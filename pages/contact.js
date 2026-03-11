@@ -11,15 +11,33 @@ export default function Contact() {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // In production: send to your form handler / CRM
-    setSubmitted(true);
+    setLoading(true);
+    setError(false);
+    try {
+      const res = await fetch('https://formspree.io/f/xbdzolkv', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputStyle = {
@@ -186,9 +204,14 @@ export default function Contact() {
                     />
                   </div>
 
-                  <button type="submit" className="btn-primary" style={{ fontSize: '0.8rem', padding: '1rem 2rem', border: 'none', cursor: 'pointer' }}>
-                    Send Message →
+                  <button type="submit" disabled={loading} className="btn-primary" style={{ fontSize: '0.8rem', padding: '1rem 2rem', border: 'none', cursor: loading ? 'not-allowed' : 'pointer', opacity: loading ? 0.7 : 1 }}>
+                    {loading ? 'Sending...' : 'Send Message →'}
                   </button>
+                  {error && (
+                    <p style={{ color: '#f87171', marginTop: '1rem', fontSize: '0.85rem' }}>
+                      Something went wrong — please email us directly at admin@movex.media
+                    </p>
+                  )}
                 </form>
               )}
             </div>
