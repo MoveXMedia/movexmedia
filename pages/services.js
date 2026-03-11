@@ -180,7 +180,7 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section style={{ padding: '5rem 2rem 8rem', textAlign: 'center', }>
+      <section style={{ padding: '5rem 2rem 8rem', textAlign: 'center' }}>
         <div style={{ maxWidth: '600px', margin: '0 auto' }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>
             Not sure what<br />you <span>need?</span>
