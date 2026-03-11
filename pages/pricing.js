@@ -99,6 +99,20 @@ export default function Pricing() {
       <Head>
         <title>Packages — MoveX Media</title>
         <meta name="description" content="Transparent, fixed-price digital marketing packages for health and allied health practices. Google Ads, Facebook, Instagram — all included." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://movex.media/pricing" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="MoveX Media" />
+        <meta property="og:title" content="Packages — MoveX Media" />
+        <meta property="og:description" content="Transparent, fixed-price digital marketing packages for health and allied health practices. Google Ads, Facebook, Instagram — all included." />
+        <meta property="og:url" content="https://movex.media/pricing" />
+        <meta property="og:image" content="https://movex.media/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Packages — MoveX Media" />
+        <meta name="twitter:description" content="Transparent, fixed-price digital marketing packages for health and allied health practices. Google Ads, Facebook, Instagram — all included." />
+        <meta name="twitter:image" content="https://movex.media/og-image.png" />
       </Head>
 
       {/* Hero */}

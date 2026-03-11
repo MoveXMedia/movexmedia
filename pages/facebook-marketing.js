@@ -40,6 +40,20 @@ export default function FacebookMarketing() {
       <Head>
         <title>Facebook & Instagram Marketing for Allied Health — MoveX Media</title>
         <meta name="description" content="Facebook and Instagram advertising for physiotherapy and allied health practices. Build your local presence and fill your books with precision-targeted social ads." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://movex.media/facebook-marketing" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="MoveX Media" />
+        <meta property="og:title" content="Facebook & Instagram Marketing for Allied Health — MoveX Media" />
+        <meta property="og:description" content="Facebook and Instagram advertising for physiotherapy and allied health practices. Build your local presence and fill your books with precision-targeted social ads." />
+        <meta property="og:url" content="https://movex.media/facebook-marketing" />
+        <meta property="og:image" content="https://movex.media/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Facebook & Instagram Marketing for Allied Health — MoveX Media" />
+        <meta name="twitter:description" content="Facebook and Instagram advertising for physiotherapy and allied health practices. Build your local presence and fill your books with precision-targeted social ads." />
+        <meta name="twitter:image" content="https://movex.media/og-image.png" />
       </Head>
 
       {/* Hero */}

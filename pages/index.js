@@ -29,6 +29,20 @@ export default function Home() {
       <Head>
         <title>MoveX Media — Digital Marketing for Health & Allied Health</title>
         <meta name="description" content="Perth-based digital marketing agency specialising in Google Ads, Facebook, social media, email marketing, and websites for health and allied health practices." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://movex.media/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="MoveX Media" />
+        <meta property="og:title" content="MoveX Media — Digital Marketing for Health & Allied Health" />
+        <meta property="og:description" content="Perth-based digital marketing agency specialising in Google Ads, Facebook, social media, email marketing, and websites for health and allied health practices." />
+        <meta property="og:url" content="https://movex.media/" />
+        <meta property="og:image" content="https://movex.media/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="MoveX Media — Digital Marketing for Health & Allied Health" />
+        <meta name="twitter:description" content="Perth-based digital marketing agency specialising in Google Ads, Facebook, social media, email marketing, and websites for health and allied health practices." />
+        <meta name="twitter:image" content="https://movex.media/og-image.png" />
       </Head>
 
       {/* ── HERO (dark, keeps space theme) ── */}

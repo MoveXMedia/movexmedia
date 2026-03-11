@@ -51,6 +51,20 @@ export default function Contact() {
       <Head>
         <title>Contact — MoveX Media</title>
         <meta name="description" content="Book a free strategy session with MoveX Media. Digital marketing for health and allied health practices in Perth." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://movex.media/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="MoveX Media" />
+        <meta property="og:title" content="Contact — MoveX Media" />
+        <meta property="og:description" content="Book a free strategy session with MoveX Media. Digital marketing for health and allied health practices in Perth." />
+        <meta property="og:url" content="https://movex.media/contact" />
+        <meta property="og:image" content="https://movex.media/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact — MoveX Media" />
+        <meta name="twitter:description" content="Book a free strategy session with MoveX Media. Digital marketing for health and allied health practices in Perth." />
+        <meta name="twitter:image" content="https://movex.media/og-image.png" />
       </Head>
 
       <section className="page-hero" style={{ paddingBottom: '2rem' }}>

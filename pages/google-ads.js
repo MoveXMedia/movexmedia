@@ -39,6 +39,20 @@ export default function GoogleAds() {
       <Head>
         <title>Google Ads for Physiotherapy & Allied Health — MoveX Media</title>
         <meta name="description" content="Google Ads management built for physiotherapy and allied health practices in Perth. AHPRA-compliant campaigns that generate real bookings." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://movex.media/google-ads" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="MoveX Media" />
+        <meta property="og:title" content="Google Ads for Physiotherapy & Allied Health — MoveX Media" />
+        <meta property="og:description" content="Google Ads management built for physiotherapy and allied health practices in Perth. AHPRA-compliant campaigns that generate real bookings." />
+        <meta property="og:url" content="https://movex.media/google-ads" />
+        <meta property="og:image" content="https://movex.media/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Google Ads for Physiotherapy & Allied Health — MoveX Media" />
+        <meta name="twitter:description" content="Google Ads management built for physiotherapy and allied health practices in Perth. AHPRA-compliant campaigns that generate real bookings." />
+        <meta name="twitter:image" content="https://movex.media/og-image.png" />
       </Head>
 
       {/* Hero */}
