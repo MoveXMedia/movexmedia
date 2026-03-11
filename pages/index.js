@@ -4,9 +4,9 @@ import Link from 'next/link';
 const services = [
   { icon: '📡', title: 'Google Ads', desc: 'Precision-targeted campaigns that put your practice at the top of search results when patients are actively looking.', href: '/google-ads' },
   { icon: '📘', title: 'Facebook Marketing', desc: 'Hyper-targeted social ads that reach your ideal patients in the communities where they spend their time.', href: '/facebook-marketing' },
-  { icon: '📱', title: 'Social Media', desc: 'Strategic content that builds trust, educates your audience, and converts followers into booked appointments.', href: '/services' },
-  { icon: '✉️', title: 'Email Marketing', desc: 'Automated campaigns that re-engage past patients, nurture referrals, and keep your clinic top of mind.', href: '/services' },
-  { icon: '🌐', title: 'Website Development', desc: 'Fast, conversion-focused websites built to rank on Google and turn visitors into patients.', href: '/services' },
+  { icon: '📱', title: 'Social Media', desc: 'Strategic content that builds trust, educates your audience, and converts followers into booked appointments.', href: '/social-media' },
+  { icon: '✉️', title: 'Email Marketing', desc: 'Automated campaigns that re-engage past patients, nurture referrals, and keep your clinic top of mind.', href: '/email-marketing' },
+  { icon: '🌐', title: 'Website Development', desc: 'Fast, conversion-focused websites built to rank on Google and turn visitors into patients.', href: '/website-development' },
 ];
 
 const whyItems = [

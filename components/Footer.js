@@ -38,11 +38,17 @@ export default function Footer() {
               color: '#5bc4f5',
               marginBottom: '1.2rem',
             }}>SERVICES</h4>
-            {['Google Ads', 'Facebook Marketing', 'Social Media', 'Email Marketing', 'Website Development'].map(s => (
-              <div key={s} style={{ marginBottom: '0.6rem' }}>
-                <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', fontWeight: 300 }}>
-                  {s}
-                </span>
+            {[
+              { href: '/google-ads', label: 'Google Ads' },
+              { href: '/facebook-marketing', label: 'Facebook & Instagram' },
+              { href: '/social-media', label: 'Social Media' },
+              { href: '/email-marketing', label: 'Email Marketing' },
+              { href: '/website-development', label: 'Website Development' },
+            ].map(s => (
+              <div key={s.href} style={{ marginBottom: '0.6rem' }}>
+                <Link href={s.href} style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', fontWeight: 300 }}>
+                  {s.label}
+                </Link>
               </div>
             ))}
           </div>
@@ -59,8 +65,11 @@ export default function Footer() {
             {[
               { href: '/', label: 'Home' },
               { href: '/about', label: 'About' },
-              { href: '/services', label: 'Services' },
+              { href: '/pricing', label: 'Packages' },
+              { href: '/marketing-budget', label: 'Budget Calculator' },
               { href: '/contact', label: 'Contact' },
+              { href: '/privacy', label: 'Privacy Policy' },
+              { href: '/terms', label: 'Terms of Service' },
             ].map(link => (
               <div key={link.href} style={{ marginBottom: '0.6rem' }}>
                 <Link href={link.href} style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', fontWeight: 300 }}>
