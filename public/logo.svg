@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <!-- Outer orbit ring -->
+  <circle cx="24" cy="24" r="22" stroke="#5bc4f5" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.45"/>
+  
+  <!-- Inner circle with semi-transparent fill so it works on light + dark -->
+  <circle cx="24" cy="24" r="15.5" fill="rgba(13,31,53,0.65)" stroke="#5bc4f5" stroke-width="1.2"/>
+
+  <!-- M shape (cyan) -->
+  <path d="M14.5 30 L14.5 18.5 L20.5 26 L26.5 18.5 L26.5 30" stroke="#5bc4f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- X shape (white) -->
+  <path d="M28.5 18.5 L34.5 30 M34.5 18.5 L28.5 30" stroke="white" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Small orbit dot -->
+  <circle cx="24" cy="2.5" r="2" fill="#5bc4f5" opacity="0.7"/>
+
+  <!-- Wordmark: MOVE -->
+  <text x="56" y="20" font-family="Poppins, Helvetica Neue, Arial, sans-serif" font-weight="800" font-size="15" fill="white" letter-spacing="0.5">MOVE</text>
+  <!-- X accent -->
+  <text x="101.5" y="20" font-family="Poppins, Helvetica Neue, Arial, sans-serif" font-weight="800" font-size="15" fill="#5bc4f5" letter-spacing="0.5">X</text>
+  <!-- Thin rule -->
+  <line x1="56" y1="24.5" x2="118" y2="24.5" stroke="rgba(255,255,255,0.1)" stroke-width="0.6"/>
+  <!-- MEDIA -->
+  <text x="57" y="36.5" font-family="Poppins, Helvetica Neue, Arial, sans-serif" font-weight="400" font-size="8" fill="rgba(255,255,255,0.38)" letter-spacing="4.5">MEDIA</text>
+</svg>
