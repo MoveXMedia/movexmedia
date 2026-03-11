@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import Layout from '../components/Layout';
 import Head from 'next/head';
+import Script from 'next/script';
 
 const schemaMarkup = {
   '@context': 'https://schema.org',
@@ -43,6 +44,18 @@ export default function App({ Component, pageProps }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
         />
       </Head>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-S3BDP7H95J"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-S3BDP7H95J');
+        `}
+      </Script>
       <Layout>
         <Component {...pageProps} />
       </Layout>
