@@ -38,7 +38,7 @@ const services = [
     icon: '📱',
     title: 'Social Media Management',
     tag: 'Organic Social',
-    href: '/services',
+    href: '/social-media',
     desc: 'Consistent, professional content that builds trust, educates your community, and keeps your clinic visible between patient visits.',
     features: [
       'Content calendar planning',
@@ -48,12 +48,13 @@ const services = [
       'Community engagement',
       'Monthly analytics',
     ],
+    highlight: true,
   },
   {
     icon: '✉️',
     title: 'Email Marketing',
     tag: 'Retention & Nurture',
-    href: '/services',
+    href: '/email-marketing',
     desc: 'Turn your patient database into a reliable re-booking engine. Automated campaigns that keep past patients connected and coming back.',
     features: [
       'Email platform setup (Birdeye, Mailchimp etc.)',
@@ -63,12 +64,13 @@ const services = [
       'List segmentation',
       'Performance tracking',
     ],
+    highlight: true,
   },
   {
     icon: '🌐',
     title: 'Website Development',
     tag: 'Web & SEO',
-    href: '/services',
+    href: '/website-development',
     desc: 'Fast, mobile-first websites built to convert visitors into patients and rank on Google. Every site includes on-page SEO as standard.',
     features: [
       'Custom Next.js or WordPress sites',
@@ -78,6 +80,7 @@ const services = [
       'Page speed optimisation',
       'Google Analytics setup',
     ],
+    highlight: true,
   },
 ];
 
