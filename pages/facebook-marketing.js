@@ -105,7 +105,7 @@ export default function FacebookMarketing() {
 
               {/* Ad copy */}
               <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.65)', lineHeight: '1.6', marginBottom: '0.75rem', fontWeight: 300 }}>
-                Struggling with back pain that won't go away? Our exercise-based approach gets to the root cause — not just the symptoms. 📅 Book online today.
+                Struggling with back pain that won&apos;t go away? Our exercise-based approach gets to the root cause — not just the symptoms. 📅 Book online today.
               </p>
 
               {/* Fake image area */}
@@ -205,7 +205,7 @@ export default function FacebookMarketing() {
               <h2 className="section-title">Full-Service <span>Management</span></h2>
               <div className="divider" />
               <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.8', fontWeight: 300, marginBottom: '2rem' }}>
-                We handle everything from strategy and creative to targeting, optimisation, and reporting. You don't need any knowledge of Ads Manager — we run the mission control.
+                We handle everything from strategy and creative to targeting, optimisation, and reporting. You don&apos;t need any knowledge of Ads Manager — we run the mission control.
               </p>
               <Link href="/contact" className="btn-primary">Start a Campaign →</Link>
             </div>
@@ -248,7 +248,7 @@ export default function FacebookMarketing() {
             Ready to Build Your<br /><span>Local Presence?</span>
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.55)', lineHeight: '1.8', marginBottom: '2rem', fontWeight: 300 }}>
-            Book a free strategy call. We'll look at your current marketing, your local market, and build a Facebook advertising plan around your specific goals.
+            Book a free strategy call. We&apos;ll look at your current marketing, your local market, and build a Facebook advertising plan around your specific goals.
           </p>
           <Link href="/contact" className="btn-primary" style={{ fontSize: '0.85rem', padding: '1.1rem 2.5rem' }}>
             Book a Free Strategy Call →

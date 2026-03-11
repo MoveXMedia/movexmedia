@@ -139,7 +139,7 @@ export default function Home() {
               </h2>
               <div style={{ width: '50px', height: '3px', background: 'linear-gradient(90deg, #5bc4f5, transparent)', borderRadius: '2px', marginBottom: '1.5rem' }} />
               <p style={{ color: '#6b849a', lineHeight: '1.85', marginBottom: '1.25rem', fontWeight: 300, fontSize: '0.98rem' }}>
-                Most marketing agencies treat a physio clinic the same as any other small business. We don't. We understand patient journeys, referral networks, clinical credibility, and the compliance nuances that come with marketing health services.
+                Most marketing agencies treat a physio clinic the same as any other small business. We don&apos;t. We understand patient journeys, referral networks, clinical credibility, and the compliance nuances that come with marketing health services.
               </p>
               <p style={{ color: '#6b849a', lineHeight: '1.85', marginBottom: '2rem', fontWeight: 300, fontSize: '0.98rem' }}>
                 Our campaigns use the right language to attract the right patients — and we know which conditions, services, and trust signals actually convert browsers into booked appointments.
@@ -190,7 +190,7 @@ export default function Home() {
             Let's build your<br /><span style={{ color: '#5bc4f5' }}>growth engine</span>
           </h2>
           <p style={{ color: '#6b849a', fontSize: '1rem', lineHeight: '1.8', marginBottom: '2.5rem', fontWeight: 300 }}>
-            Book a free strategy session. We'll audit your current marketing, identify the gaps, and show you exactly how we'd grow your practice — no obligation.
+            Book a free strategy session. We&apos;ll audit your current marketing, identify the gaps, and show you exactly how we'd grow your practice — no obligation.
           </p>
           <Link href="/contact" className="btn-primary" style={{ fontSize: '0.85rem', padding: '1.1rem 2.5rem' }}>
             Book a Free Strategy Session →

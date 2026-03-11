@@ -186,7 +186,7 @@ export default function Services() {
             Not sure what<br />you <span>need?</span>
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.55)', lineHeight: '1.8', marginBottom: '2rem', fontWeight: 300 }}>
-            Book a free strategy session. We'll audit your current marketing and tell you honestly what will move the needle for your practice.
+            Book a free strategy session. We&apos;ll audit your current marketing and tell you honestly what will move the needle for your practice.
           </p>
           <Link href="/contact" className="btn-primary">
             Get a Free Audit →

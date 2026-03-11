@@ -276,7 +276,7 @@ export default function GoogleAds() {
             Ready to Fill Your <span>Schedule?</span>
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.55)', lineHeight: '1.8', marginBottom: '2rem', fontWeight: 300 }}>
-            Book a free Google Ads audit. We'll review your current setup (or build a strategy from scratch) and show you exactly how we'd approach your campaigns.
+            Book a free Google Ads audit. We&apos;ll review your current setup (or build a strategy from scratch) and show you exactly how we'd approach your campaigns.
           </p>
           <Link href="/contact" className="btn-primary" style={{ fontSize: '0.85rem', padding: '1.1rem 2.5rem' }}>
             Book a Free Audit →

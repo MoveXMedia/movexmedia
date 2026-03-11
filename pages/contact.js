@@ -88,7 +88,7 @@ export default function Contact() {
                     color: '#5bc4f5',
                   }}>Message Received</h2>
                   <p style={{ color: 'rgba(255,255,255,0.6)', fontWeight: 300, lineHeight: '1.7' }}>
-                    We'll be in touch within 1 business day to book your strategy session. Get ready for liftoff.
+                    We&apos;ll be in touch within 1 business day to book your strategy session. Get ready for liftoff.
                   </p>
                 </div>
               ) : (
@@ -217,7 +217,7 @@ export default function Contact() {
                   Free Strategy Session
                 </h3>
                 <p style={{ color: 'rgba(255,255,255,0.55)', fontWeight: 300, lineHeight: '1.7', fontSize: '0.9rem' }}>
-                  Every new client starts with a free, no-obligation strategy session. We'll review your current marketing, identify your biggest growth opportunities, and tell you honestly what we'd do and what it would cost.
+                  Every new client starts with a free, no-obligation strategy session. We&apos;ll review your current marketing, identify your biggest growth opportunities, and tell you honestly what we'd do and what it would cost.
                 </p>
               </div>
             </div>

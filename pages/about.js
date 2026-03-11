@@ -48,7 +48,7 @@ export default function About() {
             margin: '0 auto',
             fontWeight: 300,
           }}>
-            MoveX Media was born out of hands-on experience running a real allied health business. We know what it takes to fill an appointment book — because we've done it.
+            MoveX Media was born out of hands-on experience running a real allied health business. We know what it takes to fill an appointment book — because we&apos;ve done it.
           </p>
         </div>
       </section>
@@ -70,7 +70,7 @@ export default function About() {
                 We grew out of Move Physiotherapy — a multi-clinic allied health practice in Perth — where we built and executed our own digital marketing from the ground up. Everything we offer is battle-tested in a real health business environment.
               </p>
               <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.9', fontWeight: 300 }}>
-                That background gives us an edge that generalist agencies simply can't replicate. We know your patients, your referrers, your compliance obligations, and your growth levers. We don't have a learning curve when we start working with you.
+                That background gives us an edge that generalist agencies simply can&apos;t replicate. We know your patients, your referrers, your compliance obligations, and your growth levers. We don&apos;t have a learning curve when we start working with you.
               </p>
             </div>
 
