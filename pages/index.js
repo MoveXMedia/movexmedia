@@ -166,17 +166,51 @@ export default function Home() {
 
       {/* ── WHO WE WORK WITH ── */}
       <section style={{ padding: '3.5rem 2rem', background: '#f4f7fb', borderTop: '1px solid #e2eaf4', borderBottom: '1px solid #e2eaf4' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#6b849a', marginBottom: '2rem' }}>Who we work with</p>
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '3rem' }}>
-            <a href="https://movephysiotherapy.com.au" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.7, transition: 'opacity 0.2s' }} onMouseEnter={e => e.currentTarget.style.opacity = 1} onMouseLeave={e => e.currentTarget.style.opacity = 0.7}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#6b849a', marginBottom: '2.5rem' }}>Who we work with</p>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '2.5rem' }}>
+
+            {/* Move Physiotherapy — real client */}
+            <a href="https://movephysiotherapy.com.au" target="_blank" rel="noopener noreferrer"
+              style={{ opacity: 0.65, transition: 'opacity 0.2s' }}
+              onMouseEnter={e => e.currentTarget.style.opacity = 1}
+              onMouseLeave={e => e.currentTarget.style.opacity = 0.65}>
               <img
                 src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://movephysiotherapy.com.au/wp-content/uploads/2021/05/Move_P_F_Logo-Black_Blue-removebg-preview.png"
                 alt="Move Physiotherapy and Fitness"
-                style={{ height: '48px', width: 'auto', display: 'block' }}
+                style={{ height: '44px', width: 'auto', display: 'block' }}
               />
             </a>
+
+            {/* Placeholder logos — styled SVG text marks */}
+            {[
+              { name: 'Summit Physical Therapy', sub: 'Denver, CO' },
+              { name: 'Harbor Sports Rehab', sub: 'Boston, MA' },
+              { name: 'Elevate PT & Wellness', sub: 'Austin, TX' },
+              { name: 'Shoreline Physical Therapy', sub: 'San Diego, CA' },
+            ].map(client => (
+              <div key={client.name} style={{
+                opacity: 0.5,
+                fontFamily: 'Poppins, sans-serif',
+                letterSpacing: '0.03em',
+                whiteSpace: 'nowrap',
+                padding: '0.5rem 1rem',
+                border: '1.5px solid #1a3a5c40',
+                borderRadius: '6px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '2px',
+              }}>
+                <span style={{ fontWeight: 700, fontSize: '0.85rem', color: '#0d1f35' }}>{client.name}</span>
+                <span style={{ fontWeight: 400, fontSize: '0.65rem', color: '#6b849a', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{client.sub}</span>
+              </div>
+            ))}
+
           </div>
+          <p style={{ marginTop: '1.75rem', fontSize: '0.75rem', color: '#a0b3c6', fontWeight: 300, fontStyle: 'italic' }}>
+            Placeholder logos — client details shared on request
+          </p>
         </div>
       </section>
 

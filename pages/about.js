@@ -194,13 +194,13 @@ export default function About() {
               <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: 'white', marginBottom: '0.4rem' }}>Daniel Ryan</h2>
               <p style={{ color: '#5bc4f5', fontFamily: 'Poppins, sans-serif', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>Founder — MoveX Media</p>
               <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: '1.85', fontWeight: 300, marginBottom: '1rem' }}>
-                Daniel is a Senior Physiotherapist and the founder of Move Physiotherapy & Fitness — a multi-clinic practice operating across Fremantle, Booragoon, and Beeliar in Perth, WA.
+                Daniel&apos;s background in digital marketing started over 15 years ago during his studies, building websites before most small businesses had one. When he founded Move Physiotherapy &amp; Fitness — now a multi-clinic practice across Perth — he did what most practice owners do: wore every marketing hat himself.
               </p>
               <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: '1.85', fontWeight: 300, marginBottom: '1rem' }}>
-                After spending years working with marketing agencies that didn't understand allied health, he built the marketing capability in-house. MoveX Media grew out of that experience — a specialist agency that understands patient journeys, AHPRA considerations, and the economics of a health practice.
+                Social media, Google Ads, email campaigns, website management — he ran it all in-house. When he eventually engaged external agencies, the results didn&apos;t stack up. So he went deeper, upskilling across paid search, Meta advertising, and conversion strategy until his own campaigns were consistently outperforming what agencies had delivered.
               </p>
               <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: '1.85', fontWeight: 300 }}>
-                He holds a Masters in Physiotherapy from the University of South Australia, a Bachelor of Applied Sciences in Human Movement, and is currently studying a Masters of Sports & Musculoskeletal Physiotherapy.
+                That track record — built inside a real health practice, with real budgets and real accountability — is what MoveX Media was founded on.
               </p>
             </div>
           </div>
