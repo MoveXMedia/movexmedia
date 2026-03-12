@@ -211,8 +211,8 @@ export default function MarketingBudget() {
                   <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.7rem', letterSpacing: '0.15em', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', marginBottom: '0.8rem' }}>How to split it</div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                     {[
-                      { label: 'Paid advertising (Google/Meta ad spend)', pct: 0.6 },
-                      { label: 'Management & strategy (agency fee)', pct: 0.25 },
+                      { label: 'Paid advertising (Google/Meta ad spend)', pct: 0.70 },
+                      { label: 'Management & strategy (agency fee)', pct: 0.15 },
                       { label: 'Content & other channels', pct: 0.15 },
                     ].map(item => (
                       <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
