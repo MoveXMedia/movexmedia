@@ -341,9 +341,9 @@ export default function Pricing() {
               </thead>
               <tbody>
                 {[
-                  { label: 'Management Fee', values: ['$200 / mo', '$500 / mo', '$1,000 / mo'] },
+                  { label: 'Management Fee', values: ['$200 / mo', '$750 / mo', '$1,500 / mo'] },
                   { label: 'Max Ad Spend', values: ['$1,000 / mo', '$5,000 / mo', '$10,000 / mo'] },
-                  { label: 'Setup Fee', values: ['$200', '$500', '$500'] },
+                  { label: 'Setup Fee', values: ['$400', '$750', '$1,000'] },
                   { label: 'Minimum Term', values: ['6 months', '6 months', '6 months'] },
                   { label: 'Google Ads', values: ['✓', '✓', '✓'] },
                   { label: 'Facebook & Instagram', values: ['—', '✓', '✓'] },
