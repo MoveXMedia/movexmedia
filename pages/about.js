@@ -81,7 +81,7 @@ export default function About() {
                 MoveX Media was founded with one conviction: that health practices deserve marketing partners who actually understand their world. Not agencies that have read a few blog posts about physiotherapy, but people who've sat in the clinic, built the patient base, and know the pressure of an empty schedule.
               </p>
               <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.9', marginBottom: '1.5rem', fontWeight: 300 }}>
-                We grew out of Move Physiotherapy — a multi-clinic allied health practice in Perth — where we built and executed our own digital marketing from the ground up. Everything we offer is battle-tested in a real health business environment.
+                We grew out of a multi-clinic allied health practice in Perth — where we built and executed our own digital marketing from the ground up. Everything we offer is battle-tested in a real health business environment.
               </p>
               <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.9', fontWeight: 300 }}>
                 That background gives us an edge that generalist agencies simply can&apos;t replicate. We know your patients, your referrers, your compliance obligations, and your growth levers. We don&apos;t have a learning curve when we start working with you.
@@ -174,6 +174,35 @@ export default function About() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Founder */}
+      <section style={{ padding: '6rem 2rem', background: 'rgba(15,37,64,0.2)' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <div className="section-label" style={{ justifyContent: 'center', marginBottom: '3rem' }}>Founder</div>
+          <div style={{ display: 'flex', gap: '4rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+            <div style={{ flexShrink: 0 }}>
+              <img
+                src="https://movephysiotherapy.com.au/wp-content/uploads/2025/07/26-Jun-2025-Move-Physiotherapy-Headshots-_0094-scaled.webp"
+                alt="Daniel Ryan — Founder, MoveX Media"
+                style={{ width: '200px', height: '200px', borderRadius: '50%', objectFit: 'cover', objectPosition: 'top', border: '3px solid rgba(91,196,245,0.3)', display: 'block' }}
+              />
+            </div>
+            <div style={{ flex: 1, minWidth: '260px' }}>
+              <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: 'white', marginBottom: '0.4rem' }}>Daniel Ryan</h2>
+              <p style={{ color: '#5bc4f5', fontFamily: 'Poppins, sans-serif', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>Founder — MoveX Media</p>
+              <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: '1.85', fontWeight: 300, marginBottom: '1rem' }}>
+                Daniel is a Senior Physiotherapist and the founder of Move Physiotherapy & Fitness — a multi-clinic practice operating across Fremantle, Booragoon, and Beeliar in Perth, WA.
+              </p>
+              <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: '1.85', fontWeight: 300, marginBottom: '1rem' }}>
+                After spending years working with marketing agencies that didn't understand allied health, he built the marketing capability in-house. MoveX Media grew out of that experience — a specialist agency that understands patient journeys, AHPRA considerations, and the economics of a health practice.
+              </p>
+              <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: '1.85', fontWeight: 300 }}>
+                He holds a Masters in Physiotherapy from the University of South Australia, a Bachelor of Applied Sciences in Human Movement, and is currently studying a Masters of Sports & Musculoskeletal Physiotherapy.
+              </p>
+            </div>
           </div>
         </div>
       </section>

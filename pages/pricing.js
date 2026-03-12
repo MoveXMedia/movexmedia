@@ -130,7 +130,7 @@ export default function Pricing() {
             margin: '0 auto',
             fontWeight: 300,
           }}>
-            Three packages built around your ad spend. Every package includes full campaign management across Google and Meta platforms.
+            Packages are structured around your ad spend and platform complexity. Beginner includes one platform; Intermediate and Expert include multi-platform management.
           </p>
         </div>
       </section>

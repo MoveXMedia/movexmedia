@@ -164,6 +164,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── WHO WE WORK WITH ── */}
+      <section style={{ padding: '3.5rem 2rem', background: '#f4f7fb', borderTop: '1px solid #e2eaf4', borderBottom: '1px solid #e2eaf4' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#6b849a', marginBottom: '2rem' }}>Who we work with</p>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '3rem' }}>
+            <a href="https://movephysiotherapy.com.au" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.7, transition: 'opacity 0.2s' }} onMouseEnter={e => e.currentTarget.style.opacity = 1} onMouseLeave={e => e.currentTarget.style.opacity = 0.7}>
+              <img
+                src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://movephysiotherapy.com.au/wp-content/uploads/2021/05/Move_P_F_Logo-Black_Blue-removebg-preview.png"
+                alt="Move Physiotherapy and Fitness"
+                style={{ height: '48px', width: 'auto', display: 'block' }}
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ── HOW IT WORKS (dark, space feel) ── */}
       <section style={{ padding: '6rem 2rem', background: '#080f1a', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '700px', height: '300px', background: 'radial-gradient(ellipse, rgba(74,158,218,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />

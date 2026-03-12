@@ -65,6 +65,7 @@ export default function Footer() {
             {[
               { href: '/', label: 'Home' },
               { href: '/about', label: 'About' },
+              { href: '/blog', label: 'Blog' },
               { href: '/pricing', label: 'Packages' },
               { href: '/marketing-budget', label: 'Budget Calculator' },
               { href: '/contact', label: 'Contact' },
