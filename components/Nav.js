@@ -34,7 +34,6 @@ export default function Nav() {
     { href: '/blog', label: 'Blog' },
     { href: '/marketing-budget', label: 'Budget Calculator' },
     { href: '/pricing', label: 'Packages' },
-    { href: '/contact', label: 'Contact' },
   ];
 
   const isServicesActive = ['/services', '/google-ads', '/facebook-marketing', '/social-media', '/email-marketing', '/website-development'].includes(router.pathname);
@@ -162,7 +161,7 @@ export default function Nav() {
             )}
           </div>
 
-          {[topLinks[3], topLinks[4], topLinks[5]].map(link => (
+          {[topLinks[3], topLinks[4]].map(link => (
             <Link key={link.href} href={link.href} style={{
               ...linkStyle,
               color: router.pathname === link.href ? '#5bc4f5' : 'rgba(255,255,255,0.7)',
@@ -221,7 +220,7 @@ export default function Nav() {
               }}>{link.label}</Link>
             ))}
           </div>
-          {[topLinks[3], topLinks[4], topLinks[5]].map(link => (
+          {[topLinks[3], topLinks[4]].map(link => (
             <Link key={link.href} href={link.href} style={{
               fontFamily: 'Poppins, sans-serif', fontSize: '1rem',
               letterSpacing: '0.04em', textTransform: 'uppercase',

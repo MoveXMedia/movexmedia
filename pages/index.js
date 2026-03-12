@@ -182,35 +182,58 @@ export default function Home() {
               />
             </a>
 
-            {/* Placeholder logos — styled SVG text marks */}
-            {[
-              { name: 'Summit Physical Therapy', sub: 'Denver, CO' },
-              { name: 'Harbor Sports Rehab', sub: 'Boston, MA' },
-              { name: 'Elevate PT & Wellness', sub: 'Austin, TX' },
-              { name: 'Shoreline Physical Therapy', sub: 'San Diego, CA' },
-            ].map(client => (
-              <div key={client.name} style={{
-                opacity: 0.5,
-                fontFamily: 'Poppins, sans-serif',
-                letterSpacing: '0.03em',
-                whiteSpace: 'nowrap',
-                padding: '0.5rem 1rem',
-                border: '1.5px solid #1a3a5c40',
-                borderRadius: '6px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                gap: '2px',
-              }}>
-                <span style={{ fontWeight: 700, fontSize: '0.85rem', color: '#0d1f35' }}>{client.name}</span>
-                <span style={{ fontWeight: 400, fontSize: '0.65rem', color: '#6b849a', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{client.sub}</span>
-              </div>
-            ))}
+            {/* Placeholder logos — SVG logo marks */}
+
+            {/* Summit Physical Therapy */}
+            <div style={{ opacity: 0.6 }}>
+              <svg width="140" height="44" viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="20,6 32,28 8,28" fill="none" stroke="#2a6496" strokeWidth="2.5" strokeLinejoin="round"/>
+                <line x1="14" y1="28" x2="26" y2="28" stroke="#2a6496" strokeWidth="2.5"/>
+                <text x="38" y="18" fontFamily="Poppins, sans-serif" fontWeight="700" fontSize="9" fill="#0d1f35" letterSpacing="0.5">SUMMIT</text>
+                <text x="38" y="29" fontFamily="Poppins, sans-serif" fontWeight="400" fontSize="7.5" fill="#6b849a" letterSpacing="0.3">Physical Therapy</text>
+                <text x="38" y="39" fontFamily="Poppins, sans-serif" fontWeight="400" fontSize="6" fill="#a0b3c6" letterSpacing="0.5">DENVER, CO</text>
+              </svg>
+            </div>
+
+            {/* Harbor Sports Rehab */}
+            <div style={{ opacity: 0.6 }}>
+              <svg width="140" height="44" viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="18" cy="18" r="11" fill="none" stroke="#1a5c8a" strokeWidth="2"/>
+                <line x1="18" y1="7" x2="18" y2="29" stroke="#1a5c8a" strokeWidth="2"/>
+                <line x1="10" y1="18" x2="26" y2="18" stroke="#1a5c8a" strokeWidth="1.5"/>
+                <path d="M9,13 Q18,10 27,13" stroke="#1a5c8a" strokeWidth="1.2" fill="none"/>
+                <path d="M9,23 Q18,26 27,23" stroke="#1a5c8a" strokeWidth="1.2" fill="none"/>
+                <text x="36" y="17" fontFamily="Poppins, sans-serif" fontWeight="700" fontSize="9" fill="#0d1f35" letterSpacing="0.5">HARBOR</text>
+                <text x="36" y="28" fontFamily="Poppins, sans-serif" fontWeight="400" fontSize="7.5" fill="#6b849a" letterSpacing="0.3">Sports Rehab</text>
+                <text x="36" y="38" fontFamily="Poppins, sans-serif" fontWeight="400" fontSize="6" fill="#a0b3c6" letterSpacing="0.5">BOSTON, MA</text>
+              </svg>
+            </div>
+
+            {/* Elevate PT & Wellness */}
+            <div style={{ opacity: 0.6 }}>
+              <svg width="145" height="44" viewBox="0 0 145 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18,28 L10,28 L10,10 L18,10" stroke="#1a7a5e" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                <path d="M10,18 L17,18" stroke="#1a7a5e" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M18,28 L26,28 L26,10 L18,10" stroke="#1a7a5e" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                <circle cx="18" cy="6" r="2.5" fill="#1a7a5e"/>
+                <text x="34" y="17" fontFamily="Poppins, sans-serif" fontWeight="700" fontSize="9" fill="#0d1f35" letterSpacing="0.5">ELEVATE</text>
+                <text x="34" y="28" fontFamily="Poppins, sans-serif" fontWeight="400" fontSize="7.5" fill="#6b849a" letterSpacing="0.3">PT &amp; Wellness</text>
+                <text x="34" y="38" fontFamily="Poppins, sans-serif" fontWeight="400" fontSize="6" fill="#a0b3c6" letterSpacing="0.5">AUSTIN, TX</text>
+              </svg>
+            </div>
+
+            {/* Shoreline Physical Therapy */}
+            <div style={{ opacity: 0.6 }}>
+              <svg width="150" height="44" viewBox="0 0 150 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6,22 Q12,14 18,22 Q24,30 30,22" stroke="#1a6496" strokeWidth="2.2" fill="none" strokeLinecap="round"/>
+                <path d="M6,28 Q12,20 18,28 Q24,36 30,28" stroke="#5bc4f5" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.6"/>
+                <text x="38" y="17" fontFamily="Poppins, sans-serif" fontWeight="700" fontSize="9" fill="#0d1f35" letterSpacing="0.5">SHORELINE</text>
+                <text x="38" y="28" fontFamily="Poppins, sans-serif" fontWeight="400" fontSize="7.5" fill="#6b849a" letterSpacing="0.3">Physical Therapy</text>
+                <text x="38" y="38" fontFamily="Poppins, sans-serif" fontWeight="400" fontSize="6" fill="#a0b3c6" letterSpacing="0.5">SAN DIEGO, CA</text>
+              </svg>
+            </div>
 
           </div>
-          <p style={{ marginTop: '1.75rem', fontSize: '0.75rem', color: '#a0b3c6', fontWeight: 300, fontStyle: 'italic' }}>
-            Placeholder logos — client details shared on request
-          </p>
         </div>
       </section>
 
