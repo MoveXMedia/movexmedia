@@ -147,36 +147,15 @@ export default function WebsiteDevelopment() {
             <span style={{ color: '#5bc4f5' }}>Every single day.</span>
           </h2>
           <p style={{ color: '#6b849a', fontSize: '1.05rem', lineHeight: '1.85', maxWidth: '720px', fontWeight: 300, marginBottom: '3.5rem' }}>
-            Most physiotherapy websites were built years ago by a generalist developer, haven't been touched since, and are quietly turning away the exact patients you're paying to attract through Google and Facebook Ads.
+            Most physiotherapy websites were built years ago by a generalist developer, haven&apos;t been touched since, and are quietly turning away the exact patients you&apos;re paying to attract through Google and Facebook Ads.
           </p>
 
-          {/* Problem stat cards */}
+          {/* Stat cards */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem', marginBottom: '4rem' }}>
             {[
-              {
-                stat: '53%',
-                label: 'of mobile visitors leave',
-                desc: 'if a site takes longer than 3 seconds to load. The average physio website takes 6–8 seconds on mobile.',
-                colour: '#e05555',
-              },
-              {
-                stat: '7%',
-                label: 'conversion drop per second',
-                desc: 'Every 1-second delay in load time reduces bookings by 7%. A 4-second site could be cutting your leads in half.',
-                colour: '#f59e0b',
-              },
-              {
-                stat: '2.5s',
-                label: 'Google\'s LCP benchmark',
-                desc: 'Google\'s Core Web Vitals flag anything over 2.5 seconds as "needs improvement" — and rank you lower as a result.',
-                colour: '#5bc4f5',
-              },
-              {
-                stat: '70%+',
-                label: 'of health searches are mobile',
-                desc: 'Most patients find you on their phone. A desktop-first website with no mobile optimisation fails more than half your traffic.',
-                colour: '#5bc4f5',
-              },
+              { stat: '53%', label: 'of mobile visitors leave', desc: 'if a site takes longer than 3 seconds to load. The average physio website takes 6-8 seconds on mobile.', colour: '#e05555' },
+              { stat: '7%', label: 'conversion drop per second', desc: 'Every 1-second delay in load time reduces bookings by 7%. A 4-second site could be cutting your leads in half.', colour: '#f59e0b' },
+              { stat: '70%+', label: 'of health searches are mobile', desc: 'Most patients find you on their phone. A desktop-first website with no mobile optimisation fails more than half your traffic.', colour: '#5bc4f5' },
             ].map(item => (
               <div key={item.stat} style={{ background: '#f9fbff', border: '1px solid #e2eaf4', borderTop: `3px solid ${item.colour}`, borderRadius: '0 0 12px 12px', padding: '1.75rem' }}>
                 <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: item.colour, lineHeight: 1, marginBottom: '0.4rem' }}>{item.stat}</div>
@@ -186,48 +165,53 @@ export default function WebsiteDevelopment() {
             ))}
           </div>
 
-          {/* Problem list + generational shift */}
+          {/* Main text + dark card */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }} className="problem-grid">
+
             <div>
-              <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.2rem', color: '#0d1f35', marginBottom: '1.25rem' }}>
-                Most physio websites are losing patients because they:
-              </h3>
+              <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.9', fontWeight: 300, marginBottom: '1.5rem' }}>
+                Most physio websites are outdated, slow, and lack the authority and social proof that turn a visitor into a booked patient. The result is wasted ad spend — you&apos;re paying to send traffic to a site that&apos;s quietly turning people away before they ever hit the booking button.
+              </p>
+              <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.9', fontWeight: 300, marginBottom: '1.75rem' }}>
+                Patients with booking intent don&apos;t wait for a slow site. There&apos;s always another clinic a tab away. An outdated design signals to a new patient that your clinic may not be current in other areas either — and without reviews, testimonials, or clear trust signals, there&apos;s no reason to choose you over the practice down the road.
+              </p>
               {[
-                { icon: '🐌', problem: 'Load too slowly', detail: 'Patients with booking intent move on within seconds. They don\'t wait — there\'s always another clinic a tab away.' },
-                { icon: '📵', problem: 'Aren\'t mobile-optimised', detail: 'Tiny text, broken layouts, and buttons that are impossible to tap on a phone — all on a device your patients use 70% of the time.' },
-                { icon: '🏚️', problem: 'Look outdated', detail: 'An old or generic website signals to patients that your clinic may not be up to date in other areas too. First impressions are instant and brutal.' },
-                { icon: '👻', problem: 'Lack social proof', detail: 'No Google reviews, no testimonials, no patient outcomes. Without it, there\'s no reason for a new patient to choose you over the clinic down the road.' },
-                { icon: '❌', problem: 'Have no clear call to action', detail: 'Visitors don\'t know what to do next. If booking online isn\'t front and centre, patients simply don\'t book — or call a competitor who made it easier.' },
+                { icon: '🐌', problem: 'Slow loading', detail: "Patients leave within seconds. Every second of delay costs you bookings." },
+                { icon: '📵', problem: 'Not mobile-optimised', detail: "Broken layouts and tiny text on the device 70% of your patients use." },
+                { icon: '🏚', problem: 'Outdated design', detail: "First impressions are instant. An old site loses trust before a word is read." },
+                { icon: '👻', problem: 'No social proof', detail: "No reviews, no outcomes, no reason for a new patient to choose you." },
+                { icon: '✗', problem: 'No clear booking path', detail: "If booking online isn't front and centre, patients don't book — they move on." },
               ].map(item => (
-                <div key={item.problem} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', marginBottom: '1.25rem' }}>
-                  <span style={{ fontSize: '1.3rem', flexShrink: 0, lineHeight: 1.3 }}>{item.icon}</span>
+                <div key={item.problem} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', marginBottom: '1rem' }}>
+                  <span style={{ fontSize: '1.2rem', flexShrink: 0, lineHeight: 1.4 }}>{item.icon}</span>
                   <div>
-                    <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.88rem', color: '#0d1f35', marginBottom: '0.25rem' }}>{item.problem}</div>
-                    <p style={{ color: '#6b849a', fontSize: '0.85rem', lineHeight: '1.65', fontWeight: 300, margin: 0 }}>{item.detail}</p>
+                    <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.88rem', color: '#0d1f35' }}>{item.problem} — </span>
+                    <span style={{ color: '#6b849a', fontSize: '0.88rem', lineHeight: '1.65', fontWeight: 300 }}>{item.detail}</span>
                   </div>
                 </div>
               ))}
+              <div style={{ marginTop: '1.75rem', background: '#f4f7fb', border: '1px solid #e2eaf4', borderLeft: '4px solid #5bc4f5', borderRadius: '0 10px 10px 0', padding: '1.25rem 1.5rem' }}>
+                <p style={{ color: '#0d1f35', fontSize: '0.9rem', lineHeight: '1.8', fontWeight: 400, margin: 0 }}>
+                  <strong>The good news:</strong> fix it once and every ad, every Google search, and every referral you receive converts at a dramatically higher rate.
+                </p>
+              </div>
             </div>
 
             <div>
-              <div style={{ background: 'linear-gradient(135deg, #0d1f35 0%, #1a3a5c 100%)', borderRadius: '16px', padding: '2.5rem', marginBottom: '1.5rem' }}>
+              <div style={{ background: 'linear-gradient(135deg, #0d1f35 0%, #1a3a5c 100%)', borderRadius: '16px', padding: '2.5rem' }}>
                 <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>📱</div>
-                <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.1rem', color: 'white', marginBottom: '1rem', lineHeight: 1.3 }}>
-                  Younger patients won't call.<br />They book online — or not at all.
+                <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.15rem', color: 'white', marginBottom: '1rem', lineHeight: 1.3 }}>
+                  Younger patients won&apos;t call.<br />They book online — or not at all.
                 </h3>
-                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '1.8', fontWeight: 300, marginBottom: '1rem' }}>
-                  Millennials and Gen Z now make up the majority of people seeking physiotherapy. This generation didn't grow up leaving voicemails. They expect to find a clinic, read reviews, check availability, and book — entirely online, in under two minutes, often at 10pm.
+                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.25rem' }}>
+                  Millennials and Gen Z now make up the majority of people seeking physiotherapy. This generation didn&apos;t grow up leaving voicemails. They expect to find a clinic, read reviews, check availability, and book — entirely online, in under two minutes, often at 10pm.
                 </p>
-                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '1.8', fontWeight: 300, marginBottom: '0' }}>
-                  If your website doesn't support online booking, loads slowly on mobile, or looks like it was built in 2015 — they move on. They don't call to enquire. The booking simply goes to whoever made it easiest.
-                </p>
-              </div>
-              <div style={{ background: '#f4f7fb', border: '1px solid #e2eaf4', borderLeft: '4px solid #5bc4f5', borderRadius: '0 12px 12px 0', padding: '1.5rem' }}>
-                <p style={{ color: '#0d1f35', fontSize: '0.92rem', lineHeight: '1.8', fontWeight: 400, margin: 0 }}>
-                  <strong>The good news:</strong> a well-built website is the single highest-leverage thing you can do for your online presence. Fix it once, and every ad you run, every Google search you rank for, and every referral you receive converts at a dramatically higher rate.
+                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '1.85', fontWeight: 300 }}>
+                  If your website doesn&apos;t support online booking, loads slowly on mobile, or looks like it was built in 2015 — they move on. They don&apos;t call to enquire. The booking simply goes to whoever made it easiest.
                 </p>
               </div>
             </div>
+
           </div>
         </div>
         <style>{`
