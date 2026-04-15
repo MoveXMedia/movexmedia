@@ -84,12 +84,14 @@ export default function ClinicianPortal() {
                 <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#5bc4f5' }}>MoveX Product</span>
               </div>
               <h1 style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(2rem, 4.5vw, 3.4rem)', lineHeight: 1.15, marginBottom: '1.5rem', fontWeight: 900 }}>
-                Are you losing money<br />through unbilled<br />
-                <span style={{ color: '#5bc4f5', textShadow: '0 0 40px rgba(91,196,245,0.3)' }}>insurance claims?</span>
+                Are you losing money because of<br />
+                <span style={{ color: '#5bc4f5', textShadow: '0 0 40px rgba(91,196,245,0.3)' }}>untracked clinician performance?</span>
               </h1>
-              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.05rem', lineHeight: '1.85', marginBottom: '2.5rem', maxWidth: '480px', fontWeight: 300 }}>
-                The MoveX Clinician Portal gives clinic owners and individual practitioners a live view of their KPIs, insurance billing status, EPC tracking, and new patient follow-ups — all sourced directly from Cliniko and updated daily.
-              </p>
+              <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1rem', lineHeight: '1.85', marginBottom: '2.5rem', maxWidth: '480px', fontWeight: 300 }}>
+                <p style={{ margin: '0 0 0.5rem' }}>Insurance report monitoring &nbsp;·&nbsp; EPC claim monitoring</p>
+                <p style={{ margin: '0 0 0.5rem' }}>Clients without upcoming appointments &nbsp;·&nbsp; Client visit average</p>
+                <p style={{ margin: 0 }}>Clinic intranet &nbsp;·&nbsp; All your information in one place.</p>
+              </div>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <Link href="/contact" className="btn-primary">Book a Demo →</Link>
                 <Link href="#pricing" className="btn-outline">See Pricing</Link>
@@ -243,6 +245,48 @@ export default function ClinicianPortal() {
             }
           `}</style>
         </div>
+      </section>
+
+      {/* ── CUSTOM KPIS ── */}
+      <section style={{ padding: '6rem 2rem', background: '#080f1a', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '800px', height: '400px', background: 'radial-gradient(ellipse, rgba(74,158,218,0.06) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div style={{ maxWidth: '1100px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }} className="kpi-custom-grid">
+            <div>
+              <div className="section-label">Track Your Clinic Custom KPIs</div>
+              <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', color: 'white', lineHeight: 1.2, marginBottom: '1.25rem' }}>
+                Your metrics.<br /><span style={{ color: '#5bc4f5' }}>Your dashboard.</span>
+              </h2>
+              <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.98rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.25rem' }}>
+                Every clinic is different. The MoveX Portal isn't locked to a fixed set of KPIs — it's built to track the metrics that matter to <em>your</em> practice model. Whether you're a high-volume clinic optimising throughput, or a boutique practice focused on long-term outcomes, your dashboard reflects your priorities.
+              </p>
+              <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.98rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '2rem' }}>
+                Work with us to define what you want to measure — we configure the portal to surface it automatically.
+              </p>
+              <Link href="/contact" className="btn-primary" style={{ fontSize: '0.82rem' }}>Discuss Your KPIs →</Link>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {[
+                { icon: '🔁', label: 'Rebooks per initial appointment', desc: 'What percentage of new patients book a follow-up? Track this by clinician and identify who\'s converting intake into ongoing care.' },
+                { icon: '📦', label: 'Block booking percentage', desc: 'How many patients are being set up on a treatment block vs. single bookings? A key driver of forward diary revenue.' },
+                { icon: '🏋️', label: 'VALD / AxIT booking rate', desc: 'What percentage of relevant patients are being assessed with your in-clinic technology? Track uptake by clinician.' },
+                { icon: '📊', label: 'Any metric from Cliniko', desc: 'If it\'s in your Cliniko data, we can surface it. Custom KPIs are configured to your exact practice model during onboarding.' },
+              ].map(item => (
+                <div key={item.label} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(91,196,245,0.12)', borderLeft: '3px solid rgba(91,196,245,0.4)', borderRadius: '0 10px 10px 0', padding: '1.1rem 1.4rem', display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <span style={{ fontSize: '1.3rem', flexShrink: 0, lineHeight: 1.2 }}>{item.icon}</span>
+                  <div>
+                    <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.85rem', color: 'white', marginBottom: '0.3rem' }}>{item.label}</div>
+                    <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', lineHeight: '1.6', fontWeight: 300 }}>{item.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <style>{`
+          @media (max-width: 900px) { .kpi-custom-grid { grid-template-columns: 1fr !important; gap: 3rem !important; } }
+        `}</style>
       </section>
 
       {/* ── PRICING ── */}

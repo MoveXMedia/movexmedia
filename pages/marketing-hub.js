@@ -46,7 +46,6 @@ const features = [
   { label: 'Email activity dashboard', desc: 'See requests, delivery rates, open rates, clicks, bounces, and spam reports across all sends in real time.' },
   { label: 'Subscriber growth chart', desc: 'Track new subscribers vs unsubscribes over time. Understand what\'s driving list growth.' },
   { label: 'New patient tracking', desc: 'Monitor new patients week by week alongside your subscriber numbers.' },
-  { label: 'Multi-location support', desc: 'Segment subscribers by clinic location. Send location-specific campaigns or broadcast to all.' },
 ];
 
 const comparisonRows = [
@@ -249,11 +248,16 @@ export default function MarketingHub() {
             <div style={{ background: '#ffffff', border: '1px solid #e2eaf4', borderRadius: '14px', padding: '2rem', textAlign: 'center' }}>
               <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>✉️</div>
               <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '1rem', color: '#0d1f35', marginBottom: '0.5rem' }}>Mailchimp</h3>
-              <p style={{ color: '#6b849a', fontSize: '0.82rem', marginBottom: '1.25rem', lineHeight: 1.5, fontWeight: 300 }}>Standard plan, 5,000 contacts</p>
-              <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.2rem', fontWeight: 900, color: '#e05555' }}>~$155</div>
+              <p style={{ color: '#6b849a', fontSize: '0.82rem', marginBottom: '0.5rem', lineHeight: 1.5, fontWeight: 300 }}>Standard plan, 10,000 contacts</p>
+              <div style={{ background: '#fff8f0', border: '1px solid #f5c066', borderRadius: '8px', padding: '0.5rem 0.75rem', marginBottom: '1rem' }}>
+                <p style={{ color: '#a0620a', fontSize: '0.72rem', lineHeight: 1.5, fontWeight: 400, margin: 0 }}>
+                  ⚠️ Mailchimp bills for <strong>all contacts</strong> — including unsubscribed. A list of 5,000 active patients can easily hit 10,000+ total contacts over time.
+                </p>
+              </div>
+              <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.2rem', fontWeight: 900, color: '#e05555' }}>~$270</div>
               <div style={{ color: '#6b849a', fontSize: '0.78rem', marginTop: '0.25rem', marginBottom: '1.25rem' }}>AUD / month</div>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, textAlign: 'left' }}>
-                {['Generic — not health-specific', 'No Cliniko integration', 'Charges per contact', 'Basic automation only'].map(item => (
+                {['Generic — not health-specific', 'No Cliniko integration', 'Bills unsubscribed contacts too', 'Cost grows as your list grows'].map(item => (
                   <li key={item} style={{ color: '#6b849a', fontSize: '0.8rem', lineHeight: '1.65', padding: '0.3rem 0', display: 'flex', gap: '0.5rem', fontWeight: 300 }}>
                     <span style={{ color: '#e05555', flexShrink: 0 }}>✕</span>{item}
                   </li>
@@ -300,7 +304,7 @@ export default function MarketingHub() {
             <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(91,196,245,0.6)', marginBottom: '0.75rem' }}>The numbers</p>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
               <div style={{ textAlign: 'center' }}>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#e05555' }}>$350</div>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#e05555' }}>$465</div>
                 <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', fontWeight: 300 }}>Mailchimp + CliniqApps / mo</div>
               </div>
               <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2rem', color: 'rgba(255,255,255,0.2)', fontWeight: 300 }}>vs</div>
@@ -309,7 +313,7 @@ export default function MarketingHub() {
                 <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', fontWeight: 300 }}>MoveX Marketing Hub / mo</div>
               </div>
               <div style={{ textAlign: 'center', background: 'rgba(91,196,245,0.08)', border: '1px solid rgba(91,196,245,0.2)', borderRadius: '10px', padding: '1rem 1.5rem' }}>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#5bc4f5' }}>$1,812</div>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#5bc4f5' }}>$3,192</div>
                 <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', fontWeight: 300 }}>saved per year</div>
               </div>
             </div>
@@ -333,7 +337,7 @@ export default function MarketingHub() {
             ))}
           </div>
           <p style={{ color: '#a0b3c6', fontSize: '0.75rem', textAlign: 'center', marginTop: '1rem', fontWeight: 300 }}>
-            Mailchimp Standard plan pricing ~$155 AUD/month at 5,000 contacts. CliniqApps at $195 AUD/month for up to 12 practitioners.
+            Mailchimp Standard plan ~$270 AUD/month at 10,000 total contacts (Mailchimp bills all contacts including unsubscribed). CliniqApps $195 AUD/month for up to 12 practitioners.
           </p>
         </div>
         <style>{`

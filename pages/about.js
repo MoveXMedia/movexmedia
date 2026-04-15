@@ -185,7 +185,7 @@ export default function About() {
           <div style={{ display: 'flex', gap: '4rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
             <div style={{ flexShrink: 0 }}>
               <img
-                src="https://movephysiotherapy.com.au/wp-content/uploads/2025/07/26-Jun-2025-Move-Physiotherapy-Headshots-_0094-scaled.webp"
+                src="/daniel-ryan.jpg"
                 alt="Daniel Ryan — Founder, MoveX Media"
                 style={{ width: '200px', height: '200px', borderRadius: '50%', objectFit: 'cover', objectPosition: 'top', border: '3px solid rgba(91,196,245,0.3)', display: 'block' }}
               />

@@ -350,30 +350,41 @@ export default function Home() {
       </section>
 
       {/* ── SERVICES (light) ── */}
-      <section style={{ padding: '6rem 2rem', background: '#f4f7fb' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <section style={{ padding: '6rem 2rem', background: '#080f1a', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '900px', height: '400px', background: 'radial-gradient(ellipse, rgba(74,158,218,0.06) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <div style={{ marginBottom: '3rem' }}>
-            <div className="section-label" style={{ color: '#5bc4f5' }}>What We Do</div>
-            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: 1.2, marginBottom: '1rem', color: '#0d1f35', fontWeight: 800 }}>
+            <div className="section-label">What We Do</div>
+            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: 1.2, marginBottom: '1rem', color: 'white', fontWeight: 800 }}>
               Full-service marketing<br />for <span style={{ color: '#5bc4f5' }}>health practices</span>
             </h2>
-            <p style={{ color: '#6b849a', fontSize: '1.05rem', lineHeight: '1.75', maxWidth: '560px', fontWeight: 300 }}>
+            <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '1.05rem', lineHeight: '1.75', maxWidth: '560px', fontWeight: 300 }}>
               Every service is designed specifically for health and allied health businesses — no generalist fluff, just strategies that fill appointment books.
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: '1.5rem' }}>
             {services.map(s => (
-              <Link href={s.href} key={s.title}>
-                <div className="card-light" style={{ height: '100%', cursor: 'pointer' }}>
+              <Link href={s.href} key={s.title} className="service-card-link">
+                <div className="service-card" style={{ height: '100%', cursor: 'pointer', padding: '1.75rem', borderRadius: '12px', border: '1px solid rgba(91,196,245,0.12)', background: 'rgba(255,255,255,0.03)', transition: 'all 0.25s ease' }}>
                   <div style={{ width: '52px', height: '52px', borderRadius: '12px', background: 'rgba(91,196,245,0.1)', border: '1px solid rgba(91,196,245,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', marginBottom: '1.2rem' }}>{s.icon}</div>
-                  <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.6rem', color: '#0d1f35' }}>{s.title}</h3>
-                  <p style={{ color: '#6b849a', fontSize: '0.88rem', lineHeight: '1.65', fontWeight: 300 }}>{s.desc}</p>
+                  <h3 className="service-card-title" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.6rem', color: 'white', transition: 'color 0.25s ease' }}>{s.title}</h3>
+                  <p className="service-card-desc" style={{ fontSize: '0.88rem', lineHeight: '1.65', fontWeight: 300, color: 'rgba(255,255,255,0.5)', transition: 'color 0.25s ease' }}>{s.desc}</p>
                   <div style={{ marginTop: '1.2rem', color: '#5bc4f5', fontSize: '0.8rem', fontFamily: 'Poppins, sans-serif', fontWeight: 600 }}>Learn more →</div>
                 </div>
               </Link>
             ))}
           </div>
         </div>
+        <style>{`
+          .service-card:hover {
+            background: #ffffff !important;
+            border-color: #ffffff !important;
+            box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+            transform: translateY(-3px);
+          }
+          .service-card:hover .service-card-title { color: #0d1f35 !important; }
+          .service-card:hover .service-card-desc { color: #6b849a !important; }
+        `}</style>
       </section>
 
       {/* ── WHY US (white) ── */}
@@ -404,79 +415,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── WHO WE WORK WITH ── */}
-      <section style={{ padding: '3.5rem 2rem', background: '#f4f7fb', borderTop: '1px solid #e2eaf4', borderBottom: '1px solid #e2eaf4' }}>
-        <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#6b849a', marginBottom: '2.5rem' }}>Who we work with</p>
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '2.5rem' }}>
-
-            {/* Move Physiotherapy — real client */}
-            <a href="https://movephysiotherapy.com.au" target="_blank" rel="noopener noreferrer"
-              style={{ opacity: 0.65, transition: 'opacity 0.2s' }}
-              onMouseEnter={e => e.currentTarget.style.opacity = 1}
-              onMouseLeave={e => e.currentTarget.style.opacity = 0.65}>
-              <img
-                src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://movephysiotherapy.com.au/wp-content/uploads/2021/05/Move_P_F_Logo-Black_Blue-removebg-preview.png"
-                alt="Move Physiotherapy and Fitness"
-                style={{ height: '44px', width: 'auto', display: 'block' }}
-              />
-            </a>
-
-            {/* Placeholder logos — SVG logo marks */}
-
-            {/* Summit Physical Therapy */}
-            <div style={{ opacity: 0.6 }}>
-              <svg width="140" height="44" viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="20,6 32,28 8,28" fill="none" stroke="#2a6496" strokeWidth="2.5" strokeLinejoin="round"/>
-                <line x1="14" y1="28" x2="26" y2="28" stroke="#2a6496" strokeWidth="2.5"/>
-                <text x="38" y="18" fontFamily="Poppins, sans-serif" fontWeight="700" fontSize="9" fill="#0d1f35" letterSpacing="0.5">SUMMIT</text>
-                <text x="38" y="29" fontFamily="Poppins, sans-serif" fontWeight="400" fontSize="7.5" fill="#6b849a" letterSpacing="0.3">Physical Therapy</text>
-                <text x="38" y="39" fontFamily="Poppins, sans-serif" fontWeight="400" fontSize="6" fill="#a0b3c6" letterSpacing="0.5">DENVER, CO</text>
-              </svg>
-            </div>
-
-            {/* Harbor Sports Rehab */}
-            <div style={{ opacity: 0.6 }}>
-              <svg width="140" height="44" viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="18" cy="18" r="11" fill="none" stroke="#1a5c8a" strokeWidth="2"/>
-                <line x1="18" y1="7" x2="18" y2="29" stroke="#1a5c8a" strokeWidth="2"/>
-                <line x1="10" y1="18" x2="26" y2="18" stroke="#1a5c8a" strokeWidth="1.5"/>
-                <path d="M9,13 Q18,10 27,13" stroke="#1a5c8a" strokeWidth="1.2" fill="none"/>
-                <path d="M9,23 Q18,26 27,23" stroke="#1a5c8a" strokeWidth="1.2" fill="none"/>
-                <text x="36" y="17" fontFamily="Poppins, sans-serif" fontWeight="700" fontSize="9" fill="#0d1f35" letterSpacing="0.5">HARBOR</text>
-                <text x="36" y="28" fontFamily="Poppins, sans-serif" fontWeight="400" fontSize="7.5" fill="#6b849a" letterSpacing="0.3">Sports Rehab</text>
-                <text x="36" y="38" fontFamily="Poppins, sans-serif" fontWeight="400" fontSize="6" fill="#a0b3c6" letterSpacing="0.5">BOSTON, MA</text>
-              </svg>
-            </div>
-
-            {/* Elevate PT & Wellness */}
-            <div style={{ opacity: 0.6 }}>
-              <svg width="145" height="44" viewBox="0 0 145 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18,28 L10,28 L10,10 L18,10" stroke="#1a7a5e" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                <path d="M10,18 L17,18" stroke="#1a7a5e" strokeWidth="2" strokeLinecap="round"/>
-                <path d="M18,28 L26,28 L26,10 L18,10" stroke="#1a7a5e" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                <circle cx="18" cy="6" r="2.5" fill="#1a7a5e"/>
-                <text x="34" y="17" fontFamily="Poppins, sans-serif" fontWeight="700" fontSize="9" fill="#0d1f35" letterSpacing="0.5">ELEVATE</text>
-                <text x="34" y="28" fontFamily="Poppins, sans-serif" fontWeight="400" fontSize="7.5" fill="#6b849a" letterSpacing="0.3">PT &amp; Wellness</text>
-                <text x="34" y="38" fontFamily="Poppins, sans-serif" fontWeight="400" fontSize="6" fill="#a0b3c6" letterSpacing="0.5">AUSTIN, TX</text>
-              </svg>
-            </div>
-
-            {/* Shoreline Physical Therapy */}
-            <div style={{ opacity: 0.6 }}>
-              <svg width="150" height="44" viewBox="0 0 150 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6,22 Q12,14 18,22 Q24,30 30,22" stroke="#1a6496" strokeWidth="2.2" fill="none" strokeLinecap="round"/>
-                <path d="M6,28 Q12,20 18,28 Q24,36 30,28" stroke="#5bc4f5" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.6"/>
-                <text x="38" y="17" fontFamily="Poppins, sans-serif" fontWeight="700" fontSize="9" fill="#0d1f35" letterSpacing="0.5">SHORELINE</text>
-                <text x="38" y="28" fontFamily="Poppins, sans-serif" fontWeight="400" fontSize="7.5" fill="#6b849a" letterSpacing="0.3">Physical Therapy</text>
-                <text x="38" y="38" fontFamily="Poppins, sans-serif" fontWeight="400" fontSize="6" fill="#a0b3c6" letterSpacing="0.5">SAN DIEGO, CA</text>
-              </svg>
-            </div>
-
           </div>
         </div>
       </section>
