@@ -73,6 +73,8 @@ const faqs = [
     q: 'What is the MoveX Marketing Hub and what does it include?',
     a: 'The MoveX Marketing Hub is our purpose-built platform for physiotherapy clinics. It includes email automation (welcome emails, reactivation, birthday vouchers, review requests), a clinician performance portal with KPI tracking and insurance/EPC monitoring, social post publishing to Instagram, Facebook, and Google My Business, Facebook Ads statistics, and a practice password file. It\'s included at no added cost with Intermediate and Expert packages — a $199/month value.',
   },
+  {
+    q: 'Is the ad spend included in the management fee?',
     a: 'No — ad spend and management fee are separate. The ad spend goes directly to Google or Meta and is billed by them. The management fee is paid to MoveX Media for strategy, setup, and ongoing optimisation.',
   },
   {
