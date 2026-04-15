@@ -110,7 +110,7 @@ export default function ClinicianPortal() {
               <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 30px 80px rgba(0,0,0,0.5)', border: '1px solid rgba(91,196,245,0.15)' }}>
                 <img src="/portal-screenshot-1.png" alt="MoveX Clinician Portal — Performance Statistics" style={{ width: '100%', display: 'block' }} />
               </div>
-              <div style={{
+              <div className="portal-hero-overlay" style={{
                 position: 'absolute', bottom: '-30px', right: '-15px',
                 borderRadius: '10px', overflow: 'hidden',
                 boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
@@ -119,13 +119,15 @@ export default function ClinicianPortal() {
               }}>
                 <img src="/portal-screenshot-2.png" alt="MoveX Clinician Portal — Clinic KPIs" style={{ width: '100%', display: 'block' }} />
               </div>
-              <div style={{ height: '70px' }} />
+              <div className="portal-hero-spacer" style={{ height: '70px' }} />
             </div>
           </div>
         </div>
         <style>{`
           @media (max-width: 900px) {
             .portal-hero-grid { grid-template-columns: 1fr !important; }
+            .portal-hero-overlay { display: none !important; }
+            .portal-hero-spacer { display: none !important; }
           }
         `}</style>
       </section>

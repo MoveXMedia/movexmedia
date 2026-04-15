@@ -317,6 +317,9 @@ export default function Nav() {
               color: router.pathname === link.href ? '#5bc4f5' : 'white',
             }}>{link.label}</Link>
           ))}
+          <Link href="/contact" className="btn-primary" style={{ fontSize: '0.9rem', padding: '0.85rem 2rem', marginTop: '0.5rem' }}>
+            Get Started →
+          </Link>
         </div>
       )}
 

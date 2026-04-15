@@ -72,7 +72,7 @@ export default function Home() {
         }} />
 
         <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }} className="hero-grid">
             <div style={{ animation: 'fadeInUp 0.8s ease forwards' }}>
               <div className="section-label">Digital Marketing Agency — Perth, WA</div>
               <h1 style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(2.2rem, 5vw, 3.8rem)', lineHeight: '1.15', marginBottom: '1.5rem', fontWeight: 900 }}>
@@ -108,8 +108,10 @@ export default function Home() {
         </div>
         <style>{`
           @keyframes orbit { from { transform: rotate(0deg) translateX(150px) rotate(0deg); } to { transform: rotate(360deg) translateX(150px) rotate(-360deg); } }
-          .hero-rocket { transform-origin: center; }
-          @media (max-width: 900px) { .hero-rocket { display: none !important; } }
+          @media (max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr !important; }
+            .hero-rocket { display: none !important; }
+          }
         `}</style>
       </section>
 
@@ -390,7 +392,7 @@ export default function Home() {
       {/* ── WHY US (white) ── */}
       <section style={{ padding: '6rem 2rem', background: '#ffffff' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start' }} className="why-grid">
             <div>
               <div className="section-label" style={{ color: '#5bc4f5' }}>Our Niche</div>
               <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', lineHeight: 1.2, color: '#0d1f35', marginBottom: '1rem' }}>
@@ -417,6 +419,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <style>{`@media (max-width: 900px) { .why-grid { grid-template-columns: 1fr !important; gap: 3rem !important; } }`}</style>
       </section>
 
       {/* ── HOW IT WORKS (dark, space feel) ── */}

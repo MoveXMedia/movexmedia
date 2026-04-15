@@ -123,7 +123,7 @@ export default function MarketingHub() {
               <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 30px 80px rgba(0,0,0,0.5)', border: '1px solid rgba(91,196,245,0.15)' }}>
                 <img src="/hub-screenshot-1.png" alt="MoveX Marketing Hub — Dashboard" style={{ width: '100%', display: 'block' }} />
               </div>
-              <div style={{
+              <div className="hub-hero-overlay" style={{
                 position: 'absolute', bottom: '-30px', right: '-15px',
                 borderRadius: '10px', overflow: 'hidden',
                 boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
@@ -132,13 +132,15 @@ export default function MarketingHub() {
               }}>
                 <img src="/hub-screenshot-2.png" alt="MoveX Marketing Hub — Automations" style={{ width: '100%', display: 'block' }} />
               </div>
-              <div style={{ height: '70px' }} />
+              <div className="hub-hero-spacer" style={{ height: '70px' }} />
             </div>
           </div>
         </div>
         <style>{`
           @media (max-width: 900px) {
             .hub-hero-grid { grid-template-columns: 1fr !important; }
+            .hub-hero-overlay { display: none !important; }
+            .hub-hero-spacer { display: none !important; }
           }
         `}</style>
       </section>
