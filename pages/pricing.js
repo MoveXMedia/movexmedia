@@ -213,12 +213,12 @@ export default function Pricing() {
 
       {/* Ads Management Label */}
       <div style={{ background: 'rgba(15,37,64,0.3)', borderBottom: '1px solid rgba(26,58,92,0.4)', padding: '2.5rem 2rem 1.5rem' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div className="section-label" style={{ color: '#5bc4f5', marginBottom: '0.5rem' }}>Google &amp; Facebook Ads Management</div>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+          <div className="section-label" style={{ color: '#5bc4f5', marginBottom: '0.5rem', justifyContent: 'center' }}>Google &amp; Facebook Ads Management</div>
           <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', color: 'white', lineHeight: 1.2, marginBottom: '0.5rem' }}>
             Paid Advertising Packages
           </h2>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.92rem', fontWeight: 300, maxWidth: '560px' }}>
+          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.92rem', fontWeight: 300, maxWidth: '560px', margin: '0 auto' }}>
             Fixed monthly management fees. Ad spend is separate and billed directly by Google or Meta.
           </p>
         </div>
@@ -422,69 +422,6 @@ export default function Pricing() {
           }}>
             All packages include Google Ads, Facebook & Instagram Ads, and any Meta platform variations. Ad spend is billed directly by Google / Meta — separate to the management fee.
           </p>
-        </div>
-      </section>
-
-      {/* Comparison table */}
-      <section style={{ padding: '2rem 2rem 6rem', background: 'rgba(15,37,64,0.3)' }}>
-        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <div style={{ marginBottom: '2.5rem', textAlign: 'center' }}>
-            <div className="section-label" style={{ justifyContent: 'center' }}>Side by Side</div>
-            <h2 className="section-title" style={{ textAlign: 'center' }}>Package <span>Comparison</span></h2>
-          </div>
-
-          <div style={{ overflowX: 'auto' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: 'inherit' }}>
-              <thead>
-                <tr>
-                  <th style={{ ...thStyle, textAlign: 'left', width: '30%' }}></th>
-                  {packages.map(pkg => (
-                    <th key={pkg.name} style={{
-                      ...thStyle,
-                      color: pkg.highlight ? '#5bc4f5' : 'white',
-                      borderBottom: pkg.highlight ? '2px solid #5bc4f5' : '1px solid #1a3a5c',
-                    }}>
-                      <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.85rem', letterSpacing: '0.05em' }}>
-                        {pkg.icon} {pkg.name}
-                      </div>
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { label: 'Management Fee', values: ['$200 / mo', '$750 / mo', '$1,500 / mo'] },
-                  { label: 'Max Ad Spend', values: ['$1,000 / mo', '$5,000 / mo', '$10,000 / mo'] },
-                  { label: 'Setup Fee', values: ['$400', '$750', '$1,000'] },
-                  { label: 'Minimum Term', values: ['6 months', '6 months', '6 months'] },
-                  { label: 'Google Ads', values: ['✓', '✓', '✓'] },
-                  { label: 'Facebook & Instagram', values: ['—', '✓', '✓'] },
-                  { label: 'Retargeting Campaigns', values: ['—', '✓', '✓'] },
-                  { label: 'A/B Ad Testing', values: ['—', '✓', '✓'] },
-                  { label: 'Landing Page Creation', values: ['—', '—', '✓'] },
-                  { label: 'Dedicated Account Manager', values: ['—', '—', '✓'] },
-                  { label: 'Weekly Reviews', values: ['—', '—', '✓'] },
-                  { label: 'Monthly Strategy Session', values: ['—', '—', '✓'] },
-                  { label: 'MoveX Marketing Hub', values: ['—', '✓ included', '✓ included'] },
-                ].map((row, i) => (
-                  <tr key={row.label} style={{ background: i % 2 === 0 ? 'transparent' : 'rgba(15,37,64,0.2)' }}>
-                    <td style={tdLabelStyle}>{row.label}</td>
-                    {row.values.map((val, j) => (
-                      <td key={j} style={{
-                        ...tdStyle,
-                        color: val.startsWith('✓') ? '#5bc4f5' : val === '—' ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.75)',
-                        fontFamily: (val === '✓' || val === '—') ? 'inherit' : 'Poppins, sans-serif',
-                        fontSize: (val === '✓' || val === '—') ? '1rem' : '0.8rem',
-                        fontWeight: packages[j].highlight ? 600 : 400,
-                      }}>
-                        {val}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
         </div>
       </section>
 
