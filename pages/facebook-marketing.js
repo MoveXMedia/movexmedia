@@ -3,6 +3,9 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const adTypes = [
+  {
+    icon: '🎯',
+    title: 'Local Awareness Ads',
     desc: 'Reach people within a set radius of your clinic. Build brand recognition in your local area so your name is the first that comes to mind when someone needs a physio.',
   },
   {

@@ -2,7 +2,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 
-const process = [ desc: 'We analyse your market, competitors, and current setup to build a campaign strategy around the services that will deliver the best return.' },
+const process = [
+  { step: '01', title: 'Audit & Strategy', desc: 'We analyse your market, competitors, and current setup to build a campaign strategy around the services that will deliver the best return.' },
   { step: '02', title: 'Campaign Build', desc: 'We structure your campaigns by service line — physio, dry needling, sports rehab etc. — with dedicated ad groups and highly relevant keywords.' },
   { step: '03', title: 'Ad Creation', desc: 'We write responsive search ads with up to 15 headlines and 4 descriptions, optimised for click-through rate and patient intent.' },
   { step: '04', title: 'Conversion Tracking', desc: 'We set up full conversion tracking — phone calls, online bookings, and form submissions — so every dollar is accountable.' },
