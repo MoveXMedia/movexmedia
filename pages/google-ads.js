@@ -40,10 +40,12 @@ export default function GoogleAds() {
   const [convRate, setConvRate] = useState(6);
   const [apptValue, setApptValue] = useState(95);
 
+  const LTV_MULTIPLIER = 4.7;
   const clicks = Math.round(adSpend / cpc);
-  const bookings = Math.round(clicks * convRate / 100);
-  const revenue = bookings * apptValue;
-  const roi = adSpend > 0 ? Math.round((revenue - adSpend) / adSpend * 100) : 0;
+  const newClients = Math.round(clicks * convRate / 100);
+  const ltvPerClient = Math.round(apptValue * LTV_MULTIPLIER);
+  const totalLtv = newClients * ltvPerClient;
+  const roi = adSpend > 0 ? Math.round((totalLtv - adSpend) / adSpend * 100) : 0;
   return (
     <>
       <Head>
@@ -231,7 +233,7 @@ export default function GoogleAds() {
               What could your Google Ads<br /><span style={{ color: '#5bc4f5' }}>budget return?</span>
             </h2>
             <p style={{ color: '#6b849a', fontSize: '0.95rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '520px', margin: '0 auto' }}>
-              Typical physiotherapy Google Ads campaigns run a $3–$8 cost-per-click with a 5–8% booking conversion rate. Adjust the numbers to match your market.
+              Typical physiotherapy Google Ads campaigns run a $3–$8 cost-per-click with a 5–8% booking conversion rate. The calculator uses a lifetime value of 4.7 appointments per new client — the industry average for physio.
             </p>
           </div>
 
@@ -267,9 +269,10 @@ export default function GoogleAds() {
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '1.5rem', marginBottom: '1.5rem' }}>
                 {[
                   { label: 'Clicks / month', value: clicks.toLocaleString(), highlight: false },
-                  { label: 'Bookings / month', value: bookings.toLocaleString(), highlight: false },
-                  { label: 'Est. monthly revenue', value: `$${revenue.toLocaleString()}`, highlight: true },
-                  { label: 'Est. ROI', value: `${roi}%`, highlight: true },
+                  { label: 'New clients / month', value: newClients.toLocaleString(), highlight: false },
+                  { label: 'LTV per client', value: `$${ltvPerClient.toLocaleString()}`, highlight: false },
+                  { label: 'Total client LTV', value: `$${totalLtv.toLocaleString()}`, highlight: true },
+                  { label: 'Est. LTV ROI', value: `${roi}%`, highlight: true },
                 ].map(item => (
                   <div key={item.label} style={{ textAlign: 'center', background: item.highlight ? 'rgba(91,196,245,0.1)' : 'rgba(255,255,255,0.04)', border: `1px solid ${item.highlight ? 'rgba(91,196,245,0.25)' : 'rgba(255,255,255,0.06)'}`, borderRadius: '12px', padding: '1.25rem 0.75rem' }}>
                     <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: item.highlight ? '#5bc4f5' : 'rgba(255,255,255,0.4)', marginBottom: '0.5rem' }}>{item.label}</div>
@@ -278,7 +281,7 @@ export default function GoogleAds() {
                 ))}
               </div>
               <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.73rem', fontWeight: 300, textAlign: 'center', margin: '0 0 1.5rem' }}>
-                Estimates based on {clicks.toLocaleString()} clicks × {convRate}% conversion × ${apptValue} appointment value. Actual results vary by market and campaign quality.
+                Estimates based on {clicks.toLocaleString()} clicks × {convRate}% conversion × ${apptValue} appointment value × 4.7 avg appointments per client. Actual results vary by market and campaign quality.
               </p>
               <div style={{ textAlign: 'center' }}>
                 <Link href="/contact" className="btn-primary" style={{ fontSize: '0.82rem' }}>Book a Free Strategy Session →</Link>
