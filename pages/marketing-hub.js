@@ -40,6 +40,29 @@ const automations = [
   },
 ];
 
+const socialFeatures = [
+  {
+    icon: '📊',
+    title: 'Facebook Ads Statistics',
+    desc: 'Live dashboard showing your Facebook & Instagram ad performance — impressions, reach, clicks, cost-per-click, and conversions — pulled directly from Meta. No switching between platforms.',
+  },
+  {
+    icon: '📸',
+    title: 'Post to Instagram & Facebook',
+    desc: 'Draft, schedule, and publish posts to Instagram and Facebook directly from the Hub. Write your caption, upload your image, set your time, and it goes out automatically.',
+  },
+  {
+    icon: '📍',
+    title: 'Google My Business Posts',
+    desc: 'Publish updates, offers, and events directly to your Google Business Profile from the same interface. Keep your GMB listing fresh without logging into a separate platform.',
+  },
+  {
+    icon: '🔐',
+    title: 'Practice Password File',
+    desc: 'A secure, centralised credentials vault for your clinic. Store logins for your practice management software, Medicare PRODA, HICAPS, equipment portals, and supplier accounts — accessible only to authorised team members.',
+  },
+];
+
 const features = [
   { label: 'Cliniko integration', desc: 'Pulls patient data, appointment history, and DOB directly from Cliniko — no manual imports.' },
   { label: 'Subscriber management', desc: 'Full database with location filters, preference categories, opt-in/out tracking, and SPAM Act compliance built in.' },
@@ -190,6 +213,47 @@ export default function MarketingHub() {
         </div>
       </section>
 
+      {/* ── SOCIAL & TOOLS ── */}
+      <section style={{ padding: '6rem 2rem', background: '#ffffff' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <div className="section-label" style={{ justifyContent: 'center', color: '#5bc4f5' }}>Social & Clinic Tools</div>
+            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', color: '#0d1f35', lineHeight: 1.2 }}>
+              More than email — your whole<br />digital presence in one place
+            </h2>
+            <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '560px', margin: '1.25rem auto 0' }}>
+              The Hub goes beyond email. Publish social content, track your ad performance, and manage your clinic's credentials — all without leaving the platform.
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+            {socialFeatures.map(f => (
+              <div key={f.title} className="card-light" style={{ display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
+                <div style={{ width: '52px', height: '52px', borderRadius: '12px', background: 'rgba(91,196,245,0.1)', border: '1px solid rgba(91,196,245,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', flexShrink: 0 }}>{f.icon}</div>
+                <div>
+                  <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.92rem', color: '#0d1f35', marginBottom: '0.4rem' }}>{f.title}</h3>
+                  <p style={{ color: '#6b849a', fontSize: '0.87rem', lineHeight: '1.65', fontWeight: 300, margin: 0 }}>{f.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Platform logos row */}
+          <div style={{ marginTop: '3rem', padding: '2rem', background: '#f9fbff', border: '1px solid #e2eaf4', borderRadius: '14px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '3rem', flexWrap: 'wrap' }}>
+            <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#a0b3c6', margin: 0 }}>Publishes to</p>
+            {[
+              { label: 'Instagram', icon: '📸' },
+              { label: 'Facebook', icon: '👍' },
+              { label: 'Google My Business', icon: '📍' },
+            ].map(p => (
+              <div key={p.label} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                <span style={{ fontSize: '1.4rem' }}>{p.icon}</span>
+                <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.85rem', color: '#0d1f35' }}>{p.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── DASHBOARD SCREENSHOT ── */}
       <section style={{ padding: '6rem 2rem', background: '#080f1a', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '900px', height: '400px', background: 'radial-gradient(ellipse, rgba(74,158,218,0.06) 0%, transparent 70%)', pointerEvents: 'none' }} />
@@ -292,7 +356,7 @@ export default function MarketingHub() {
               <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.2rem', fontWeight: 900, color: '#5bc4f5' }}>$199</div>
               <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', marginTop: '0.25rem', marginBottom: '1.25rem' }}>AUD / month</div>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, textAlign: 'left' }}>
-                {['Built for physiotherapy', 'Native Cliniko integration', 'Flat fee — no per-seat costs', '6 automation flows included', 'Clinician performance portal included', 'Google Ads dashboard included', 'Full email analytics'].map(item => (
+                {['Built for physiotherapy', 'Native Cliniko integration', 'Flat fee — no per-seat costs', '6 email automation flows', 'Clinician performance portal', 'Facebook Ads stats dashboard', 'Post to Instagram, Facebook & GMB', 'Practice password file', 'Google Ads dashboard'].map(item => (
                   <li key={item} style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.8rem', lineHeight: '1.65', padding: '0.3rem 0', display: 'flex', gap: '0.5rem', fontWeight: 300 }}>
                     <span style={{ color: '#5bc4f5', flexShrink: 0 }}>✓</span>{item}
                   </li>

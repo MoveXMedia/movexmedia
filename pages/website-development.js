@@ -226,6 +226,56 @@ export default function WebsiteDevelopment() {
         </div>
       </section>
 
+      {/* OUR WORK */}
+      <section style={{ padding: '6rem 2rem', background: '#ffffff' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <div className="section-label" style={{ justifyContent: 'center', color: '#5bc4f5' }}>Our Work</div>
+            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', color: '#0d1f35', lineHeight: 1.2 }}>
+              Built for health practices,<br />designed to convert
+            </h2>
+            <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '540px', margin: '1rem auto 0' }}>
+              Every site we build is fast, mobile-first, and structured to rank on Google from day one.
+            </p>
+          </div>
+
+          {/* Move Physio — large feature */}
+          <div style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 20px 60px rgba(13,31,53,0.12)', border: '1px solid #e2eaf4', marginBottom: '1.5rem' }}>
+            <img src="/work-move-physio.png" alt="Move Physiotherapy & Fitness website" style={{ width: '100%', display: 'block' }} />
+            <div style={{ padding: '1.25rem 1.75rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
+              <div>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.95rem', color: '#0d1f35' }}>Move Physiotherapy & Fitness</div>
+                <div style={{ color: '#6b849a', fontSize: '0.8rem', fontWeight: 300, marginTop: '0.2rem' }}>Three-location physio practice · Perth, WA · Next.js + Cliniko integration</div>
+              </div>
+              <a href="https://movephysiotherapy.com.au" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.78rem', color: '#5bc4f5', textDecoration: 'none', letterSpacing: '0.03em' }}>
+                Visit site →
+              </a>
+            </div>
+          </div>
+
+          {/* Hexa — two-up */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }} className="portfolio-grid">
+            <div style={{ borderRadius: '14px', overflow: 'hidden', boxShadow: '0 12px 40px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
+              <img src="/work-hexa-1.png" alt="Hexa Health Hub homepage" style={{ width: '100%', display: 'block' }} />
+              <div style={{ padding: '1rem 1.25rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.88rem', color: '#0d1f35' }}>Hexa Health Hub</div>
+                <div style={{ color: '#6b849a', fontSize: '0.78rem', fontWeight: 300, marginTop: '0.15rem' }}>North Perth · Physiotherapy & Sport Performance</div>
+              </div>
+            </div>
+            <div style={{ borderRadius: '14px', overflow: 'hidden', boxShadow: '0 12px 40px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
+              <img src="/work-hexa-2.png" alt="Hexa Health Hub interior section" style={{ width: '100%', display: 'block' }} />
+              <div style={{ padding: '1rem 1.25rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.88rem', color: '#0d1f35' }}>Hexa Health Hub</div>
+                <div style={{ color: '#6b849a', fontSize: '0.78rem', fontWeight: 300, marginTop: '0.15rem' }}>Interior sections — conversion-focused layout</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <style>{`
+          @media (max-width: 768px) { .portfolio-grid { grid-template-columns: 1fr !important; } }
+        `}</style>
+      </section>
+
       {/* CTA */}
       <section style={{ padding: '6rem 2rem', background: '#f4f7fb', textAlign: 'center' }}>
         <div style={{ maxWidth: '600px', margin: '0 auto' }}>

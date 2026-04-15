@@ -389,34 +389,74 @@ export default function Home() {
         `}</style>
       </section>
 
-      {/* ── WHY US (white) ── */}
+      {/* ── WEBSITE DESIGN (white) ── */}
       <section style={{ padding: '6rem 2rem', background: '#ffffff' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start' }} className="why-grid">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }} className="why-grid">
+
+            {/* Copy */}
             <div>
-              <div className="section-label" style={{ color: '#5bc4f5' }}>Our Niche</div>
+              <div className="section-label" style={{ color: '#5bc4f5' }}>Website Design</div>
               <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', lineHeight: 1.2, color: '#0d1f35', marginBottom: '1rem' }}>
-                We speak <span style={{ color: '#5bc4f5' }}>health</span>
+                Your website comes<br />first. <span style={{ color: '#5bc4f5' }}>Everything else</span><br />builds on it.
               </h2>
               <div style={{ width: '50px', height: '3px', background: 'linear-gradient(90deg, #5bc4f5, transparent)', borderRadius: '2px', marginBottom: '1.5rem' }} />
               <p style={{ color: '#6b849a', lineHeight: '1.85', marginBottom: '1.25rem', fontWeight: 300, fontSize: '0.98rem' }}>
-                Most marketing agencies treat a physio clinic the same as any other small business. We don&apos;t. We understand patient journeys, referral networks, clinical credibility, and the compliance nuances that come with marketing health services.
+                Before you spend a dollar on Google Ads or Facebook, your website needs to be able to convert the traffic you send to it. A slow, generic, or poorly structured site will silently kill your ROI — no matter how good the campaign.
               </p>
               <p style={{ color: '#6b849a', lineHeight: '1.85', marginBottom: '2rem', fontWeight: 300, fontSize: '0.98rem' }}>
-                Our campaigns use the right language to attract the right patients — and we know which conditions, services, and trust signals actually convert browsers into booked appointments.
+                We build fast, conversion-focused websites built specifically for physiotherapy and allied health — with booking integration, local SEO structure, and copy that speaks to patients in pain. Built to rank, built to convert.
               </p>
-              <Link href="/about" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.85rem 1.8rem', border: '1.5px solid #1a3a5c', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.8rem', color: '#0d1f35', letterSpacing: '0.04em', textTransform: 'uppercase', transition: 'border-color 0.2s' }}>
-                About MoveX →
-              </Link>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              {whyItems.map(item => (
-                <div key={item.title} style={{ padding: '1.25rem 1.5rem', border: '1px solid #e2eaf4', borderLeft: '3px solid #5bc4f5', borderRadius: '0 10px 10px 0', background: '#f9fbff' }}>
-                  <h4 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.82rem', color: '#0d1f35', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>{item.title}</h4>
-                  <p style={{ color: '#6b849a', fontSize: '0.88rem', lineHeight: '1.65', fontWeight: 300 }}>{item.desc}</p>
+
+              {/* Feature bullets */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '2rem' }}>
+                {['Next.js — faster than WordPress, better Core Web Vitals', 'Cliniko / HotDoc booking integration built in', 'Local SEO structure from page one', 'AHPRA-compliant copy included', 'Mobile-first, conversion-optimised layouts'].map(item => (
+                  <div key={item} style={{ display: 'flex', gap: '0.6rem', alignItems: 'flex-start' }}>
+                    <span style={{ color: '#5bc4f5', fontWeight: 700, flexShrink: 0, marginTop: '0.1rem' }}>✓</span>
+                    <span style={{ color: '#6b849a', fontSize: '0.88rem', fontWeight: 300 }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Price + CTA */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+                <div>
+                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6b849a', marginBottom: '0.2rem' }}>Starting from</div>
+                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 900, color: '#0d1f35', lineHeight: 1 }}>$2,500</div>
                 </div>
-              ))}
+                <Link href="/website-development" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.85rem 1.8rem', background: '#5bc4f5', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.8rem', color: '#0d1f35', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none' }}>
+                  View Packages →
+                </Link>
+              </div>
             </div>
+
+            {/* Portfolio screenshots */}
+            <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+              {/* Main screenshot */}
+              <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 16px 48px rgba(13,31,53,0.12)', border: '1px solid #e2eaf4' }}>
+                <img src="/work-move-physio.png" alt="Move Physiotherapy website" style={{ width: '100%', display: 'block' }} />
+                <div style={{ padding: '0.75rem 1rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.78rem', color: '#0d1f35' }}>Move Physiotherapy & Fitness</span>
+                  <span style={{ fontSize: '0.72rem', color: '#6b849a', fontWeight: 300 }}>Perth, WA</span>
+                </div>
+              </div>
+              {/* Second screenshot — offset */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div style={{ borderRadius: '10px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
+                  <img src="/work-hexa-1.png" alt="Hexa Health Hub website" style={{ width: '100%', display: 'block' }} />
+                  <div style={{ padding: '0.5rem 0.75rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
+                    <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.72rem', color: '#0d1f35' }}>Hexa Health Hub</span>
+                  </div>
+                </div>
+                <div style={{ borderRadius: '10px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
+                  <img src="/work-hexa-2.png" alt="Hexa Health Hub interior" style={{ width: '100%', display: 'block' }} />
+                  <div style={{ padding: '0.5rem 0.75rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
+                    <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.72rem', color: '#0d1f35' }}>Hexa Health Hub</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
         <style>{`@media (max-width: 900px) { .why-grid { grid-template-columns: 1fr !important; gap: 3rem !important; } }`}</style>
