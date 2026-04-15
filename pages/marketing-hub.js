@@ -239,7 +239,7 @@ export default function MarketingHub() {
               Stop paying for tools<br />that weren't built for you
             </h2>
             <p style={{ color: '#6b849a', fontSize: '1rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '600px', margin: '0 auto' }}>
-              A typical 10-clinician clinic using separate tools is paying over $400/month for functionality that's split across platforms. The MoveX Marketing Hub replaces it all at a fraction of the cost.
+              A typical multi-clinician practice using separate tools is paying over $300/month for functionality that's split across platforms. The MoveX Marketing Hub replaces it all at a fraction of the cost.
             </p>
           </div>
 
@@ -265,8 +265,8 @@ export default function MarketingHub() {
             <div style={{ background: '#ffffff', border: '1px solid #e2eaf4', borderRadius: '14px', padding: '2rem', textAlign: 'center' }}>
               <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🏥</div>
               <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '1rem', color: '#0d1f35', marginBottom: '0.5rem' }}>CliniqApps</h3>
-              <p style={{ color: '#6b849a', fontSize: '0.82rem', marginBottom: '1.25rem', lineHeight: 1.5, fontWeight: 300 }}>$29/clinician × 10 clinicians</p>
-              <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.2rem', fontWeight: 900, color: '#e05555' }}>$290</div>
+              <p style={{ color: '#6b849a', fontSize: '0.82rem', marginBottom: '1.25rem', lineHeight: 1.5, fontWeight: 300 }}>Up to 12 practitioners</p>
+              <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.2rem', fontWeight: 900, color: '#e05555' }}>$195</div>
               <div style={{ color: '#6b849a', fontSize: '0.78rem', marginTop: '0.25rem', marginBottom: '1.25rem' }}>AUD / month</div>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, textAlign: 'left' }}>
                 {['Per-clinician pricing scales up', 'No Google Ads dashboard', 'No performance portal', 'Limited analytics'].map(item => (
@@ -300,7 +300,7 @@ export default function MarketingHub() {
             <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(91,196,245,0.6)', marginBottom: '0.75rem' }}>The numbers</p>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
               <div style={{ textAlign: 'center' }}>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#e05555' }}>$445</div>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#e05555' }}>$350</div>
                 <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', fontWeight: 300 }}>Mailchimp + CliniqApps / mo</div>
               </div>
               <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2rem', color: 'rgba(255,255,255,0.2)', fontWeight: 300 }}>vs</div>
@@ -309,7 +309,7 @@ export default function MarketingHub() {
                 <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', fontWeight: 300 }}>MoveX Marketing Hub / mo</div>
               </div>
               <div style={{ textAlign: 'center', background: 'rgba(91,196,245,0.08)', border: '1px solid rgba(91,196,245,0.2)', borderRadius: '10px', padding: '1rem 1.5rem' }}>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#5bc4f5' }}>$4,152</div>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#5bc4f5' }}>$3,012</div>
                 <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', fontWeight: 300 }}>saved per year</div>
               </div>
             </div>
@@ -333,7 +333,7 @@ export default function MarketingHub() {
             ))}
           </div>
           <p style={{ color: '#a0b3c6', fontSize: '0.75rem', textAlign: 'center', marginTop: '1rem', fontWeight: 300 }}>
-            Mailchimp Standard plan pricing ~$155 AUD/month at 5,000 contacts. CliniqApps at $29 AUD/clinician/month × 10 clinicians.
+            Mailchimp Standard plan pricing ~$155 AUD/month at 5,000 contacts. CliniqApps at $195 AUD/month for up to 12 practitioners.
           </p>
         </div>
         <style>{`
