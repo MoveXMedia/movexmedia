@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-
-const process = [
+import { useState } from 'react';
   { step: '01', title: 'Audit & Strategy', desc: 'We analyse your market, competitors, and current setup to build a campaign strategy around the services that will deliver the best return.' },
   { step: '02', title: 'Campaign Build', desc: 'We structure your campaigns by service line — physio, dry needling, sports rehab etc. — with dedicated ad groups and highly relevant keywords.' },
   { step: '03', title: 'Ad Creation', desc: 'We write responsive search ads with up to 15 headlines and 4 descriptions, optimised for click-through rate and patient intent.' },
@@ -34,6 +33,15 @@ const faqs = [
 ];
 
 export default function GoogleAds() {
+  const [adSpend, setAdSpend] = useState(2000);
+  const [cpc, setCpc] = useState(5);
+  const [convRate, setConvRate] = useState(6);
+  const [apptValue, setApptValue] = useState(95);
+
+  const clicks = Math.round(adSpend / cpc);
+  const bookings = Math.round(clicks * convRate / 100);
+  const revenue = bookings * apptValue;
+  const roi = adSpend > 0 ? Math.round((revenue - adSpend) / adSpend * 100) : 0;
   return (
     <>
       <Head>
@@ -210,6 +218,75 @@ export default function GoogleAds() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* BUDGET CALCULATOR */}
+      <section style={{ padding: '6rem 2rem', background: '#f4f7fb' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div className="section-label" style={{ justifyContent: 'center', color: '#5bc4f5' }}>Budget Calculator</div>
+            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', color: '#0d1f35', lineHeight: 1.2, marginBottom: '1rem' }}>
+              What could your Google Ads<br /><span style={{ color: '#5bc4f5' }}>budget return?</span>
+            </h2>
+            <p style={{ color: '#6b849a', fontSize: '0.95rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '520px', margin: '0 auto' }}>
+              Typical physiotherapy Google Ads campaigns run a $3–$8 cost-per-click with a 5–8% booking conversion rate. Adjust the numbers to match your market.
+            </p>
+          </div>
+
+          <div style={{ background: '#ffffff', border: '1px solid #e2eaf4', borderRadius: '20px', padding: '3rem', boxShadow: '0 8px 40px rgba(0,0,0,0.06)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1.5rem', marginBottom: '2.5rem' }}>
+              {[
+                { label: 'Monthly ad spend', value: adSpend, setter: setAdSpend, prefix: '$', suffix: '', min: 500, max: 20000, step: 250 },
+                { label: 'Avg. cost per click', value: cpc, setter: setCpc, prefix: '$', suffix: '', min: 1, max: 20, step: 0.5 },
+                { label: 'Booking conversion', value: convRate, setter: setConvRate, prefix: '', suffix: '%', min: 1, max: 20, step: 0.5 },
+                { label: 'Appointment value', value: apptValue, setter: setApptValue, prefix: '$', suffix: '', min: 50, max: 300, step: 5 },
+              ].map(({ label, value, setter, prefix, suffix, min, max, step }) => (
+                <div key={label}>
+                  <label style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#6b849a', display: 'block', marginBottom: '0.6rem' }}>{label}</label>
+                  <div style={{ position: 'relative' }}>
+                    {prefix && <span style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#0d1f35', fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '1rem', zIndex: 1 }}>{prefix}</span>}
+                    <input type="number" value={value} min={min} max={max} step={step}
+                      onChange={e => setter(parseFloat(e.target.value) || 0)}
+                      style={{ width: '100%', padding: `0.75rem ${suffix ? '2.5rem' : '0.75rem'} 0.75rem ${prefix ? '1.75rem' : '0.75rem'}`, border: '2px solid #e2eaf4', borderRadius: '10px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '1.1rem', color: '#0d1f35', background: '#f9fbff', outline: 'none', boxSizing: 'border-box', transition: 'border-color 0.2s' }}
+                      onFocus={e => e.target.style.borderColor = '#5bc4f5'}
+                      onBlur={e => e.target.style.borderColor = '#e2eaf4'}
+                    />
+                    {suffix && <span style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', color: '#6b849a', fontFamily: 'Poppins, sans-serif', fontSize: '0.82rem' }}>{suffix}</span>}
+                  </div>
+                  <input type="range" min={min} max={max} step={step} value={value}
+                    onChange={e => setter(parseFloat(e.target.value))}
+                    style={{ width: '100%', marginTop: '0.5rem', accentColor: '#5bc4f5', cursor: 'pointer' }}
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div style={{ background: 'linear-gradient(135deg, #0d1f35 0%, #1a3a5c 100%)', borderRadius: '16px', padding: '2.5rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '1.5rem', marginBottom: '1.5rem' }}>
+                {[
+                  { label: 'Clicks / month', value: clicks.toLocaleString(), highlight: false },
+                  { label: 'Bookings / month', value: bookings.toLocaleString(), highlight: false },
+                  { label: 'Est. monthly revenue', value: `$${revenue.toLocaleString()}`, highlight: true },
+                  { label: 'Est. ROI', value: `${roi}%`, highlight: true },
+                ].map(item => (
+                  <div key={item.label} style={{ textAlign: 'center', background: item.highlight ? 'rgba(91,196,245,0.1)' : 'rgba(255,255,255,0.04)', border: `1px solid ${item.highlight ? 'rgba(91,196,245,0.25)' : 'rgba(255,255,255,0.06)'}`, borderRadius: '12px', padding: '1.25rem 0.75rem' }}>
+                    <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: item.highlight ? '#5bc4f5' : 'rgba(255,255,255,0.4)', marginBottom: '0.5rem' }}>{item.label}</div>
+                    <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.8rem', fontWeight: 900, color: item.highlight ? '#5bc4f5' : 'white', lineHeight: 1 }}>{item.value}</div>
+                  </div>
+                ))}
+              </div>
+              <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.73rem', fontWeight: 300, textAlign: 'center', margin: '0 0 1.5rem' }}>
+                Estimates based on {clicks.toLocaleString()} clicks × {convRate}% conversion × ${apptValue} appointment value. Actual results vary by market and campaign quality.
+              </p>
+              <div style={{ textAlign: 'center' }}>
+                <Link href="/contact" className="btn-primary" style={{ fontSize: '0.82rem' }}>Book a Free Strategy Session →</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <style>{`
+          input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { opacity: 1; }
+        `}</style>
       </section>
 
       {/* What's included */}

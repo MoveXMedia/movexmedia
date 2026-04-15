@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-
-const adTypes = [
+import { useState } from 'react';
   {
     icon: '🎯',
     title: 'Local Awareness Ads',
@@ -35,6 +34,19 @@ const adTypes = [
 ];
 
 export default function FacebookMarketing() {
+  const [totalBudget, setTotalBudget] = useState(3000);
+  const [googleSplit, setGoogleSplit] = useState(60);
+  const [convRate, setConvRate] = useState(5);
+  const [apptValue, setApptValue] = useState(95);
+
+  const fbSplit = 100 - googleSplit;
+  const googleSpend = Math.round(totalBudget * googleSplit / 100);
+  const fbSpend = totalBudget - googleSpend;
+  const googleClicks = Math.round(googleSpend / 5);
+  const fbClicks = Math.round(fbSpend / 1.5);
+  const totalClicks = googleClicks + fbClicks;
+  const totalBookings = Math.round(totalClicks * convRate / 100);
+  const totalRevenue = totalBookings * apptValue;
   return (
     <>
       <Head>
@@ -255,8 +267,123 @@ export default function FacebookMarketing() {
         </div>
       </section>
 
+      {/* COMBINED BUDGET CALCULATOR */}
+      <section style={{ padding: '6rem 2rem', background: '#f4f7fb' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div className="section-label" style={{ justifyContent: 'center', color: '#5bc4f5' }}>Combined Budget Calculator</div>
+            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', color: '#0d1f35', lineHeight: 1.2, marginBottom: '1rem' }}>
+              Google + Facebook.<br /><span style={{ color: '#5bc4f5' }}>What does your combined budget return?</span>
+            </h2>
+            <p style={{ color: '#6b849a', fontSize: '0.95rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '560px', margin: '0 auto' }}>
+              The most effective approach combines Google Ads (capturing patients actively searching) with Facebook & Instagram (reaching patients before they start looking). Split your budget across both and see what each platform delivers.
+            </p>
+          </div>
+
+          <div style={{ background: '#ffffff', border: '1px solid #e2eaf4', borderRadius: '20px', padding: '3rem', boxShadow: '0 8px 40px rgba(0,0,0,0.06)' }}>
+
+            {/* Inputs */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1.5rem', marginBottom: '2rem' }}>
+              {[
+                { label: 'Total monthly budget', value: totalBudget, setter: setTotalBudget, prefix: '$', suffix: '', min: 500, max: 20000, step: 250 },
+                { label: 'Booking conversion rate', value: convRate, setter: setConvRate, prefix: '', suffix: '%', min: 1, max: 20, step: 0.5 },
+                { label: 'Appointment value', value: apptValue, setter: setApptValue, prefix: '$', suffix: '', min: 50, max: 300, step: 5 },
+              ].map(({ label, value, setter, prefix, suffix, min, max, step }) => (
+                <div key={label}>
+                  <label style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#6b849a', display: 'block', marginBottom: '0.6rem' }}>{label}</label>
+                  <div style={{ position: 'relative' }}>
+                    {prefix && <span style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#0d1f35', fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '1rem', zIndex: 1 }}>{prefix}</span>}
+                    <input type="number" value={value} min={min} max={max} step={step}
+                      onChange={e => setter(parseFloat(e.target.value) || 0)}
+                      style={{ width: '100%', padding: `0.75rem ${suffix ? '2.5rem' : '0.75rem'} 0.75rem ${prefix ? '1.75rem' : '0.75rem'}`, border: '2px solid #e2eaf4', borderRadius: '10px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '1.1rem', color: '#0d1f35', background: '#f9fbff', outline: 'none', boxSizing: 'border-box', transition: 'border-color 0.2s' }}
+                      onFocus={e => e.target.style.borderColor = '#5bc4f5'}
+                      onBlur={e => e.target.style.borderColor = '#e2eaf4'}
+                    />
+                    {suffix && <span style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', color: '#6b849a', fontFamily: 'Poppins, sans-serif', fontSize: '0.82rem' }}>{suffix}</span>}
+                  </div>
+                  <input type="range" min={min} max={max} step={step} value={value}
+                    onChange={e => setter(parseFloat(e.target.value))}
+                    style={{ width: '100%', marginTop: '0.5rem', accentColor: '#5bc4f5', cursor: 'pointer' }}
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Budget split slider */}
+            <div style={{ background: '#f9fbff', border: '1px solid #e2eaf4', borderRadius: '12px', padding: '1.5rem', marginBottom: '2rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
+                <label style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#6b849a' }}>Budget split</label>
+                <div style={{ display: 'flex', gap: '1.5rem' }}>
+                  <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.82rem', fontWeight: 700, color: '#1656A0' }}>📡 Google {googleSplit}% — ${googleSpend.toLocaleString()}</span>
+                  <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.82rem', fontWeight: 700, color: '#4267B2' }}>📘 Meta {fbSplit}% — ${fbSpend.toLocaleString()}</span>
+                </div>
+              </div>
+              {/* Visual split bar */}
+              <div style={{ height: '10px', borderRadius: '5px', overflow: 'hidden', display: 'flex', marginBottom: '0.75rem' }}>
+                <div style={{ width: `${googleSplit}%`, background: '#5bc4f5', transition: 'width 0.2s' }} />
+                <div style={{ flex: 1, background: '#4267B2' }} />
+              </div>
+              <input type="range" min={20} max={80} step={5} value={googleSplit}
+                onChange={e => setGoogleSplit(parseInt(e.target.value))}
+                style={{ width: '100%', accentColor: '#5bc4f5', cursor: 'pointer' }}
+              />
+              <p style={{ color: '#6b849a', fontSize: '0.75rem', fontWeight: 300, margin: '0.5rem 0 0', textAlign: 'center' }}>
+                Recommended: 60% Google / 40% Meta — Google captures active searchers, Meta builds awareness and retargets.
+              </p>
+            </div>
+
+            {/* Results */}
+            <div style={{ background: 'linear-gradient(135deg, #0d1f35 0%, #1a3a5c 100%)', borderRadius: '16px', padding: '2.5rem' }}>
+              {/* Per-platform breakdown */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }} className="calc-split-grid">
+                {[
+                  { platform: 'Google Ads', spend: googleSpend, clicks: googleClicks, icon: '📡', note: 'Avg. $5 CPC — active search intent' },
+                  { platform: 'Facebook & Instagram', spend: fbSpend, clicks: fbClicks, icon: '📘', note: 'Avg. $1.50 CPC — awareness & retargeting' },
+                ].map(p => (
+                  <div key={p.platform} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '1.25rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
+                      <span style={{ fontSize: '1.1rem' }}>{p.icon}</span>
+                      <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.78rem', color: 'white' }}>{p.platform}</span>
+                    </div>
+                    <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.6rem', fontWeight: 900, color: '#5bc4f5', lineHeight: 1 }}>${p.spend.toLocaleString()}</div>
+                    <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.72rem', marginTop: '0.2rem', marginBottom: '0.5rem', fontWeight: 300 }}>budget</div>
+                    <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 700, color: 'white' }}>{p.clicks.toLocaleString()} clicks</div>
+                    <div style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.7rem', marginTop: '0.15rem', fontWeight: 300 }}>{p.note}</div>
+                  </div>
+                ))}
+              </div>
+              {/* Combined totals */}
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '1.5rem' }} className="calc-totals-grid">
+                {[
+                  { label: 'Total clicks', value: totalClicks.toLocaleString() },
+                  { label: 'Est. bookings / mo', value: totalBookings.toLocaleString() },
+                  { label: 'Est. monthly revenue', value: `$${totalRevenue.toLocaleString()}` },
+                ].map(item => (
+                  <div key={item.label} style={{ textAlign: 'center', background: 'rgba(91,196,245,0.1)', border: '1px solid rgba(91,196,245,0.2)', borderRadius: '10px', padding: '1rem 0.5rem' }}>
+                    <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(91,196,245,0.7)', marginBottom: '0.4rem' }}>{item.label}</div>
+                    <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.6rem', fontWeight: 900, color: '#5bc4f5', lineHeight: 1 }}>{item.value}</div>
+                  </div>
+                ))}
+              </div>
+              <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.73rem', fontWeight: 300, textAlign: 'center', margin: '0 0 1.5rem' }}>
+                Google CPC ~$5, Meta CPC ~$1.50 (health sector averages). Estimates only — actual results vary by market and creative quality.
+              </p>
+              <div style={{ textAlign: 'center' }}>
+                <Link href="/contact" className="btn-primary" style={{ fontSize: '0.82rem' }}>Book a Free Strategy Session →</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <style>{`
+          @media (max-width: 600px) {
+            .calc-split-grid { grid-template-columns: 1fr !important; }
+            .calc-totals-grid { grid-template-columns: 1fr !important; }
+          }
+          input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { opacity: 1; }
+        `}</style>
+      </section>
+
       {/* CTA */}
-      <section style={{ padding: '6rem 2rem 8rem', textAlign: 'center', }}>
         <div style={{ maxWidth: '600px', margin: '0 auto' }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>
             Ready to Build Your<br /><span>Local Presence?</span>
