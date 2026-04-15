@@ -272,7 +272,6 @@ export default function GoogleAds() {
                   { label: 'New clients / month', value: newClients.toLocaleString(), highlight: false },
                   { label: 'LTV per client', value: `$${ltvPerClient.toLocaleString()}`, highlight: false },
                   { label: 'Total client LTV', value: `$${totalLtv.toLocaleString()}`, highlight: true },
-                  { label: 'Est. LTV ROI', value: `${roi}%`, highlight: true },
                 ].map(item => (
                   <div key={item.label} style={{ textAlign: 'center', background: item.highlight ? 'rgba(91,196,245,0.1)' : 'rgba(255,255,255,0.04)', border: `1px solid ${item.highlight ? 'rgba(91,196,245,0.25)' : 'rgba(255,255,255,0.06)'}`, borderRadius: '12px', padding: '1.25rem 0.75rem' }}>
                     <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: item.highlight ? '#5bc4f5' : 'rgba(255,255,255,0.4)', marginBottom: '0.5rem' }}>{item.label}</div>
