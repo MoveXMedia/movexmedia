@@ -6,6 +6,7 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -17,6 +18,7 @@ export default function Nav() {
   useEffect(() => {
     setMenuOpen(false);
     setServicesOpen(false);
+    setProductsOpen(false);
   }, [router.pathname]);
 
   const serviceLinks = [
@@ -28,15 +30,20 @@ export default function Nav() {
     { href: '/website-development', label: 'Website Development' },
   ];
 
+  const productLinks = [
+    { href: '/marketing-hub', label: 'Marketing Hub', desc: 'Email automation for physio clinics' },
+    { href: '/clinician-portal', label: 'Clinician Portal', desc: 'Performance & KPI tracking' },
+  ];
+
   const topLinks = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
-    { href: '/blog', label: 'Blog' },
     { href: '/marketing-budget', label: 'Budget Calculator' },
     { href: '/pricing', label: 'Packages' },
   ];
 
   const isServicesActive = ['/services', '/google-ads', '/facebook-marketing', '/social-media', '/email-marketing', '/website-development'].includes(router.pathname);
+  const isProductsActive = ['/marketing-hub', '/clinician-portal'].includes(router.pathname);
 
   const linkStyle = {
     fontFamily: 'Poppins, sans-serif',
@@ -70,7 +77,7 @@ export default function Nav() {
         {/* Desktop links */}
         <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }} className="desktop-nav">
 
-          {[topLinks[0], topLinks[1], topLinks[2]].map(link => (
+          {[topLinks[0], topLinks[1]].map(link => (
             <Link key={link.href} href={link.href} style={{
               ...linkStyle,
               color: router.pathname === link.href ? '#5bc4f5' : 'rgba(255,255,255,0.7)',
@@ -84,6 +91,75 @@ export default function Nav() {
               )}
             </Link>
           ))}
+
+          {/* Products dropdown */}
+          <div
+            style={{ position: 'relative' }}
+            onMouseEnter={() => setProductsOpen(true)}
+            onMouseLeave={() => setProductsOpen(false)}
+          >
+            <span style={{
+              ...linkStyle,
+              color: isProductsActive ? '#5bc4f5' : 'rgba(255,255,255,0.7)',
+              display: 'flex', alignItems: 'center', gap: '0.3rem',
+            }}>
+              Products
+              <span style={{
+                fontSize: '0.62rem', opacity: 0.6,
+                transform: productsOpen ? 'rotate(180deg)' : 'rotate(0)',
+                transition: 'transform 0.2s ease',
+                display: 'inline-block',
+              }}>▼</span>
+              {isProductsActive && (
+                <span style={{
+                  position: 'absolute', bottom: '-4px', left: 0, right: 0,
+                  height: '1px', background: '#5bc4f5', boxShadow: '0 0 8px #5bc4f5',
+                }} />
+              )}
+            </span>
+            {productsOpen && (
+              <div style={{ position: 'absolute', top: '100%', left: '-20px', right: '-20px', height: '16px' }} />
+            )}
+            {productsOpen && (
+              <div style={{
+                position: 'absolute',
+                top: 'calc(100% + 16px)',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                background: 'rgba(8,15,26,0.97)',
+                border: '1px solid rgba(91,196,245,0.2)',
+                borderRadius: '6px',
+                padding: '0.5rem 0',
+                minWidth: '230px',
+                boxShadow: '0 16px 40px rgba(0,0,0,0.5)',
+                backdropFilter: 'blur(20px)',
+              }}>
+                <div style={{
+                  position: 'absolute', top: '-5px', left: '50%', transform: 'translateX(-50%) rotate(45deg)',
+                  width: '8px', height: '8px',
+                  background: 'rgba(8,15,26,0.97)',
+                  border: '1px solid rgba(91,196,245,0.2)',
+                  borderRight: 'none', borderBottom: 'none',
+                }} />
+                {productLinks.map((link, i) => (
+                  <Link key={link.href} href={link.href} style={{
+                    display: 'block',
+                    padding: '0.75rem 1.25rem',
+                    borderBottom: i < productLinks.length - 1 ? '1px solid rgba(255,255,255,0.05)' : 'none',
+                    transition: 'color 0.15s',
+                  }}>
+                    <div style={{
+                      fontFamily: 'Poppins, sans-serif', fontSize: '0.85rem',
+                      letterSpacing: '0.02em',
+                      color: router.pathname === link.href ? '#5bc4f5' : 'rgba(255,255,255,0.85)',
+                      fontWeight: 600, marginBottom: '0.2rem',
+                    }}>{link.label}</div>
+                    <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)', fontFamily: 'Poppins, sans-serif' }}>{link.desc}</div>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
 
           {/* Services dropdown */}
           <div
@@ -161,7 +237,7 @@ export default function Nav() {
             )}
           </div>
 
-          {[topLinks[3], topLinks[4]].map(link => (
+          {[topLinks[2], topLinks[3]].map(link => (
             <Link key={link.href} href={link.href} style={{
               ...linkStyle,
               color: router.pathname === link.href ? '#5bc4f5' : 'rgba(255,255,255,0.7)',
@@ -199,13 +275,27 @@ export default function Nav() {
           justifyContent: 'center', gap: '1.75rem',
           backdropFilter: 'blur(20px)',
         }}>
-          {[topLinks[0], topLinks[1], topLinks[2]].map(link => (
+          {[topLinks[0], topLinks[1]].map(link => (
             <Link key={link.href} href={link.href} style={{
               fontFamily: 'Poppins, sans-serif', fontSize: '1rem',
               letterSpacing: '0.04em', textTransform: 'uppercase',
               color: router.pathname === link.href ? '#5bc4f5' : 'white',
             }}>{link.label}</Link>
           ))}
+          <div style={{ textAlign: 'center' }}>
+            <div style={{
+              fontFamily: 'Poppins, sans-serif', fontSize: '1rem',
+              letterSpacing: '0.04em', textTransform: 'uppercase',
+              color: isProductsActive ? '#5bc4f5' : 'white', marginBottom: '0.75rem',
+            }}>Products</div>
+            {productLinks.map(link => (
+              <Link key={link.href} href={link.href} style={{
+                display: 'block', fontFamily: 'Poppins, sans-serif', fontSize: '0.8rem',
+                color: router.pathname === link.href ? '#5bc4f5' : 'rgba(255,255,255,0.5)',
+                marginBottom: '0.5rem',
+              }}>{link.label}</Link>
+            ))}
+          </div>
           <div style={{ textAlign: 'center' }}>
             <div style={{
               fontFamily: 'Poppins, sans-serif', fontSize: '1rem',
@@ -220,7 +310,7 @@ export default function Nav() {
               }}>{link.label}</Link>
             ))}
           </div>
-          {[topLinks[3], topLinks[4]].map(link => (
+          {[topLinks[2], topLinks[3]].map(link => (
             <Link key={link.href} href={link.href} style={{
               fontFamily: 'Poppins, sans-serif', fontSize: '1rem',
               letterSpacing: '0.04em', textTransform: 'uppercase',

@@ -105,6 +105,127 @@ export default function Home() {
       </section>
 
 
+      {/* ── ABOUT US (light, friendly) ── */}
+      <section style={{ padding: '6rem 2rem', background: '#ffffff' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }} className="about-grid">
+            <div style={{ position: 'relative' }}>
+              <div style={{
+                position: 'absolute', top: '-20px', left: '-20px',
+                width: '100%', height: '100%',
+                border: '2px solid rgba(91,196,245,0.2)',
+                borderRadius: '16px',
+                zIndex: 0,
+              }} />
+              <img
+                src="/daniel-ryan.jpg"
+                alt="Daniel Ryan — Founder, MoveX Media"
+                style={{
+                  width: '100%',
+                  borderRadius: '12px',
+                  display: 'block',
+                  objectFit: 'cover',
+                  maxHeight: '480px',
+                  position: 'relative',
+                  zIndex: 1,
+                  boxShadow: '0 20px 60px rgba(0,0,0,0.12)',
+                }}
+              />
+              <div style={{
+                position: 'absolute', bottom: '24px', left: '24px', zIndex: 2,
+                background: 'rgba(8,15,26,0.85)',
+                backdropFilter: 'blur(12px)',
+                border: '1px solid rgba(91,196,245,0.2)',
+                borderRadius: '10px',
+                padding: '0.75rem 1.25rem',
+              }}>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.85rem', color: 'white' }}>Daniel Ryan</div>
+                <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)', marginTop: '0.15rem' }}>Principal Physiotherapist & Founder</div>
+              </div>
+            </div>
+
+            <div>
+              <div className="section-label" style={{ color: '#5bc4f5' }}>About Us</div>
+              <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', lineHeight: 1.2, color: '#0d1f35', marginBottom: '1rem' }}>
+                Built by a clinician.<br />Designed for <span style={{ color: '#5bc4f5' }}>yours</span>.
+              </h2>
+              <div style={{ width: '50px', height: '3px', background: 'linear-gradient(90deg, #5bc4f5, transparent)', borderRadius: '2px', marginBottom: '1.5rem' }} />
+              <p style={{ color: '#6b849a', lineHeight: '1.85', marginBottom: '1.25rem', fontWeight: 300, fontSize: '0.98rem' }}>
+                MoveX Media was founded by Daniel Ryan — Principal Physiotherapist and owner of Move Physiotherapy &amp; Fitness, a three-location practice in Perth. Having grown a clinic from the ground up, Daniel knows exactly what it takes to attract patients, retain them, and build a practice that lasts.
+              </p>
+              <p style={{ color: '#6b849a', lineHeight: '1.85', marginBottom: '2rem', fontWeight: 300, fontSize: '0.98rem' }}>
+                That clinical background shapes everything we do. From writing ads that speak to patients in pain, to building automation tools that integrate directly with your practice management software — we build what we wish had existed when we were growing.
+              </p>
+              <Link href="/about" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.85rem 1.8rem', background: '#5bc4f5', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.8rem', color: '#0d1f35', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none' }}>
+                Read More →
+              </Link>
+            </div>
+          </div>
+        </div>
+        <style>{`
+          @media (max-width: 900px) {
+            .about-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+          }
+        `}</style>
+      </section>
+
+      {/* ── MARKETING HUB PREVIEW (dark) ── */}
+      <section style={{ padding: '6rem 2rem', background: '#080f1a', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '800px', height: '400px', background: 'radial-gradient(ellipse, rgba(74,158,218,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }} className="hub-grid">
+            <div>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(91,196,245,0.1)', border: '1px solid rgba(91,196,245,0.25)', borderRadius: '20px', padding: '0.35rem 0.9rem', marginBottom: '1.25rem' }}>
+                <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#5bc4f5', display: 'inline-block' }} />
+                <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#5bc4f5' }}>New Product</span>
+              </div>
+              <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', lineHeight: 1.2, color: 'white', marginBottom: '1rem' }}>
+                The MoveX<br /><span style={{ color: '#5bc4f5' }}>Marketing Hub</span>
+              </h2>
+              <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.85', marginBottom: '1.25rem', fontWeight: 300, fontSize: '0.98rem' }}>
+                Purpose-built email automation for physiotherapy clinics. Welcome new patients, re-engage lapsed ones, send birthday vouchers, and request Google reviews — all running automatically in the background while you focus on clinic.
+              </p>
+              <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.85', marginBottom: '2rem', fontWeight: 300, fontSize: '0.98rem' }}>
+                Integrates directly with Cliniko. No generic email platforms. No per-clinician seat fees. One flat price.
+              </p>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
+                <Link href="/marketing-hub" className="btn-primary" style={{ fontSize: '0.82rem' }}>See the Hub →</Link>
+                <Link href="/contact" className="btn-outline" style={{ fontSize: '0.82rem' }}>Book a Demo</Link>
+              </div>
+              <div style={{ display: 'flex', gap: '2rem', paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.07)', flexWrap: 'wrap' }}>
+                {[['$99', '/month flat fee'], ['6,000+', 'Subscribers managed'], ['100%', 'Cliniko integrated']].map(([val, label]) => (
+                  <div key={label}>
+                    <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.6rem', fontWeight: 800, color: '#5bc4f5' }}>{val}</div>
+                    <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.35)', marginTop: '0.2rem', fontWeight: 300 }}>{label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div style={{ position: 'relative' }}>
+              <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 30px 80px rgba(0,0,0,0.5)', border: '1px solid rgba(91,196,245,0.15)' }}>
+                <img src="/hub-screenshot-1.png" alt="MoveX Marketing Hub Dashboard" style={{ width: '100%', display: 'block' }} />
+              </div>
+              <div style={{
+                position: 'absolute', bottom: '-30px', right: '-20px',
+                borderRadius: '10px', overflow: 'hidden',
+                boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
+                border: '1px solid rgba(91,196,245,0.2)',
+                width: '65%',
+              }}>
+                <img src="/hub-screenshot-2.png" alt="MoveX Marketing Hub Automations" style={{ width: '100%', display: 'block' }} />
+              </div>
+              <div style={{ height: '80px' }} />
+            </div>
+          </div>
+        </div>
+        <style>{`
+          @media (max-width: 900px) {
+            .hub-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+          }
+        `}</style>
+      </section>
+
       {/* ── SERVICES (light) ── */}
       <section style={{ padding: '6rem 2rem', background: '#f4f7fb' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
