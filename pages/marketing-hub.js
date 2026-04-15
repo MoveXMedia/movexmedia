@@ -66,11 +66,11 @@ export default function MarketingHub() {
     <>
       <Head>
         <title>MoveX Marketing Hub — Email Automation for Physiotherapy Clinics</title>
-        <meta name="description" content="Purpose-built email automation for physiotherapy clinics. Integrates with Cliniko. Welcome emails, reactivation, birthday vouchers, review requests — all automated. $99/month flat." />
+        <meta name="description" content="Purpose-built email automation for physiotherapy clinics. Integrates with Cliniko. Welcome emails, reactivation, birthday vouchers, review requests — all automated. $199/month flat." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://movex.media/marketing-hub" />
         <meta property="og:title" content="MoveX Marketing Hub — Email Automation for Physiotherapy Clinics" />
-        <meta property="og:description" content="Purpose-built email automation for physiotherapy clinics. Integrates with Cliniko. $99/month flat fee." />
+        <meta property="og:description" content="Purpose-built email automation for physiotherapy clinics. Integrates with Cliniko. $199/month flat fee." />
         <meta property="og:url" content="https://movex.media/marketing-hub" />
         <meta property="og:image" content="https://movex.media/og-image.png" />
       </Head>
@@ -111,7 +111,7 @@ export default function MarketingHub() {
                 <Link href="#pricing" className="btn-outline">See Pricing</Link>
               </div>
               <div style={{ display: 'flex', gap: '2rem', marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid rgba(26,58,92,0.5)', flexWrap: 'wrap' }}>
-                {[['$99', '/month flat'], ['6,400+', 'Subscribers managed'], ['6', 'Automation flows']].map(([val, label]) => (
+                {[['$199', '/month flat'], ['6,400+', 'Subscribers managed'], ['6', 'Automation flows']].map(([val, label]) => (
                   <div key={label}>
                     <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.6rem', fontWeight: 800, color: '#5bc4f5' }}>{val}</div>
                     <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.35)', marginTop: '0.2rem', fontWeight: 300 }}>{label}</div>
@@ -283,10 +283,10 @@ export default function MarketingHub() {
               <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🚀</div>
               <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '1rem', color: 'white', marginBottom: '0.5rem' }}>MoveX Marketing Hub</h3>
               <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.82rem', marginBottom: '1.25rem', lineHeight: 1.5, fontWeight: 300 }}>Unlimited clinicians, unlimited contacts</p>
-              <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.2rem', fontWeight: 900, color: '#5bc4f5' }}>$99</div>
+              <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.2rem', fontWeight: 900, color: '#5bc4f5' }}>$199</div>
               <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', marginTop: '0.25rem', marginBottom: '1.25rem' }}>AUD / month</div>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, textAlign: 'left' }}>
-                {['Built for physiotherapy', 'Native Cliniko integration', 'Flat fee — no per-seat costs', '6 automation flows included', 'Google Ads dashboard included', 'Full email analytics'].map(item => (
+                {['Built for physiotherapy', 'Native Cliniko integration', 'Flat fee — no per-seat costs', '6 automation flows included', 'Clinician performance portal included', 'Google Ads dashboard included', 'Full email analytics'].map(item => (
                   <li key={item} style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.8rem', lineHeight: '1.65', padding: '0.3rem 0', display: 'flex', gap: '0.5rem', fontWeight: 300 }}>
                     <span style={{ color: '#5bc4f5', flexShrink: 0 }}>✓</span>{item}
                   </li>
@@ -305,11 +305,11 @@ export default function MarketingHub() {
               </div>
               <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2rem', color: 'rgba(255,255,255,0.2)', fontWeight: 300 }}>vs</div>
               <div style={{ textAlign: 'center' }}>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#5bc4f5' }}>$99</div>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#5bc4f5' }}>$199</div>
                 <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', fontWeight: 300 }}>MoveX Marketing Hub / mo</div>
               </div>
               <div style={{ textAlign: 'center', background: 'rgba(91,196,245,0.08)', border: '1px solid rgba(91,196,245,0.2)', borderRadius: '10px', padding: '1rem 1.5rem' }}>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#5bc4f5' }}>$3,012</div>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#5bc4f5' }}>$1,812</div>
                 <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', fontWeight: 300 }}>saved per year</div>
               </div>
             </div>

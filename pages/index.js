@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const services = [
   { icon: '📡', title: 'Google Ads', desc: 'Precision-targeted campaigns that put your practice at the top of search results when patients are actively looking.', href: '/google-ads' },
@@ -24,6 +25,14 @@ const steps = [
 ];
 
 export default function Home() {
+  const [dbSize, setDbSize] = useState(5000);
+  const [openRate, setOpenRate] = useState(38);
+  const [convRate, setConvRate] = useState(6);
+  const [apptPrice, setApptPrice] = useState(95);
+
+  const bookingsPerMonth = Math.round(dbSize * (openRate / 100) * (convRate / 100));
+  const yearlyRevenue = bookingsPerMonth * apptPrice * 12;
+
   return (
     <>
       <Head>
@@ -78,7 +87,7 @@ export default function Home() {
                 <Link href="/services" className="btn-outline">View Services</Link>
               </div>
               <div style={{ display: 'flex', gap: '2.5rem', marginTop: '3.5rem', paddingTop: '2.5rem', borderTop: '1px solid rgba(26,58,92,0.5)', flexWrap: 'wrap' }}>
-                {[['5×', 'Average ROI for clients'], ['100%', 'Health industry focused'], ['48hr', 'Campaign launch time']].map(([val, label]) => (
+                {[['$10k → $M+', 'Founder-proven clinic growth'], ['100%', 'Health industry focused'], ['48hr', 'Campaign launch time']].map(([val, label]) => (
                   <div key={label}>
                     <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.8rem', fontWeight: 800, color: '#5bc4f5' }}>{val}</div>
                     <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)', marginTop: '0.25rem', fontWeight: 300 }}>{label}</div>
@@ -108,13 +117,13 @@ export default function Home() {
       {/* ── ABOUT US (light, friendly) ── */}
       <section style={{ padding: '6rem 2rem', background: '#ffffff' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }} className="about-grid">
-            <div style={{ position: 'relative' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '300px 1fr', gap: '5rem', alignItems: 'center' }} className="about-grid">
+            <div style={{ position: 'relative', flexShrink: 0 }}>
               <div style={{
-                position: 'absolute', top: '-20px', left: '-20px',
+                position: 'absolute', top: '-12px', left: '-12px',
                 width: '100%', height: '100%',
                 border: '2px solid rgba(91,196,245,0.2)',
-                borderRadius: '16px',
+                borderRadius: '14px',
                 zIndex: 0,
               }} />
               <img
@@ -122,25 +131,25 @@ export default function Home() {
                 alt="Daniel Ryan — Founder, MoveX Media"
                 style={{
                   width: '100%',
-                  borderRadius: '12px',
+                  borderRadius: '10px',
                   display: 'block',
                   objectFit: 'cover',
-                  maxHeight: '480px',
+                  aspectRatio: '3/4',
                   position: 'relative',
                   zIndex: 1,
-                  boxShadow: '0 20px 60px rgba(0,0,0,0.12)',
+                  boxShadow: '0 12px 40px rgba(0,0,0,0.12)',
                 }}
               />
               <div style={{
-                position: 'absolute', bottom: '24px', left: '24px', zIndex: 2,
+                position: 'absolute', bottom: '16px', left: '16px', zIndex: 2,
                 background: 'rgba(8,15,26,0.85)',
                 backdropFilter: 'blur(12px)',
                 border: '1px solid rgba(91,196,245,0.2)',
-                borderRadius: '10px',
-                padding: '0.75rem 1.25rem',
+                borderRadius: '8px',
+                padding: '0.6rem 1rem',
               }}>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.85rem', color: 'white' }}>Daniel Ryan</div>
-                <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)', marginTop: '0.15rem' }}>Principal Physiotherapist & Founder</div>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.78rem', color: 'white' }}>Daniel Ryan</div>
+                <div style={{ fontSize: '0.68rem', color: 'rgba(255,255,255,0.5)', marginTop: '0.1rem' }}>Physiotherapist & Founder</div>
               </div>
             </div>
 
@@ -169,60 +178,174 @@ export default function Home() {
         `}</style>
       </section>
 
-      {/* ── MARKETING HUB PREVIEW (dark) ── */}
+      {/* ── MOVEX PLATFORM (combined product, dark) ── */}
       <section style={{ padding: '6rem 2rem', background: '#080f1a', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '800px', height: '400px', background: 'radial-gradient(ellipse, rgba(74,158,218,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '900px', height: '400px', background: 'radial-gradient(ellipse, rgba(74,158,218,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }} className="hub-grid">
-            <div>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(91,196,245,0.1)', border: '1px solid rgba(91,196,245,0.25)', borderRadius: '20px', padding: '0.35rem 0.9rem', marginBottom: '1.25rem' }}>
-                <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#5bc4f5', display: 'inline-block' }} />
-                <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#5bc4f5' }}>New Product</span>
-              </div>
-              <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', lineHeight: 1.2, color: 'white', marginBottom: '1rem' }}>
-                The MoveX<br /><span style={{ color: '#5bc4f5' }}>Marketing Hub</span>
-              </h2>
-              <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.85', marginBottom: '1.25rem', fontWeight: 300, fontSize: '0.98rem' }}>
-                Purpose-built email automation for physiotherapy clinics. Welcome new patients, re-engage lapsed ones, send birthday vouchers, and request Google reviews — all running automatically in the background while you focus on clinic.
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(91,196,245,0.1)', border: '1px solid rgba(91,196,245,0.25)', borderRadius: '20px', padding: '0.35rem 0.9rem', marginBottom: '1.25rem' }}>
+              <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#5bc4f5', display: 'inline-block', animation: 'pulse-glow 2s ease-in-out infinite' }} />
+              <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#5bc4f5' }}>MoveX Products</span>
+            </div>
+            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', color: 'white', lineHeight: 1.2, marginBottom: '1rem' }}>
+              Two tools. One platform.<br /><span style={{ color: '#5bc4f5' }}>Built for physiotherapy.</span>
+            </h2>
+            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '1rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '580px', margin: '0 auto' }}>
+              The MoveX Marketing Hub bundles email automation and the clinician performance portal — everything your clinic needs to grow revenue and track results, in one flat monthly fee.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }} className="product-cards-grid">
+            <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(91,196,245,0.15)', borderRadius: '16px', padding: '2.5rem', overflow: 'hidden' }}>
+              <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>✉️</div>
+              <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.15rem', color: 'white', marginBottom: '0.5rem' }}>Email Automation</h3>
+              <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.88rem', lineHeight: '1.7', fontWeight: 300, marginBottom: '1.5rem' }}>
+                Six automated flows running continuously — welcome emails, opt-in sequences, birthday vouchers, review requests, and reactivation campaigns. Triggered by Cliniko data, zero manual work required.
               </p>
-              <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.85', marginBottom: '2rem', fontWeight: 300, fontSize: '0.98rem' }}>
-                Integrates directly with Cliniko. No generic email platforms. No per-clinician seat fees. One flat price.
-              </p>
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
-                <Link href="/marketing-hub" className="btn-primary" style={{ fontSize: '0.82rem' }}>See the Hub →</Link>
-                <Link href="/contact" className="btn-outline" style={{ fontSize: '0.82rem' }}>Book a Demo</Link>
-              </div>
-              <div style={{ display: 'flex', gap: '2rem', paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.07)', flexWrap: 'wrap' }}>
-                {[['$99', '/month flat fee'], ['6,000+', 'Subscribers managed'], ['100%', 'Cliniko integrated']].map(([val, label]) => (
-                  <div key={label}>
-                    <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.6rem', fontWeight: 800, color: '#5bc4f5' }}>{val}</div>
-                    <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.35)', marginTop: '0.2rem', fontWeight: 300 }}>{label}</div>
-                  </div>
-                ))}
+              {['Welcome & opt-in sequences', 'Birthday voucher automation', 'Reactivation after 90 days inactive', 'Review request at appointment milestone', 'Broadcast campaigns to segments', 'Live delivery & open rate dashboard'].map(item => (
+                <div key={item} style={{ display: 'flex', gap: '0.6rem', color: 'rgba(255,255,255,0.55)', fontSize: '0.83rem', lineHeight: '1.65', padding: '0.2rem 0', fontWeight: 300 }}>
+                  <span style={{ color: '#5bc4f5', flexShrink: 0 }}>✓</span>{item}
+                </div>
+              ))}
+              <div style={{ marginTop: '1.5rem', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(91,196,245,0.1)' }}>
+                <img src="/hub-screenshot-1.png" alt="Email automation dashboard" style={{ width: '100%', display: 'block' }} />
               </div>
             </div>
 
-            <div style={{ position: 'relative' }}>
-              <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 30px 80px rgba(0,0,0,0.5)', border: '1px solid rgba(91,196,245,0.15)' }}>
-                <img src="/hub-screenshot-1.png" alt="MoveX Marketing Hub Dashboard" style={{ width: '100%', display: 'block' }} />
+            <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(91,196,245,0.15)', borderRadius: '16px', padding: '2.5rem', overflow: 'hidden' }}>
+              <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>📊</div>
+              <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.15rem', color: 'white', marginBottom: '0.5rem' }}>Clinician Performance Portal</h3>
+              <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.88rem', lineHeight: '1.7', fontWeight: 300, marginBottom: '1.5rem' }}>
+                Live KPI dashboard for every clinician — benchmarked against the clinic average. Track unbilled insurance and EPC appointments, client visit averages, and new patient numbers. Updated daily from Cliniko.
+              </p>
+              {['KPI benchmarking vs clinic average', 'Unbilled insurance (MVA/WorkCover) alerts', 'EPC session & correspondence tracking', 'Client Visit Average monitoring', 'New patient & reactivation counts', 'Cancellation & DNA rate tracking'].map(item => (
+                <div key={item} style={{ display: 'flex', gap: '0.6rem', color: 'rgba(255,255,255,0.55)', fontSize: '0.83rem', lineHeight: '1.65', padding: '0.2rem 0', fontWeight: 300 }}>
+                  <span style={{ color: '#5bc4f5', flexShrink: 0 }}>✓</span>{item}
+                </div>
+              ))}
+              <div style={{ marginTop: '1.5rem', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(91,196,245,0.1)' }}>
+                <img src="/portal-screenshot-1.png" alt="Clinician performance portal" style={{ width: '100%', display: 'block' }} />
               </div>
-              <div style={{
-                position: 'absolute', bottom: '-30px', right: '-20px',
-                borderRadius: '10px', overflow: 'hidden',
-                boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
-                border: '1px solid rgba(91,196,245,0.2)',
-                width: '65%',
-              }}>
-                <img src="/hub-screenshot-2.png" alt="MoveX Marketing Hub Automations" style={{ width: '100%', display: 'block' }} />
+            </div>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }} className="product-pricing-grid">
+            <div style={{ background: 'linear-gradient(135deg, rgba(91,196,245,0.12) 0%, rgba(91,196,245,0.04) 100%)', border: '2px solid rgba(91,196,245,0.35)', borderRadius: '14px', padding: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem' }}>
+              <div>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.4rem' }}>MoveX Marketing Hub — Full Bundle</div>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: 'white', lineHeight: 1 }}>$199<span style={{ fontSize: '0.95rem', fontWeight: 400, color: 'rgba(255,255,255,0.4)' }}>/mo</span></div>
+                <div style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.78rem', marginTop: '0.3rem', fontWeight: 300 }}>Email automation + Performance Portal, unlimited clinicians</div>
               </div>
-              <div style={{ height: '80px' }} />
+              <Link href="/marketing-hub" className="btn-primary" style={{ fontSize: '0.82rem', whiteSpace: 'nowrap' }}>Learn More →</Link>
+            </div>
+            <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px', padding: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem' }}>
+              <div>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '0.4rem' }}>Performance Portal — Standalone</div>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: 'white', lineHeight: 1 }}>$20<span style={{ fontSize: '0.95rem', fontWeight: 400, color: 'rgba(255,255,255,0.4)' }}>/clinician</span></div>
+                <div style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.78rem', marginTop: '0.3rem', fontWeight: 300 }}>KPI portal without the email suite</div>
+              </div>
+              <Link href="/clinician-portal" className="btn-outline" style={{ fontSize: '0.82rem', whiteSpace: 'nowrap' }}>Learn More →</Link>
+            </div>
+          </div>
+        </div>
+        <style>{\`
+          @media (max-width: 900px) {
+            .product-cards-grid { grid-template-columns: 1fr !important; }
+            .product-pricing-grid { grid-template-columns: 1fr !important; }
+          }
+        \`}</style>
+      </section>
+
+      {/* ── REACTIVATION CALCULATOR (light) ── */}
+      <section style={{ padding: '6rem 2rem', background: '#f4f7fb' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div className="section-label" style={{ justifyContent: 'center', color: '#5bc4f5' }}>Revenue Calculator</div>
+            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', color: '#0d1f35', lineHeight: 1.2, marginBottom: '1rem' }}>
+              What is your patient database<br /><span style={{ color: '#5bc4f5' }}>worth in reactivations?</span>
+            </h2>
+            <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '560px', margin: '0 auto' }}>
+              Allied health reactivation emails average a 38% open rate and 6% booking conversion. Enter your numbers to see your estimated annual return.
+            </p>
+          </div>
+
+          <div style={{ background: '#ffffff', border: '1px solid #e2eaf4', borderRadius: '20px', padding: '3rem', boxShadow: '0 8px 40px rgba(0,0,0,0.06)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1.5rem', marginBottom: '2.5rem' }}>
+              {[
+                { label: 'Patient database size', value: dbSize, setter: setDbSize, prefix: '', suffix: ' patients', min: 100, max: 50000, step: 100 },
+                { label: 'Email open rate', value: openRate, setter: setOpenRate, prefix: '', suffix: '%', min: 5, max: 80, step: 1 },
+                { label: 'Booking conversion', value: convRate, setter: setConvRate, prefix: '', suffix: '%', min: 1, max: 30, step: 0.5 },
+                { label: 'Appointment price', value: apptPrice, setter: setApptPrice, prefix: '$', suffix: '', min: 30, max: 500, step: 5 },
+              ].map(({ label, value, setter, prefix, suffix, min, max, step }) => (
+                <div key={label}>
+                  <label style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#6b849a', display: 'block', marginBottom: '0.6rem' }}>{label}</label>
+                  <div style={{ position: 'relative' }}>
+                    {prefix && <span style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#0d1f35', fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '1rem', zIndex: 1 }}>{prefix}</span>}
+                    <input
+                      type="number"
+                      value={value}
+                      min={min}
+                      max={max}
+                      step={step}
+                      onChange={e => setter(parseFloat(e.target.value) || 0)}
+                      style={{
+                        width: '100%',
+                        padding: `0.75rem ${suffix ? '2.8rem' : '0.75rem'} 0.75rem ${prefix ? '1.75rem' : '0.75rem'}`,
+                        border: '2px solid #e2eaf4',
+                        borderRadius: '10px',
+                        fontFamily: 'Poppins, sans-serif',
+                        fontWeight: 700,
+                        fontSize: '1.1rem',
+                        color: '#0d1f35',
+                        background: '#f9fbff',
+                        outline: 'none',
+                        boxSizing: 'border-box',
+                        transition: 'border-color 0.2s',
+                      }}
+                      onFocus={e => e.target.style.borderColor = '#5bc4f5'}
+                      onBlur={e => e.target.style.borderColor = '#e2eaf4'}
+                    />
+                    {suffix && <span style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', color: '#6b849a', fontFamily: 'Poppins, sans-serif', fontSize: '0.82rem' }}>{suffix}</span>}
+                  </div>
+                  <input type="range" min={min} max={max} step={step} value={value}
+                    onChange={e => setter(parseFloat(e.target.value))}
+                    style={{ width: '100%', marginTop: '0.5rem', accentColor: '#5bc4f5', cursor: 'pointer' }}
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div style={{ background: 'linear-gradient(135deg, #0d1f35 0%, #1a3a5c 100%)', borderRadius: '16px', padding: '2.5rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1.5rem', marginBottom: '1.75rem' }} className="calc-results">
+                <div style={{ textAlign: 'center' }}>
+                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(91,196,245,0.6)', marginBottom: '0.5rem' }}>Emails opened / mo</div>
+                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 900, color: 'white' }}>{Math.round(dbSize * openRate / 100).toLocaleString()}</div>
+                </div>
+                <div style={{ textAlign: 'center' }}>
+                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(91,196,245,0.6)', marginBottom: '0.5rem' }}>Bookings / month</div>
+                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 900, color: 'white' }}>{bookingsPerMonth.toLocaleString()}</div>
+                </div>
+                <div style={{ textAlign: 'center', background: 'rgba(91,196,245,0.1)', border: '1px solid rgba(91,196,245,0.25)', borderRadius: '12px', padding: '0.75rem 0.5rem' }}>
+                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.5rem' }}>Est. annual return</div>
+                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.2rem', fontWeight: 900, color: '#5bc4f5', lineHeight: 1 }}>
+                    ${yearlyRevenue.toLocaleString()}
+                  </div>
+                </div>
+              </div>
+              <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.73rem', fontWeight: 300, textAlign: 'center', margin: '0 0 1.5rem' }}>
+                {bookingsPerMonth} bookings/month × ${apptPrice} × 12 months. Benchmarks from Australian allied health email data.
+              </p>
+              <div style={{ textAlign: 'center' }}>
+                <Link href="/marketing-hub" className="btn-primary" style={{ fontSize: '0.82rem' }}>
+                  Start Automating →
+                </Link>
+              </div>
             </div>
           </div>
         </div>
         <style>{`
-          @media (max-width: 900px) {
-            .hub-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
-          }
+          @media (max-width: 600px) { .calc-results { grid-template-columns: 1fr !important; } }
+          input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { opacity: 1; }
         `}</style>
       </section>
 
