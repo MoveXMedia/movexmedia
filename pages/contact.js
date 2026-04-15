@@ -87,7 +87,7 @@ export default function Contact() {
         <meta name="twitter:image" content="https://movex.media/og-image.png" />
       </Head>
 
-      <section className="page-hero" style={{ paddingBottom: '2rem' }}>
+      <section className="page-hero" style={{ paddingTop: '8rem', paddingBottom: '2rem' }}>
         <div className="container">
           <div className="section-label" style={{ justifyContent: 'center' }}>Mission Control</div>
           <h1 style={{ fontFamily: 'Poppins, sans-serif', marginBottom: '1.5rem' }}>

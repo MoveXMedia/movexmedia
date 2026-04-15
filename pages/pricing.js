@@ -212,7 +212,7 @@ export default function Pricing() {
 
 
       {/* Ads Management Label */}
-      <div style={{ background: 'rgba(15,37,64,0.3)', borderBottom: '1px solid rgba(26,58,92,0.4)', padding: '2.5rem 2rem 1.5rem' }}>
+      <div style={{ background: 'rgba(15,37,64,0.3)', borderBottom: '1px solid rgba(26,58,92,0.4)', padding: '6rem 2rem 2.5rem' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
           <div className="section-label" style={{ color: '#5bc4f5', marginBottom: '0.5rem', justifyContent: 'center' }}>Google &amp; Facebook Ads Management</div>
           <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', color: 'white', lineHeight: 1.2, marginBottom: '0.5rem' }}>
