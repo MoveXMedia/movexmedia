@@ -406,7 +406,199 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* MoveX Platform Pricing */}
+      <section style={{ padding: '6rem 2rem', background: '#ffffff' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <div className="section-label" style={{ justifyContent: 'center', color: '#5bc4f5' }}>MoveX Platform</div>
+            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', color: '#0d1f35', lineHeight: 1.2, marginBottom: '1rem' }}>
+              Marketing Hub &amp; Clinician Portal
+            </h2>
+            <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '600px', margin: '0 auto' }}>
+              Our software platform is available standalone or bundled with advertising management. Intermediate and Expert ad packages include the full Hub at no added cost.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '2.5rem' }}>
+
+            {/* Marketing Hub */}
+            <div style={{ background: '#f9fbff', border: '1px solid #e2eaf4', borderTop: '3px solid #5bc4f5', borderRadius: '0 0 16px 16px', padding: '2.5rem' }}>
+              <div style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>🚀</div>
+              <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.2rem', color: '#0d1f35', marginBottom: '0.4rem' }}>MoveX Marketing Hub</h3>
+              <p style={{ color: '#6b849a', fontSize: '0.88rem', lineHeight: '1.7', fontWeight: 300, marginBottom: '1.5rem' }}>
+                Automated email marketing, social posting, Facebook Ads stats, and a practice password file — purpose-built for physio clinics.
+              </p>
+              <div style={{ marginBottom: '1.5rem' }}>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#0d1f35', lineHeight: 1 }}>$199</div>
+                <div style={{ color: '#6b849a', fontSize: '0.82rem', fontWeight: 300, marginTop: '0.25rem' }}>per month, all locations included</div>
+              </div>
+              {[
+                'Welcome email sequence',
+                'Patient reactivation automation',
+                'Birthday voucher emails',
+                'Review request automation',
+                'Instagram, Facebook & GMB posting',
+                'Facebook Ads stats dashboard',
+                'Practice password file',
+              ].map(f => (
+                <div key={f} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start', marginBottom: '0.55rem' }}>
+                  <span style={{ color: '#5bc4f5', fontSize: '0.7rem', marginTop: '3px', flexShrink: 0 }}>◆</span>
+                  <span style={{ color: '#6b849a', fontSize: '0.85rem', fontWeight: 300, lineHeight: '1.5' }}>{f}</span>
+                </div>
+              ))}
+              <div style={{ marginTop: '1.5rem', padding: '0.85rem 1rem', background: 'rgba(91,196,245,0.07)', border: '1px solid rgba(91,196,245,0.2)', borderRadius: '8px' }}>
+                <p style={{ color: '#5bc4f5', fontSize: '0.78rem', fontWeight: 600, margin: 0, fontFamily: 'Poppins, sans-serif' }}>
+                  ✓ Included free with Intermediate &amp; Expert ad packages
+                </p>
+              </div>
+              <Link href="/contact" className="btn-primary" style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem', fontSize: '0.78rem' }}>
+                Get Started →
+              </Link>
+            </div>
+
+            {/* Clinician Portal */}
+            <div style={{ background: '#f9fbff', border: '1px solid #e2eaf4', borderTop: '3px solid #1656A0', borderRadius: '0 0 16px 16px', padding: '2.5rem' }}>
+              <div style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>📊</div>
+              <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.2rem', color: '#0d1f35', marginBottom: '0.4rem' }}>Clinician Portal</h3>
+              <p style={{ color: '#6b849a', fontSize: '0.88rem', lineHeight: '1.7', fontWeight: 300, marginBottom: '1.5rem' }}>
+                Real-time KPI tracking for every clinician. Monitor rebook rates, EPC clients, insurance patients, block booking, and any Cliniko metric that matters.
+              </p>
+              <div style={{ marginBottom: '1.5rem' }}>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#0d1f35', lineHeight: 1 }}>$20</div>
+                <div style={{ color: '#6b849a', fontSize: '0.82rem', fontWeight: 300, marginTop: '0.25rem' }}>per clinician / month</div>
+              </div>
+              {[
+                'Live Cliniko data dashboard',
+                'Rebook rate & retention tracking',
+                'EPC client monitoring',
+                'Insurance patient panel',
+                'Block booking percentage',
+                'VALD & AxIT utilisation rates',
+                'Custom KPI configuration',
+                'Practitioner-level reporting',
+              ].map(f => (
+                <div key={f} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start', marginBottom: '0.55rem' }}>
+                  <span style={{ color: '#1656A0', fontSize: '0.7rem', marginTop: '3px', flexShrink: 0 }}>◆</span>
+                  <span style={{ color: '#6b849a', fontSize: '0.85rem', fontWeight: 300, lineHeight: '1.5' }}>{f}</span>
+                </div>
+              ))}
+              <div style={{ marginTop: '1.5rem', padding: '0.85rem 1rem', background: 'rgba(22,86,160,0.06)', border: '1px solid rgba(22,86,160,0.2)', borderRadius: '8px' }}>
+                <p style={{ color: '#1656A0', fontSize: '0.78rem', fontWeight: 600, margin: 0, fontFamily: 'Poppins, sans-serif' }}>
+                  ✓ Also available standalone — no ads required
+                </p>
+              </div>
+              <Link href="/contact" className="btn-primary" style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem', fontSize: '0.78rem' }}>
+                Get Started →
+              </Link>
+            </div>
+
+            {/* Bundle */}
+            <div style={{ background: 'linear-gradient(135deg, #0d1f35 0%, #1a3a5c 100%)', border: '1px solid rgba(91,196,245,0.25)', borderTop: '3px solid #5bc4f5', borderRadius: '0 0 16px 16px', padding: '2.5rem' }}>
+              <div style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>⚡</div>
+              <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.2rem', color: 'white', marginBottom: '0.4rem' }}>Full Platform Bundle</h3>
+              <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.88rem', lineHeight: '1.7', fontWeight: 300, marginBottom: '1.5rem' }}>
+                Marketing Hub + Clinician Portal together. Everything you need to automate patient communication and track clinician performance in one place.
+              </p>
+              <div style={{ marginBottom: '1.5rem' }}>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#5bc4f5', lineHeight: 1 }}>$199</div>
+                <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.82rem', fontWeight: 300, marginTop: '0.25rem' }}>+ $20 per clinician / month</div>
+              </div>
+              {[
+                'Everything in Marketing Hub',
+                'Everything in Clinician Portal',
+                'Shared patient data context',
+                'Single login for your whole team',
+                'Priority support',
+              ].map(f => (
+                <div key={f} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start', marginBottom: '0.55rem' }}>
+                  <span style={{ color: '#5bc4f5', fontSize: '0.7rem', marginTop: '3px', flexShrink: 0 }}>◆</span>
+                  <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', fontWeight: 300, lineHeight: '1.5' }}>{f}</span>
+                </div>
+              ))}
+              <div style={{ marginTop: '1.5rem', padding: '0.85rem 1rem', background: 'rgba(91,196,245,0.1)', border: '1px solid rgba(91,196,245,0.25)', borderRadius: '8px' }}>
+                <p style={{ color: '#5bc4f5', fontSize: '0.78rem', fontWeight: 600, margin: 0, fontFamily: 'Poppins, sans-serif' }}>
+                  ✓ Included with Intermediate &amp; Expert ad packages
+                </p>
+              </div>
+              <Link href="/contact" className="btn-primary" style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem', fontSize: '0.78rem' }}>
+                Get Started →
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Website Design Pricing */}
+      <section style={{ padding: '6rem 2rem', background: '#f4f7fb' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <div className="section-label" style={{ justifyContent: 'center', color: '#5bc4f5' }}>Website Development</div>
+            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', color: '#0d1f35', lineHeight: 1.2, marginBottom: '1rem' }}>
+              Website Design &amp; Build
+            </h2>
+            <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '580px', margin: '0 auto' }}>
+              One-off builds. Fast, conversion-focused websites for physiotherapy and allied health practices — built to rank on Google and turn visitors into booked appointments.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginBottom: '2.5rem' }}>
+            {[
+              {
+                icon: '🌱',
+                name: 'Starter',
+                price: 'From $2,500',
+                desc: 'A clean, professional site for a solo practitioner or new clinic.',
+                pages: '3–6 pages',
+                features: ['Mobile-responsive design', 'Online booking integration', 'Basic SEO setup', 'Google Analytics setup', '30-day post-launch support'],
+                accent: '#6b849a',
+              },
+              {
+                icon: '🚀',
+                name: 'Growth',
+                price: 'From $4,500',
+                desc: 'For established clinics ready to rank on Google and convert more visitors.',
+                pages: '6–10 pages',
+                features: ['Custom brand-aligned design', 'Individual service pages', 'Advanced SEO + schema markup', 'Conversion tracking setup', 'Blog setup', '60-day support'],
+                accent: '#5bc4f5',
+                highlight: true,
+              },
+              {
+                icon: '⚡',
+                name: 'Authority',
+                price: 'From $7,500',
+                desc: 'Multi-location clinics or practices that want to own their market online.',
+                pages: '10+ pages',
+                features: ['Multi-location architecture', 'Individual location pages', 'Full technical SEO', 'Patient resources section', 'Booking system + CRM integration', '90-day support'],
+                accent: '#1656A0',
+              },
+            ].map(pkg => (
+              <div key={pkg.name} style={{ background: pkg.highlight ? 'white' : 'white', border: `1px solid ${pkg.highlight ? '#5bc4f5' : '#e2eaf4'}`, borderTop: `3px solid ${pkg.accent}`, borderRadius: '0 0 16px 16px', padding: '2rem', boxShadow: pkg.highlight ? '0 8px 40px rgba(91,196,245,0.12)' : '0 2px 12px rgba(0,0,0,0.04)', transform: pkg.highlight ? 'scale(1.02)' : 'scale(1)' }}>
+                <div style={{ fontSize: '1.5rem', marginBottom: '0.75rem' }}>{pkg.icon}</div>
+                <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.1rem', color: '#0d1f35', marginBottom: '0.25rem' }}>{pkg.name}</h3>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 700, color: pkg.accent, letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>{pkg.pages}</div>
+                <p style={{ color: '#6b849a', fontSize: '0.85rem', lineHeight: '1.65', fontWeight: 300, marginBottom: '1.25rem' }}>{pkg.desc}</p>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.6rem', fontWeight: 900, color: '#0d1f35', lineHeight: 1, marginBottom: '1.25rem' }}>{pkg.price}</div>
+                {pkg.features.map(f => (
+                  <div key={f} style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
+                    <span style={{ color: pkg.accent, fontSize: '0.65rem', marginTop: '3px', flexShrink: 0 }}>◆</span>
+                    <span style={{ color: '#6b849a', fontSize: '0.82rem', fontWeight: 300, lineHeight: '1.5' }}>{f}</span>
+                  </div>
+                ))}
+                <Link href="/website-development" style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem', padding: '0.8rem 1.5rem', background: pkg.highlight ? '#5bc4f5' : 'transparent', border: `1px solid ${pkg.highlight ? '#5bc4f5' : '#d1dce8'}`, borderRadius: '4px', color: pkg.highlight ? 'white' : '#0d1f35', fontFamily: 'Poppins, sans-serif', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.04em', textDecoration: 'none', cursor: 'pointer' }}>
+                  Learn More →
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <p style={{ textAlign: 'center', color: '#6b849a', fontSize: '0.82rem', fontWeight: 300 }}>
+            Website builds are one-off projects — separate from ongoing ad management fees. <Link href="/website-development" style={{ color: '#5bc4f5', textDecoration: 'none', fontWeight: 600 }}>See full details →</Link>
+          </p>
+        </div>
+      </section>
+
+
       <section style={{ padding: '4rem 2rem 6rem', background: 'rgba(15,37,64,0.2)' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
