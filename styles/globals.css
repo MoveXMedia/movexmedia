@@ -324,3 +324,47 @@ section {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* ── Mobile overrides ── */
+@media (max-width: 768px) {
+  /* Reduce hero top padding so content isn't buried below nav */
+  .page-hero {
+    padding: 7rem 1.5rem 4rem;
+  }
+
+  /* Hero sections with mobile-padding class */
+  .hero-section {
+    padding-top: 6rem !important;
+  }
+
+  /* Prevent large absolute radial glows overflowing on mobile */
+  section {
+    overflow-x: hidden;
+  }
+
+  /* Ensure buttons don't overflow on small screens */
+  .btn-primary, .btn-outline {
+    font-size: 0.82rem !important;
+    padding: 0.75rem 1.4rem !important;
+  }
+
+  /* Nav burger button sizing */
+  .hamburger {
+    padding: 0.45rem 0.65rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens — tighten section padding */
+  section {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+}
+
+/* Contact form field rows */
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+}

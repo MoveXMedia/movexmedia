@@ -60,7 +60,7 @@ export default function ClinicianPortal() {
       </Head>
 
       {/* ── HERO ── */}
-      <section style={{
+      <section className="hero-section" style={{
         minHeight: '90vh',
         display: 'flex',
         alignItems: 'center',
@@ -307,7 +307,7 @@ export default function ClinicianPortal() {
             <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '5rem', fontWeight: 900, color: '#5bc4f5', lineHeight: 1 }}>$20</div>
             <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '1rem', marginTop: '0.5rem', marginBottom: '2.5rem', fontWeight: 300 }}>AUD per practitioner / month</div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem 2rem', maxWidth: '520px', margin: '0 auto 2.5rem', textAlign: 'left' }}>
+            <div className="pricing-features-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem 2rem', maxWidth: '520px', margin: '0 auto 2.5rem', textAlign: 'left' }}>
               {[
                 'Individual performance dashboard',
                 'KPI benchmarking vs clinic avg',
@@ -342,10 +342,13 @@ export default function ClinicianPortal() {
 
           <div style={{ background: 'rgba(91,196,245,0.06)', border: '1px solid rgba(91,196,245,0.15)', borderRadius: '12px', padding: '1.5rem' }}>
             <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.88rem', lineHeight: '1.7', fontWeight: 300, margin: 0 }}>
-              💡 <strong style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 600 }}>Bundle with the Marketing Hub</strong> — add the MoveX Marketing Hub for just $99/month and get email automation, subscriber management, and campaign broadcasts alongside your performance portal. Two tools built to work together.
+              💡 <strong style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 600 }}>Bundle with the Marketing Hub</strong> — upgrade to the full MoveX Marketing Hub at $199/month and get email automation, subscriber management, and campaign broadcasts alongside your performance portal. Two tools built to work together.
             </p>
           </div>
         </div>
+        <style>{`
+          @media (max-width: 600px) { .pricing-features-grid { grid-template-columns: 1fr !important; } }
+        `}</style>
       </section>
 
       {/* ── CTA ── */}

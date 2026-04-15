@@ -55,7 +55,7 @@ export default function Home() {
       </Head>
 
       {/* ── HERO (dark, keeps space theme) ── */}
-      <section style={{
+      <section className="hero-section" style={{
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',

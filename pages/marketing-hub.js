@@ -75,7 +75,7 @@ export default function MarketingHub() {
       </Head>
 
       {/* ── HERO ── */}
-      <section style={{
+      <section className="hero-section" style={{
         minHeight: '90vh',
         display: 'flex',
         alignItems: 'center',
@@ -322,24 +322,26 @@ export default function MarketingHub() {
           </div>
 
           {/* Feature comparison table */}
-          <div style={{ background: '#ffffff', border: '1px solid #e2eaf4', borderRadius: '14px', overflow: 'hidden' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', background: '#0d1f35', padding: '1rem 1.5rem' }}>
-              <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.78rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Feature</div>
-              {['MoveX Hub', 'Mailchimp', 'CliniqApps'].map(h => (
-                <div key={h} style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.78rem', color: h === 'MoveX Hub' ? '#5bc4f5' : 'rgba(255,255,255,0.5)', letterSpacing: '0.04em', textAlign: 'center' }}>{h}</div>
+          <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+            <div style={{ minWidth: '480px', background: '#ffffff', border: '1px solid #e2eaf4', borderRadius: '14px', overflow: 'hidden' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', background: '#0d1f35', padding: '1rem 1.5rem' }}>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.78rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Feature</div>
+                {['MoveX Hub', 'Mailchimp', 'CliniqApps'].map(h => (
+                  <div key={h} style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.78rem', color: h === 'MoveX Hub' ? '#5bc4f5' : 'rgba(255,255,255,0.5)', letterSpacing: '0.04em', textAlign: 'center' }}>{h}</div>
+                ))}
+              </div>
+              {comparisonRows.map((row, i) => (
+                <div key={row.feature} style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', padding: '0.85rem 1.5rem', borderBottom: i < comparisonRows.length - 1 ? '1px solid #e2eaf4' : 'none', background: i % 2 === 0 ? '#fff' : '#f9fbff' }}>
+                  <div style={{ color: '#0d1f35', fontSize: '0.88rem', fontWeight: 400 }}>{row.feature}</div>
+                  <div style={{ textAlign: 'center', fontSize: '1rem' }}>{row.movex ? <span style={{ color: '#22c55e' }}>✓</span> : <span style={{ color: '#e05555' }}>✕</span>}</div>
+                  <div style={{ textAlign: 'center', fontSize: '1rem' }}>{row.mailchimp ? <span style={{ color: '#22c55e' }}>✓</span> : <span style={{ color: '#e05555' }}>✕</span>}</div>
+                  <div style={{ textAlign: 'center', fontSize: '1rem' }}>{row.cliniqapps ? <span style={{ color: '#22c55e' }}>✓</span> : <span style={{ color: '#e05555' }}>✕</span>}</div>
+                </div>
               ))}
             </div>
-            {comparisonRows.map((row, i) => (
-              <div key={row.feature} style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', padding: '0.85rem 1.5rem', borderBottom: i < comparisonRows.length - 1 ? '1px solid #e2eaf4' : 'none', background: i % 2 === 0 ? '#fff' : '#f9fbff' }}>
-                <div style={{ color: '#0d1f35', fontSize: '0.88rem', fontWeight: 400 }}>{row.feature}</div>
-                <div style={{ textAlign: 'center', fontSize: '1rem' }}>{row.movex ? <span style={{ color: '#22c55e' }}>✓</span> : <span style={{ color: '#e05555' }}>✕</span>}</div>
-                <div style={{ textAlign: 'center', fontSize: '1rem' }}>{row.mailchimp ? <span style={{ color: '#22c55e' }}>✓</span> : <span style={{ color: '#e05555' }}>✕</span>}</div>
-                <div style={{ textAlign: 'center', fontSize: '1rem' }}>{row.cliniqapps ? <span style={{ color: '#22c55e' }}>✓</span> : <span style={{ color: '#e05555' }}>✕</span>}</div>
-              </div>
-            ))}
           </div>
-          <p style={{ color: '#a0b3c6', fontSize: '0.75rem', textAlign: 'center', marginTop: '1rem', fontWeight: 300 }}>
-            Mailchimp Standard plan ~$270 AUD/month at 10,000 total contacts (Mailchimp bills all contacts including unsubscribed). CliniqApps $195 AUD/month for up to 12 practitioners.
+          <p style={{ color: '#a0b3c6', fontSize: '0.72rem', textAlign: 'center', marginTop: '0.75rem', fontWeight: 300 }}>
+            ← Scroll to compare &nbsp;·&nbsp; Mailchimp ~$270 AUD/mo at 10,000 contacts (incl. unsubscribed). CliniqApps $195 AUD/mo for up to 12 practitioners.
           </p>
         </div>
         <style>{`
