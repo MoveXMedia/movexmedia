@@ -30,6 +30,7 @@ const packages = [
     setup: '$750',
     monthly: '$750',
     highlight: true,
+    hubIncluded: true,
     desc: 'For established practices ready to scale. Multi-platform campaigns with deeper optimisation and broader reach.',
     includes: [
       'Google Ads + Facebook/Instagram Ads',
@@ -51,6 +52,7 @@ const packages = [
     setup: '$1,000',
     monthly: '$1,500',
     highlight: false,
+    hubIncluded: true,
     desc: 'Full-scale digital marketing for high-growth practices or multi-location clinics serious about market dominance.',
     includes: [
       'All platforms — Google, Facebook, Instagram',
@@ -68,7 +70,9 @@ const packages = [
 
 const faqs = [
   {
-    q: 'Is the ad spend included in the management fee?',
+    q: 'What is the MoveX Marketing Hub and what does it include?',
+    a: 'The MoveX Marketing Hub is our purpose-built platform for physiotherapy clinics. It includes email automation (welcome emails, reactivation, birthday vouchers, review requests), a clinician performance portal with KPI tracking and insurance/EPC monitoring, social post publishing to Instagram, Facebook, and Google My Business, Facebook Ads statistics, and a practice password file. It\'s included at no added cost with Intermediate and Expert packages — a $199/month value.',
+  },
     a: 'No — ad spend and management fee are separate. The ad spend goes directly to Google or Meta and is billed by them. The management fee is paid to MoveX Media for strategy, setup, and ongoing optimisation.',
   },
   {
@@ -130,7 +134,7 @@ export default function Pricing() {
             margin: '0 auto',
             fontWeight: 300,
           }}>
-            Packages are structured around your ad spend and platform complexity. Beginner includes one platform; Intermediate and Expert include multi-platform management.
+            Packages are structured around your ad spend and platform complexity. Intermediate and Expert packages include the MoveX Marketing Hub — email automation, clinician performance portal, and social tools — at no added cost.
           </p>
         </div>
       </section>
@@ -286,6 +290,30 @@ export default function Pricing() {
                     </div>
                   ))}
 
+                  {/* Marketing Hub included callout */}
+                  {pkg.hubIncluded && (
+                    <div style={{
+                      marginTop: '1.25rem',
+                      padding: '1rem 1.25rem',
+                      background: 'linear-gradient(135deg, rgba(91,196,245,0.1) 0%, rgba(91,196,245,0.04) 100%)',
+                      border: '1px solid rgba(91,196,245,0.3)',
+                      borderRadius: '10px',
+                    }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.4rem' }}>
+                        <span style={{ fontSize: '1rem' }}>🚀</span>
+                        <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.78rem', color: '#5bc4f5', letterSpacing: '0.02em' }}>
+                          MoveX Marketing Hub — included
+                        </span>
+                        <span style={{ marginLeft: 'auto', background: 'rgba(91,196,245,0.15)', border: '1px solid rgba(91,196,245,0.25)', borderRadius: '10px', padding: '0.15rem 0.6rem', fontFamily: 'Poppins, sans-serif', fontSize: '0.65rem', fontWeight: 700, color: '#5bc4f5', whiteSpace: 'nowrap' }}>
+                          $199 value
+                        </span>
+                      </div>
+                      <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.78rem', lineHeight: '1.55', fontWeight: 300, margin: 0 }}>
+                        Email automations, clinician performance portal, social posting, Facebook Ads stats & password file — at no added cost.
+                      </p>
+                    </div>
+                  )}
+
                   <Link href="/contact" className={pkg.highlight ? 'btn-primary' : 'btn-outline'} style={{
                     display: 'flex',
                     justifyContent: 'center',
@@ -353,13 +381,14 @@ export default function Pricing() {
                   { label: 'Dedicated Account Manager', values: ['—', '—', '✓'] },
                   { label: 'Weekly Reviews', values: ['—', '—', '✓'] },
                   { label: 'Monthly Strategy Session', values: ['—', '—', '✓'] },
+                  { label: 'MoveX Marketing Hub', values: ['—', '✓ included', '✓ included'] },
                 ].map((row, i) => (
                   <tr key={row.label} style={{ background: i % 2 === 0 ? 'transparent' : 'rgba(15,37,64,0.2)' }}>
                     <td style={tdLabelStyle}>{row.label}</td>
                     {row.values.map((val, j) => (
                       <td key={j} style={{
                         ...tdStyle,
-                        color: val === '✓' ? '#5bc4f5' : val === '—' ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.75)',
+                        color: val.startsWith('✓') ? '#5bc4f5' : val === '—' ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.75)',
                         fontFamily: (val === '✓' || val === '—') ? 'inherit' : 'Poppins, sans-serif',
                         fontSize: (val === '✓' || val === '—') ? '1rem' : '0.8rem',
                         fontWeight: packages[j].highlight ? 600 : 400,
