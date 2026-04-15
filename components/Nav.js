@@ -38,7 +38,6 @@ export default function Nav() {
   const topLinks = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
-    { href: '/marketing-budget', label: 'Budget Calculator' },
     { href: '/pricing', label: 'Packages' },
   ];
 
@@ -237,7 +236,7 @@ export default function Nav() {
             )}
           </div>
 
-          {[topLinks[2], topLinks[3]].map(link => (
+          {[topLinks[2]].map(link => (
             <Link key={link.href} href={link.href} style={{
               ...linkStyle,
               color: router.pathname === link.href ? '#5bc4f5' : 'rgba(255,255,255,0.7)',
@@ -310,7 +309,7 @@ export default function Nav() {
               }}>{link.label}</Link>
             ))}
           </div>
-          {[topLinks[2], topLinks[3]].map(link => (
+          {[topLinks[2]].map(link => (
             <Link key={link.href} href={link.href} style={{
               fontFamily: 'Poppins, sans-serif', fontSize: '1rem',
               letterSpacing: '0.04em', textTransform: 'uppercase',

@@ -141,33 +141,16 @@ export default function WebsiteDevelopment() {
       {/* PROBLEM */}
       <section style={{ padding: '6rem 2rem', background: '#ffffff' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+
+          {/* Label + Headline */}
           <div className="section-label" style={{ color: '#e05555', marginBottom: '0.8rem' }}>The Real Problem</div>
-          <h2 style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', fontWeight: 800, color: '#0d1f35', lineHeight: 1.2, marginBottom: '1.5rem', maxWidth: '780px' }}>
+          <h2 style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', fontWeight: 800, color: '#0d1f35', lineHeight: 1.2, marginBottom: '2.5rem', maxWidth: '780px' }}>
             Your website is losing you patients.<br />
             <span style={{ color: '#5bc4f5' }}>Every single day.</span>
           </h2>
-          <p style={{ color: '#6b849a', fontSize: '1.05rem', lineHeight: '1.85', maxWidth: '720px', fontWeight: 300, marginBottom: '3.5rem' }}>
-            Most physiotherapy websites were built years ago by a generalist developer, haven&apos;t been touched since, and are quietly turning away the exact patients you&apos;re paying to attract through Google and Facebook Ads.
-          </p>
 
-          {/* Stat cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem', marginBottom: '4rem' }}>
-            {[
-              { stat: '53%', label: 'of mobile visitors leave', desc: 'if a site takes longer than 3 seconds to load. The average physio website takes 6-8 seconds on mobile.', colour: '#e05555' },
-              { stat: '7%', label: 'conversion drop per second', desc: 'Every 1-second delay in load time reduces bookings by 7%. A 4-second site could be cutting your leads in half.', colour: '#f59e0b' },
-              { stat: '70%+', label: 'of health searches are mobile', desc: 'Most patients find you on their phone. A desktop-first website with no mobile optimisation fails more than half your traffic.', colour: '#5bc4f5' },
-            ].map(item => (
-              <div key={item.stat} style={{ background: '#f9fbff', border: '1px solid #e2eaf4', borderTop: `3px solid ${item.colour}`, borderRadius: '0 0 12px 12px', padding: '1.75rem' }}>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: item.colour, lineHeight: 1, marginBottom: '0.4rem' }}>{item.stat}</div>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.82rem', color: '#0d1f35', marginBottom: '0.6rem', letterSpacing: '0.02em' }}>{item.label}</div>
-                <p style={{ color: '#6b849a', fontSize: '0.85rem', lineHeight: '1.65', fontWeight: 300, margin: 0 }}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Main text + dark card */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }} className="problem-grid">
-
+          {/* Two-column: problem copy + dark card */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start', marginBottom: '4rem' }} className="problem-grid">
             <div>
               <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.9', fontWeight: 300, marginBottom: '1.5rem' }}>
                 Most physio websites are outdated, slow, and lack the authority and social proof that turn a visitor into a booked patient. The result is wasted ad spend — you&apos;re paying to send traffic to a site that&apos;s quietly turning people away before they ever hit the booking button.
@@ -176,10 +159,10 @@ export default function WebsiteDevelopment() {
                 Patients with booking intent don&apos;t wait for a slow site. There&apos;s always another clinic a tab away. An outdated design signals to a new patient that your clinic may not be current in other areas either — and without reviews, testimonials, or clear trust signals, there&apos;s no reason to choose you over the practice down the road.
               </p>
               {[
-                { icon: '🐌', problem: 'Slow loading', detail: "Patients leave within seconds. Every second of delay costs you bookings." },
-                { icon: '📵', problem: 'Not mobile-optimised', detail: "Broken layouts and tiny text on the device 70% of your patients use." },
-                { icon: '🏚', problem: 'Outdated design', detail: "First impressions are instant. An old site loses trust before a word is read." },
-                { icon: '👻', problem: 'No social proof', detail: "No reviews, no outcomes, no reason for a new patient to choose you." },
+                { icon: '🐌', problem: 'Slow loading', detail: 'Patients leave within seconds. Every second of delay costs you bookings.' },
+                { icon: '📵', problem: 'Not mobile-optimised', detail: 'Broken layouts and tiny text on the device 70% of your patients use.' },
+                { icon: '🏚', problem: 'Outdated design', detail: 'First impressions are instant. An old site loses trust before a word is read.' },
+                { icon: '👻', problem: 'No social proof', detail: 'No reviews, no outcomes, no reason for a new patient to choose you.' },
                 { icon: '✗', problem: 'No clear booking path', detail: "If booking online isn't front and centre, patients don't book — they move on." },
               ].map(item => (
                 <div key={item.problem} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', marginBottom: '1rem' }}>
@@ -190,11 +173,6 @@ export default function WebsiteDevelopment() {
                   </div>
                 </div>
               ))}
-              <div style={{ marginTop: '1.75rem', background: '#f4f7fb', border: '1px solid #e2eaf4', borderLeft: '4px solid #5bc4f5', borderRadius: '0 10px 10px 0', padding: '1.25rem 1.5rem' }}>
-                <p style={{ color: '#0d1f35', fontSize: '0.9rem', lineHeight: '1.8', fontWeight: 400, margin: 0 }}>
-                  <strong>The good news:</strong> fix it once and every ad, every Google search, and every referral you receive converts at a dramatically higher rate.
-                </p>
-              </div>
             </div>
 
             <div>
@@ -211,8 +189,30 @@ export default function WebsiteDevelopment() {
                 </p>
               </div>
             </div>
-
           </div>
+
+          {/* Stat cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem', marginBottom: '2.5rem' }}>
+            {[
+              { stat: '53%', label: 'of mobile visitors leave', desc: 'if a site takes longer than 3 seconds to load. The average physio website takes 6-8 seconds on mobile.', colour: '#e05555' },
+              { stat: '7%', label: 'conversion drop per second', desc: 'Every 1-second delay in load time reduces bookings by 7%. A 4-second site could be cutting your leads in half.', colour: '#f59e0b' },
+              { stat: '70%+', label: 'of health searches are mobile', desc: 'Most patients find you on their phone. A desktop-first website with no mobile optimisation fails more than half your traffic.', colour: '#5bc4f5' },
+            ].map(item => (
+              <div key={item.stat} style={{ background: '#f9fbff', border: '1px solid #e2eaf4', borderTop: `3px solid ${item.colour}`, borderRadius: '0 0 12px 12px', padding: '1.75rem' }}>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: item.colour, lineHeight: 1, marginBottom: '0.4rem' }}>{item.stat}</div>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.82rem', color: '#0d1f35', marginBottom: '0.6rem', letterSpacing: '0.02em' }}>{item.label}</div>
+                <p style={{ color: '#6b849a', fontSize: '0.85rem', lineHeight: '1.65', fontWeight: 300, margin: 0 }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Good news — full width */}
+          <div style={{ background: '#f4f7fb', border: '1px solid #e2eaf4', borderLeft: '4px solid #5bc4f5', borderRadius: '0 12px 12px 0', padding: '1.5rem 2rem' }}>
+            <p style={{ color: '#0d1f35', fontSize: '0.98rem', lineHeight: '1.8', fontWeight: 400, margin: 0 }}>
+              <strong>The good news:</strong> a well-built website is the single highest-leverage investment you can make for your online presence. Fix it once, and every ad you run, every Google search you rank for, and every referral you receive converts at a dramatically higher rate — without spending another dollar on traffic.
+            </p>
+          </div>
+
         </div>
         <style>{`
           @media (max-width: 900px) { .problem-grid { grid-template-columns: 1fr !important; gap: 3rem !important; } }
