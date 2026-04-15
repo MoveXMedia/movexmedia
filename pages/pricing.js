@@ -141,6 +141,88 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* Website Design Pricing */}
+      <section style={{ padding: '6rem 2rem', background: '#f4f7fb' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <div className="section-label" style={{ justifyContent: 'center', color: '#5bc4f5' }}>Website Development</div>
+            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', color: '#0d1f35', lineHeight: 1.2, marginBottom: '1rem' }}>
+              Website Design &amp; Build
+            </h2>
+            <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '580px', margin: '0 auto' }}>
+              One-off builds. Fast, conversion-focused websites for physiotherapy and allied health practices — built to rank on Google and turn visitors into booked appointments.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginBottom: '2.5rem' }}>
+            {[
+              {
+                icon: '🌱',
+                name: 'Starter',
+                price: 'From $2,500',
+                desc: 'A clean, professional site for a solo practitioner or new clinic.',
+                pages: '3–6 pages',
+                features: ['Mobile-responsive design', 'Online booking integration', 'Basic SEO setup', 'Google Analytics setup', '30-day post-launch support'],
+                accent: '#6b849a',
+              },
+              {
+                icon: '🚀',
+                name: 'Growth',
+                price: 'From $4,500',
+                desc: 'For established clinics ready to rank on Google and convert more visitors.',
+                pages: '6–10 pages',
+                features: ['Custom brand-aligned design', 'Individual service pages', 'Advanced SEO + schema markup', 'Conversion tracking setup', 'Blog setup', '60-day support'],
+                accent: '#5bc4f5',
+                highlight: true,
+              },
+              {
+                icon: '⚡',
+                name: 'Authority',
+                price: 'From $7,500',
+                desc: 'Multi-location clinics or practices that want to own their market online.',
+                pages: '10+ pages',
+                features: ['Multi-location architecture', 'Individual location pages', 'Full technical SEO', 'Patient resources section', 'Booking system + CRM integration', '90-day support'],
+                accent: '#1656A0',
+              },
+            ].map(pkg => (
+              <div key={pkg.name} style={{ background: pkg.highlight ? 'white' : 'white', border: `1px solid ${pkg.highlight ? '#5bc4f5' : '#e2eaf4'}`, borderTop: `3px solid ${pkg.accent}`, borderRadius: '0 0 16px 16px', padding: '2rem', boxShadow: pkg.highlight ? '0 8px 40px rgba(91,196,245,0.12)' : '0 2px 12px rgba(0,0,0,0.04)', transform: pkg.highlight ? 'scale(1.02)' : 'scale(1)' }}>
+                <div style={{ fontSize: '1.5rem', marginBottom: '0.75rem' }}>{pkg.icon}</div>
+                <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.1rem', color: '#0d1f35', marginBottom: '0.25rem' }}>{pkg.name}</h3>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 700, color: pkg.accent, letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>{pkg.pages}</div>
+                <p style={{ color: '#6b849a', fontSize: '0.85rem', lineHeight: '1.65', fontWeight: 300, marginBottom: '1.25rem' }}>{pkg.desc}</p>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.6rem', fontWeight: 900, color: '#0d1f35', lineHeight: 1, marginBottom: '1.25rem' }}>{pkg.price}</div>
+                {pkg.features.map(f => (
+                  <div key={f} style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
+                    <span style={{ color: pkg.accent, fontSize: '0.65rem', marginTop: '3px', flexShrink: 0 }}>◆</span>
+                    <span style={{ color: '#6b849a', fontSize: '0.82rem', fontWeight: 300, lineHeight: '1.5' }}>{f}</span>
+                  </div>
+                ))}
+                <Link href="/website-development" style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem', padding: '0.8rem 1.5rem', background: pkg.highlight ? '#5bc4f5' : 'transparent', border: `1px solid ${pkg.highlight ? '#5bc4f5' : '#d1dce8'}`, borderRadius: '4px', color: pkg.highlight ? 'white' : '#0d1f35', fontFamily: 'Poppins, sans-serif', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.04em', textDecoration: 'none', cursor: 'pointer' }}>
+                  Learn More →
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <p style={{ textAlign: 'center', color: '#6b849a', fontSize: '0.82rem', fontWeight: 300 }}>
+            Website builds are one-off projects — separate from ongoing ad management fees. <Link href="/website-development" style={{ color: '#5bc4f5', textDecoration: 'none', fontWeight: 600 }}>See full details →</Link>
+          </p>
+        </div>
+      </section>
+
+
+      {/* Ads Management Label */}
+      <div style={{ background: 'rgba(15,37,64,0.3)', borderBottom: '1px solid rgba(26,58,92,0.4)', padding: '2.5rem 2rem 1.5rem' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div className="section-label" style={{ color: '#5bc4f5', marginBottom: '0.5rem' }}>Google &amp; Facebook Ads Management</div>
+          <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', color: 'white', lineHeight: 1.2, marginBottom: '0.5rem' }}>
+            Paid Advertising Packages
+          </h2>
+          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.92rem', fontWeight: 300, maxWidth: '560px' }}>
+            Fixed monthly management fees. Ad spend is separate and billed directly by Google or Meta.
+          </p>
+        </div>
+      </div>
       {/* Pricing cards */}
       <section style={{ padding: '2rem 2rem 6rem', background: 'rgba(15,37,64,0.2)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -528,76 +610,6 @@ export default function Pricing() {
           </div>
         </div>
       </section>
-
-      {/* Website Design Pricing */}
-      <section style={{ padding: '6rem 2rem', background: '#f4f7fb' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-            <div className="section-label" style={{ justifyContent: 'center', color: '#5bc4f5' }}>Website Development</div>
-            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', color: '#0d1f35', lineHeight: 1.2, marginBottom: '1rem' }}>
-              Website Design &amp; Build
-            </h2>
-            <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '580px', margin: '0 auto' }}>
-              One-off builds. Fast, conversion-focused websites for physiotherapy and allied health practices — built to rank on Google and turn visitors into booked appointments.
-            </p>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginBottom: '2.5rem' }}>
-            {[
-              {
-                icon: '🌱',
-                name: 'Starter',
-                price: 'From $2,500',
-                desc: 'A clean, professional site for a solo practitioner or new clinic.',
-                pages: '3–6 pages',
-                features: ['Mobile-responsive design', 'Online booking integration', 'Basic SEO setup', 'Google Analytics setup', '30-day post-launch support'],
-                accent: '#6b849a',
-              },
-              {
-                icon: '🚀',
-                name: 'Growth',
-                price: 'From $4,500',
-                desc: 'For established clinics ready to rank on Google and convert more visitors.',
-                pages: '6–10 pages',
-                features: ['Custom brand-aligned design', 'Individual service pages', 'Advanced SEO + schema markup', 'Conversion tracking setup', 'Blog setup', '60-day support'],
-                accent: '#5bc4f5',
-                highlight: true,
-              },
-              {
-                icon: '⚡',
-                name: 'Authority',
-                price: 'From $7,500',
-                desc: 'Multi-location clinics or practices that want to own their market online.',
-                pages: '10+ pages',
-                features: ['Multi-location architecture', 'Individual location pages', 'Full technical SEO', 'Patient resources section', 'Booking system + CRM integration', '90-day support'],
-                accent: '#1656A0',
-              },
-            ].map(pkg => (
-              <div key={pkg.name} style={{ background: pkg.highlight ? 'white' : 'white', border: `1px solid ${pkg.highlight ? '#5bc4f5' : '#e2eaf4'}`, borderTop: `3px solid ${pkg.accent}`, borderRadius: '0 0 16px 16px', padding: '2rem', boxShadow: pkg.highlight ? '0 8px 40px rgba(91,196,245,0.12)' : '0 2px 12px rgba(0,0,0,0.04)', transform: pkg.highlight ? 'scale(1.02)' : 'scale(1)' }}>
-                <div style={{ fontSize: '1.5rem', marginBottom: '0.75rem' }}>{pkg.icon}</div>
-                <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.1rem', color: '#0d1f35', marginBottom: '0.25rem' }}>{pkg.name}</h3>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 700, color: pkg.accent, letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>{pkg.pages}</div>
-                <p style={{ color: '#6b849a', fontSize: '0.85rem', lineHeight: '1.65', fontWeight: 300, marginBottom: '1.25rem' }}>{pkg.desc}</p>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.6rem', fontWeight: 900, color: '#0d1f35', lineHeight: 1, marginBottom: '1.25rem' }}>{pkg.price}</div>
-                {pkg.features.map(f => (
-                  <div key={f} style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
-                    <span style={{ color: pkg.accent, fontSize: '0.65rem', marginTop: '3px', flexShrink: 0 }}>◆</span>
-                    <span style={{ color: '#6b849a', fontSize: '0.82rem', fontWeight: 300, lineHeight: '1.5' }}>{f}</span>
-                  </div>
-                ))}
-                <Link href="/website-development" style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem', padding: '0.8rem 1.5rem', background: pkg.highlight ? '#5bc4f5' : 'transparent', border: `1px solid ${pkg.highlight ? '#5bc4f5' : '#d1dce8'}`, borderRadius: '4px', color: pkg.highlight ? 'white' : '#0d1f35', fontFamily: 'Poppins, sans-serif', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.04em', textDecoration: 'none', cursor: 'pointer' }}>
-                  Learn More →
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          <p style={{ textAlign: 'center', color: '#6b849a', fontSize: '0.82rem', fontWeight: 300 }}>
-            Website builds are one-off projects — separate from ongoing ad management fees. <Link href="/website-development" style={{ color: '#5bc4f5', textDecoration: 'none', fontWeight: 600 }}>See full details →</Link>
-          </p>
-        </div>
-      </section>
-
 
       <section style={{ padding: '4rem 2rem 6rem', background: 'rgba(15,37,64,0.2)' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
