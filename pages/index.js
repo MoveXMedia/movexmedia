@@ -248,12 +248,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <style>{\`
+        <style>{`
           @media (max-width: 900px) {
             .product-cards-grid { grid-template-columns: 1fr !important; }
             .product-pricing-grid { grid-template-columns: 1fr !important; }
           }
-        \`}</style>
+        `}</style>
       </section>
 
       {/* ── REACTIVATION CALCULATOR (light) ── */}
