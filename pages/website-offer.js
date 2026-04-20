@@ -89,7 +89,7 @@ export default function WebsitePromo() {
       </div>
 
       {/* ─── HERO ─── */}
-      <section style={{ position: 'relative', padding: '7rem 1.5rem 5rem', textAlign: 'center', overflow: 'hidden', background: 'linear-gradient(160deg, #060d18 0%, #0a1628 60%, #060d18 100%)' }}>
+      <section style={{ position: 'relative', padding: '7rem 1.5rem 5rem', textAlign: 'center', overflow: 'hidden', background: 'linear-gradient(160deg, #040b15 0%, #081525 60%, #040b15 100%)' }}>
         <div style={{ position: 'absolute', top: '10%', left: '50%', transform: 'translateX(-50%)', width: '700px', height: '400px', background: 'radial-gradient(ellipse, rgba(91,196,245,0.08) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div style={{ position: 'relative', maxWidth: '860px', margin: '0 auto' }}>
           <div style={{ marginBottom: '1.5rem' }}>
@@ -134,7 +134,7 @@ export default function WebsitePromo() {
       </div>
 
       {/* ─── PORTFOLIO ─── */}
-      <section style={{ padding: '6rem 1.5rem', maxWidth: '1100px', margin: '0 auto' }}>
+      <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #040b15 0%, #060f1c 100%)' }}><div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
           <span className="tag">Our Work</span>
           <h2 style={{ fontWeight: 800, fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: 1.2, marginTop: '1rem', marginBottom: '0.75rem' }}>Real Sites. Real Clinics.</h2>
@@ -168,7 +168,7 @@ export default function WebsitePromo() {
       </section>
 
       {/* ─── DANIEL — WORK DIRECTLY WITH ME ─── */}
-      <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #080f1a 0%, #0d1f35 100%)', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+      <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #0d1f35 0%, #0f2840 100%)', borderTop: '1px solid rgba(91,196,245,0.08)' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'grid', gridTemplateColumns: '360px 1fr', gap: '5rem', alignItems: 'center' }} className="daniel-grid">
           <div style={{ position: 'relative' }}>
             <div style={{ borderRadius: '20px', overflow: 'hidden', border: '2px solid rgba(91,196,245,0.35)', boxShadow: '0 24px 80px rgba(0,0,0,0.5), 0 0 40px rgba(91,196,245,0.08)' }}>
@@ -218,7 +218,7 @@ export default function WebsitePromo() {
       </section>
 
       {/* ─── PAGE SPEED ─── */}
-      <section style={{ padding: '6rem 1.5rem', background: '#060d18' }}>
+      <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #040b15 0%, #060f1c 100%)' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <span className="tag">Performance</span>
           <h2 style={{ fontWeight: 800, fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: 1.2, margin: '1rem 0 0.75rem' }}>
@@ -245,7 +245,7 @@ export default function WebsitePromo() {
       </section>
 
       {/* ─── FEATURES ─── */}
-      <section style={{ padding: '6rem 1.5rem', maxWidth: '1100px', margin: '0 auto' }}>
+      <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #040b15 0%, #060f1c 100%)' }}><div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
           <span className="tag">What You Get</span>
           <h2 style={{ fontWeight: 800, fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: 1.2, margin: '1rem 0 0.75rem' }}>Every Site Includes</h2>
@@ -273,7 +273,7 @@ export default function WebsitePromo() {
       </section>
 
       {/* ─── EDIT YOURSELF ─── */}
-      <section style={{ padding: '5rem 1.5rem', background: 'rgba(8,15,26,0.8)', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+      <section style={{ padding: '5rem 1.5rem', background: 'linear-gradient(160deg, #0d1f35 0%, #102540 100%)', borderTop: '1px solid rgba(91,196,245,0.08)' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }} className="edit-grid">
           <div>
             <span className="tag" style={{ marginBottom: '1.25rem', display: 'inline-block' }}>After Launch</span>
@@ -294,7 +294,7 @@ export default function WebsitePromo() {
       </section>
 
       {/* ─── PACKAGES ─── */}
-      <section style={{ padding: '6rem 1.5rem', maxWidth: '900px', margin: '0 auto' }}>
+      <section style={{ padding: '6rem 1.5rem', background: '#040b15' }}>
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
           <span className="tag">Pricing</span>
           <h2 style={{ fontWeight: 800, fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: 1.2, margin: '1rem 0 0.75rem' }}>Simple, Fixed Pricing</h2>
@@ -325,7 +325,7 @@ export default function WebsitePromo() {
       </section>
 
       {/* ─── EMAIL CAPTURE ─── */}
-      <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #080f1a 0%, #0a1628 100%)', borderTop: '1px solid rgba(255,255,255,0.05)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+      <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #0d1f35 0%, #0f2840 50%, #0d1f35 100%)', borderTop: '1px solid rgba(91,196,245,0.1)', borderBottom: '1px solid rgba(91,196,245,0.1)' }}>
         <div style={{ maxWidth: '580px', margin: '0 auto', textAlign: 'center' }}>
           <div style={{ background: 'rgba(255,180,0,0.08)', border: '1px solid rgba(255,180,0,0.25)', borderRadius: '10px', padding: '0.9rem 1.5rem', marginBottom: '2.5rem' }}>
             <p style={{ fontSize: '0.82rem', color: '#ffb400', fontWeight: 600, lineHeight: 1.5, margin: 0 }}>
@@ -360,7 +360,7 @@ export default function WebsitePromo() {
       </section>
 
       {/* ─── FINAL CTA ─── */}
-      <section style={{ padding: '6rem 1.5rem 7rem', textAlign: 'center', background: 'linear-gradient(160deg, #080f1a 0%, #0d1f35 50%, #080f1a 100%)', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ padding: '6rem 1.5rem 7rem', textAlign: 'center', background: 'linear-gradient(160deg, #040b15 0%, #081525 50%, #040b15 100%)', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '600px', height: '400px', background: 'radial-gradient(ellipse, rgba(91,196,245,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div style={{ position: 'relative', maxWidth: '680px', margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', marginBottom: '2rem' }}>

@@ -36,7 +36,7 @@ const schemaMarkup = {
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
-  const noLayout = ['/link'];
+  const noLayout = ['/link', '/website-offer'];
   const skipLayout = noLayout.includes(router.pathname);
 
   return (
