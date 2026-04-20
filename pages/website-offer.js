@@ -318,8 +318,8 @@ export default function WebsitePromo() {
             <div style={{ position: 'relative' }}>
               <div style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(91,196,245,0.25)', boxShadow: '0 24px 80px rgba(0,0,0,0.5), 0 0 60px rgba(91,196,245,0.06)' }}>
                 <Image
-                  src="/hub-screenshot-1.png"
-                  alt="MoveX Marketing Hub dashboard"
+                  src="/hub-screenshot-2.png"
+                  alt="MoveX Marketing Hub — Automations"
                   width={900}
                   height={600}
                   style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -327,8 +327,8 @@ export default function WebsitePromo() {
               </div>
               {/* Floating stat */}
               <div style={{ position: 'absolute', bottom: '-18px', right: '-18px', background: 'linear-gradient(135deg, #5bc4f5, #2a9fd8)', borderRadius: '12px', padding: '0.85rem 1.2rem', boxShadow: '0 8px 24px rgba(91,196,245,0.4)', textAlign: 'center' }}>
-                <div style={{ fontWeight: 900, fontSize: '1.4rem', color: '#040c18', lineHeight: 1 }}>6,450</div>
-                <div style={{ fontSize: '0.6rem', fontWeight: 700, color: '#040c18', letterSpacing: '0.06em', marginTop: '2px' }}>ACTIVE SUBSCRIBERS</div>
+                <div style={{ fontWeight: 900, fontSize: '1.4rem', color: '#040c18', lineHeight: 1 }}>394</div>
+                <div style={{ fontSize: '0.6rem', fontWeight: 700, color: '#040c18', letterSpacing: '0.06em', marginTop: '2px' }}>RE-ACTIVATIONS SENT</div>
               </div>
             </div>
 
