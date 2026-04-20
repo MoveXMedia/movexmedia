@@ -341,6 +341,7 @@ export default function WebsitePromo() {
                   { icon: '📘', title: 'Facebook & Instagram Ads', body: 'Ad management, audience targeting, and creative performance all connected.' },
                   { icon: '✉️', title: 'Email Marketing', body: 'Campaigns, newsletters, and subscriber management built for allied health.' },
                   { icon: '⚡', title: 'Automations', body: 'Birthday emails, reactivation sequences, new patient welcome flows — set and forget.' },
+                  { icon: '🖼️', title: 'Social Media Poster', body: 'Create and schedule branded social posts directly from the hub — no Canva, no extra tools.' },
                 ].map(item => (
                   <div key={item.title} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                     <div style={{ fontSize: '1.2rem', marginTop: '2px', flexShrink: 0 }}>{item.icon}</div>
