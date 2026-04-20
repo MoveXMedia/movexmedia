@@ -165,7 +165,7 @@ export default function WebsitePromo() {
           ))}
         </div>
         <style>{`@media (max-width: 640px) { .portfolio-grid-2 { grid-template-columns: 1fr !important; } }`}</style>
-      </section>
+      </div></section>
 
       {/* ─── DANIEL — WORK DIRECTLY WITH ME ─── */}
       <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #0d1f35 0%, #0f2840 100%)', borderTop: '1px solid rgba(91,196,245,0.08)' }}>
@@ -270,9 +270,7 @@ export default function WebsitePromo() {
             </div>
           ))}
         </div>
-      </section>
-
-      {/* ─── EDIT YOURSELF ─── */}
+      </div></section>
       <section style={{ padding: '5rem 1.5rem', background: 'linear-gradient(160deg, #0d1f35 0%, #102540 100%)', borderTop: '1px solid rgba(91,196,245,0.08)' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }} className="edit-grid">
           <div>
