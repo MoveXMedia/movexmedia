@@ -293,6 +293,86 @@ export default function WebsitePromo() {
         <style>{`@media (max-width: 760px) { .edit-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; } }`}</style>
       </section>
 
+      {/* ─── MARKETING HUB BONUS ─── */}
+      <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #060d18 0%, #08111e 100%)', borderTop: '1px solid rgba(91,196,245,0.1)' }}>
+        <div style={{ maxWidth: '1060px', margin: '0 auto' }}>
+
+          {/* Header */}
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', background: 'linear-gradient(135deg, rgba(255,180,0,0.15), rgba(255,180,0,0.05))', border: '1px solid rgba(255,180,0,0.4)', borderRadius: '30px', padding: '0.4rem 1.2rem', marginBottom: '1.5rem' }}>
+              <span style={{ fontSize: '0.7rem', fontWeight: 800, color: '#ffb400', letterSpacing: '0.1em', textTransform: 'uppercase' }}>🎁 Bonus — Included Free</span>
+              <span style={{ background: '#ffb400', color: '#040c18', fontSize: '0.65rem', fontWeight: 900, padding: '0.15rem 0.6rem', borderRadius: '10px', letterSpacing: '0.05em' }}>$600 VALUE</span>
+            </div>
+            <h2 style={{ fontWeight: 900, fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: 1.2, marginBottom: '0.75rem', letterSpacing: '-0.02em' }}>
+              3 months of the<br />
+              <span style={{ background: 'linear-gradient(90deg, #5bc4f5, #2dd4bf)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>MoveX Marketing Hub</span>
+            </h2>
+            <div className="divider" />
+            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '1rem', lineHeight: 1.8, maxWidth: '620px', margin: '1.5rem auto 0', fontWeight: 300 }}>
+              From experience building Move Physiotherapy to three locations — this hub contains everything you will ever need to market an allied health business. Included with your website at no extra cost.
+            </p>
+          </div>
+
+          {/* Screenshot + feature list */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 420px', gap: '4rem', alignItems: 'center' }} className="hub-grid">
+
+            {/* Screenshot */}
+            <div style={{ position: 'relative' }}>
+              <div style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(91,196,245,0.25)', boxShadow: '0 24px 80px rgba(0,0,0,0.5), 0 0 60px rgba(91,196,245,0.06)' }}>
+                <Image
+                  src="/hub-screenshot-1.png"
+                  alt="MoveX Marketing Hub dashboard"
+                  width={900}
+                  height={600}
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+              {/* Floating stat */}
+              <div style={{ position: 'absolute', bottom: '-18px', right: '-18px', background: 'linear-gradient(135deg, #5bc4f5, #2a9fd8)', borderRadius: '12px', padding: '0.85rem 1.2rem', boxShadow: '0 8px 24px rgba(91,196,245,0.4)', textAlign: 'center' }}>
+                <div style={{ fontWeight: 900, fontSize: '1.4rem', color: '#040c18', lineHeight: 1 }}>6,450</div>
+                <div style={{ fontSize: '0.6rem', fontWeight: 700, color: '#040c18', letterSpacing: '0.06em', marginTop: '2px' }}>ACTIVE SUBSCRIBERS</div>
+              </div>
+            </div>
+
+            {/* What's included */}
+            <div>
+              <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#5bc4f5', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>What's inside</div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem', marginBottom: '2rem' }}>
+                {[
+                  { icon: '🎯', title: 'Google Ads Dashboard', body: 'Live campaign performance, spend tracking, and patient acquisition metrics in one place.' },
+                  { icon: '📘', title: 'Facebook & Instagram Ads', body: 'Ad management, audience targeting, and creative performance all connected.' },
+                  { icon: '✉️', title: 'Email Marketing', body: 'Campaigns, newsletters, and subscriber management built for allied health.' },
+                  { icon: '⚡', title: 'Automations', body: 'Birthday emails, reactivation sequences, new patient welcome flows — set and forget.' },
+                ].map(item => (
+                  <div key={item.title} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ fontSize: '1.2rem', marginTop: '2px', flexShrink: 0 }}>{item.icon}</div>
+                    <div>
+                      <div style={{ fontWeight: 700, fontSize: '0.92rem', marginBottom: '0.2rem', color: 'white' }}>{item.title}</div>
+                      <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.82rem', fontWeight: 300, lineHeight: 1.55 }}>{item.body}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Value callout */}
+              <div style={{ background: 'rgba(255,180,0,0.07)', border: '1px solid rgba(255,180,0,0.25)', borderRadius: '12px', padding: '1.1rem 1.25rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
+                  <div>
+                    <div style={{ fontWeight: 700, fontSize: '0.88rem', color: 'white', marginBottom: '0.15rem' }}>3 months free with every website</div>
+                    <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', fontWeight: 300 }}>Then $200/month — cancel any time</div>
+                  </div>
+                  <div style={{ textAlign: 'right' }}>
+                    <div style={{ fontWeight: 900, fontSize: '1.3rem', color: '#ffb400', lineHeight: 1 }}>$600</div>
+                    <div style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.35)', fontWeight: 300 }}>included free</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <style>{`@media (max-width: 860px) { .hub-grid { grid-template-columns: 1fr !important; gap: 3rem !important; } }`}</style>
+      </section>
+
       {/* ─── PACKAGES ─── */}
       <section style={{ padding: '6rem 1.5rem', background: '#040b15', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
@@ -303,8 +383,8 @@ export default function WebsitePromo() {
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }} className="pkg-grid">
           {[
-            { name: 'Starter', price: '$1,500', pages: '3 pages', desc: 'A clean, professional online presence for a solo practitioner or new clinic.', includes: ['Home, About & Contact pages', 'Online booking integration', 'Mobile-responsive design', 'Basic SEO setup', 'Google Analytics', '30-day support'], highlight: false },
-            { name: 'Growth', price: '$2,500', pages: '6–10 pages', desc: "Built to rank on Google and convert more of the visitors you're already getting.", includes: ['Up to 10 pages incl. service pages', 'Custom brand-aligned design', 'Advanced SEO + schema markup', 'Condition/service landing pages', 'Blog setup', 'Conversion tracking', '60-day support'], highlight: true },
+            { name: 'Starter', price: '$1,500', pages: '3 pages', desc: 'A clean, professional online presence for a solo practitioner or new clinic.', includes: ['Home, About & Contact pages', 'Online booking integration', 'Mobile-responsive design', 'Basic SEO setup', 'Google Analytics', '30-day support', '🎁 3 months Marketing Hub — free ($600)'], highlight: false },
+            { name: 'Growth', price: '$2,500', pages: '6–10 pages', desc: "Built to rank on Google and convert more of the visitors you're already getting.", includes: ['Up to 10 pages incl. service pages', 'Custom brand-aligned design', 'Advanced SEO + schema markup', 'Condition/service landing pages', 'Blog setup', 'Conversion tracking', '60-day support', '🎁 3 months Marketing Hub — free ($600)'], highlight: true },
           ].map(pkg => (
             <div key={pkg.name} style={{ background: pkg.highlight ? 'linear-gradient(160deg, rgba(15,37,64,0.9), rgba(20,50,80,0.7))' : 'rgba(255,255,255,0.03)', border: `1px solid ${pkg.highlight ? 'rgba(91,196,245,0.45)' : 'rgba(255,255,255,0.08)'}`, borderRadius: '20px', padding: '2.5rem 2rem', position: 'relative', transform: pkg.highlight ? 'scale(1.02)' : 'scale(1)', boxShadow: pkg.highlight ? '0 0 60px rgba(91,196,245,0.1)' : 'none' }}>
               {pkg.highlight && <div style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)', background: 'linear-gradient(90deg, #5bc4f5, #2a9fd8)', color: '#060d18', fontSize: '0.65rem', fontWeight: 800, padding: '0.3rem 1.2rem', borderRadius: '20px', letterSpacing: '0.08em', whiteSpace: 'nowrap' }}>MOST POPULAR</div>}
