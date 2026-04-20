@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import Layout from '../components/Layout';
 import Head from 'next/head';
 import Script from 'next/script';
+import { useRouter } from 'next/router';
 
 const schemaMarkup = {
   '@context': 'https://schema.org',
@@ -34,6 +35,10 @@ const schemaMarkup = {
 };
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
+  const noLayout = ['/link'];
+  const skipLayout = noLayout.includes(router.pathname);
+
   return (
     <>
       <Head>
@@ -56,9 +61,13 @@ export default function App({ Component, pageProps }) {
           gtag('config', 'G-S3BDP7H95J');
         `}
       </Script>
-      <Layout>
+      {skipLayout ? (
         <Component {...pageProps} />
-      </Layout>
+      ) : (
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      )}
     </>
   );
 }
