@@ -81,15 +81,15 @@ export default function WebsitePromo() {
         `}</style>
       </Head>
 
-      {/* ─── SCARCITY BAR ─── */}
-      <div style={{ background: 'rgba(255,180,0,0.08)', borderBottom: '1px solid rgba(255,180,0,0.25)', padding: '0.75rem 1.5rem', textAlign: 'center' }}>
+      {/* ─── SCARCITY BAR — position sticky + zIndex above nav (100) ─── */}
+      <div style={{ position: 'sticky', top: 0, zIndex: 101, background: '#1c1000', borderBottom: '1px solid rgba(255,180,0,0.5)', padding: '0.72rem 1.5rem', textAlign: 'center' }}>
         <p style={{ fontSize: '0.82rem', fontWeight: 600, color: '#ffb400', letterSpacing: '0.02em' }}>
           🔒 Opening special — only <strong>1–2 websites built at a time.</strong> First in, first served. Spots fill fast.
         </p>
       </div>
 
       {/* ─── HERO ─── */}
-      <section style={{ position: 'relative', padding: '7rem 1.5rem 5rem', textAlign: 'center', overflow: 'hidden', background: 'linear-gradient(160deg, #040b15 0%, #081525 60%, #040b15 100%)' }}>
+      <section style={{ position: 'relative', padding: '9rem 1.5rem 6rem', textAlign: 'center', overflow: 'hidden', background: 'linear-gradient(160deg, #060d18 0%, #0d1f35 60%, #060d18 100%)' }}>
         <div style={{ position: 'absolute', top: '10%', left: '50%', transform: 'translateX(-50%)', width: '700px', height: '400px', background: 'radial-gradient(ellipse, rgba(91,196,245,0.08) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div style={{ position: 'relative', maxWidth: '860px', margin: '0 auto' }}>
           <div style={{ marginBottom: '1.5rem' }}>
@@ -134,7 +134,7 @@ export default function WebsitePromo() {
       </div>
 
       {/* ─── PORTFOLIO ─── */}
-      <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #040b15 0%, #060f1c 100%)' }}><div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+      <section style={{ padding: '6rem 1.5rem', background: '#08111e' }}><div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
           <span className="tag">Our Work</span>
           <h2 style={{ fontWeight: 800, fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: 1.2, marginTop: '1rem', marginBottom: '0.75rem' }}>Real Sites. Real Clinics.</h2>
@@ -218,7 +218,7 @@ export default function WebsitePromo() {
       </section>
 
       {/* ─── PAGE SPEED ─── */}
-      <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #040b15 0%, #060f1c 100%)' }}>
+      <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #030b10 0%, #061510 100%)', borderTop: '1px solid rgba(34,197,94,0.12)', borderBottom: '1px solid rgba(34,197,94,0.08)' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <span className="tag">Performance</span>
           <h2 style={{ fontWeight: 800, fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: 1.2, margin: '1rem 0 0.75rem' }}>
@@ -245,7 +245,7 @@ export default function WebsitePromo() {
       </section>
 
       {/* ─── FEATURES ─── */}
-      <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #040b15 0%, #060f1c 100%)' }}><div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+      <section style={{ padding: '6rem 1.5rem', background: '#0a1628' }}><div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
           <span className="tag">What You Get</span>
           <h2 style={{ fontWeight: 800, fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: 1.2, margin: '1rem 0 0.75rem' }}>Every Site Includes</h2>
@@ -294,7 +294,7 @@ export default function WebsitePromo() {
       </section>
 
       {/* ─── PACKAGES ─── */}
-      <section style={{ padding: '6rem 1.5rem', background: '#040b15' }}>
+      <section style={{ padding: '6rem 1.5rem', background: '#040b15', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
           <span className="tag">Pricing</span>
           <h2 style={{ fontWeight: 800, fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: 1.2, margin: '1rem 0 0.75rem' }}>Simple, Fixed Pricing</h2>
