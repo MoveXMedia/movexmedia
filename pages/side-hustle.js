@@ -111,9 +111,46 @@ export default function SideHustle() {
 
       {/* ── HERO ── */}
       <section style={{ position: 'relative', padding: '8rem 1.5rem 5rem', overflow: 'hidden', background: 'linear-gradient(160deg, #060d18 0%, #0a1628 60%, #060d18 100%)' }}>
+        {/* Radial glow */}
         <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: '800px', height: '500px', background: 'radial-gradient(ellipse, rgba(91,196,245,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
-        <div style={{ maxWidth: '860px', margin: '0 auto', position: 'relative' }}>
 
+        {/* Browser mockup — decorative background right side */}
+        <div style={{ position: 'absolute', right: '-60px', top: '50%', transform: 'translateY(-50%)', width: '480px', opacity: 0.18, pointerEvents: 'none' }} className="hero-mockup">
+          <svg viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="480" height="320" rx="12" fill="#0d1f35" stroke="#5bc4f5" strokeWidth="1.5"/>
+            {/* Browser bar */}
+            <rect x="0" y="0" width="480" height="36" rx="12" fill="#0a1a2e"/>
+            <rect x="8" y="8" width="20" height="20" rx="10" fill="#ef4444" opacity="0.7"/>
+            <rect x="34" y="8" width="20" height="20" rx="10" fill="#f59e0b" opacity="0.7"/>
+            <rect x="60" y="8" width="20" height="20" rx="10" fill="#22c55e" opacity="0.7"/>
+            <rect x="90" y="10" width="280" height="16" rx="8" fill="#1a3a5c"/>
+            {/* URL text */}
+            <rect x="100" y="14" width="80" height="8" rx="4" fill="#5bc4f5" opacity="0.5"/>
+            {/* Page content mockup */}
+            <rect x="20" y="55" width="200" height="14" rx="4" fill="#5bc4f5" opacity="0.8"/>
+            <rect x="20" y="78" width="300" height="8" rx="4" fill="#1a3a5c"/>
+            <rect x="20" y="94" width="250" height="8" rx="4" fill="#1a3a5c"/>
+            <rect x="20" y="110" width="280" height="8" rx="4" fill="#1a3a5c"/>
+            <rect x="20" y="135" width="90" height="28" rx="6" fill="#5bc4f5" opacity="0.9"/>
+            <rect x="120" y="135" width="90" height="28" rx="6" fill="#0d1f35" stroke="#5bc4f5" strokeWidth="1" opacity="0.7"/>
+            {/* Stat cards */}
+            <rect x="20" y="185" width="130" height="70" rx="8" fill="#0d1f35" stroke="#1a3a5c" strokeWidth="1"/>
+            <rect x="165" y="185" width="130" height="70" rx="8" fill="#0d1f35" stroke="#5bc4f5" strokeWidth="1" opacity="0.6"/>
+            <rect x="310" y="185" width="130" height="70" rx="8" fill="#0d1f35" stroke="#1a3a5c" strokeWidth="1"/>
+            <rect x="30" y="200" width="50" height="18" rx="4" fill="#5bc4f5" opacity="0.7"/>
+            <rect x="175" y="200" width="50" height="18" rx="4" fill="#f59e0b" opacity="0.7"/>
+            <rect x="320" y="200" width="50" height="18" rx="4" fill="#22c55e" opacity="0.7"/>
+            <rect x="30" y="226" width="80" height="8" rx="4" fill="#1a3a5c"/>
+            <rect x="175" y="226" width="80" height="8" rx="4" fill="#1a3a5c"/>
+            <rect x="320" y="226" width="80" height="8" rx="4" fill="#1a3a5c"/>
+            {/* Bottom row */}
+            <rect x="20" y="270" width="440" height="30" rx="6" fill="#0d1f35" stroke="#1a3a5c" strokeWidth="1"/>
+            <rect x="30" y="279" width="120" height="12" rx="4" fill="#1a3a5c"/>
+            <rect x="360" y="279" width="80" height="12" rx="6" fill="#5bc4f5" opacity="0.5"/>
+          </svg>
+        </div>
+
+        <div style={{ maxWidth: '860px', margin: '0 auto', position: 'relative' }}>
           {/* Frank opener */}
           <div style={{ display: 'inline-block', background: 'rgba(255,180,0,0.1)', border: '1px solid rgba(255,180,0,0.35)', borderRadius: '8px', padding: '0.5rem 1.1rem', marginBottom: '2rem' }}>
             <span style={{ fontSize: '0.82rem', fontWeight: 600, color: '#ffb400' }}>Honest talk for people building something on the side 👇</span>
@@ -140,6 +177,64 @@ export default function SideHustle() {
             $499 USD one-off · $20 USD/month hosting · Live in 7 days
           </p>
         </div>
+        <style>{`.hero-mockup { display: block; } @media (max-width: 900px) { .hero-mockup { display: none; } }`}</style>
+      </section>
+
+      {/* ── DANIEL + TIPS ── */}
+      <section id="tips" style={{ padding: '6rem 1.5rem', background: '#08111e', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ maxWidth: '960px', margin: '0 auto', display: 'grid', gridTemplateColumns: '300px 1fr', gap: '4rem', alignItems: 'start' }} className="daniel-tips-grid">
+
+          {/* Daniel photo */}
+          <div style={{ position: 'relative' }}>
+            <div style={{ borderRadius: '20px', overflow: 'hidden', border: '2px solid rgba(91,196,245,0.4)', boxShadow: '0 24px 80px rgba(0,0,0,0.5)' }}>
+              <Image src="/daniel-ryan.jpg" alt="Daniel Ryan" width={400} height={500} style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover', objectPosition: 'top' }} />
+              <div style={{ background: 'linear-gradient(to top, rgba(6,13,24,0.97) 40%, transparent)', padding: '1.75rem 1.5rem 1.5rem', marginTop: '-80px', position: 'relative' }}>
+                <div style={{ fontWeight: 800, fontSize: '1rem' }}>Daniel Ryan</div>
+                <div style={{ color: '#5bc4f5', fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.04em' }}>Founder · MoveX Media</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Tips */}
+          <div>
+            <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.75rem' }}>From Daniel</p>
+            <h2 style={{ fontWeight: 900, fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', lineHeight: 1.2, marginBottom: '1.25rem', letterSpacing: '-0.02em' }}>
+              The honest truth about<br />
+              <span style={{ color: '#5bc4f5' }}>side hustles that actually work</span>
+            </h2>
+
+            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.95rem', lineHeight: 1.85, fontWeight: 300, marginBottom: '1.5rem' }}>
+              I built Move Physiotherapy from a single room into a three-location business. Before MoveX. While running a clinic. I know what it feels like to be building something on the side with limited time, limited money, and a long list of things to figure out.
+            </p>
+            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.95rem', lineHeight: 1.85, fontWeight: 300, marginBottom: '2.5rem' }}>
+              The businesses that make it aren't the ones who launch perfectly. They're the ones who pick the right daily actions and actually do them.
+            </p>
+
+            {/* Tips list */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2.5rem' }}>
+              {[
+                { num: '01', tip: 'Don\'t do everything at once', detail: 'Pick one channel. One audience. One offer. Master it before you expand.' },
+                { num: '02', tip: 'Daily beats weekly beats monthly', detail: 'A small thing done every day compounds into something big. An hour every Sunday doesn\'t.' },
+                { num: '03', tip: 'Remove the low-value tasks first', detail: 'If it can be done better by someone else for a reasonable price — pay it. Your time is worth more than you think.' },
+                { num: '04', tip: 'Your website is infrastructure, not marketing', detail: 'Get it done once. Properly. Then forget about it and go market your business.' },
+              ].map(t => (
+                <div key={t.num} style={{ display: 'flex', gap: '1.25rem', padding: '1.25rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.06)' }}>
+                  <div style={{ fontWeight: 900, fontSize: '0.7rem', color: '#5bc4f5', letterSpacing: '0.1em', minWidth: '28px', marginTop: '3px', opacity: 0.7 }}>{t.num}</div>
+                  <div>
+                    <div style={{ fontWeight: 700, fontSize: '0.92rem', marginBottom: '0.3rem' }}>{t.tip}</div>
+                    <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.84rem', fontWeight: 300, lineHeight: 1.6 }}>{t.detail}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', lineHeight: 1.8, fontWeight: 300, fontStyle: 'italic', marginBottom: '0.5rem' }}>
+              "Sign up below and I'll send you the full version — what I actually did, what worked, and what I'd do differently."
+            </p>
+            <p style={{ color: '#5bc4f5', fontSize: '0.82rem', fontWeight: 600 }}>— Daniel</p>
+          </div>
+        </div>
+        <style>{`@media (max-width: 820px) { .daniel-tips-grid { grid-template-columns: 1fr !important; gap: 3rem !important; } }`}</style>
       </section>
 
       {/* ── FRANK TRUTH SECTION ── */}
@@ -275,22 +370,14 @@ export default function SideHustle() {
             </div>
           </div>
 
-          {/* Hexa */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }} className="portfolio-grid-sh">
-            {[
-              { src: '/work-hexa-1.png', alt: 'Hexa Health Hub', title: 'Hexa Health Hub', desc: 'Premium service business · Perth, WA' },
-              { src: '/work-hexa-2.png', alt: 'Hexa service pages', title: 'Hexa — Service Pages', desc: 'Individual service pages that rank on Google' },
-            ].map(p => (
-              <div key={p.title} style={{ borderRadius: '14px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)', background: '#0a1628' }}>
-                <Image src={p.src} alt={p.alt} width={600} height={380} style={{ width: '100%', height: 'auto', display: 'block' }} />
-                <div style={{ padding: '1rem 1.25rem' }}>
-                  <div style={{ fontWeight: 700, fontSize: '0.88rem', marginBottom: '0.2rem' }}>{p.title}</div>
-                  <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', fontWeight: 300 }}>{p.desc}</div>
-                </div>
-              </div>
-            ))}
+          {/* Hexa — homepage only */}
+          <div style={{ borderRadius: '14px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)', background: '#0a1628' }}>
+            <Image src="/work-hexa-1.png" alt="Hexa Health Hub" width={600} height={380} style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <div style={{ padding: '1rem 1.25rem' }}>
+              <div style={{ fontWeight: 700, fontSize: '0.88rem', marginBottom: '0.2rem' }}>Hexa Health Hub</div>
+              <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', fontWeight: 300 }}>Premium service business · Perth, WA</div>
+            </div>
           </div>
-          <style>{`@media (max-width: 600px) { .portfolio-grid-sh { grid-template-columns: 1fr !important; } }`}</style>
         </div>
       </section>
 
@@ -305,63 +392,6 @@ export default function SideHustle() {
           </a>
         </div>
       </div>
-
-      {/* ── DANIEL + TIPS ── */}
-      <section id="tips" style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #060d18 0%, #0d1f35 100%)', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-        <div style={{ maxWidth: '960px', margin: '0 auto', display: 'grid', gridTemplateColumns: '320px 1fr', gap: '5rem', alignItems: 'start' }} className="daniel-tips-grid">
-
-          {/* Daniel photo */}
-          <div style={{ position: 'relative' }}>
-            <div style={{ borderRadius: '20px', overflow: 'hidden', border: '2px solid rgba(91,196,245,0.4)', boxShadow: '0 24px 80px rgba(0,0,0,0.5)' }}>
-              <Image src="/daniel-ryan.jpg" alt="Daniel Ryan" width={400} height={500} style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover', objectPosition: 'top' }} />
-              <div style={{ background: 'linear-gradient(to top, rgba(6,13,24,0.97) 40%, transparent)', padding: '1.75rem 1.5rem 1.5rem', marginTop: '-80px', position: 'relative' }}>
-                <div style={{ fontWeight: 800, fontSize: '1rem' }}>Daniel Ryan</div>
-                <div style={{ color: '#5bc4f5', fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.04em' }}>Founder · MoveX Media</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Tips */}
-          <div>
-            <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.75rem' }}>From Daniel</p>
-            <h2 style={{ fontWeight: 900, fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', lineHeight: 1.2, marginBottom: '1.25rem', letterSpacing: '-0.02em' }}>
-              The honest truth about<br />
-              <span style={{ color: '#5bc4f5' }}>side hustles that actually work</span>
-            </h2>
-
-            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.95rem', lineHeight: 1.85, fontWeight: 300, marginBottom: '1.5rem' }}>
-              I built Move Physiotherapy from a single room into a three-location business. Before MoveX. While running a clinic. I know what it feels like to be building something on the side with limited time, limited money, and a long list of things to figure out.
-            </p>
-            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.95rem', lineHeight: 1.85, fontWeight: 300, marginBottom: '2.5rem' }}>
-              The businesses that make it aren't the ones who launch perfectly. They're the ones who pick the right daily actions and actually do them.
-            </p>
-
-            {/* Tips list */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2.5rem' }}>
-              {[
-                { num: '01', tip: 'Don\'t do everything at once', detail: 'Pick one channel. One audience. One offer. Master it before you expand.' },
-                { num: '02', tip: 'Daily beats weekly beats monthly', detail: 'A small thing done every day compounds into something big. An hour every Sunday doesn\'t.' },
-                { num: '03', tip: 'Remove the low-value tasks first', detail: 'If it can be done better by someone else for a reasonable price — pay it. Your time is worth more than you think.' },
-                { num: '04', tip: 'Your website is infrastructure, not marketing', detail: 'Get it done once. Properly. Then forget about it and go market your business.' },
-              ].map(t => (
-                <div key={t.num} style={{ display: 'flex', gap: '1.25rem', padding: '1.25rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.06)' }}>
-                  <div style={{ fontWeight: 900, fontSize: '0.7rem', color: '#5bc4f5', letterSpacing: '0.1em', minWidth: '28px', marginTop: '3px', opacity: 0.7 }}>{t.num}</div>
-                  <div>
-                    <div style={{ fontWeight: 700, fontSize: '0.92rem', marginBottom: '0.3rem' }}>{t.tip}</div>
-                    <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.84rem', fontWeight: 300, lineHeight: 1.6 }}>{t.detail}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', lineHeight: 1.8, fontWeight: 300, fontStyle: 'italic', marginBottom: '0.5rem' }}>
-              "Sign up below and I'll send you the full version — what I actually did, what worked, and what I'd do differently."
-            </p>
-            <p style={{ color: '#5bc4f5', fontSize: '0.82rem', fontWeight: 600 }}>— Daniel</p>
-          </div>
-        </div>
-        <style>{`@media (max-width: 820px) { .daniel-tips-grid { grid-template-columns: 1fr !important; gap: 3rem !important; } }`}</style>
-      </section>
 
       {/* ── EMAIL CAPTURE ── */}
       <section style={{ padding: '6rem 1.5rem', background: '#08111e', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
