@@ -275,14 +275,60 @@ export default function SideHustle() {
             ))}
           </div>
 
-          {/* Pricing */}
-          <div style={{ background: 'linear-gradient(135deg, #0a1628, #0d1f35)', borderRadius: '16px', padding: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem' }}>
-            <div>
-              <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#5bc4f5', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>3-page website · Live in 7 days</div>
-              <div style={{ fontWeight: 900, fontSize: '3rem', lineHeight: 1, color: '#5bc4f5' }}>$499 <span style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.4)', fontWeight: 300 }}>USD</span></div>
-              <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem', marginTop: '0.4rem', fontWeight: 300 }}>+ $20 USD/month hosting · 2-year minimum hosting commitment</div>
+          {/* Pricing comparison */}
+          <div style={{ marginBottom: '0' }}>
+            <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.75rem' }}>The real cost breakdown</p>
+            <h3 style={{ fontWeight: 900, fontSize: 'clamp(1.4rem, 3vw, 2rem)', color: '#060d18', marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>
+              $499 won't break the bank.<br /><span style={{ color: '#5bc4f5' }}>Here's the proof.</span>
+            </h3>
+            <p style={{ color: '#6b849a', fontSize: '0.95rem', lineHeight: 1.75, fontWeight: 300, maxWidth: '560px', marginBottom: '2rem' }}>
+              DIY platforms look cheap until you add up what you actually pay. Most side hustlers spend more on Wix or Shopify in year one — and get a slower, templated result.
+            </p>
+
+            {/* Comparison table */}
+            <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem', fontFamily: 'Poppins, sans-serif' }}>
+                <thead>
+                  <tr>
+                    <th style={{ textAlign: 'left', padding: '0.9rem 1.25rem', background: '#060d18', color: 'rgba(255,255,255,0.5)', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', borderRadius: '12px 0 0 0' }}> </th>
+                    <th style={{ padding: '0.9rem 1.25rem', background: '#060d18', color: 'rgba(255,255,255,0.5)', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', textAlign: 'center' }}>Wix</th>
+                    <th style={{ padding: '0.9rem 1.25rem', background: '#060d18', color: 'rgba(255,255,255,0.5)', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', textAlign: 'center' }}>Shopify</th>
+                    <th style={{ padding: '0.9rem 1.25rem', background: 'linear-gradient(135deg, #1a3a5c, #0d1f35)', color: '#5bc4f5', fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', textAlign: 'center', borderRadius: '0 12px 0 0', borderBottom: '2px solid #5bc4f5' }}>MoveX $499</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { label: 'Setup / build cost', wix: '$0', shopify: '$0', movex: '$499 once', highlight: true },
+                    { label: 'Monthly subscription', wix: '$27–$49/mo', shopify: '$39–$105/mo', movex: '$20/mo hosting' },
+                    { label: 'Year 1 total cost', wix: '$324–$588', shopify: '$468–$1,260', movex: '$499 + $240 = $739', highlight: true },
+                    { label: 'Year 2 onwards', wix: '$324–$588/yr', shopify: '$468–$1,260/yr', movex: '$240/yr only' },
+                    { label: 'PageSpeed score', wix: '40–65 / 100', shopify: '50–70 / 100', movex: '100 / 100 ✓', highlight: true },
+                    { label: 'Custom design', wix: 'Template only', shopify: 'Template only', movex: 'Built for you ✓' },
+                    { label: 'SEO structure', wix: 'Basic', shopify: 'Basic', movex: 'Built in ✓' },
+                    { label: 'Copy written for you', wix: '✗', shopify: '✗', movex: '✓' },
+                  ].map((row, i) => (
+                    <tr key={row.label} style={{ background: i % 2 === 0 ? 'white' : '#f8fafc' }}>
+                      <td style={{ padding: '0.85rem 1.25rem', color: '#0d1f35', fontWeight: 500, borderBottom: '1px solid #e2eaf4' }}>{row.label}</td>
+                      <td style={{ padding: '0.85rem 1.25rem', color: '#9ab0c4', textAlign: 'center', borderBottom: '1px solid #e2eaf4', fontWeight: 300 }}>{row.wix}</td>
+                      <td style={{ padding: '0.85rem 1.25rem', color: '#9ab0c4', textAlign: 'center', borderBottom: '1px solid #e2eaf4', fontWeight: 300 }}>{row.shopify}</td>
+                      <td style={{ padding: '0.85rem 1.25rem', color: row.highlight ? '#0d8fd4' : '#0d1f35', fontWeight: 700, textAlign: 'center', borderBottom: '1px solid rgba(91,196,245,0.2)', background: row.highlight ? 'rgba(91,196,245,0.06)' : 'rgba(91,196,245,0.03)', borderLeft: '2px solid rgba(91,196,245,0.3)' }}>{row.movex}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-            <a href={BOOKING_URL} style={{ display: 'inline-block', background: '#5bc4f5', color: 'white', fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1rem', padding: '1rem 2.2rem', borderRadius: '8px', textDecoration: 'none', boxShadow: '0 4px 20px rgba(91,196,245,0.4)' }}>Start Today →</a>
+
+            <div style={{ background: 'linear-gradient(135deg, #0a1628, #0d1f35)', borderRadius: '14px', padding: '2rem 2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem' }}>
+              <div>
+                <div style={{ fontSize: '0.72rem', fontWeight: 700, color: '#5bc4f5', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>3-page website · Live in 7 days · Custom design</div>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+                  <span style={{ fontWeight: 900, fontSize: '3.2rem', lineHeight: 1, color: '#5bc4f5' }}>$499</span>
+                  <span style={{ color: 'rgba(255,255,255,0.35)', fontWeight: 300, fontSize: '1rem' }}>USD one-off</span>
+                </div>
+                <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.82rem', marginTop: '0.35rem', fontWeight: 300 }}>Then just $20 USD/month hosting · 2-year minimum</div>
+              </div>
+              <a href={BOOKING_URL} style={{ display: 'inline-block', background: '#5bc4f5', color: '#040c18', fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1rem', padding: '1rem 2.2rem', borderRadius: '8px', textDecoration: 'none', boxShadow: '0 4px 20px rgba(91,196,245,0.4)', whiteSpace: 'nowrap' }}>Start Today →</a>
+            </div>
           </div>
         </div>
       </section>
@@ -295,10 +341,13 @@ export default function SideHustle() {
             This is what $499 gets you.
           </h2>
 
-          {/* Move Physio - hero */}
-          <div style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid #e2eaf4', marginBottom: '1.5rem' }}>
-            <Image src="/work-move-physio.png" alt="Move Physiotherapy Website" width={1200} height={680} style={{ width: '100%', height: 'auto', display: 'block' }} />
-
+          {/* ShapeHaus */}
+          <div style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid #e2eaf4', boxShadow: '0 8px 32px rgba(13,31,53,0.08)' }}>
+            <img src="/work-shapehaus.jpg" alt="ShapeHaus website" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <div style={{ padding: '0.9rem 1.25rem', background: 'white', borderTop: '1px solid #e2eaf4', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.82rem', color: '#0d1f35' }}>ShapeHaus — Handcraft Studio · Fremantle, WA</span>
+              <span style={{ fontSize: '0.72rem', color: '#5bc4f5', fontWeight: 600 }}>MoveX build</span>
+            </div>
           </div>
 
         </div>
