@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 const features = [
   { icon: '🔄', title: 'Re-engagement Campaigns', desc: 'Automatically reach patients who haven\'t booked in 3, 6, or 12 months — bringing lapsed patients back without a single manual email.' },
-  { icon: '📬', title: 'Referral Nurture Sequences', desc: 'Structured email journeys for GP and specialist referrals — keeping your practice top of mind with the people who send you patients.' },
-  { icon: '🗓️', title: 'Appointment Reminders', desc: 'Automated pre-appointment emails that reduce no-shows and prepare patients for their visit.' },
-  { icon: '📰', title: 'Monthly Newsletter', desc: 'A health-focused newsletter that educates your patient base, highlights services, and keeps your clinic in their inbox.' },
-  { icon: '⭐', title: 'Review Generation', desc: 'Post-appointment sequences that prompt satisfied patients to leave Google reviews — compliantly and without pressure.' },
+  { icon: '📬', title: 'Referral Nurture Sequences', desc: 'Structured email journeys for new leads and referrals — keeping your business top of mind with the people who send you customers.' },
+  { icon: '🗓️', title: 'Appointment Reminders', desc: 'Automated reminder emails that reduce no-shows and keep customers engaged before they arrive.' },
+  { icon: '📰', title: 'Monthly Newsletter', desc: 'A regular newsletter that educates your customer base, highlights services, and keeps your business in their inbox.' },
+  { icon: '⭐', title: 'Review Generation', desc: 'Post-visit sequences that prompt satisfied customers to leave Google reviews — naturally and without pressure.' },
   { icon: '📈', title: 'List Growth Strategy', desc: 'Tactics to grow your email list through your website, front desk, and social channels — building an asset you own permanently.' },
 ];
 
@@ -38,10 +38,10 @@ const campaignExamples = [
 ];
 
 const faqs = [
-  { q: 'What platform do you use?', a: 'We work with Mailchimp, Klaviyo, or integrate with your existing booking system (Cliniko, Nookal, etc.) depending on your setup and patient list size.' },
-  { q: 'Do we need a big email list to start?', a: 'No. Even 200 patients in your list is enough to generate meaningful re-bookings. List building is part of the service.' },
+  { q: 'What platform do you use?', a: 'We work with Mailchimp, Klaviyo, or integrate with your existing CRM or booking system depending on your setup and list size.' },
+  { q: 'Do we need a big email list to start?', a: 'No. Even 200 contacts in your list is enough to generate meaningful results. List building is part of the service.' },
   { q: 'Is email marketing AHPRA compliant?', a: 'Yes, when done correctly. We don\'t use testimonials or outcome claims that breach standards. Every campaign is reviewed before sending.' },
-  { q: 'How often will we email patients?', a: 'Automated sequences fire based on patient behaviour (lapsed, post-appointment, etc.). Newsletters are monthly. We never spam — frequency is always considered against patient experience.' },
+  { q: 'How often will we email patients?', a: 'Automated sequences fire based on customer behaviour (lapsed, post-visit, etc.). Newsletters are monthly. We never spam — frequency is always considered.' },
 ];
 
 export default function EmailMarketing() {
@@ -49,20 +49,20 @@ export default function EmailMarketing() {
     <>
       <Head>
         <title>Email Marketing for Allied Health — MoveX Media</title>
-        <meta name="description" content="Email marketing automation for physiotherapy and allied health practices. Re-engage lapsed patients, reduce no-shows, and grow your review count — all on autopilot." />
+        <meta name="description" content="Email marketing automation for local service businesses. Re-engage lapsed customers, reduce no-shows, and grow your review count — all on autopilot." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://movex.media/email-marketing" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="MoveX Media" />
         <meta property="og:title" content="Email Marketing for Allied Health — MoveX Media" />
-        <meta property="og:description" content="Email marketing automation for physiotherapy and allied health practices. Re-engage lapsed patients, reduce no-shows, and grow your review count." />
+        <meta property="og:description" content="Email marketing automation for local service businesses. Re-engage lapsed customers, reduce no-shows, and grow your review count." />
         <meta property="og:url" content="https://movex.media/email-marketing" />
         <meta property="og:image" content="https://movex.media/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Email Marketing for Allied Health — MoveX Media" />
-        <meta name="twitter:description" content="Email marketing automation for physiotherapy and allied health practices. Re-engage lapsed patients, reduce no-shows, and grow your review count." />
+        <meta name="twitter:description" content="Email marketing automation for local service businesses. Re-engage lapsed customers, reduce no-shows, and grow your review count." />
         <meta name="twitter:image" content="https://movex.media/og-image.png" />
       </Head>
 
@@ -71,7 +71,7 @@ export default function EmailMarketing() {
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div className="section-label" style={{ color: '#5bc4f5', marginBottom: '1.2rem' }}>Email Marketing</div>
           <h1 style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(2rem, 5vw, 3.4rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1.5rem', color: 'white' }}>
-            Your patient list is<br />
+            Your customer list is<br />
             <span style={{ background: 'linear-gradient(90deg, #3b82f6, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               your most underused asset
             </span>
@@ -91,7 +91,7 @@ export default function EmailMarketing() {
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div className="section-label" style={{ color: '#5bc4f5', marginBottom: '0.8rem' }}>What We Do</div>
           <h2 style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontWeight: 800, color: '#0d1f35', marginBottom: '3rem' }}>
-            Automation that works while you treat patients
+            Automation that works while you run your business
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
             {features.map(f => (
@@ -110,7 +110,7 @@ export default function EmailMarketing() {
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div className="section-label" style={{ color: '#5bc4f5', marginBottom: '0.8rem' }}>Campaign Examples</div>
           <h2 style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontWeight: 800, color: 'white', marginBottom: '1rem' }}>
-            What your patients actually <span style={{ color: '#5bc4f5' }}>receive</span>
+            What your customers actually <span style={{ color: '#5bc4f5' }}>receive</span>
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '1rem', lineHeight: '1.75', maxWidth: '560px', marginBottom: '3rem', fontWeight: 300 }}>
             Every campaign is written in plain language, personalised where possible, and designed to feel like it came from your clinic — not a marketing agency.
@@ -163,7 +163,7 @@ export default function EmailMarketing() {
       <section style={{ padding: '6rem 2rem', background: 'rgba(15,37,64,0.15)', textAlign: 'center' }}>
         <div style={{ maxWidth: '600px', margin: '0 auto' }}>
           <h2 style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', fontWeight: 800, color: 'white', marginBottom: '1rem' }}>
-            Start recovering lost patients
+            Start recovering lost customers
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '1rem', lineHeight: '1.75', marginBottom: '2rem', fontWeight: 300 }}>
             Book a free strategy session and we&apos;ll audit your current patient list and show you the re-booking opportunity you&apos;re sitting on.

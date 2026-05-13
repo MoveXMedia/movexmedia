@@ -229,49 +229,54 @@ export default function Home() {
 
           </div>
 
-          {/* Portfolio — Move Physio + Hexa home only */}
-          <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '1.25rem', alignItems: 'start' }} className="portfolio-grid-home">
-            <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 16px 48px rgba(13,31,53,0.12)', border: '1px solid #e2eaf4' }}>
-              <img src="/work-move-physio.png" alt="Move Physiotherapy website" style={{ width: '100%', display: 'block' }} />
+          {/* Dark CTA bar above portfolio */}
+          <div style={{ background: '#0d1f35', borderRadius: '14px', padding: '1.75rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.25rem', marginBottom: '1.5rem' }}>
+            <div>
+              <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: '0.3rem' }}>
+                3-page website · Live in 7 days · $20 USD/month hosting · 2-year minimum term
+              </div>
+              <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900, fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)', color: 'white', lineHeight: 1.1 }}>
+                🌟 Limited time — <span style={{ color: '#5bc4f5' }}>$499 USD special offer</span>
+              </div>
+            </div>
+            <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+              <Link href="/website-development" style={{ display: 'inline-flex', alignItems: 'center', padding: '0.7rem 1.4rem', background: 'rgba(91,196,245,0.15)', border: '1px solid rgba(91,196,245,0.4)', borderRadius: '7px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.8rem', color: '#5bc4f5', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+                View Packages →
+              </Link>
+              <Link href="/get-started" style={{ display: 'inline-flex', alignItems: 'center', padding: '0.7rem 1.4rem', background: '#5bc4f5', borderRadius: '7px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.8rem', color: '#0d1f35', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+                Get Started →
+              </Link>
+            </div>
+          </div>
+
+          {/* Portfolio — equal size, clickable, opens in new tab */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', alignItems: 'start' }} className="portfolio-grid-home">
+            <a href="https://movephysio.com.au" target="_blank" rel="noopener noreferrer" style={{ display: 'block', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 16px 48px rgba(13,31,53,0.12)', border: '1px solid #e2eaf4', textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s' }} className="portfolio-link">
+              <div style={{ aspectRatio: '16/9', overflow: 'hidden' }}>
+                <img src="/work-move-physio.png" alt="Move Physiotherapy website" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+              </div>
               <div style={{ padding: '0.75rem 1rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.78rem', color: '#0d1f35' }}>Move Physiotherapy & Fitness</span>
-                <span style={{ fontSize: '0.72rem', color: '#6b849a', fontWeight: 300 }}>Perth, WA · PageSpeed 100</span>
+                <span style={{ fontSize: '0.72rem', color: '#5bc4f5', fontWeight: 600 }}>Visit site ↗</span>
               </div>
-            </div>
-            <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
-              <img src="/work-hexa-1.png" alt="Hexa Health Hub website" style={{ width: '100%', display: 'block' }} />
-              <div style={{ padding: '0.75rem 1rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
+            </a>
+            <a href="https://hexahealthhub.com.au" target="_blank" rel="noopener noreferrer" style={{ display: 'block', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 16px 48px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4', textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s' }} className="portfolio-link">
+              <div style={{ aspectRatio: '16/9', overflow: 'hidden' }}>
+                <img src="/work-hexa-1.png" alt="Hexa Health Hub website" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+              </div>
+              <div style={{ padding: '0.75rem 1rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.78rem', color: '#0d1f35' }}>Hexa Health Hub</span>
+                <span style={{ fontSize: '0.72rem', color: '#5bc4f5', fontWeight: 600 }}>Visit site ↗</span>
               </div>
-            </div>
+            </a>
           </div>
 
         </div>
         <style>{`
           @media (max-width: 900px) { .website-top-grid { grid-template-columns: 1fr !important; gap: 3rem !important; } }
           @media (max-width: 700px) { .portfolio-grid-home { grid-template-columns: 1fr !important; } }
+          .portfolio-link:hover { transform: translateY(-3px); box-shadow: 0 24px 60px rgba(13,31,53,0.18) !important; }
         `}</style>
-      </section>
-
-      {/* ── WEBSITE OFFER CTA ── */}
-      <section style={{ padding: '3rem 2rem', background: '#ffffff', borderTop: '1px solid #e2eaf4' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem' }}>
-          <div>
-            <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6b849a', marginBottom: '0.3rem' }}>3-page website · Live in 7 days</div>
-            <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900, fontSize: 'clamp(1.4rem, 3vw, 2rem)', color: '#0d1f35', lineHeight: 1.1 }}>
-              Starting from <span style={{ color: '#5bc4f5' }}>$2,500 USD</span>
-            </div>
-            <div style={{ color: '#6b849a', fontSize: '0.82rem', marginTop: '0.3rem', fontWeight: 300 }}>Hosting from $20 USD/month · 2-year minimum hosting term</div>
-          </div>
-          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <Link href="/website-development" style={{ display: 'inline-flex', alignItems: 'center', padding: '0.85rem 1.8rem', background: '#5bc4f5', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.82rem', color: '#0d1f35', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none' }}>
-              View Packages →
-            </Link>
-            <Link href="/get-started" style={{ display: 'inline-flex', alignItems: 'center', padding: '0.85rem 1.8rem', background: 'rgba(91,196,245,0.08)', border: '1px solid rgba(91,196,245,0.35)', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.82rem', color: '#5bc4f5', textDecoration: 'none' }}>
-              🌟 $499 Special Offer
-            </Link>
-          </div>
-        </div>
       </section>
 
       {/* ── SERVICES (dark) ── */}

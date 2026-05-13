@@ -142,6 +142,37 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* Limited Time Offer Hero */}
+      <section style={{ padding: '4rem 2rem 0', background: '#f4f7fb' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <div style={{ background: 'linear-gradient(135deg, #0d1f35 0%, #1a3a5c 100%)', borderRadius: '20px', padding: 'clamp(2rem, 4vw, 3rem)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem', position: 'relative', overflow: 'hidden' }}>
+            <div style={{ position: 'absolute', top: '-60px', right: '-60px', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(91,196,245,0.12) 0%, transparent 70%)', pointerEvents: 'none' }} />
+            <div style={{ position: 'relative' }}>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(255,180,0,0.15)', border: '1px solid rgba(255,180,0,0.4)', borderRadius: '20px', padding: '0.3rem 0.9rem', marginBottom: '1rem' }}>
+                <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#ffb400', display: 'inline-block' }} />
+                <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#ffb400' }}>Limited Time Offer</span>
+              </div>
+              <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900, fontSize: 'clamp(1.6rem, 3.5vw, 2.6rem)', color: 'white', lineHeight: 1.1, marginBottom: '0.75rem' }}>
+                New website from <span style={{ color: '#5bc4f5' }}>$499 USD</span>
+              </h2>
+              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', fontWeight: 300, lineHeight: 1.7, maxWidth: '480px' }}>
+                3-page website. Live in 7 days. Work directly with Daniel. Includes all the same quality as our standard packages — $20 USD/month hosting, 2-year minimum term.
+              </p>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', alignItems: 'flex-start', position: 'relative' }}>
+              {['PageSpeed 100 score', 'SEO built in from day one', 'Copy written for you', 'Live in 7 days', 'Work directly with Daniel'].map(item => (
+                <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', fontWeight: 300 }}>
+                  <span style={{ color: '#5bc4f5', fontWeight: 700, fontSize: '0.8rem' }}>✓</span> {item}
+                </div>
+              ))}
+              <Link href="/get-started" style={{ marginTop: '0.5rem', display: 'inline-flex', alignItems: 'center', background: 'linear-gradient(135deg, #5bc4f5, #2a9fd8)', color: '#040c18', fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '0.88rem', padding: '0.9rem 2rem', borderRadius: '8px', textDecoration: 'none', boxShadow: '0 4px 20px rgba(91,196,245,0.4)', whiteSpace: 'nowrap' }}>
+                Claim This Offer →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Website Design Pricing */}
       <section style={{ padding: '6rem 2rem', background: '#f4f7fb' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
