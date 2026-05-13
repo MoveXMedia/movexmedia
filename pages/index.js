@@ -165,7 +165,7 @@ export default function Home() {
                 MoveX Media was founded by Daniel Ryan — who built Move Physiotherapy & Fitness from a single room into a three-location Perth practice, running all the digital marketing in-house. The results consistently outperformed agencies. So he turned the system into a service.
               </p>
               <p style={{ color: '#6b849a', lineHeight: '1.85', marginBottom: '2rem', fontWeight: 300, fontSize: '0.98rem' }}>
-                Every strategy MoveX offers has been battle-tested with real budgets. We work with local service businesses across any industry — delivering agency-quality marketing at a price that actually makes sense for small business.
+                Since Move Physiotherapy, Daniel has worked with multiple industries including trades, hospitality, marketing and more — strategising and implementing business growth strategies that actually move the needle.
               </p>
               <Link href="/about" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.85rem 1.8rem', background: '#5bc4f5', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.8rem', color: '#0d1f35', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none' }}>
                 Read More →
@@ -176,84 +176,6 @@ export default function Home() {
         <style>{`
           @media (max-width: 900px) {
             .about-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
-          }
-        `}</style>
-      </section>
-
-      {/* ── MOVEX PLATFORM (combined product, dark) ── */}
-      <section style={{ padding: '6rem 2rem', background: '#080f1a', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '900px', height: '400px', background: 'radial-gradient(ellipse, rgba(74,158,218,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
-        <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(91,196,245,0.1)', border: '1px solid rgba(91,196,245,0.25)', borderRadius: '20px', padding: '0.35rem 0.9rem', marginBottom: '1.25rem' }}>
-              <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#5bc4f5', display: 'inline-block', animation: 'pulse-glow 2s ease-in-out infinite' }} />
-              <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#5bc4f5' }}>MoveX Products</span>
-            </div>
-            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', color: 'white', lineHeight: 1.2, marginBottom: '1rem' }}>
-              Two tools. One platform.<br /><span style={{ color: '#5bc4f5' }}>Built for health businesses.</span>
-            </h2>
-            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '1rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '580px', margin: '0 auto' }}>
-              The MoveX Marketing Hub bundles email automation and the clinician performance portal — purpose-built for health and allied health businesses looking to grow revenue and track results in one place.
-            </p>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }} className="product-cards-grid">
-            <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(91,196,245,0.15)', borderRadius: '16px', padding: '2.5rem', overflow: 'hidden' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>✉️</div>
-              <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.15rem', color: 'white', marginBottom: '0.5rem' }}>Email Automation</h3>
-              <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.88rem', lineHeight: '1.7', fontWeight: 300, marginBottom: '1.5rem' }}>
-                Six automated flows running continuously — welcome emails, opt-in sequences, birthday vouchers, review requests, and reactivation campaigns. Triggered by Cliniko data, zero manual work required.
-              </p>
-              {['Welcome & opt-in sequences', 'Birthday voucher automation', 'Reactivation after 90 days inactive', 'Review request at appointment milestone', 'Broadcast campaigns to segments', 'Live delivery & open rate dashboard'].map(item => (
-                <div key={item} style={{ display: 'flex', gap: '0.6rem', color: 'rgba(255,255,255,0.55)', fontSize: '0.83rem', lineHeight: '1.65', padding: '0.2rem 0', fontWeight: 300 }}>
-                  <span style={{ color: '#5bc4f5', flexShrink: 0 }}>✓</span>{item}
-                </div>
-              ))}
-              <div style={{ marginTop: '1.5rem', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(91,196,245,0.1)' }}>
-                <img src="/hub-screenshot-1.png" alt="Email automation dashboard" style={{ width: '100%', display: 'block' }} />
-              </div>
-            </div>
-
-            <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(91,196,245,0.15)', borderRadius: '16px', padding: '2.5rem', overflow: 'hidden' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>📊</div>
-              <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.15rem', color: 'white', marginBottom: '0.5rem' }}>Clinician Performance Portal</h3>
-              <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.88rem', lineHeight: '1.7', fontWeight: 300, marginBottom: '1.5rem' }}>
-                Live KPI dashboard for every clinician — benchmarked against the clinic average. Track unbilled insurance and EPC appointments, client visit averages, and new patient numbers. Updated daily from Cliniko.
-              </p>
-              {['KPI benchmarking vs clinic average', 'Unbilled insurance (MVA/WorkCover) alerts', 'EPC session & correspondence tracking', 'Client Visit Average monitoring', 'New patient & reactivation counts', 'Cancellation & DNA rate tracking'].map(item => (
-                <div key={item} style={{ display: 'flex', gap: '0.6rem', color: 'rgba(255,255,255,0.55)', fontSize: '0.83rem', lineHeight: '1.65', padding: '0.2rem 0', fontWeight: 300 }}>
-                  <span style={{ color: '#5bc4f5', flexShrink: 0 }}>✓</span>{item}
-                </div>
-              ))}
-              <div style={{ marginTop: '1.5rem', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(91,196,245,0.1)' }}>
-                <img src="/portal-screenshot-1.png" alt="Clinician performance portal" style={{ width: '100%', display: 'block' }} />
-              </div>
-            </div>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }} className="product-pricing-grid">
-            <div style={{ background: 'linear-gradient(135deg, rgba(91,196,245,0.12) 0%, rgba(91,196,245,0.04) 100%)', border: '2px solid rgba(91,196,245,0.35)', borderRadius: '14px', padding: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem' }}>
-              <div>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.4rem' }}>MoveX Marketing Hub — Full Bundle</div>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: 'white', lineHeight: 1 }}>$199<span style={{ fontSize: '0.95rem', fontWeight: 400, color: 'rgba(255,255,255,0.4)' }}>/mo</span></div>
-                <div style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.78rem', marginTop: '0.3rem', fontWeight: 300 }}>Email automation + Performance Portal, unlimited clinicians</div>
-              </div>
-              <Link href="/marketing-hub" className="btn-primary" style={{ fontSize: '0.82rem', whiteSpace: 'nowrap' }}>Learn More →</Link>
-            </div>
-            <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px', padding: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem' }}>
-              <div>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '0.4rem' }}>Performance Portal — Standalone</div>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: 'white', lineHeight: 1 }}>$20<span style={{ fontSize: '0.95rem', fontWeight: 400, color: 'rgba(255,255,255,0.4)' }}>/clinician</span></div>
-                <div style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.78rem', marginTop: '0.3rem', fontWeight: 300 }}>KPI portal without the email suite</div>
-              </div>
-              <Link href="/clinician-portal" className="btn-outline" style={{ fontSize: '0.82rem', whiteSpace: 'nowrap' }}>Learn More →</Link>
-            </div>
-          </div>
-        </div>
-        <style>{`
-          @media (max-width: 900px) {
-            .product-cards-grid { grid-template-columns: 1fr !important; }
-            .product-pricing-grid { grid-template-columns: 1fr !important; }
           }
         `}</style>
       </section>
