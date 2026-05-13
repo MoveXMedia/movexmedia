@@ -70,12 +70,12 @@ const packages = [
 ];
 
 const features = [
-  { icon: '📱', title: 'Mobile-first', desc: 'Over 70% of health searches happen on mobile. Every site we build is designed for mobile first, desktop second.' },
+  { icon: '📱', title: 'Mobile-first', desc: 'Over 70% of searches happen on mobile. Every site we build is designed for mobile first, desktop second.' },
   { icon: '⚡', title: 'Fast loading', desc: 'Slow sites lose patients. We build on modern frameworks with image optimisation and CDN delivery as standard.' },
   { icon: '🔍', title: 'Built to rank', desc: 'SEO isn\'t an afterthought — it\'s built into the structure, copy, and technical setup from day one.' },
   { icon: '📅', title: 'Booking-focused', desc: 'Every page is designed with a single goal: convert visitors into booked appointments.' },
   { icon: '🏥', title: 'Health sector copy', desc: 'We write the copy. No lorem ipsum placeholders — your site launches with real, AHPRA-compliant content.' },
-  { icon: '🔗', title: 'Integrations', desc: 'Cliniko, Nookal, HotDoc, PowerDiary — we integrate with the booking systems allied health practices actually use.' },
+  { icon: '🔗', title: 'Integrations', desc: 'Cliniko, Nookal, HotDoc, or any booking system — we integrate directly so customers can book without leaving your site.' },
 ];
 
 const process = [
@@ -100,21 +100,21 @@ export default function WebsiteDevelopment() {
   return (
     <>
       <Head>
-        <title>Website Development for Allied Health — MoveX Media</title>
-        <meta name="description" content="Fast, conversion-focused websites for physiotherapy and allied health practices. Built to rank on Google and turn visitors into booked appointments." />
+        <title>Website Development — MoveX Media</title>
+        <meta name="description" content="Fast, conversion-focused websites for local service businesses. Built to rank on Google, load in under 1 second, and turn visitors into customers." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://movex.media/website-development" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="MoveX Media" />
-        <meta property="og:title" content="Website Development for Allied Health — MoveX Media" />
-        <meta property="og:description" content="Fast, conversion-focused websites for physiotherapy and allied health practices. Built to rank on Google and turn visitors into booked appointments." />
+        <meta property="og:title" content="Website Development — MoveX Media" />
+        <meta property="og:description" content="Fast, conversion-focused websites for local service businesses. Built to rank on Google, load in under 1 second, and turn visitors into customers." />
         <meta property="og:url" content="https://movex.media/website-development" />
         <meta property="og:image" content="https://movex.media/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Website Development for Allied Health — MoveX Media" />
-        <meta name="twitter:description" content="Fast, conversion-focused websites for physiotherapy and allied health practices. Built to rank on Google and turn visitors into booked appointments." />
+        <meta name="twitter:title" content="Website Development — MoveX Media" />
+        <meta name="twitter:description" content="Fast, conversion-focused websites for local service businesses. Built to rank on Google, load in under 1 second, and turn visitors into customers." />
         <meta name="twitter:image" content="https://movex.media/og-image.png" />
       </Head>
 
@@ -160,7 +160,7 @@ export default function WebsiteDevelopment() {
               </p>
               {[
                 { icon: '🐌', problem: 'Slow loading', detail: 'Patients leave within seconds. Every second of delay costs you bookings.' },
-                { icon: '📵', problem: 'Not mobile-optimised', detail: 'Broken layouts and tiny text on the device 70% of your patients use.' },
+                { icon: '📵', problem: 'Not mobile-optimised', detail: 'Broken layouts and tiny text on the device 70% of your customers use.' },
                 { icon: '🏚', problem: 'Outdated design', detail: 'First impressions are instant. An old site loses trust before a word is read.' },
                 { icon: '👻', problem: 'No social proof', detail: 'No reviews, no outcomes, no reason for a new patient to choose you.' },
                 { icon: '✗', problem: 'No clear booking path', detail: "If booking online isn't front and centre, patients don't book — they move on." },
@@ -194,9 +194,9 @@ export default function WebsiteDevelopment() {
           {/* Stat cards */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem', marginBottom: '2.5rem' }}>
             {[
-              { stat: '53%', label: 'of mobile visitors leave', desc: 'if a site takes longer than 3 seconds to load. The average physio website takes 6-8 seconds on mobile.', colour: '#e05555' },
-              { stat: '7%', label: 'conversion drop per second', desc: 'Every 1-second delay in load time reduces bookings by 7%. A 4-second site could be cutting your leads in half.', colour: '#f59e0b' },
-              { stat: '70%+', label: 'of health searches are mobile', desc: 'Most patients find you on their phone. A desktop-first website with no mobile optimisation fails more than half your traffic.', colour: '#5bc4f5' },
+              { stat: '53%', label: 'of mobile visitors leave', desc: 'if a site takes longer than 3 seconds to load. Most business websites take 6–8 seconds on mobile.', colour: '#e05555' },
+              { stat: '7%', label: 'conversion drop per second', desc: 'Every 1-second delay in load time reduces conversions by 7%. A 4-second site could be cutting your leads in half.', colour: '#f59e0b' },
+              { stat: '70%+', label: 'of health searches are mobile', desc: 'Most customers find you on their phone. A desktop-first website with no mobile optimisation fails more than half your traffic.', colour: '#5bc4f5' },
             ].map(item => (
               <div key={item.stat} style={{ background: '#f9fbff', border: '1px solid #e2eaf4', borderTop: `3px solid ${item.colour}`, borderRadius: '0 0 12px 12px', padding: '1.75rem' }}>
                 <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: item.colour, lineHeight: 1, marginBottom: '0.4rem' }}>{item.stat}</div>
@@ -238,7 +238,7 @@ export default function WebsiteDevelopment() {
             <div style={{ padding: '1.25rem 1.75rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
               <div>
                 <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.95rem', color: '#0d1f35' }}>Move Physiotherapy & Fitness</div>
-                <div style={{ color: '#6b849a', fontSize: '0.8rem', fontWeight: 300, marginTop: '0.2rem' }}>Three-location physio practice · Perth, WA · Next.js + Cliniko integration</div>
+                <div style={{ color: '#6b849a', fontSize: '0.8rem', fontWeight: 300, marginTop: '0.2rem' }}>Three-location practice · Perth, WA · PageSpeed 100 · Next.js</div>
               </div>
               <a href="https://movephysiotherapy.com.au" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.78rem', color: '#5bc4f5', textDecoration: 'none', letterSpacing: '0.03em' }}>
                 Visit site →

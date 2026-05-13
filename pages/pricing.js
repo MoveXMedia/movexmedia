@@ -136,7 +136,7 @@ export default function Pricing() {
             margin: '0 auto',
             fontWeight: 300,
           }}>
-            Packages are structured around your ad spend and platform complexity. Intermediate and Expert packages include the MoveX Marketing Hub — email automation and social tools — at no added cost.
+            Packages are structured around your ad spend and platform complexity. All packages include dedicated campaign management, reporting, and ongoing optimisation.
           </p>
         </div>
       </section>
@@ -150,7 +150,7 @@ export default function Pricing() {
               Website Design &amp; Build
             </h2>
             <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '580px', margin: '0 auto' }}>
-              One-off builds. Fast, conversion-focused websites for local service businesses — built to rank on Google and turn visitors into customers.
+              One-off builds. Fast, conversion-focused websites for local service businesses — built to rank on Google and turn visitors into customers. All websites include hosting at $20/month, billed monthly.
             </p>
           </div>
 
@@ -160,7 +160,7 @@ export default function Pricing() {
                 icon: '🌱',
                 name: 'Starter',
                 price: 'From $2,500',
-                desc: 'A clean, professional site for a solo operator or new business.',
+                desc: 'A clean, professional site for a solo operator or new business. Includes hosting at $20/month.',
                 pages: '3–6 pages',
                 features: ['Mobile-responsive design', 'Online booking integration', 'Basic SEO setup', 'Google Analytics setup', '30-day post-launch support'],
                 accent: '#6b849a',
@@ -169,7 +169,7 @@ export default function Pricing() {
                 icon: '🚀',
                 name: 'Growth',
                 price: 'From $4,500',
-                desc: 'For established businesses ready to rank on Google and convert more visitors.',
+                desc: 'For established businesses ready to rank on Google and convert more visitors. Includes hosting at $20/month.',
                 pages: '6–10 pages',
                 features: ['Custom brand-aligned design', 'Individual service pages', 'Advanced SEO + schema markup', 'Conversion tracking setup', 'Blog setup', '60-day support'],
                 accent: '#5bc4f5',
@@ -179,7 +179,7 @@ export default function Pricing() {
                 icon: '⚡',
                 name: 'Authority',
                 price: 'From $7,500',
-                desc: 'Multi-location businesses or operators that want to own their market online.',
+                desc: 'Multi-location businesses or operators that want to own their market online. Includes hosting at $20/month.',
                 pages: '10+ pages',
                 features: ['Multi-location architecture', 'Individual location pages', 'Full technical SEO', 'Patient resources section', 'Booking system + CRM integration', '90-day support'],
                 accent: '#1656A0',
@@ -373,207 +373,7 @@ export default function Pricing() {
                       {item}
                     </div>
                   ))}
-
-                  {/* Marketing Hub included callout */}
-                  {pkg.hubIncluded && (
-                    <div style={{
-                      marginTop: '1.25rem',
-                      padding: '1rem 1.25rem',
-                      background: 'linear-gradient(135deg, rgba(91,196,245,0.1) 0%, rgba(91,196,245,0.04) 100%)',
-                      border: '1px solid rgba(91,196,245,0.3)',
-                      borderRadius: '10px',
-                    }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.4rem' }}>
-                        <span style={{ fontSize: '1rem' }}>🚀</span>
-                        <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.78rem', color: '#5bc4f5', letterSpacing: '0.02em' }}>
-                          MoveX Marketing Hub — included
-                        </span>
-                        <span style={{ marginLeft: 'auto', background: 'rgba(91,196,245,0.15)', border: '1px solid rgba(91,196,245,0.25)', borderRadius: '10px', padding: '0.15rem 0.6rem', fontFamily: 'Poppins, sans-serif', fontSize: '0.65rem', fontWeight: 700, color: '#5bc4f5', whiteSpace: 'nowrap' }}>
-                          $199 value
-                        </span>
-                      </div>
-                      <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.78rem', lineHeight: '1.55', fontWeight: 300, margin: 0 }}>
-                        Email automations, clinician performance portal, social posting, Facebook Ads stats & password file — at no added cost.
-                      </p>
-                    </div>
-                  )}
-
-                  <Link href="/contact" className={pkg.highlight ? 'btn-primary' : 'btn-outline'} style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    marginTop: '1.75rem',
-                    fontSize: '0.72rem',
-                    padding: '0.85rem 1.5rem',
-                  }}>
-                    Get Started →
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Comparison note */}
-          <p style={{
-            textAlign: 'center',
-            color: 'rgba(255,255,255,0.3)',
-            fontSize: '0.85rem',
-            marginTop: '2.5rem',
-            fontWeight: 300,
-          }}>
-            All packages include Google Ads, Facebook & Instagram Ads, and any Meta platform variations. Ad spend is billed directly by Google / Meta — separate to the management fee.
-          </p>
-        </div>
-      </section>
-
-      {/* MoveX Platform Pricing */}
-      <section style={{ padding: '6rem 2rem', background: '#ffffff' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-            <div className="section-label" style={{ justifyContent: 'center', color: '#5bc4f5' }}>MoveX Platform</div>
-            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', color: '#0d1f35', lineHeight: 1.2, marginBottom: '1rem' }}>
-              Marketing Hub &amp; Clinician Portal
-            </h2>
-            <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '600px', margin: '0 auto' }}>
-              Our software platform is available standalone or bundled with advertising management. Intermediate and Expert ad packages include the full Hub at no added cost.
-            </p>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '2.5rem' }}>
-
-            {/* Marketing Hub */}
-            <div style={{ background: '#f9fbff', border: '1px solid #e2eaf4', borderTop: '3px solid #5bc4f5', borderRadius: '0 0 16px 16px', padding: '2.5rem' }}>
-              <div style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>🚀</div>
-              <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.2rem', color: '#0d1f35', marginBottom: '0.4rem' }}>MoveX Marketing Hub</h3>
-              <p style={{ color: '#6b849a', fontSize: '0.88rem', lineHeight: '1.7', fontWeight: 300, marginBottom: '1.5rem' }}>
-                Automated email marketing, social posting, Facebook Ads stats, and a practice password file — purpose-built for physio clinics.
-              </p>
-              <div style={{ marginBottom: '1.5rem' }}>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#0d1f35', lineHeight: 1 }}>$199</div>
-                <div style={{ color: '#6b849a', fontSize: '0.82rem', fontWeight: 300, marginTop: '0.25rem' }}>per month, all locations included</div>
-              </div>
-              {[
-                'Welcome email sequence',
-                'Patient reactivation automation',
-                'Birthday voucher emails',
-                'Review request automation',
-                'Instagram, Facebook & GMB posting',
-                'Facebook Ads stats dashboard',
-                'Practice password file',
-              ].map(f => (
-                <div key={f} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start', marginBottom: '0.55rem' }}>
-                  <span style={{ color: '#5bc4f5', fontSize: '0.7rem', marginTop: '3px', flexShrink: 0 }}>◆</span>
-                  <span style={{ color: '#6b849a', fontSize: '0.85rem', fontWeight: 300, lineHeight: '1.5' }}>{f}</span>
-                </div>
-              ))}
-              <div style={{ marginTop: '1.5rem', padding: '0.85rem 1rem', background: 'rgba(91,196,245,0.07)', border: '1px solid rgba(91,196,245,0.2)', borderRadius: '8px' }}>
-                <p style={{ color: '#5bc4f5', fontSize: '0.78rem', fontWeight: 600, margin: 0, fontFamily: 'Poppins, sans-serif' }}>
-                  ✓ Included free with Intermediate &amp; Expert ad packages
-                </p>
-              </div>
-              <Link href="/contact" className="btn-primary" style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem', fontSize: '0.78rem' }}>
-                Get Started →
-              </Link>
-            </div>
-
-            {/* Clinician Portal */}
-            <div style={{ background: '#f9fbff', border: '1px solid #e2eaf4', borderTop: '3px solid #1656A0', borderRadius: '0 0 16px 16px', padding: '2.5rem' }}>
-              <div style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>📊</div>
-              <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.2rem', color: '#0d1f35', marginBottom: '0.4rem' }}>Clinician Portal</h3>
-              <p style={{ color: '#6b849a', fontSize: '0.88rem', lineHeight: '1.7', fontWeight: 300, marginBottom: '1.5rem' }}>
-                Real-time KPI tracking for every clinician. Monitor rebook rates, EPC clients, insurance patients, block booking, and any Cliniko metric that matters.
-              </p>
-              <div style={{ marginBottom: '1.5rem' }}>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#0d1f35', lineHeight: 1 }}>$20</div>
-                <div style={{ color: '#6b849a', fontSize: '0.82rem', fontWeight: 300, marginTop: '0.25rem' }}>per clinician / month</div>
-              </div>
-              {[
-                'Live Cliniko data dashboard',
-                'Rebook rate & retention tracking',
-                'EPC client monitoring',
-                'Insurance patient panel',
-                'Block booking percentage',
-                'VALD & AxIT utilisation rates',
-                'Custom KPI configuration',
-                'Practitioner-level reporting',
-              ].map(f => (
-                <div key={f} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start', marginBottom: '0.55rem' }}>
-                  <span style={{ color: '#1656A0', fontSize: '0.7rem', marginTop: '3px', flexShrink: 0 }}>◆</span>
-                  <span style={{ color: '#6b849a', fontSize: '0.85rem', fontWeight: 300, lineHeight: '1.5' }}>{f}</span>
-                </div>
-              ))}
-              <div style={{ marginTop: '1.5rem', padding: '0.85rem 1rem', background: 'rgba(22,86,160,0.06)', border: '1px solid rgba(22,86,160,0.2)', borderRadius: '8px' }}>
-                <p style={{ color: '#1656A0', fontSize: '0.78rem', fontWeight: 600, margin: 0, fontFamily: 'Poppins, sans-serif' }}>
-                  ✓ Also available standalone — no ads required
-                </p>
-              </div>
-              <Link href="/contact" className="btn-primary" style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem', fontSize: '0.78rem' }}>
-                Get Started →
-              </Link>
-            </div>
-
-            {/* Bundle */}
-            <div style={{ background: 'linear-gradient(135deg, #0d1f35 0%, #1a3a5c 100%)', border: '1px solid rgba(91,196,245,0.25)', borderTop: '3px solid #5bc4f5', borderRadius: '0 0 16px 16px', padding: '2.5rem' }}>
-              <div style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>⚡</div>
-              <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.2rem', color: 'white', marginBottom: '0.4rem' }}>Full Platform Bundle</h3>
-              <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.88rem', lineHeight: '1.7', fontWeight: 300, marginBottom: '1.5rem' }}>
-                Marketing Hub + Clinician Portal together. Everything you need to automate patient communication and track clinician performance in one place.
-              </p>
-              <div style={{ marginBottom: '1.5rem' }}>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: '#5bc4f5', lineHeight: 1 }}>$199</div>
-                <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.82rem', fontWeight: 300, marginTop: '0.25rem' }}>+ $20 per clinician / month</div>
-              </div>
-              {[
-                'Everything in Marketing Hub',
-                'Everything in Clinician Portal',
-                'Shared patient data context',
-                'Single login for your whole team',
-                'Priority support',
-              ].map(f => (
-                <div key={f} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start', marginBottom: '0.55rem' }}>
-                  <span style={{ color: '#5bc4f5', fontSize: '0.7rem', marginTop: '3px', flexShrink: 0 }}>◆</span>
-                  <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', fontWeight: 300, lineHeight: '1.5' }}>{f}</span>
-                </div>
-              ))}
-              <div style={{ marginTop: '1.5rem', padding: '0.85rem 1rem', background: 'rgba(91,196,245,0.1)', border: '1px solid rgba(91,196,245,0.25)', borderRadius: '8px' }}>
-                <p style={{ color: '#5bc4f5', fontSize: '0.78rem', fontWeight: 600, margin: 0, fontFamily: 'Poppins, sans-serif' }}>
-                  ✓ Included with Intermediate &amp; Expert ad packages
-                </p>
-              </div>
-              <Link href="/contact" className="btn-primary" style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem', fontSize: '0.78rem' }}>
-                Get Started →
-              </Link>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: '4rem 2rem 6rem', background: 'rgba(15,37,64,0.2)' }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <div className="section-label" style={{ justifyContent: 'center' }}>FAQ</div>
-            <h2 className="section-title" style={{ textAlign: 'center' }}>Pricing <span>Questions</span></h2>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            {faqs.map(faq => (
-              <div key={faq.q} className="card">
-                <h4 style={{
-                  fontFamily: 'Poppins, sans-serif',
-                  fontSize: '0.78rem',
-                  letterSpacing: '0.05em',
-                  marginBottom: '0.75rem',
-                  color: '#5bc4f5',
-                }}>{faq.q}</h4>
-                <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.9rem', lineHeight: '1.7', fontWeight: 300 }}>
-                  {faq.a}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
+                  {/* CTA */}
       <section style={{ padding: '4rem 2rem 8rem', textAlign: 'center', }}>
         <div style={{ maxWidth: '600px', margin: '0 auto' }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>

@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState } from 'react';
 
 const services = [
   { icon: '📡', title: 'Google Ads', desc: 'Precision-targeted campaigns that put your business at the top of search results when customers are actively looking for what you offer.', href: '/google-ads' },
@@ -25,14 +24,6 @@ const steps = [
 ];
 
 export default function Home() {
-  const [dbSize, setDbSize] = useState(5000);
-  const [openRate, setOpenRate] = useState(38);
-  const [convRate, setConvRate] = useState(6);
-  const [apptPrice, setApptPrice] = useState(95);
-
-  const bookingsPerMonth = Math.round(dbSize * (openRate / 100) * (convRate / 100));
-  const yearlyRevenue = bookingsPerMonth * apptPrice * 12;
-
   return (
     <>
       <Head>
@@ -180,100 +171,44 @@ export default function Home() {
         `}</style>
       </section>
 
-      {/* ── REACTIVATION CALCULATOR (light) ── */}
+      {/* ── WEBSITE STATS (light) ── */}
       <section style={{ padding: '6rem 2rem', background: '#f4f7fb' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <div className="section-label" style={{ justifyContent: 'center', color: '#5bc4f5' }}>Revenue Calculator</div>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <div className="section-label" style={{ justifyContent: 'center', color: '#5bc4f5' }}>Why Your Website Matters</div>
             <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', color: '#0d1f35', lineHeight: 1.2, marginBottom: '1rem' }}>
-              What is your email list<br /><span style={{ color: '#5bc4f5' }}>worth in reactivations?</span>
+              A slow website is<br /><span style={{ color: '#5bc4f5' }}>costing you customers every day</span>
             </h2>
             <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '560px', margin: '0 auto' }}>
-              Reactivation emails average a 38% open rate and 6% conversion. Enter your numbers to see your estimated annual return from customers who've gone quiet.
+              Before you spend a dollar on ads, your website needs to convert the traffic you send to it. A slow, outdated site quietly kills your ROI — no matter how good the campaign.
             </p>
           </div>
-
-          <div style={{ background: '#ffffff', border: '1px solid #e2eaf4', borderRadius: '20px', padding: '3rem', boxShadow: '0 8px 40px rgba(0,0,0,0.06)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1.5rem', marginBottom: '2.5rem' }}>
-              {[
-                { label: 'Email list size', value: dbSize, setter: setDbSize, prefix: '', suffix: ' contacts', min: 100, max: 50000, step: 100 },
-                { label: 'Email open rate', value: openRate, setter: setOpenRate, prefix: '', suffix: '%', min: 5, max: 80, step: 1 },
-                { label: 'Booking conversion', value: convRate, setter: setConvRate, prefix: '', suffix: '%', min: 1, max: 30, step: 0.5 },
-                { label: 'Appointment price', value: apptPrice, setter: setApptPrice, prefix: '$', suffix: '', min: 30, max: 500, step: 5 },
-              ].map(({ label, value, setter, prefix, suffix, min, max, step }) => (
-                <div key={label}>
-                  <label style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#6b849a', display: 'block', marginBottom: '0.6rem' }}>{label}</label>
-                  <div style={{ position: 'relative' }}>
-                    {prefix && <span style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#0d1f35', fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '1rem', zIndex: 1 }}>{prefix}</span>}
-                    <input
-                      type="number"
-                      value={value}
-                      min={min}
-                      max={max}
-                      step={step}
-                      onChange={e => setter(parseFloat(e.target.value) || 0)}
-                      style={{
-                        width: '100%',
-                        padding: `0.75rem ${suffix ? '2.8rem' : '0.75rem'} 0.75rem ${prefix ? '1.75rem' : '0.75rem'}`,
-                        border: '2px solid #e2eaf4',
-                        borderRadius: '10px',
-                        fontFamily: 'Poppins, sans-serif',
-                        fontWeight: 700,
-                        fontSize: '1.1rem',
-                        color: '#0d1f35',
-                        background: '#f9fbff',
-                        outline: 'none',
-                        boxSizing: 'border-box',
-                        transition: 'border-color 0.2s',
-                      }}
-                      onFocus={e => e.target.style.borderColor = '#5bc4f5'}
-                      onBlur={e => e.target.style.borderColor = '#e2eaf4'}
-                    />
-                    {suffix && <span style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', color: '#6b849a', fontFamily: 'Poppins, sans-serif', fontSize: '0.82rem' }}>{suffix}</span>}
-                  </div>
-                  <input type="range" min={min} max={max} step={step} value={value}
-                    onChange={e => setter(parseFloat(e.target.value))}
-                    style={{ width: '100%', marginTop: '0.5rem', accentColor: '#5bc4f5', cursor: 'pointer' }}
-                  />
-                </div>
-              ))}
-            </div>
-
-            <div style={{ background: 'linear-gradient(135deg, #0d1f35 0%, #1a3a5c 100%)', borderRadius: '16px', padding: '2.5rem' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1.5rem', marginBottom: '1.75rem' }} className="calc-results">
-                <div style={{ textAlign: 'center' }}>
-                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(91,196,245,0.6)', marginBottom: '0.5rem' }}>Emails opened / mo</div>
-                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 900, color: 'white' }}>{Math.round(dbSize * openRate / 100).toLocaleString()}</div>
-                </div>
-                <div style={{ textAlign: 'center' }}>
-                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(91,196,245,0.6)', marginBottom: '0.5rem' }}>Bookings / month</div>
-                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 900, color: 'white' }}>{bookingsPerMonth.toLocaleString()}</div>
-                </div>
-                <div style={{ textAlign: 'center', background: 'rgba(91,196,245,0.1)', border: '1px solid rgba(91,196,245,0.25)', borderRadius: '12px', padding: '0.75rem 0.5rem' }}>
-                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.5rem' }}>Est. annual return</div>
-                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.2rem', fontWeight: 900, color: '#5bc4f5', lineHeight: 1 }}>
-                    ${yearlyRevenue.toLocaleString()}
-                  </div>
-                </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', marginBottom: '3rem' }} className="stats-grid">
+            {[
+              { stat: '53%', label: 'of mobile visitors leave', desc: 'if a site takes longer than 3 seconds to load. Most business websites take 6–8 seconds on mobile.', colour: '#e05555' },
+              { stat: '7%', label: 'conversion drop per second', desc: 'Every 1-second delay in load time reduces conversions by 7%. A 4-second site could be cutting your leads in half.', colour: '#f59e0b' },
+              { stat: '70%+', label: 'of searches are on mobile', desc: 'Most customers find you on their phone. A desktop-first website fails more than half your traffic before they even read a word.', colour: '#5bc4f5' },
+            ].map(({ stat, label, desc, colour }) => (
+              <div key={stat} style={{ background: 'white', borderRadius: '16px', padding: '2.5rem 2rem', boxShadow: '0 4px 24px rgba(13,31,53,0.07)', border: '1px solid #e2eaf4', textAlign: 'center' }}>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(2.8rem, 5vw, 4rem)', fontWeight: 900, color: colour, lineHeight: 1, marginBottom: '0.5rem' }}>{stat}</div>
+                <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.9rem', color: '#0d1f35', marginBottom: '0.75rem' }}>{label}</div>
+                <p style={{ color: '#6b849a', fontSize: '0.85rem', lineHeight: '1.65', fontWeight: 300 }}>{desc}</p>
               </div>
-              <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.73rem', fontWeight: 300, textAlign: 'center', margin: '0 0 1.5rem' }}>
-                {bookingsPerMonth} conversions/month × ${apptPrice} × 12 months. Based on average email reactivation data across service businesses.
-              </p>
-              <div style={{ textAlign: 'center' }}>
-                <Link href="/marketing-hub" className="btn-primary" style={{ fontSize: '0.82rem' }}>
-                  Start Automating →
-                </Link>
-              </div>
-            </div>
+            ))}
+          </div>
+          <div style={{ background: 'linear-gradient(135deg, #0d1f35, #1a3a5c)', borderRadius: '16px', padding: '2.5rem', textAlign: 'center' }}>
+            <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, maxWidth: '780px', margin: '0 auto 1.5rem' }}>
+              A well-built website is the single highest-leverage investment you can make for your online presence. Fix it once — and every ad you run, every search you rank for, and every referral you receive converts at a dramatically higher rate.
+            </p>
+            <Link href="/website-development" style={{ display: 'inline-block', background: '#5bc4f5', color: '#0d1f35', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.85rem', padding: '0.9rem 2rem', borderRadius: '8px', textDecoration: 'none', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
+              See Website Packages →
+            </Link>
           </div>
         </div>
-        <style>{`
-          @media (max-width: 600px) { .calc-results { grid-template-columns: 1fr !important; } }
-          input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { opacity: 1; }
-        `}</style>
+        <style>{`@media (max-width: 700px) { .stats-grid { grid-template-columns: 1fr !important; } }`}</style>
       </section>
 
-      {/* ── SERVICES (light) ── */}
+      {/* ── SERVICES (dark) ── */}
       <section style={{ padding: '6rem 2rem', background: '#080f1a', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '900px', height: '400px', background: 'radial-gradient(ellipse, rgba(74,158,218,0.06) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
@@ -363,7 +298,7 @@ export default function Home() {
                 </div>
               </div>
               {/* Second screenshot — offset */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem' }}>
                 <div style={{ borderRadius: '10px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
                   <img src="/work-hexa-1.png" alt="Hexa Health Hub website" style={{ width: '100%', display: 'block' }} />
                   <div style={{ padding: '0.5rem 0.75rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
@@ -373,7 +308,15 @@ export default function Home() {
                 <div style={{ borderRadius: '10px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
                   <img src="/work-hexa-2.png" alt="Hexa Health Hub interior" style={{ width: '100%', display: 'block' }} />
                   <div style={{ padding: '0.5rem 0.75rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
-                    <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.72rem', color: '#0d1f35' }}>Hexa Health Hub</span>
+                    <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.72rem', color: '#0d1f35' }}>Hexa — Services</span>
+                  </div>
+                </div>
+                <div style={{ borderRadius: '10px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
+                  <div style={{ background: 'linear-gradient(135deg, #1a0a00, #3a1500)', height: '120px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <span style={{ color: '#d4a862', fontFamily: 'Georgia, serif', fontSize: '0.9rem', textAlign: 'center', padding: '0 1rem', fontStyle: 'italic' }}>Le Trevie<br/>Taormina</span>
+                  </div>
+                  <div style={{ padding: '0.5rem 0.75rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
+                    <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.72rem', color: '#0d1f35' }}>Le Trevie — Restaurant</span>
                   </div>
                 </div>
               </div>

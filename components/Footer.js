@@ -25,7 +25,7 @@ export default function Footer() {
               <img src="/logo.svg" alt="MoveX Media" style={{ height: '38px', width: 'auto' }} />
             </div>
             <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', lineHeight: '1.7', fontWeight: 300 }}>
-              Digital marketing built for health and allied health businesses. We launch your practice into orbit.
+              Digital marketing for local service businesses. We launch your business into orbit.
             </p>
           </div>
 
