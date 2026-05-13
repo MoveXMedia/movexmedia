@@ -3,18 +3,18 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const services = [
-  { icon: '📡', title: 'Google Ads', desc: 'Precision-targeted campaigns that put your practice at the top of search results when patients are actively looking.', href: '/google-ads' },
-  { icon: '📘', title: 'Facebook Marketing', desc: 'Hyper-targeted social ads that reach your ideal patients in the communities where they spend their time.', href: '/facebook-marketing' },
-  { icon: '📱', title: 'Social Media', desc: 'Strategic content that builds trust, educates your audience, and converts followers into booked appointments.', href: '/social-media' },
-  { icon: '✉️', title: 'Email Marketing', desc: 'Automated campaigns that re-engage past patients, nurture referrals, and keep your clinic top of mind.', href: '/email-marketing' },
-  { icon: '🌐', title: 'Website Development', desc: 'Fast, conversion-focused websites built to rank on Google and turn visitors into patients.', href: '/website-development' },
+  { icon: '📡', title: 'Google Ads', desc: 'Precision-targeted campaigns that put your business at the top of search results when customers are actively looking for what you offer.', href: '/google-ads' },
+  { icon: '📘', title: 'Facebook Marketing', desc: 'Hyper-targeted social ads that reach your ideal customers in the communities where they spend their time.', href: '/facebook-marketing' },
+  { icon: '📱', title: 'Social Media', desc: 'Strategic content that builds trust, educates your audience, and converts followers into paying customers.', href: '/social-media' },
+  { icon: '✉️', title: 'Email Marketing', desc: 'Automated campaigns that re-engage past customers, nurture leads, and keep your business top of mind.', href: '/email-marketing' },
+  { icon: '🌐', title: 'Website Development', desc: 'Fast, conversion-focused websites built to rank on Google and turn visitors into customers.', href: '/website-development' },
 ];
 
 const whyItems = [
-  { title: 'Health-literate copy', desc: 'We write ads and content that accurately represent your services and build genuine clinical credibility.' },
-  { title: 'Condition-based targeting', desc: 'We target by pain point, condition, and intent — so your ads reach people actively seeking what you offer.' },
-  { title: 'Referral-aware strategy', desc: "We understand allied health growth isn't just digital — your strategy accounts for GP and specialist referrals too." },
-  { title: 'AHPRA compliant', desc: 'Every campaign is reviewed against AHPRA advertising guidelines as a matter of course — no second-guessing.' },
+  { title: 'Built for small business', desc: 'We work with local service businesses — not enterprise. Our strategies are scaled to your budget and built to grow with you.' },
+  { title: 'Intent-based targeting', desc: 'We target by search intent, behaviour, and location — so your ads reach people actively looking for what you offer.' },
+  { title: 'Founder-run, not account managed', desc: 'You deal directly with Daniel — not a junior account manager. Strategy, execution, and results, without the agency overhead.' },
+  { title: 'Cost-effective from day one', desc: 'No lock-in contracts, no bloated retainers. Every dollar is tracked and accountable from the first campaign.' },
 ];
 
 const steps = [
@@ -36,21 +36,21 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>MoveX Media — Digital Marketing for Health & Allied Health</title>
-        <meta name="description" content="Perth-based digital marketing agency specialising in Google Ads, Facebook, social media, email marketing, and websites for health and allied health practices." />
+        <title>MoveX Media — Digital Marketing for Local Businesses</title>
+        <meta name="description" content="Digital marketing agency specialising in Google Ads, Facebook, social media, email marketing, and websites for local service businesses. Cost-effective, no lock-in." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://movex.media/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="MoveX Media" />
-        <meta property="og:title" content="MoveX Media — Digital Marketing for Health & Allied Health" />
-        <meta property="og:description" content="Perth-based digital marketing agency specialising in Google Ads, Facebook, social media, email marketing, and websites for health and allied health practices." />
+        <meta property="og:title" content="MoveX Media — Digital Marketing for Local Businesses" />
+        <meta property="og:description" content="Digital marketing agency specialising in Google Ads, Facebook, social media, email marketing, and websites for local service businesses." />
         <meta property="og:url" content="https://movex.media/" />
         <meta property="og:image" content="https://movex.media/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="MoveX Media — Digital Marketing for Health & Allied Health" />
-        <meta name="twitter:description" content="Perth-based digital marketing agency specialising in Google Ads, Facebook, social media, email marketing, and websites for health and allied health practices." />
+        <meta name="twitter:title" content="MoveX Media — Digital Marketing for Local Businesses" />
+        <meta name="twitter:description" content="Digital marketing agency specialising in Google Ads, Facebook, social media, email marketing, and websites for local service businesses." />
         <meta name="twitter:image" content="https://movex.media/og-image.png" />
       </Head>
 
@@ -74,20 +74,20 @@ export default function Home() {
         <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }} className="hero-grid">
             <div style={{ animation: 'fadeInUp 0.8s ease forwards' }}>
-              <div className="section-label">Digital Marketing Agency — Perth, WA</div>
+              <div className="section-label">Digital Marketing Agency — Worldwide</div>
               <h1 style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(2.2rem, 5vw, 3.8rem)', lineHeight: '1.15', marginBottom: '1.5rem', fontWeight: 900 }}>
-                Launch Your<br />Practice<br />
+                Launch Your<br />Business<br />
                 <span style={{ color: '#5bc4f5', textShadow: '0 0 40px rgba(91,196,245,0.4)' }}>Into Orbit</span>
               </h1>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2.5rem', maxWidth: '480px', fontWeight: 300 }}>
-                MoveX Media specialises in digital marketing for health and allied health businesses. We help physiotherapy, chiropractic, and allied health practices fill their books and grow sustainably.
+                MoveX Media is a digital marketing agency for local service businesses. Google Ads, Facebook, email automation, and websites — all under one roof, at a price that scales with you.
               </p>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <Link href="/contact" className="btn-primary">Book a Free Session →</Link>
                 <Link href="/services" className="btn-outline">View Services</Link>
               </div>
               <div style={{ display: 'flex', gap: '2.5rem', marginTop: '3.5rem', paddingTop: '2.5rem', borderTop: '1px solid rgba(26,58,92,0.5)', flexWrap: 'wrap' }}>
-                {[['$10k → $M+', 'Founder-proven clinic growth'], ['100%', 'Health industry focused'], ['48hr', 'Campaign launch time']].map(([val, label]) => (
+                {[['$10k → $M+', 'Founder-proven business growth'], ['No lock-in', 'Flexible, cancel anytime'], ['48hr', 'Campaign launch time']].map(([val, label]) => (
                   <div key={label}>
                     <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.8rem', fontWeight: 800, color: '#5bc4f5' }}>{val}</div>
                     <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)', marginTop: '0.25rem', fontWeight: 300 }}>{label}</div>
@@ -151,21 +151,21 @@ export default function Home() {
                 padding: '0.6rem 1rem',
               }}>
                 <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.78rem', color: 'white' }}>Daniel Ryan</div>
-                <div style={{ fontSize: '0.68rem', color: 'rgba(255,255,255,0.5)', marginTop: '0.1rem' }}>Physiotherapist & Founder</div>
+                <div style={{ fontSize: '0.68rem', color: 'rgba(255,255,255,0.5)', marginTop: '0.1rem' }}>Founder & Head IT</div>
               </div>
             </div>
 
             <div>
               <div className="section-label" style={{ color: '#5bc4f5' }}>About Us</div>
               <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', lineHeight: 1.2, color: '#0d1f35', marginBottom: '1rem' }}>
-                Built by a clinician.<br />Designed for <span style={{ color: '#5bc4f5' }}>yours</span>.
+                Built from experience.<br />Designed for <span style={{ color: '#5bc4f5' }}>growth</span>.
               </h2>
               <div style={{ width: '50px', height: '3px', background: 'linear-gradient(90deg, #5bc4f5, transparent)', borderRadius: '2px', marginBottom: '1.5rem' }} />
               <p style={{ color: '#6b849a', lineHeight: '1.85', marginBottom: '1.25rem', fontWeight: 300, fontSize: '0.98rem' }}>
-                MoveX Media was founded by Daniel Ryan — Principal Physiotherapist and owner of Move Physiotherapy &amp; Fitness, a three-location practice in Perth. Having grown a clinic from the ground up, Daniel knows exactly what it takes to attract patients, retain them, and build a practice that lasts.
+                MoveX Media was founded by Daniel Ryan — who built Move Physiotherapy & Fitness from a single room into a three-location Perth practice, running all the digital marketing in-house. The results consistently outperformed agencies. So he turned the system into a service.
               </p>
               <p style={{ color: '#6b849a', lineHeight: '1.85', marginBottom: '2rem', fontWeight: 300, fontSize: '0.98rem' }}>
-                That clinical background shapes everything we do. From writing ads that speak to patients in pain, to building automation tools that integrate directly with your practice management software — we build what we wish had existed when we were growing.
+                Every strategy MoveX offers has been battle-tested with real budgets. We work with local service businesses across any industry — delivering agency-quality marketing at a price that actually makes sense for small business.
               </p>
               <Link href="/about" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.85rem 1.8rem', background: '#5bc4f5', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.8rem', color: '#0d1f35', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none' }}>
                 Read More →
@@ -190,10 +190,10 @@ export default function Home() {
               <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#5bc4f5' }}>MoveX Products</span>
             </div>
             <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', color: 'white', lineHeight: 1.2, marginBottom: '1rem' }}>
-              Two tools. One platform.<br /><span style={{ color: '#5bc4f5' }}>Built for physiotherapy.</span>
+              Two tools. One platform.<br /><span style={{ color: '#5bc4f5' }}>Built for health businesses.</span>
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '1rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '580px', margin: '0 auto' }}>
-              The MoveX Marketing Hub bundles email automation and the clinician performance portal — everything your clinic needs to grow revenue and track results, in one flat monthly fee.
+              The MoveX Marketing Hub bundles email automation and the clinician performance portal — purpose-built for health and allied health businesses looking to grow revenue and track results in one place.
             </p>
           </div>
 
@@ -264,17 +264,17 @@ export default function Home() {
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <div className="section-label" style={{ justifyContent: 'center', color: '#5bc4f5' }}>Revenue Calculator</div>
             <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', color: '#0d1f35', lineHeight: 1.2, marginBottom: '1rem' }}>
-              What is your patient database<br /><span style={{ color: '#5bc4f5' }}>worth in reactivations?</span>
+              What is your email list<br /><span style={{ color: '#5bc4f5' }}>worth in reactivations?</span>
             </h2>
             <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '560px', margin: '0 auto' }}>
-              Allied health reactivation emails average a 38% open rate and 6% booking conversion. Enter your numbers to see your estimated annual return.
+              Reactivation emails average a 38% open rate and 6% conversion. Enter your numbers to see your estimated annual return from customers who've gone quiet.
             </p>
           </div>
 
           <div style={{ background: '#ffffff', border: '1px solid #e2eaf4', borderRadius: '20px', padding: '3rem', boxShadow: '0 8px 40px rgba(0,0,0,0.06)' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1.5rem', marginBottom: '2.5rem' }}>
               {[
-                { label: 'Patient database size', value: dbSize, setter: setDbSize, prefix: '', suffix: ' patients', min: 100, max: 50000, step: 100 },
+                { label: 'Email list size', value: dbSize, setter: setDbSize, prefix: '', suffix: ' contacts', min: 100, max: 50000, step: 100 },
                 { label: 'Email open rate', value: openRate, setter: setOpenRate, prefix: '', suffix: '%', min: 5, max: 80, step: 1 },
                 { label: 'Booking conversion', value: convRate, setter: setConvRate, prefix: '', suffix: '%', min: 1, max: 30, step: 0.5 },
                 { label: 'Appointment price', value: apptPrice, setter: setApptPrice, prefix: '$', suffix: '', min: 30, max: 500, step: 5 },
@@ -335,7 +335,7 @@ export default function Home() {
                 </div>
               </div>
               <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.73rem', fontWeight: 300, textAlign: 'center', margin: '0 0 1.5rem' }}>
-                {bookingsPerMonth} bookings/month × ${apptPrice} × 12 months. Benchmarks from Australian allied health email data.
+                {bookingsPerMonth} conversions/month × ${apptPrice} × 12 months. Based on average email reactivation data across service businesses.
               </p>
               <div style={{ textAlign: 'center' }}>
                 <Link href="/marketing-hub" className="btn-primary" style={{ fontSize: '0.82rem' }}>
@@ -358,10 +358,10 @@ export default function Home() {
           <div style={{ marginBottom: '3rem' }}>
             <div className="section-label">What We Do</div>
             <h2 style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: 1.2, marginBottom: '1rem', color: 'white', fontWeight: 800 }}>
-              Full-service marketing<br />for <span style={{ color: '#5bc4f5' }}>health practices</span>
+              Full-service marketing<br />for <span style={{ color: '#5bc4f5' }}>local businesses</span>
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '1.05rem', lineHeight: '1.75', maxWidth: '560px', fontWeight: 300 }}>
-              Every service is designed specifically for health and allied health businesses — no generalist fluff, just strategies that fill appointment books.
+              Every service is built to drive real, measurable growth — not vanity metrics. Leads, sales, and customers. The numbers that actually matter.
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: '1.5rem' }}>
@@ -405,12 +405,12 @@ export default function Home() {
                 Before you spend a dollar on Google Ads or Facebook, your website needs to be able to convert the traffic you send to it. A slow, generic, or poorly structured site will silently kill your ROI — no matter how good the campaign.
               </p>
               <p style={{ color: '#6b849a', lineHeight: '1.85', marginBottom: '2rem', fontWeight: 300, fontSize: '0.98rem' }}>
-                We build fast, conversion-focused websites built specifically for physiotherapy and allied health — with booking integration, local SEO structure, and copy that speaks to patients in pain. Built to rank, built to convert.
+                We build fast, conversion-focused websites for local service businesses — with booking integration, local SEO structure, and copy written to convert. Built to rank, built to grow.
               </p>
 
               {/* Feature bullets */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '2rem' }}>
-                {['Next.js — faster than WordPress, better Core Web Vitals', 'Cliniko / HotDoc booking integration built in', 'Local SEO structure from page one', 'AHPRA-compliant copy included', 'Mobile-first, conversion-optimised layouts'].map(item => (
+                {['Next.js — faster than WordPress, better Core Web Vitals', 'Online booking integration built in', 'Local SEO structure from page one', 'Copy written for your business included', 'Mobile-first, conversion-optimised layouts'].map(item => (
                   <div key={item} style={{ display: 'flex', gap: '0.6rem', alignItems: 'flex-start' }}>
                     <span style={{ color: '#5bc4f5', fontWeight: 700, flexShrink: 0, marginTop: '0.1rem' }}>✓</span>
                     <span style={{ color: '#6b849a', fontSize: '0.88rem', fontWeight: 300 }}>{item}</span>
@@ -492,7 +492,7 @@ export default function Home() {
             Let's build your<br /><span style={{ color: '#5bc4f5' }}>growth engine</span>
           </h2>
           <p style={{ color: '#6b849a', fontSize: '1rem', lineHeight: '1.8', marginBottom: '2.5rem', fontWeight: 300 }}>
-            Book a free strategy session. We&apos;ll audit your current marketing, identify the gaps, and show you exactly how we'd grow your practice — no obligation.
+            Book a free strategy session. We'll audit your current marketing, identify the gaps, and show you exactly how we'd grow your business — no obligation.
           </p>
           <Link href="/contact" className="btn-primary" style={{ fontSize: '0.85rem', padding: '1.1rem 2.5rem' }}>
             Book a Free Strategy Session →

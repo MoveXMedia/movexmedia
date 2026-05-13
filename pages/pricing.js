@@ -11,13 +11,13 @@ const packages = [
     setup: '$400',
     monthly: '$200',
     highlight: false,
-    desc: 'Perfect for practices new to digital marketing or looking to test the water with a focused, low-risk campaign.',
+    desc: 'Perfect for small businesses new to digital marketing or looking to test the water with a focused, low-risk campaign.',
     includes: [
       'Google Ads or Facebook Ads (1 platform)',
       'Campaign setup & keyword research',
       'Monthly performance report',
       'Conversion tracking setup',
-      'AHPRA-compliant ad copy',
+      'Copy written for your business',
       'Email support',
     ],
   },
@@ -31,7 +31,7 @@ const packages = [
     monthly: '$750',
     highlight: true,
     hubIncluded: true,
-    desc: 'For established practices ready to scale. Multi-platform campaigns with deeper optimisation and broader reach.',
+    desc: 'For established businesses ready to scale. Multi-platform campaigns with deeper optimisation and broader reach.',
     includes: [
       'Google Ads + Facebook/Instagram Ads',
       'Full campaign setup across both platforms',
@@ -53,7 +53,7 @@ const packages = [
     monthly: '$1,500',
     highlight: false,
     hubIncluded: true,
-    desc: 'Full-scale digital marketing for high-growth practices or multi-location clinics serious about market dominance.',
+    desc: 'Full-scale digital marketing for high-growth businesses or multi-location operators serious about market dominance.',
     includes: [
       'All platforms — Google, Facebook, Instagram',
       'Full funnel strategy & campaign architecture',
@@ -71,7 +71,7 @@ const packages = [
 const faqs = [
   {
     q: 'What is the MoveX Marketing Hub and what does it include?',
-    a: 'The MoveX Marketing Hub is our purpose-built platform for physiotherapy clinics. It includes email automation (welcome emails, reactivation, birthday vouchers, review requests), a clinician performance portal with KPI tracking and insurance/EPC monitoring, social post publishing to Instagram, Facebook, and Google My Business, Facebook Ads statistics, and a practice password file. It\'s included at no added cost with Intermediate and Expert packages — a $199/month value.',
+    a: 'The MoveX Marketing Hub is our purpose-built platform for health and allied health businesses. It includes email automation (welcome emails, reactivation, birthday vouchers, review requests), a clinician performance portal with KPI tracking and insurance/EPC monitoring, social post publishing to Instagram, Facebook, and Google My Business, Facebook Ads statistics, and a practice password file. It\'s included at no added cost with Intermediate and Expert packages — a $199/month value.',
   },
   {
     q: 'Is the ad spend included in the management fee?',
@@ -104,20 +104,20 @@ export default function Pricing() {
     <>
       <Head>
         <title>Packages — MoveX Media</title>
-        <meta name="description" content="Transparent, fixed-price digital marketing packages for health and allied health practices. Google Ads, Facebook, Instagram — all included." />
+        <meta name="description" content="Transparent, fixed-price digital marketing packages for local service businesses. Google Ads, Facebook, Instagram — all included." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://movex.media/pricing" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="MoveX Media" />
         <meta property="og:title" content="Packages — MoveX Media" />
-        <meta property="og:description" content="Transparent, fixed-price digital marketing packages for health and allied health practices. Google Ads, Facebook, Instagram — all included." />
+        <meta property="og:description" content="Transparent, fixed-price digital marketing packages for local service businesses. Google Ads, Facebook, Instagram — all included." />
         <meta property="og:url" content="https://movex.media/pricing" />
         <meta property="og:image" content="https://movex.media/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Packages — MoveX Media" />
-        <meta name="twitter:description" content="Transparent, fixed-price digital marketing packages for health and allied health practices. Google Ads, Facebook, Instagram — all included." />
+        <meta name="twitter:description" content="Transparent, fixed-price digital marketing packages for local service businesses. Google Ads, Facebook, Instagram — all included." />
         <meta name="twitter:image" content="https://movex.media/og-image.png" />
       </Head>
 
@@ -136,7 +136,7 @@ export default function Pricing() {
             margin: '0 auto',
             fontWeight: 300,
           }}>
-            Packages are structured around your ad spend and platform complexity. Intermediate and Expert packages include the MoveX Marketing Hub — email automation, clinician performance portal, and social tools — at no added cost.
+            Packages are structured around your ad spend and platform complexity. Intermediate and Expert packages include the MoveX Marketing Hub — email automation and social tools — at no added cost.
           </p>
         </div>
       </section>
@@ -150,7 +150,7 @@ export default function Pricing() {
               Website Design &amp; Build
             </h2>
             <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '580px', margin: '0 auto' }}>
-              One-off builds. Fast, conversion-focused websites for physiotherapy and allied health practices — built to rank on Google and turn visitors into booked appointments.
+              One-off builds. Fast, conversion-focused websites for local service businesses — built to rank on Google and turn visitors into customers.
             </p>
           </div>
 
@@ -160,7 +160,7 @@ export default function Pricing() {
                 icon: '🌱',
                 name: 'Starter',
                 price: 'From $2,500',
-                desc: 'A clean, professional site for a solo practitioner or new clinic.',
+                desc: 'A clean, professional site for a solo operator or new business.',
                 pages: '3–6 pages',
                 features: ['Mobile-responsive design', 'Online booking integration', 'Basic SEO setup', 'Google Analytics setup', '30-day post-launch support'],
                 accent: '#6b849a',
@@ -169,7 +169,7 @@ export default function Pricing() {
                 icon: '🚀',
                 name: 'Growth',
                 price: 'From $4,500',
-                desc: 'For established clinics ready to rank on Google and convert more visitors.',
+                desc: 'For established businesses ready to rank on Google and convert more visitors.',
                 pages: '6–10 pages',
                 features: ['Custom brand-aligned design', 'Individual service pages', 'Advanced SEO + schema markup', 'Conversion tracking setup', 'Blog setup', '60-day support'],
                 accent: '#5bc4f5',
@@ -179,7 +179,7 @@ export default function Pricing() {
                 icon: '⚡',
                 name: 'Authority',
                 price: 'From $7,500',
-                desc: 'Multi-location clinics or practices that want to own their market online.',
+                desc: 'Multi-location businesses or operators that want to own their market online.',
                 pages: '10+ pages',
                 features: ['Multi-location architecture', 'Individual location pages', 'Full technical SEO', 'Patient resources section', 'Booking system + CRM integration', '90-day support'],
                 accent: '#1656A0',

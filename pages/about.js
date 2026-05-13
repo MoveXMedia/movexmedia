@@ -4,23 +4,23 @@ import Link from 'next/link';
 const values = [
   {
     icon: '🎯',
-    title: 'Niche First',
-    desc: 'We only work with health and allied health businesses. Deep specialisation means better results — every strategy, every campaign is built on industry-specific knowledge.',
+    title: 'Small Business First',
+    desc: 'We work with local service businesses — not enterprise. Every strategy is scaled to your budget and built to grow with you, not overwhelm you.',
   },
   {
     icon: '📊',
     title: 'Results Driven',
-    desc: 'We measure what matters: booked appointments, not vanity metrics. Every dollar you spend is tracked against real business outcomes.',
+    desc: 'We measure what matters: leads, sales, and customers — not vanity metrics. Every dollar you spend is tracked against real business outcomes.',
   },
   {
     icon: '🤝',
     title: 'Transparent Partnership',
-    desc: 'No jargon, no black boxes. You see exactly what\'s running, what it\'s costing, and what it\'s returning — always.',
+    desc: "No jargon, no black boxes. You see exactly what's running, what it's costing, and what it's returning — always.",
   },
   {
     icon: '🔬',
     title: 'Evidence Based',
-    desc: 'Like the allied health philosophy we market for, our strategies are evidence-based, tested, and continually refined.',
+    desc: 'Our strategies are tested inside real businesses with real budgets — not borrowed from case studies. We refine based on what the data actually shows.',
   },
 ];
 
@@ -29,20 +29,20 @@ export default function About() {
     <>
       <Head>
         <title>About — MoveX Media</title>
-        <meta name="description" content="MoveX Media is a Perth-based digital marketing agency built exclusively for health and allied health businesses." />
+        <meta name="description" content="MoveX Media is a digital marketing agency for local service businesses — built by a founder who grew a multi-million dollar practice using the same strategies we offer." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://movex.media/about" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="MoveX Media" />
         <meta property="og:title" content="About — MoveX Media" />
-        <meta property="og:description" content="MoveX Media is a Perth-based digital marketing agency built exclusively for health and allied health businesses." />
+        <meta property="og:description" content="MoveX Media is a digital marketing agency for local service businesses — built by a founder who grew a multi-million dollar practice using the same strategies we offer." />
         <meta property="og:url" content="https://movex.media/about" />
         <meta property="og:image" content="https://movex.media/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About — MoveX Media" />
-        <meta name="twitter:description" content="MoveX Media is a Perth-based digital marketing agency built exclusively for health and allied health businesses." />
+        <meta name="twitter:description" content="MoveX Media is a digital marketing agency for local service businesses — built by a founder who grew a multi-million dollar practice using the same strategies we offer." />
         <meta name="twitter:image" content="https://movex.media/og-image.png" />
       </Head>
 
@@ -62,7 +62,7 @@ export default function About() {
             margin: '0 auto',
             fontWeight: 300,
           }}>
-            MoveX Media was born out of hands-on experience running a real allied health business. We know what it takes to fill an appointment book — because we&apos;ve done it.
+            MoveX Media was born out of hands-on experience running a real business. We know what it takes to grow a customer base — because we&apos;ve done it.
           </p>
         </div>
       </section>
@@ -104,7 +104,7 @@ export default function About() {
                 Social media, Google Ads, email campaigns, website management — he ran it all in-house. When he eventually engaged external agencies, the results didn&apos;t stack up. So he went deeper, upskilling across paid search, Meta advertising, and conversion strategy until his own campaigns were consistently outperforming what agencies had delivered.
               </p>
               <p style={{ color: '#6b849a', lineHeight: '1.85', fontWeight: 300, marginBottom: '2rem', fontSize: '0.98rem' }}>
-                That track record — built inside a real health practice, with real budgets and real accountability — is what MoveX Media was founded on. Starting from a single room with a $10k budget, Move Physiotherapy has grown into a multi-million dollar, three-location practice. Every strategy MoveX offers is battle-tested in that environment.
+                That track record — built inside a real business, with real budgets and real accountability — is what MoveX Media was founded on. Starting from a single room with a $10k budget, Move Physiotherapy has grown into a multi-million dollar, three-location practice. Every strategy MoveX offers is battle-tested in that environment.
               </p>
 
               {/* Credential pills */}
@@ -134,13 +134,13 @@ export default function About() {
               </h2>
               <div className="divider" />
               <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.9', marginBottom: '1.5rem', fontWeight: 300 }}>
-                MoveX Media was founded with one conviction: that health practices deserve marketing partners who actually understand their world. Not agencies that have read a few blog posts about physiotherapy, but people who&apos;ve sat in the clinic, built the patient base, and know the pressure of an empty schedule.
+                MoveX Media was founded with one conviction: that local service businesses deserve marketing partners who actually understand growth. Not agencies running templated campaigns, but people who've built a customer base from scratch and know the pressure of a quiet month.
               </p>
               <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.9', marginBottom: '1.5rem', fontWeight: 300 }}>
-                We grew out of a multi-clinic allied health practice in Perth — where we built and executed our own digital marketing from the ground up. Everything we offer is battle-tested in a real health business environment.
+                We grew out of a successful multi-location service business in Perth — where we built and executed our own digital marketing from the ground up. Everything we offer is battle-tested in a real business environment with real money on the line.
               </p>
               <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.9', fontWeight: 300 }}>
-                That background gives us an edge that generalist agencies simply can&apos;t replicate. We know your patients, your referrers, your compliance obligations, and your growth levers. We don&apos;t have a learning curve when we start working with you.
+                That background gives us an edge that generalist agencies simply can&apos;t replicate. We understand your growth levers, your cost per acquisition, and what actually moves the needle for a local service business. We don&apos;t have a learning curve when we start working with you.
               </p>
             </div>
 
@@ -151,7 +151,7 @@ export default function About() {
                   <div>
                     <h3 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1rem', marginBottom: '0.5rem' }}>Perth-Based. Health-Focused.</h3>
                     <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.9rem', lineHeight: '1.7', fontWeight: 300 }}>
-                      Locally grounded, digitally advanced. We work with health practices across Perth and nationally, with deep roots in the Western Australian health sector.
+                      Nationwide reach, local focus. We work with service businesses across Australia and internationally — from solo operators to multi-location businesses.
                     </p>
                   </div>
                 </div>
@@ -160,7 +160,7 @@ export default function About() {
                 {[
                   { val: '100%', label: 'Health clients only' },
                   { val: '48hr', label: 'Campaign launch' },
-                  { val: 'AHPRA', label: 'Compliant by default' },
+                  { val: 'No lock-in', label: 'Flexible contracts' },
                   { val: 'Local', label: 'Perth-based team' },
                 ].map(s => (
                   <div key={s.label} className="card" style={{ textAlign: 'center', padding: '1.5rem 1rem' }}>
@@ -202,7 +202,7 @@ export default function About() {
             Ready to Work<br /><span>Together?</span>
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.55)', lineHeight: '1.8', marginBottom: '2rem', fontWeight: 300 }}>
-            Book a free strategy session and let&apos;s talk about where you want your practice to go.
+            Book a free strategy session and let&apos;s talk about where you want your business to go.
           </p>
           <Link href="/contact" className="btn-primary">
             Book a Free Session →
