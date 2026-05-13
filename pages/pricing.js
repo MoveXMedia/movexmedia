@@ -378,7 +378,8 @@ export default function Pricing() {
                     Get Started →
                   </Link>
                 </div>
-              ))}
+              </div>
+            ))}
             </div>
           </div>
         </div>
