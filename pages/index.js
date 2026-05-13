@@ -230,7 +230,8 @@ export default function Home() {
       </section>
 
       {/* ── WEBSITE OFFER CTA BAR (full-width, dark) ── */}
-      <div style={{ background: '#0d1f35', padding: '2.5rem 3rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem' }}>
+      <div style={{ background: '#0d1f35', padding: '2.5rem 2rem' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem' }}>
         <div>
           <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '0.5rem' }}>
             3-page website · Live in 7 days · $20 USD/month · 2-year minimum term
@@ -246,6 +247,7 @@ export default function Home() {
           <Link href="/get-started" style={{ display: 'inline-flex', alignItems: 'center', padding: '0.9rem 1.8rem', background: '#5bc4f5', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '0.85rem', color: '#040c18', textDecoration: 'none', whiteSpace: 'nowrap', boxShadow: '0 4px 20px rgba(91,196,245,0.35)' }}>
             Get Started →
           </Link>
+        </div>
         </div>
       </div>
 
