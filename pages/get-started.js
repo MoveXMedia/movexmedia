@@ -277,21 +277,6 @@ export default function GetStarted() {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }} className="portfolio-grid-lp">
-            {[
-              
-            ].map(item => (
-              <div key={item.title} style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)', background: '#0a1628' }}>
-                <Image src={item.src} alt={item.alt} width={600} height={380} style={{ width: '100%', height: 'auto', display: 'block' }} />
-                <div style={{ padding: '1.25rem 1.5rem' }}>
-                  <div style={{ fontWeight: 700, fontSize: '0.9rem', marginBottom: '0.2rem' }}>{item.title}</div>
-                  <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', fontWeight: 300 }}>{item.desc}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-            </div>
-          </div>
           <style>{`@media (max-width: 640px) { .portfolio-grid-lp { grid-template-columns: 1fr !important; } }`}</style>
         </div>
       </section>
