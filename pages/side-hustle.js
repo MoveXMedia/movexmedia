@@ -1,0 +1,434 @@
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+
+const BOOKING_URL = 'https://movex.media/contact';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+
+export default function SideHustle() {
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setSubmitting(true);
+    try {
+      await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ name, email, source: 'side-hustle-page' }),
+      });
+    } catch (_) {}
+    setSubmitted(true);
+    setSubmitting(false);
+  }
+
+  return (
+    <>
+      <Head>
+        <title>Your Side Hustle Deserves a Real Website — MoveX Media</title>
+        <meta name="description" content="Stop slaving over Wix. Get a professional website for your side hustle — fast, cheap, and built by a real person. Plus: get Daniel's honest tips for actually making it work." />
+        <meta name="robots" content="noindex, nofollow" />
+        <style>{`
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
+          * { box-sizing: border-box; margin: 0; padding: 0; }
+          body { background: #060d18; font-family: 'Poppins', sans-serif; color: white; }
+
+          .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #5bc4f5, #2a9fd8);
+            color: #040c18;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            padding: 1.1rem 2.6rem;
+            border-radius: 6px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.15s, box-shadow 0.15s;
+            box-shadow: 0 4px 28px rgba(91,196,245,0.35);
+          }
+          .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 40px rgba(91,196,245,0.5); }
+          .btn-lg { font-size: 1.1rem; padding: 1.25rem 3rem; }
+          .btn-outline {
+            display: inline-block;
+            background: transparent;
+            color: #5bc4f5;
+            border: 2px solid rgba(91,196,245,0.5);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 0.85rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.15s;
+          }
+          .btn-outline:hover { background: rgba(91,196,245,0.1); border-color: #5bc4f5; }
+
+          .pulse { animation: pulse 2.5s infinite; }
+          @keyframes pulse {
+            0%,100% { box-shadow: 0 4px 28px rgba(91,196,245,0.35); }
+            50% { box-shadow: 0 4px 60px rgba(91,196,245,0.65); }
+          }
+
+          .frank-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 2rem;
+          }
+          .frank-card:hover {
+            border-color: rgba(91,196,245,0.3);
+            background: rgba(91,196,245,0.04);
+          }
+
+          .lp-input {
+            width: 100%;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px;
+            padding: 0.9rem 1.25rem;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 300;
+            outline: none;
+            transition: border-color 0.2s;
+          }
+          .lp-input:focus { border-color: rgba(91,196,245,0.6); }
+          .lp-input::placeholder { color: rgba(255,255,255,0.3); }
+
+          .strike { text-decoration: line-through; opacity: 0.5; }
+          .highlight { color: #5bc4f5; }
+          .amber { color: #ffb400; }
+        `}</style>
+      </Head>
+
+      {/* ── HERO ── */}
+      <section style={{ position: 'relative', padding: '8rem 1.5rem 5rem', overflow: 'hidden', background: 'linear-gradient(160deg, #060d18 0%, #0a1628 60%, #060d18 100%)' }}>
+        <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: '800px', height: '500px', background: 'radial-gradient(ellipse, rgba(91,196,245,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div style={{ maxWidth: '860px', margin: '0 auto', position: 'relative' }}>
+
+          {/* Frank opener */}
+          <div style={{ display: 'inline-block', background: 'rgba(255,180,0,0.1)', border: '1px solid rgba(255,180,0,0.35)', borderRadius: '8px', padding: '0.5rem 1.1rem', marginBottom: '2rem' }}>
+            <span style={{ fontSize: '0.82rem', fontWeight: 600, color: '#ffb400' }}>Honest talk for people building something on the side 👇</span>
+          </div>
+
+          <h1 style={{ fontWeight: 900, fontSize: 'clamp(2.4rem, 6vw, 4.2rem)', lineHeight: 1.05, marginBottom: '1.5rem', letterSpacing: '-0.03em' }}>
+            Your side hustle<br />
+            <span style={{ color: '#5bc4f5' }}>will probably work.</span><br />
+            <span style={{ fontSize: '0.65em', fontWeight: 700, color: 'rgba(255,255,255,0.7)', letterSpacing: '-0.01em' }}>If you do the right things.</span>
+          </h1>
+
+          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: 'clamp(1rem, 2vw, 1.2rem)', lineHeight: 1.8, maxWidth: '620px', marginBottom: '1.25rem', fontWeight: 300 }}>
+            The businesses that make it aren't the most talented. They're the ones doing small, daily, high-value actions — consistently. Not trying to do everything at once.
+          </p>
+          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: 'clamp(1rem, 2vw, 1.2rem)', lineHeight: 1.8, maxWidth: '620px', marginBottom: '2.5rem', fontWeight: 300 }}>
+            A website is one of those actions. Get it done — properly — and stop thinking about it. That's where we come in.
+          </p>
+
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
+            <a href={BOOKING_URL} className="btn btn-lg pulse">Get My Website Done →</a>
+            <a href="#tips" className="btn-outline">Get Daniel's Free Tips ↓</a>
+          </div>
+          <p style={{ color: 'rgba(255,255,255,0.2)', fontSize: '0.78rem', fontWeight: 300 }}>
+            $499 USD one-off · $20 USD/month hosting · Live in 7 days
+          </p>
+        </div>
+      </section>
+
+      {/* ── FRANK TRUTH SECTION ── */}
+      <section style={{ padding: '5rem 1.5rem', background: '#08111e', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <div style={{ marginBottom: '3rem' }}>
+            <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.75rem' }}>Let's be honest</p>
+            <h2 style={{ fontWeight: 900, fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}>
+              You have two bad options.<br />
+              <span style={{ color: '#5bc4f5' }}>And one good one.</span>
+            </h2>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }} className="options-grid">
+
+            {/* Bad option 1 */}
+            <div className="frank-card" style={{ borderColor: 'rgba(239,68,68,0.25)', background: 'rgba(239,68,68,0.04)' }}>
+              <div style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>😩</div>
+              <div style={{ fontWeight: 800, fontSize: '1rem', marginBottom: '0.5rem', color: 'white' }}>Do it yourself on Wix</div>
+              <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.88rem', lineHeight: 1.7, fontWeight: 300, marginBottom: '1rem' }}>
+                10 hours of your weekend. A site that looks like a template. Loads slowly. Ranks nowhere. And you're back tweaking it every month instead of building your actual business.
+              </p>
+              <div style={{ fontSize: '0.78rem', color: '#ef4444', fontWeight: 600 }}>
+                ~$5/hr value of your time × 10+ hours = already cost you more than our rate
+              </div>
+            </div>
+
+            {/* Bad option 2 */}
+            <div className="frank-card" style={{ borderColor: 'rgba(239,68,68,0.25)', background: 'rgba(239,68,68,0.04)' }}>
+              <div style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>💸</div>
+              <div style={{ fontWeight: 800, fontSize: '1rem', marginBottom: '0.5rem', color: 'white' }}>Pay a big agency</div>
+              <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.88rem', lineHeight: 1.7, fontWeight: 300, marginBottom: '1rem' }}>
+                $5,000–$15,000 for a side project that's making $0 right now. You'll get handed to a junior designer you've never spoken to, in an office overseas. Then charged again to change a typo.
+              </p>
+              <div style={{ fontSize: '0.78rem', color: '#ef4444', fontWeight: 600 }}>
+                Way too much risk for a business that hasn't proven itself yet
+              </div>
+            </div>
+
+            {/* Good option */}
+            <div className="frank-card" style={{ borderColor: 'rgba(91,196,245,0.4)', background: 'rgba(91,196,245,0.06)', position: 'relative' }}>
+              <div style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)', background: 'linear-gradient(90deg, #5bc4f5, #2a9fd8)', color: '#040c18', fontSize: '0.65rem', fontWeight: 900, padding: '0.3rem 1.1rem', borderRadius: '20px', whiteSpace: 'nowrap', letterSpacing: '0.06em' }}>THIS ONE</div>
+              <div style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>✅</div>
+              <div style={{ fontWeight: 800, fontSize: '1rem', marginBottom: '0.5rem', color: 'white' }}>MoveX — built for side hustles</div>
+              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.88rem', lineHeight: 1.7, fontWeight: 300, marginBottom: '1rem' }}>
+                $499 USD. Done in 7 days. You speak directly with Daniel — not a tech farm. Fast, SEO-ready, mobile-first. Cheap enough that you don't need to stress about it.
+              </p>
+              <div style={{ fontSize: '0.78rem', color: '#5bc4f5', fontWeight: 600 }}>
+                Spend your energy building the business, not the website
+              </div>
+            </div>
+
+          </div>
+          <style>{`@media (max-width: 700px) { .options-grid { grid-template-columns: 1fr !important; } }`}</style>
+        </div>
+      </section>
+
+      {/* ── CTA 1 ── */}
+      <div style={{ background: 'linear-gradient(135deg, #0d1f35, #1a3a5c)', padding: '3rem 1.5rem', textAlign: 'center', borderTop: '1px solid rgba(91,196,245,0.15)', borderBottom: '1px solid rgba(91,196,245,0.15)' }}>
+        <div style={{ maxWidth: '640px', margin: '0 auto' }}>
+          <p style={{ fontWeight: 800, fontSize: 'clamp(1.2rem, 3vw, 1.6rem)', marginBottom: '1rem', lineHeight: 1.3 }}>
+            Stop procrastinating on the website.<br />
+            <span style={{ color: '#5bc4f5' }}>It's the easiest thing on your list.</span>
+          </p>
+          <a href={BOOKING_URL} className="btn">Book a Free 15-Min Call →</a>
+          <p style={{ color: 'rgba(255,255,255,0.25)', fontSize: '0.75rem', marginTop: '0.75rem', fontWeight: 300 }}>No obligation. Just a chat.</p>
+        </div>
+      </div>
+
+      {/* ── WHAT YOU GET ── */}
+      <section style={{ padding: '6rem 1.5rem', background: '#060d18' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ marginBottom: '3rem' }}>
+            <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.75rem' }}>What you get</p>
+            <h2 style={{ fontWeight: 900, fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+              A proper website.<br />Not a template.
+            </h2>
+            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '1rem', lineHeight: 1.8, fontWeight: 300, maxWidth: '560px', marginTop: '1rem' }}>
+              Better than Wix. Better than WordPress. Faster than both. Built by someone who's actually done this for a real business — not a platform that charges you monthly to look average.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem', marginBottom: '3rem' }}>
+            {[
+              { icon: '⚡', title: 'PageSpeed 100', desc: 'Loads in under 1 second. Google notices. Your visitors notice.' },
+              { icon: '📱', title: 'Mobile-first', desc: 'Most of your customers will find you on their phone. It\'ll look perfect.' },
+              { icon: '🔍', title: 'SEO built in', desc: 'Local SEO structure, schema, sitemap. You\'ll start showing up.' },
+              { icon: '✏️', title: 'Copy written for you', desc: 'You don\'t need to write a word. I write it, you review it.' },
+              { icon: '🎨', title: 'Custom design', desc: 'Not a template. Designed for your brand, your business.' },
+              { icon: '📊', title: 'Analytics hooked up', desc: 'Know who\'s visiting, where they came from, and what they do.' },
+            ].map(f => (
+              <div key={f.title} className="frank-card">
+                <div style={{ fontSize: '1.5rem', marginBottom: '0.75rem' }}>{f.icon}</div>
+                <div style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.4rem' }}>{f.title}</div>
+                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem', lineHeight: 1.65, fontWeight: 300 }}>{f.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Pricing */}
+          <div style={{ background: 'linear-gradient(135deg, rgba(91,196,245,0.12), rgba(91,196,245,0.04))', border: '1px solid rgba(91,196,245,0.35)', borderRadius: '16px', padding: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem' }}>
+            <div>
+              <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#5bc4f5', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>3-page website · Live in 7 days</div>
+              <div style={{ fontWeight: 900, fontSize: '3rem', lineHeight: 1, color: '#5bc4f5' }}>$499 <span style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.4)', fontWeight: 300 }}>USD</span></div>
+              <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem', marginTop: '0.4rem', fontWeight: 300 }}>+ $20 USD/month hosting · You own it · Cancel anytime</div>
+            </div>
+            <a href={BOOKING_URL} className="btn pulse">Start Today →</a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PORTFOLIO ── */}
+      <section style={{ padding: '4rem 1.5rem 6rem', background: '#08111e', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.75rem' }}>Real work</p>
+          <h2 style={{ fontWeight: 900, fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', lineHeight: 1.2, marginBottom: '2.5rem', letterSpacing: '-0.02em' }}>
+            This is what $499 gets you.
+          </h2>
+
+          {/* Move Physio - hero */}
+          <div style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(91,196,245,0.2)', marginBottom: '1.5rem', background: '#0a1628' }}>
+            <Image src="/work-move-physio.png" alt="Move Physiotherapy Website" width={1200} height={680} style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'linear-gradient(to top, rgba(6,13,24,0.95), transparent)', padding: '2.5rem 2rem 1.75rem' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
+                <div>
+                  <div style={{ fontSize: '0.68rem', fontWeight: 700, color: '#5bc4f5', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.3rem' }}>Move Physiotherapy & Fitness</div>
+                  <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.82rem', fontWeight: 300 }}>PageSpeed 100 · #1 Google ranking · Three-location business</div>
+                </div>
+                <a href="https://movephysio.com.au" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: 'rgba(91,196,245,0.15)', border: '1px solid rgba(91,196,245,0.4)', color: '#5bc4f5', padding: '0.55rem 1.2rem', borderRadius: '6px', fontWeight: 600, fontSize: '0.78rem', textDecoration: 'none' }}>
+                  View Live →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Hexa */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }} className="portfolio-grid-sh">
+            {[
+              { src: '/work-hexa-1.png', alt: 'Hexa Health Hub', title: 'Hexa Health Hub', desc: 'Premium service business · Perth, WA' },
+              { src: '/work-hexa-2.png', alt: 'Hexa service pages', title: 'Hexa — Service Pages', desc: 'Individual service pages that rank on Google' },
+            ].map(p => (
+              <div key={p.title} style={{ borderRadius: '14px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)', background: '#0a1628' }}>
+                <Image src={p.src} alt={p.alt} width={600} height={380} style={{ width: '100%', height: 'auto', display: 'block' }} />
+                <div style={{ padding: '1rem 1.25rem' }}>
+                  <div style={{ fontWeight: 700, fontSize: '0.88rem', marginBottom: '0.2rem' }}>{p.title}</div>
+                  <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', fontWeight: 300 }}>{p.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <style>{`@media (max-width: 600px) { .portfolio-grid-sh { grid-template-columns: 1fr !important; } }`}</style>
+        </div>
+      </section>
+
+      {/* ── CTA 2 ── */}
+      <div style={{ background: '#5bc4f5', padding: '3rem 1.5rem', textAlign: 'center' }}>
+        <div style={{ maxWidth: '640px', margin: '0 auto' }}>
+          <p style={{ fontWeight: 900, fontSize: 'clamp(1.3rem, 3vw, 1.8rem)', color: '#040c18', marginBottom: '1rem', lineHeight: 1.25 }}>
+            7 days from now, your website could be live.
+          </p>
+          <a href={BOOKING_URL} style={{ display: 'inline-block', background: '#040c18', color: 'white', fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1rem', padding: '1rem 2.5rem', borderRadius: '6px', textDecoration: 'none', boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
+            Book Your Free Call →
+          </a>
+        </div>
+      </div>
+
+      {/* ── DANIEL + TIPS ── */}
+      <section id="tips" style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #060d18 0%, #0d1f35 100%)', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ maxWidth: '960px', margin: '0 auto', display: 'grid', gridTemplateColumns: '320px 1fr', gap: '5rem', alignItems: 'start' }} className="daniel-tips-grid">
+
+          {/* Daniel photo */}
+          <div style={{ position: 'relative' }}>
+            <div style={{ borderRadius: '20px', overflow: 'hidden', border: '2px solid rgba(91,196,245,0.4)', boxShadow: '0 24px 80px rgba(0,0,0,0.5)' }}>
+              <Image src="/daniel-ryan.jpg" alt="Daniel Ryan" width={400} height={500} style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover', objectPosition: 'top' }} />
+              <div style={{ background: 'linear-gradient(to top, rgba(6,13,24,0.97) 40%, transparent)', padding: '1.75rem 1.5rem 1.5rem', marginTop: '-80px', position: 'relative' }}>
+                <div style={{ fontWeight: 800, fontSize: '1rem' }}>Daniel Ryan</div>
+                <div style={{ color: '#5bc4f5', fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.04em' }}>Founder · MoveX Media</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Tips */}
+          <div>
+            <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.75rem' }}>From Daniel</p>
+            <h2 style={{ fontWeight: 900, fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', lineHeight: 1.2, marginBottom: '1.25rem', letterSpacing: '-0.02em' }}>
+              The honest truth about<br />
+              <span style={{ color: '#5bc4f5' }}>side hustles that actually work</span>
+            </h2>
+
+            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.95rem', lineHeight: 1.85, fontWeight: 300, marginBottom: '1.5rem' }}>
+              I built Move Physiotherapy from a single room into a three-location business. Before MoveX. While running a clinic. I know what it feels like to be building something on the side with limited time, limited money, and a long list of things to figure out.
+            </p>
+            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.95rem', lineHeight: 1.85, fontWeight: 300, marginBottom: '2.5rem' }}>
+              The businesses that make it aren't the ones who launch perfectly. They're the ones who pick the right daily actions and actually do them.
+            </p>
+
+            {/* Tips list */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2.5rem' }}>
+              {[
+                { num: '01', tip: 'Don\'t do everything at once', detail: 'Pick one channel. One audience. One offer. Master it before you expand.' },
+                { num: '02', tip: 'Daily beats weekly beats monthly', detail: 'A small thing done every day compounds into something big. An hour every Sunday doesn\'t.' },
+                { num: '03', tip: 'Remove the low-value tasks first', detail: 'If it can be done better by someone else for a reasonable price — pay it. Your time is worth more than you think.' },
+                { num: '04', tip: 'Your website is infrastructure, not marketing', detail: 'Get it done once. Properly. Then forget about it and go market your business.' },
+              ].map(t => (
+                <div key={t.num} style={{ display: 'flex', gap: '1.25rem', padding: '1.25rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.06)' }}>
+                  <div style={{ fontWeight: 900, fontSize: '0.7rem', color: '#5bc4f5', letterSpacing: '0.1em', minWidth: '28px', marginTop: '3px', opacity: 0.7 }}>{t.num}</div>
+                  <div>
+                    <div style={{ fontWeight: 700, fontSize: '0.92rem', marginBottom: '0.3rem' }}>{t.tip}</div>
+                    <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.84rem', fontWeight: 300, lineHeight: 1.6 }}>{t.detail}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', lineHeight: 1.8, fontWeight: 300, fontStyle: 'italic', marginBottom: '0.5rem' }}>
+              "Sign up below and I'll send you the full version — what I actually did, what worked, and what I'd do differently."
+            </p>
+            <p style={{ color: '#5bc4f5', fontSize: '0.82rem', fontWeight: 600 }}>— Daniel</p>
+          </div>
+        </div>
+        <style>{`@media (max-width: 820px) { .daniel-tips-grid { grid-template-columns: 1fr !important; gap: 3rem !important; } }`}</style>
+      </section>
+
+      {/* ── EMAIL CAPTURE ── */}
+      <section style={{ padding: '6rem 1.5rem', background: '#08111e', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ maxWidth: '580px', margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.75rem' }}>Free. No catch.</p>
+          <h2 style={{ fontWeight: 900, fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', lineHeight: 1.2, marginBottom: '1rem', letterSpacing: '-0.02em' }}>
+            Get Daniel's side hustle<br />
+            <span style={{ color: '#5bc4f5' }}>starter guide.</span>
+          </h2>
+          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.95rem', lineHeight: 1.8, fontWeight: 300, marginBottom: '2.5rem' }}>
+            The daily actions framework. What actually moves the needle in the first 90 days. And how to stop treating your business like a hobby.
+          </p>
+
+          {submitted ? (
+            <div style={{ background: 'rgba(34,197,94,0.1)', border: '1px solid rgba(34,197,94,0.3)', borderRadius: '16px', padding: '2.5rem 2rem' }}>
+              <div style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>✅</div>
+              <h3 style={{ fontWeight: 700, fontSize: '1.2rem', marginBottom: '0.5rem', color: '#22c55e' }}>You're in.</h3>
+              <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.9rem', lineHeight: 1.6, fontWeight: 300, marginBottom: '1.5rem' }}>
+                Daniel will be in touch personally. While you wait — get your website sorted.
+              </p>
+              <a href={BOOKING_URL} className="btn">Book My Free Call →</a>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <input className="lp-input" type="text" placeholder="Your first name" value={name} onChange={e => setName(e.target.value)} required />
+              <input className="lp-input" type="email" placeholder="Your email address" value={email} onChange={e => setEmail(e.target.value)} required />
+              <button type="submit" className="btn" disabled={submitting} style={{ width: '100%', textAlign: 'center', opacity: submitting ? 0.7 : 1 }}>
+                {submitting ? 'Sending...' : 'Send Me the Guide →'}
+              </button>
+              <p style={{ color: 'rgba(255,255,255,0.2)', fontSize: '0.72rem', fontWeight: 300 }}>
+                No spam. Just the guide. Unsubscribe any time.
+              </p>
+            </form>
+          )}
+        </div>
+      </section>
+
+      {/* ── FINAL CTA ── */}
+      <section style={{ padding: '6rem 1.5rem 7rem', textAlign: 'center', background: 'linear-gradient(160deg, #060d18 0%, #0d1f35 50%, #060d18 100%)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '600px', height: '400px', background: 'radial-gradient(ellipse, rgba(91,196,245,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'relative', maxWidth: '660px', margin: '0 auto' }}>
+          <h2 style={{ fontWeight: 900, fontSize: 'clamp(2rem, 5vw, 3.2rem)', lineHeight: 1.1, marginBottom: '1.25rem', letterSpacing: '-0.03em' }}>
+            You've been meaning to start.<br />
+            <span style={{ color: '#5bc4f5' }}>This is the day.</span>
+          </h2>
+          <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '1.05rem', lineHeight: 1.8, fontWeight: 300, marginBottom: '2.5rem' }}>
+            Book a free 15-minute call. I'll ask what your business does, and get you a website that works for it — in a week. That's it.
+          </p>
+          <a href={BOOKING_URL} className="btn btn-lg pulse" style={{ marginBottom: '1rem', display: 'inline-block' }}>
+            Book My Free Call with Daniel →
+          </a>
+          <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1.5rem' }}>
+            {['$499 USD one-off', 'Live in 7 days', '$20 USD/mo hosting', 'You own the site'].map(item => (
+              <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'rgba(255,255,255,0.35)', fontSize: '0.8rem', fontWeight: 300 }}>
+                <span style={{ color: '#5bc4f5', fontSize: '0.7rem' }}>✓</span> {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '1.75rem 1.5rem', textAlign: 'center' }}>
+        <p style={{ color: 'rgba(255,255,255,0.2)', fontSize: '0.75rem', fontWeight: 300 }}>
+          © 2026 MoveX Media · movex.media
+        </p>
+      </div>
+    </>
+  );
+}
