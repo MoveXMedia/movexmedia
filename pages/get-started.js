@@ -91,7 +91,7 @@ export default function GetStarted() {
             <a href={BOOKING_URL} className="btn btn-lg pulse">Book a Free Call with Daniel →</a>
           </div>
           <p style={{ color: 'rgba(255,255,255,0.25)', fontSize: '0.78rem', marginTop: '1rem', fontWeight: 300 }}>
-            No obligation · Takes 15 minutes · All prices in USD
+            All prices in USD · 2-year minimum hosting term
           </p>
         </div>
       </section>
@@ -295,7 +295,7 @@ export default function GetStarted() {
           </p>
           <a href={BOOKING_URL} className="btn btn-lg pulse">Book My Free Call with Daniel →</a>
           <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '2rem' }}>
-            {['$499 USD one-off', '$20 USD/month (2yr min)', 'Live in 7 days', 'You own the site'].map(item => (
+            {['$499 USD one-off', 'Live in 7 days', '$20 USD/mo · 2yr min', 'You own the site'].map(item => (
               <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'rgba(255,255,255,0.35)', fontSize: '0.8rem', fontWeight: 300 }}>
                 <span style={{ color: '#5bc4f5', fontSize: '0.7rem' }}>✓</span> {item}
               </div>

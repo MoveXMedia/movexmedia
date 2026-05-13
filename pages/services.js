@@ -126,9 +126,9 @@ export default function Services() {
       </section>
 
       <section style={{ padding: '4rem 2rem 8rem', background: 'rgba(15,37,64,0.2)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           {services.map((s) => (
-            <div key={s.title} className="card" style={{
+            <div key={s.title} className="card services-card" style={{
               padding: '2.5rem',
               borderColor: s.highlight ? 'rgba(91,196,245,0.3)' : undefined,
             }}>
@@ -185,7 +185,7 @@ export default function Services() {
                     ))}
                   </div>
 
-                  {s.href && s.highlight && (
+                  {s.href && (
                     <Link href={s.href} className="btn-outline" style={{ display: 'inline-block', marginTop: '0.5rem' }}>
                       Learn More →
                     </Link>
@@ -211,6 +211,14 @@ export default function Services() {
           </Link>
         </div>
       </section>
+    <>
+        <style>{`
+          @media (max-width: 600px) {
+            .services-card { padding: 1.5rem !important; }
+            .services-card .btn-outline { display: block !important; text-align: center; width: 100%; box-sizing: border-box; }
+          }
+        `}</style>
+    </>
     </>
   );
 }

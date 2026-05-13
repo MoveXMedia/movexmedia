@@ -339,7 +339,7 @@ export default function SideHustle() {
             <div>
               <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#5bc4f5', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>3-page website · Live in 7 days</div>
               <div style={{ fontWeight: 900, fontSize: '3rem', lineHeight: 1, color: '#5bc4f5' }}>$499 <span style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.4)', fontWeight: 300 }}>USD</span></div>
-              <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem', marginTop: '0.4rem', fontWeight: 300 }}>+ $20 USD/month hosting · 2-year minimum hosting term · You own the site</div>
+              <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem', marginTop: '0.4rem', fontWeight: 300 }}>+ $20 USD/month hosting · 2-year minimum hosting term · 2-year minimum hosting commitment</div>
             </div>
             <a href={BOOKING_URL} className="btn pulse">Start Today →</a>
           </div>
@@ -444,7 +444,7 @@ export default function SideHustle() {
             Book My Free Call with Daniel →
           </a>
           <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1.5rem' }}>
-            {['$499 USD one-off', 'Live in 7 days', '$20 USD/mo (2yr min)', 'You own the site'].map(item => (
+            {['$499 USD one-off', 'Live in 7 days', '$20/mo · 2yr min', 'You own the site'].map(item => (
               <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'rgba(255,255,255,0.35)', fontSize: '0.8rem', fontWeight: 300 }}>
                 <span style={{ color: '#5bc4f5', fontSize: '0.7rem' }}>✓</span> {item}
               </div>

@@ -229,35 +229,19 @@ export default function Home() {
 
           </div>
 
-          {/* Portfolio */}
-          <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: '1.25rem', alignItems: 'start' }} className="portfolio-grid-home">
+          {/* Portfolio — Move Physio + Hexa home only */}
+          <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '1.25rem', alignItems: 'start' }} className="portfolio-grid-home">
             <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 16px 48px rgba(13,31,53,0.12)', border: '1px solid #e2eaf4' }}>
               <img src="/work-move-physio.png" alt="Move Physiotherapy website" style={{ width: '100%', display: 'block' }} />
               <div style={{ padding: '0.75rem 1rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.78rem', color: '#0d1f35' }}>Move Physiotherapy</span>
-                <span style={{ fontSize: '0.72rem', color: '#6b849a', fontWeight: 300 }}>Perth, WA</span>
+                <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.78rem', color: '#0d1f35' }}>Move Physiotherapy & Fitness</span>
+                <span style={{ fontSize: '0.72rem', color: '#6b849a', fontWeight: 300 }}>Perth, WA · PageSpeed 100</span>
               </div>
             </div>
             <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
               <img src="/work-hexa-1.png" alt="Hexa Health Hub website" style={{ width: '100%', display: 'block' }} />
-              <div style={{ padding: '0.6rem 0.9rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
-                <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.75rem', color: '#0d1f35' }}>Hexa Health Hub</span>
-              </div>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-              <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
-                <img src="/work-hexa-2.png" alt="Hexa Health Hub interior" style={{ width: '100%', display: 'block' }} />
-                <div style={{ padding: '0.6rem 0.9rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
-                  <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.75rem', color: '#0d1f35' }}>Hexa — Services</span>
-                </div>
-              </div>
-              <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
-                <div style={{ background: 'linear-gradient(135deg, #1a0a00, #3a1500)', padding: '2rem 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100px' }}>
-                  <span style={{ color: '#d4a862', fontFamily: 'Georgia, serif', fontSize: '0.9rem', textAlign: 'center', fontStyle: 'italic' }}>Le Trevie<br/>Taormina</span>
-                </div>
-                <div style={{ padding: '0.6rem 0.9rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
-                  <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.75rem', color: '#0d1f35' }}>Le Trevie</span>
-                </div>
+              <div style={{ padding: '0.75rem 1rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
+                <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.78rem', color: '#0d1f35' }}>Hexa Health Hub</span>
               </div>
             </div>
           </div>
@@ -267,6 +251,27 @@ export default function Home() {
           @media (max-width: 900px) { .website-top-grid { grid-template-columns: 1fr !important; gap: 3rem !important; } }
           @media (max-width: 700px) { .portfolio-grid-home { grid-template-columns: 1fr !important; } }
         `}</style>
+      </section>
+
+      {/* ── WEBSITE OFFER CTA ── */}
+      <section style={{ padding: '3rem 2rem', background: '#ffffff', borderTop: '1px solid #e2eaf4' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem' }}>
+          <div>
+            <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6b849a', marginBottom: '0.3rem' }}>3-page website · Live in 7 days</div>
+            <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900, fontSize: 'clamp(1.4rem, 3vw, 2rem)', color: '#0d1f35', lineHeight: 1.1 }}>
+              Starting from <span style={{ color: '#5bc4f5' }}>$2,500 USD</span>
+            </div>
+            <div style={{ color: '#6b849a', fontSize: '0.82rem', marginTop: '0.3rem', fontWeight: 300 }}>Hosting from $20 USD/month · 2-year minimum hosting term</div>
+          </div>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <Link href="/website-development" style={{ display: 'inline-flex', alignItems: 'center', padding: '0.85rem 1.8rem', background: '#5bc4f5', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.82rem', color: '#0d1f35', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none' }}>
+              View Packages →
+            </Link>
+            <Link href="/get-started" style={{ display: 'inline-flex', alignItems: 'center', padding: '0.85rem 1.8rem', background: 'rgba(91,196,245,0.08)', border: '1px solid rgba(91,196,245,0.35)', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.82rem', color: '#5bc4f5', textDecoration: 'none' }}>
+              🌟 $499 Special Offer
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* ── SERVICES (dark) ── */}

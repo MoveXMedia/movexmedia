@@ -151,7 +151,7 @@ export default function Pricing() {
               Website Design &amp; Build
             </h2>
             <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '580px', margin: '0 auto' }}>
-              One-off builds. Fast, conversion-focused websites for local service businesses — built to rank on Google and turn visitors into customers. All websites include hosting at $20 USD/month, billed monthly.
+              One-off builds. Fast, conversion-focused websites for local service businesses — built to rank on Google and turn visitors into customers. All websites include hosting at $20 USD/month (2-year minimum term).
             </p>
           </div>
 
@@ -161,7 +161,7 @@ export default function Pricing() {
                 icon: '🌱',
                 name: 'Starter',
                 price: 'From $2,500',
-                desc: 'A clean, professional site for a solo operator or new business. Includes hosting at $20 USD/month.',
+                desc: 'A clean, professional site for a solo operator or new business. Includes hosting at $20 USD/month (2-year minimum).',
                 pages: '3–6 pages',
                 features: ['Mobile-responsive design', 'Online booking integration', 'Basic SEO setup', 'Google Analytics setup', '30-day post-launch support'],
                 accent: '#6b849a',
@@ -170,7 +170,7 @@ export default function Pricing() {
                 icon: '🚀',
                 name: 'Growth',
                 price: 'From $4,500',
-                desc: 'For established businesses ready to rank on Google and convert more visitors. Includes hosting at $20 USD/month.',
+                desc: 'For established businesses ready to rank on Google and convert more visitors. Includes hosting at $20 USD/month (2-year minimum).',
                 pages: '6–10 pages',
                 features: ['Custom brand-aligned design', 'Individual service pages', 'Advanced SEO + schema markup', 'Conversion tracking setup', 'Blog setup', '60-day support'],
                 accent: '#5bc4f5',
@@ -180,7 +180,7 @@ export default function Pricing() {
                 icon: '⚡',
                 name: 'Authority',
                 price: 'From $7,500',
-                desc: 'Multi-location businesses or operators that want to own their market online. Includes hosting at $20 USD/month.',
+                desc: 'Multi-location businesses or operators that want to own their market online. Includes hosting at $20 USD/month (2-year minimum).',
                 pages: '10+ pages',
                 features: ['Multi-location architecture', 'Individual location pages', 'Full technical SEO', 'Patient resources section', 'Booking system + CRM integration', '90-day support'],
                 accent: '#1656A0',
