@@ -245,20 +245,78 @@ export default function SideHustle() {
         </div>
       </div>
 
-      {/* ── WHAT YOU GET ── */}
+      {/* ── COST BREAKDOWN ── */}
       <section style={{ padding: '6rem 1.5rem', background: '#ffffff' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.75rem' }}>The real cost breakdown</p>
+          <h2 style={{ fontWeight: 900, fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', color: '#060d18', marginBottom: '0.75rem', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
+            $499 won't break the bank.<br /><span style={{ color: '#5bc4f5' }}>Here's the proof.</span>
+          </h2>
+          <p style={{ color: '#6b849a', fontSize: '0.95rem', lineHeight: 1.75, fontWeight: 300, maxWidth: '560px', marginBottom: '2.5rem' }}>
+            DIY platforms look cheap until you add up what you actually pay. Most side hustlers spend more on Wix or Shopify in year one — and get a slower, templated result.
+          </p>
+
+          {/* Comparison table */}
+          <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem', fontFamily: 'Poppins, sans-serif' }}>
+              <thead>
+                <tr>
+                  <th style={{ textAlign: 'left', padding: '0.9rem 1.25rem', background: '#060d18', color: 'rgba(255,255,255,0.5)', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', borderRadius: '12px 0 0 0' }}> </th>
+                  <th style={{ padding: '0.9rem 1.25rem', background: '#060d18', color: 'rgba(255,255,255,0.5)', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', textAlign: 'center' }}>Wix</th>
+                  <th style={{ padding: '0.9rem 1.25rem', background: '#060d18', color: 'rgba(255,255,255,0.5)', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', textAlign: 'center' }}>Shopify</th>
+                  <th style={{ padding: '0.9rem 1.25rem', background: 'linear-gradient(135deg, #1a3a5c, #0d1f35)', color: '#5bc4f5', fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', textAlign: 'center', borderRadius: '0 12px 0 0', borderBottom: '2px solid #5bc4f5' }}>MoveX $499</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { label: 'Setup / build cost', wix: '$0', shopify: '$0', movex: '$499 once', highlight: true },
+                  { label: 'Monthly subscription', wix: '$27–$49/mo', shopify: '$39–$105/mo', movex: '$20/mo hosting' },
+                  { label: 'Year 1 total cost', wix: '$324–$588', shopify: '$468–$1,260', movex: '$499 + $240 = $739', highlight: true },
+                  { label: 'Year 2 onwards', wix: '$324–$588/yr', shopify: '$468–$1,260/yr', movex: '$240/yr only' },
+                  { label: 'PageSpeed score', wix: '40–65 / 100', shopify: '50–70 / 100', movex: '100 / 100', highlight: true },
+                  { label: 'Custom design', wix: 'Template only', shopify: 'Template only', movex: 'Built for you' },
+                  { label: 'SEO structure', wix: 'Basic', shopify: 'Basic', movex: 'Built in' },
+                  { label: 'Copy written for you', wix: 'No', shopify: 'No', movex: 'Yes' },
+                ].map((row, i) => (
+                  <tr key={row.label} style={{ background: i % 2 === 0 ? 'white' : '#f8fafc' }}>
+                    <td style={{ padding: '0.85rem 1.25rem', color: '#0d1f35', fontWeight: 500, borderBottom: '1px solid #e2eaf4' }}>{row.label}</td>
+                    <td style={{ padding: '0.85rem 1.25rem', color: '#9ab0c4', textAlign: 'center', borderBottom: '1px solid #e2eaf4', fontWeight: 300 }}>{row.wix}</td>
+                    <td style={{ padding: '0.85rem 1.25rem', color: '#9ab0c4', textAlign: 'center', borderBottom: '1px solid #e2eaf4', fontWeight: 300 }}>{row.shopify}</td>
+                    <td style={{ padding: '0.85rem 1.25rem', color: row.highlight ? '#0d8fd4' : '#0d1f35', fontWeight: 700, textAlign: 'center', borderBottom: '1px solid rgba(91,196,245,0.2)', background: row.highlight ? 'rgba(91,196,245,0.06)' : 'rgba(91,196,245,0.03)', borderLeft: '2px solid rgba(91,196,245,0.3)' }}>{row.movex}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div style={{ background: 'linear-gradient(135deg, #0a1628, #0d1f35)', borderRadius: '14px', padding: '2rem 2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem' }}>
+            <div>
+              <div style={{ fontSize: '0.72rem', fontWeight: 700, color: '#5bc4f5', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>3-page website · Live in 7 days · Custom design</div>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+                <span style={{ fontWeight: 900, fontSize: '3.2rem', lineHeight: 1, color: '#5bc4f5' }}>$499</span>
+                <span style={{ color: 'rgba(255,255,255,0.35)', fontWeight: 300, fontSize: '1rem' }}>USD one-off</span>
+              </div>
+              <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.82rem', marginTop: '0.35rem', fontWeight: 300 }}>Then just $20 USD/month hosting · 2-year minimum</div>
+            </div>
+            <a href={BOOKING_URL} style={{ display: 'inline-block', background: '#5bc4f5', color: '#040c18', fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1rem', padding: '1rem 2.2rem', borderRadius: '8px', textDecoration: 'none', boxShadow: '0 4px 20px rgba(91,196,245,0.4)', whiteSpace: 'nowrap' }}>Start Today →</a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHAT YOU GET (dark) ── */}
+      <section style={{ padding: '6rem 1.5rem', background: '#080f1a' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <div style={{ marginBottom: '3rem' }}>
             <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.75rem' }}>What you get</p>
-            <h2 style={{ fontWeight: 900, fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', lineHeight: 1.2, letterSpacing: '-0.02em', color: '#060d18' }}>
+            <h2 style={{ fontWeight: 900, fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', lineHeight: 1.2, letterSpacing: '-0.02em', color: 'white' }}>
               A proper website.<br /><span style={{ color: '#5bc4f5' }}>Not a template.</span>
             </h2>
-            <p style={{ color: '#6b849a', fontSize: '1rem', lineHeight: 1.8, fontWeight: 300, maxWidth: '560px', marginTop: '1rem' }}>
+            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '1rem', lineHeight: 1.8, fontWeight: 300, maxWidth: '560px', marginTop: '1rem' }}>
               Better than Wix. Better than WordPress. Faster than both. Built by someone who's actually done this for a real business.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem', marginBottom: '3rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem' }}>
             {[
               { icon: '⚡', title: 'PageSpeed 100', desc: 'Loads in under 1 second. Google notices. Your visitors notice.' },
               { icon: '📱', title: 'Mobile-first', desc: 'Most of your customers will find you on their phone. It\'ll look perfect.' },
@@ -267,68 +325,12 @@ export default function SideHustle() {
               { icon: '🎨', title: 'Custom design', desc: 'Not a template. Designed for your brand, your business.' },
               { icon: '📊', title: 'Analytics hooked up', desc: 'Know who\'s visiting, where they came from, and what they do.' },
             ].map(f => (
-              <div key={f.title} style={{ background: '#f4f7fb', border: '1px solid #e2eaf4', borderRadius: '14px', padding: '1.75rem', transition: 'border-color 0.2s' }}>
+              <div key={f.title} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(91,196,245,0.12)', borderRadius: '14px', padding: '1.75rem', transition: 'border-color 0.2s' }}>
                 <div style={{ fontSize: '1.5rem', marginBottom: '0.75rem' }}>{f.icon}</div>
-                <div style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.4rem', color: '#060d18' }}>{f.title}</div>
-                <p style={{ color: '#6b849a', fontSize: '0.85rem', lineHeight: 1.65, fontWeight: 300 }}>{f.desc}</p>
+                <div style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.4rem', color: 'white' }}>{f.title}</div>
+                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem', lineHeight: 1.65, fontWeight: 300 }}>{f.desc}</p>
               </div>
             ))}
-          </div>
-
-          {/* Pricing comparison */}
-          <div style={{ marginBottom: '0' }}>
-            <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.75rem' }}>The real cost breakdown</p>
-            <h3 style={{ fontWeight: 900, fontSize: 'clamp(1.4rem, 3vw, 2rem)', color: '#060d18', marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>
-              $499 won't break the bank.<br /><span style={{ color: '#5bc4f5' }}>Here's the proof.</span>
-            </h3>
-            <p style={{ color: '#6b849a', fontSize: '0.95rem', lineHeight: 1.75, fontWeight: 300, maxWidth: '560px', marginBottom: '2rem' }}>
-              DIY platforms look cheap until you add up what you actually pay. Most side hustlers spend more on Wix or Shopify in year one — and get a slower, templated result.
-            </p>
-
-            {/* Comparison table */}
-            <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem', fontFamily: 'Poppins, sans-serif' }}>
-                <thead>
-                  <tr>
-                    <th style={{ textAlign: 'left', padding: '0.9rem 1.25rem', background: '#060d18', color: 'rgba(255,255,255,0.5)', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', borderRadius: '12px 0 0 0' }}> </th>
-                    <th style={{ padding: '0.9rem 1.25rem', background: '#060d18', color: 'rgba(255,255,255,0.5)', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', textAlign: 'center' }}>Wix</th>
-                    <th style={{ padding: '0.9rem 1.25rem', background: '#060d18', color: 'rgba(255,255,255,0.5)', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', textAlign: 'center' }}>Shopify</th>
-                    <th style={{ padding: '0.9rem 1.25rem', background: 'linear-gradient(135deg, #1a3a5c, #0d1f35)', color: '#5bc4f5', fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', textAlign: 'center', borderRadius: '0 12px 0 0', borderBottom: '2px solid #5bc4f5' }}>MoveX $499</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    { label: 'Setup / build cost', wix: '$0', shopify: '$0', movex: '$499 once', highlight: true },
-                    { label: 'Monthly subscription', wix: '$27–$49/mo', shopify: '$39–$105/mo', movex: '$20/mo hosting' },
-                    { label: 'Year 1 total cost', wix: '$324–$588', shopify: '$468–$1,260', movex: '$499 + $240 = $739', highlight: true },
-                    { label: 'Year 2 onwards', wix: '$324–$588/yr', shopify: '$468–$1,260/yr', movex: '$240/yr only' },
-                    { label: 'PageSpeed score', wix: '40–65 / 100', shopify: '50–70 / 100', movex: '100 / 100 ✓', highlight: true },
-                    { label: 'Custom design', wix: 'Template only', shopify: 'Template only', movex: 'Built for you ✓' },
-                    { label: 'SEO structure', wix: 'Basic', shopify: 'Basic', movex: 'Built in ✓' },
-                    { label: 'Copy written for you', wix: '✗', shopify: '✗', movex: '✓' },
-                  ].map((row, i) => (
-                    <tr key={row.label} style={{ background: i % 2 === 0 ? 'white' : '#f8fafc' }}>
-                      <td style={{ padding: '0.85rem 1.25rem', color: '#0d1f35', fontWeight: 500, borderBottom: '1px solid #e2eaf4' }}>{row.label}</td>
-                      <td style={{ padding: '0.85rem 1.25rem', color: '#9ab0c4', textAlign: 'center', borderBottom: '1px solid #e2eaf4', fontWeight: 300 }}>{row.wix}</td>
-                      <td style={{ padding: '0.85rem 1.25rem', color: '#9ab0c4', textAlign: 'center', borderBottom: '1px solid #e2eaf4', fontWeight: 300 }}>{row.shopify}</td>
-                      <td style={{ padding: '0.85rem 1.25rem', color: row.highlight ? '#0d8fd4' : '#0d1f35', fontWeight: 700, textAlign: 'center', borderBottom: '1px solid rgba(91,196,245,0.2)', background: row.highlight ? 'rgba(91,196,245,0.06)' : 'rgba(91,196,245,0.03)', borderLeft: '2px solid rgba(91,196,245,0.3)' }}>{row.movex}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <div style={{ background: 'linear-gradient(135deg, #0a1628, #0d1f35)', borderRadius: '14px', padding: '2rem 2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem' }}>
-              <div>
-                <div style={{ fontSize: '0.72rem', fontWeight: 700, color: '#5bc4f5', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>3-page website · Live in 7 days · Custom design</div>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
-                  <span style={{ fontWeight: 900, fontSize: '3.2rem', lineHeight: 1, color: '#5bc4f5' }}>$499</span>
-                  <span style={{ color: 'rgba(255,255,255,0.35)', fontWeight: 300, fontSize: '1rem' }}>USD one-off</span>
-                </div>
-                <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.82rem', marginTop: '0.35rem', fontWeight: 300 }}>Then just $20 USD/month hosting · 2-year minimum</div>
-              </div>
-              <a href={BOOKING_URL} style={{ display: 'inline-block', background: '#5bc4f5', color: '#040c18', fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1rem', padding: '1rem 2.2rem', borderRadius: '8px', textDecoration: 'none', boxShadow: '0 4px 20px rgba(91,196,245,0.4)', whiteSpace: 'nowrap' }}>Start Today →</a>
-            </div>
           </div>
         </div>
       </section>
