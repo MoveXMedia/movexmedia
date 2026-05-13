@@ -14,7 +14,7 @@ const process = [
 const faqs = [
   {
     q: 'How much budget do I need?',
-    a: 'For most Perth allied health practices, we recommend a minimum ad spend of $1,000–$1,500/month to generate meaningful data and results. Our management fee is separate to your ad spend.',
+    a: 'For most Perth allied health practices, we recommend a minimum ad spend of $1,000–$1,500 USD/month to generate meaningful data and results. Our management fee is separate to your ad spend.',
   },
   {
     q: 'How long until I see results?',

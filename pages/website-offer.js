@@ -30,7 +30,7 @@ export default function WebsitePromo() {
     <>
       <Head>
         <title>Physio Websites — Opening Special | MoveX Media</title>
-        <meta name="description" content="Limited spots: professional physiotherapy websites from $1,500. Work directly with Daniel — founder, physio, and builder of Move Physiotherapy." />
+        <meta name="description" content="Limited spots: professional websites from $1,500 USD. Work directly with Daniel — founder, physio, and builder of Move Physiotherapy." />
         <meta name="robots" content="noindex, nofollow" />
         <style>{`
           @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
@@ -358,7 +358,7 @@ export default function WebsitePromo() {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
                   <div>
                     <div style={{ fontWeight: 700, fontSize: '0.88rem', color: 'white', marginBottom: '0.15rem' }}>3 months free with every website</div>
-                    <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', fontWeight: 300 }}>Then $200/month — cancel any time</div>
+                    <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.78rem', fontWeight: 300 }}>Then $200 USD/month — cancel any time</div>
                   </div>
                   <div style={{ textAlign: 'right' }}>
                     <div style={{ fontWeight: 900, fontSize: '1.3rem', color: '#ffb400', lineHeight: 1 }}>$600</div>

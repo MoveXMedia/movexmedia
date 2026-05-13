@@ -92,7 +92,7 @@ const faqs = [
   { q: 'Do you write the copy for us?', a: 'Yes. Copywriting is included in all packages. We research your services, practitioners, and market, and write content that converts — saving you the most time-consuming part of a website project.' },
   { q: 'What platform do you build on?', a: 'We build on Next.js (React) as standard — it\'s fast, flexible, and great for SEO. For clients who want to manage content themselves, we can integrate a headless CMS like Sanity or use WordPress as an alternative.' },
   { q: 'Can we update the site ourselves after launch?', a: 'Yes — we can build in a content management layer so your team can update text, photos, and blog posts without touching code. This is standard on Growth and Authority packages.' },
-  { q: 'Do you offer hosting?', a: 'We can manage hosting for you on Vercel or a similar provider. Hosting costs are separate from build fees and are typically $20–80/month depending on traffic.' },
+  { q: 'Do you offer hosting?', a: 'We can manage hosting for you on Vercel or a similar provider. Hosting costs are separate from build fees and are typically $20–80 USD/month depending on traffic.' },
   { q: 'What if we already have a site we like?', a: 'We can redesign specific pages, add new service pages, or rebuild sections without starting from scratch. Get in touch and we\'ll assess what makes sense.' },
 ];
 
