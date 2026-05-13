@@ -172,40 +172,107 @@ export default function Home() {
       </section>
 
       {/* ── WEBSITE STATS (light) ── */}
+      {/* ── WEBSITE (combined) ── */}
       <section style={{ padding: '6rem 2rem', background: '#f4f7fb' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-            <div className="section-label" style={{ justifyContent: 'center', color: '#5bc4f5' }}>Why Your Website Matters</div>
-            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', color: '#0d1f35', lineHeight: 1.2, marginBottom: '1rem' }}>
-              A slow website is<br /><span style={{ color: '#5bc4f5' }}>costing you customers every day</span>
-            </h2>
-            <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '560px', margin: '0 auto' }}>
-              Before you spend a dollar on ads, your website needs to convert the traffic you send to it. A slow, outdated site quietly kills your ROI — no matter how good the campaign.
-            </p>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', marginBottom: '3rem' }} className="stats-grid">
-            {[
-              { stat: '53%', label: 'of mobile visitors leave', desc: 'if a site takes longer than 3 seconds to load. Most business websites take 6–8 seconds on mobile.', colour: '#e05555' },
-              { stat: '7%', label: 'conversion drop per second', desc: 'Every 1-second delay in load time reduces conversions by 7%. A 4-second site could be cutting your leads in half.', colour: '#f59e0b' },
-              { stat: '70%+', label: 'of searches are on mobile', desc: 'Most customers find you on their phone. A desktop-first website fails more than half your traffic before they even read a word.', colour: '#5bc4f5' },
-            ].map(({ stat, label, desc, colour }) => (
-              <div key={stat} style={{ background: 'white', borderRadius: '16px', padding: '2.5rem 2rem', boxShadow: '0 4px 24px rgba(13,31,53,0.07)', border: '1px solid #e2eaf4', textAlign: 'center' }}>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(2.8rem, 5vw, 4rem)', fontWeight: 900, color: colour, lineHeight: 1, marginBottom: '0.5rem' }}>{stat}</div>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.9rem', color: '#0d1f35', marginBottom: '0.75rem' }}>{label}</div>
-                <p style={{ color: '#6b849a', fontSize: '0.85rem', lineHeight: '1.65', fontWeight: 300 }}>{desc}</p>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+
+          {/* Top — copy left, stats right */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start', marginBottom: '4rem' }} className="website-top-grid">
+
+            {/* Copy */}
+            <div>
+              <div className="section-label" style={{ color: '#5bc4f5', marginBottom: '1.25rem' }}>Website Development</div>
+              <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', lineHeight: 1.2, color: '#0d1f35', marginBottom: '1rem' }}>
+                Your website comes first.<br /><span style={{ color: '#5bc4f5' }}>Everything else builds on it.</span>
+              </h2>
+              <div style={{ width: '50px', height: '3px', background: 'linear-gradient(90deg, #5bc4f5, transparent)', borderRadius: '2px', marginBottom: '1.5rem' }} />
+              <p style={{ color: '#6b849a', lineHeight: '1.85', marginBottom: '1.25rem', fontWeight: 300, fontSize: '0.98rem' }}>
+                Before you spend a dollar on Google Ads or Facebook, your website needs to convert the traffic you send to it. A slow, outdated site quietly kills your ROI — no matter how good the campaign.
+              </p>
+              <p style={{ color: '#6b849a', lineHeight: '1.85', marginBottom: '2rem', fontWeight: 300, fontSize: '0.98rem' }}>
+                We build fast, conversion-focused websites for local service businesses — with local SEO structure and copy written to convert. Built to rank, built to grow.
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '2rem' }}>
+                {['Next.js — faster than WordPress, better Core Web Vitals', 'Local SEO structure from page one', 'Online booking integration built in', 'Copy written for your business included', 'Mobile-first, conversion-optimised layouts'].map(item => (
+                  <div key={item} style={{ display: 'flex', gap: '0.6rem', alignItems: 'flex-start' }}>
+                    <span style={{ color: '#5bc4f5', fontWeight: 700, flexShrink: 0, marginTop: '0.1rem' }}>✓</span>
+                    <span style={{ color: '#6b849a', fontSize: '0.88rem', fontWeight: 300 }}>{item}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+                <div>
+                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6b849a', marginBottom: '0.2rem' }}>Starting from</div>
+                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 900, color: '#0d1f35', lineHeight: 1 }}>$2,500 USD</div>
+                </div>
+                <Link href="/website-development" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.85rem 1.8rem', background: '#5bc4f5', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.8rem', color: '#0d1f35', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none' }}>
+                  View Packages →
+                </Link>
+              </div>
+            </div>
+
+            {/* Stats */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+              {[
+                { stat: '53%', label: 'of mobile visitors leave', desc: 'if a site takes more than 3 seconds to load. Most business websites take 6–8 seconds on mobile.', colour: '#e05555' },
+                { stat: '7%', label: 'conversion drop per second', desc: 'Every 1-second delay reduces conversions by 7%. A 4-second site could be cutting your leads in half.', colour: '#f59e0b' },
+                { stat: '70%+', label: 'of searches are on mobile', desc: 'A desktop-first website fails more than half your traffic before they read a single word.', colour: '#5bc4f5' },
+              ].map(({ stat, label, desc, colour }) => (
+                <div key={stat} style={{ background: 'white', borderRadius: '14px', padding: '1.5rem 2rem', boxShadow: '0 4px 20px rgba(13,31,53,0.07)', border: '1px solid #e2eaf4', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.4rem', fontWeight: 900, color: colour, lineHeight: 1, flexShrink: 0 }}>{stat}</div>
+                  <div>
+                    <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.88rem', color: '#0d1f35', marginBottom: '0.3rem' }}>{label}</div>
+                    <p style={{ color: '#6b849a', fontSize: '0.82rem', lineHeight: '1.6', fontWeight: 300, margin: 0 }}>{desc}</p>
+                  </div>
+                </div>
+              ))}
+              <div style={{ background: 'linear-gradient(135deg, #0d1f35, #1a3a5c)', borderRadius: '14px', padding: '1.5rem 2rem' }}>
+                <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.9rem', lineHeight: '1.75', fontWeight: 300, margin: 0 }}>
+                  Fix it once — and every ad you run, every search you rank for, and every referral you receive converts at a dramatically higher rate. Without spending another dollar on traffic.
+                </p>
+              </div>
+            </div>
+
           </div>
-          <div style={{ background: 'linear-gradient(135deg, #0d1f35, #1a3a5c)', borderRadius: '16px', padding: '2.5rem', textAlign: 'center' }}>
-            <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, maxWidth: '780px', margin: '0 auto 1.5rem' }}>
-              A well-built website is the single highest-leverage investment you can make for your online presence. Fix it once — and every ad you run, every search you rank for, and every referral you receive converts at a dramatically higher rate.
-            </p>
-            <Link href="/website-development" style={{ display: 'inline-block', background: '#5bc4f5', color: '#0d1f35', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.85rem', padding: '0.9rem 2rem', borderRadius: '8px', textDecoration: 'none', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
-              See Website Packages →
-            </Link>
+
+          {/* Portfolio */}
+          <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: '1.25rem', alignItems: 'start' }} className="portfolio-grid-home">
+            <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 16px 48px rgba(13,31,53,0.12)', border: '1px solid #e2eaf4' }}>
+              <img src="/work-move-physio.png" alt="Move Physiotherapy website" style={{ width: '100%', display: 'block' }} />
+              <div style={{ padding: '0.75rem 1rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.78rem', color: '#0d1f35' }}>Move Physiotherapy</span>
+                <span style={{ fontSize: '0.72rem', color: '#6b849a', fontWeight: 300 }}>Perth, WA</span>
+              </div>
+            </div>
+            <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
+              <img src="/work-hexa-1.png" alt="Hexa Health Hub website" style={{ width: '100%', display: 'block' }} />
+              <div style={{ padding: '0.6rem 0.9rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
+                <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.75rem', color: '#0d1f35' }}>Hexa Health Hub</span>
+              </div>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+              <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
+                <img src="/work-hexa-2.png" alt="Hexa Health Hub interior" style={{ width: '100%', display: 'block' }} />
+                <div style={{ padding: '0.6rem 0.9rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
+                  <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.75rem', color: '#0d1f35' }}>Hexa — Services</span>
+                </div>
+              </div>
+              <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
+                <div style={{ background: 'linear-gradient(135deg, #1a0a00, #3a1500)', padding: '2rem 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100px' }}>
+                  <span style={{ color: '#d4a862', fontFamily: 'Georgia, serif', fontSize: '0.9rem', textAlign: 'center', fontStyle: 'italic' }}>Le Trevie<br/>Taormina</span>
+                </div>
+                <div style={{ padding: '0.6rem 0.9rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
+                  <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.75rem', color: '#0d1f35' }}>Le Trevie</span>
+                </div>
+              </div>
+            </div>
           </div>
+
         </div>
-        <style>{`@media (max-width: 700px) { .stats-grid { grid-template-columns: 1fr !important; } }`}</style>
+        <style>{`
+          @media (max-width: 900px) { .website-top-grid { grid-template-columns: 1fr !important; gap: 3rem !important; } }
+          @media (max-width: 700px) { .portfolio-grid-home { grid-template-columns: 1fr !important; } }
+        `}</style>
       </section>
 
       {/* ── SERVICES (dark) ── */}
@@ -235,99 +302,11 @@ export default function Home() {
           </div>
         </div>
         <style>{`
-          .service-card:hover {
-            background: #ffffff !important;
-            border-color: #ffffff !important;
-            box-shadow: 0 16px 48px rgba(0,0,0,0.3);
-            transform: translateY(-3px);
-          }
+          .service-card:hover { background: #ffffff !important; border-color: #ffffff !important; box-shadow: 0 16px 48px rgba(0,0,0,0.3); transform: translateY(-3px); }
           .service-card:hover .service-card-title { color: #0d1f35 !important; }
           .service-card:hover .service-card-desc { color: #6b849a !important; }
         `}</style>
       </section>
-
-      {/* ── WEBSITE DESIGN (white) ── */}
-      <section style={{ padding: '6rem 2rem', background: '#ffffff' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }} className="why-grid">
-
-            {/* Copy */}
-            <div>
-              <div className="section-label" style={{ color: '#5bc4f5' }}>Website Design</div>
-              <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', lineHeight: 1.2, color: '#0d1f35', marginBottom: '1rem' }}>
-                Your website comes<br />first. <span style={{ color: '#5bc4f5' }}>Everything else</span><br />builds on it.
-              </h2>
-              <div style={{ width: '50px', height: '3px', background: 'linear-gradient(90deg, #5bc4f5, transparent)', borderRadius: '2px', marginBottom: '1.5rem' }} />
-              <p style={{ color: '#6b849a', lineHeight: '1.85', marginBottom: '1.25rem', fontWeight: 300, fontSize: '0.98rem' }}>
-                Before you spend a dollar on Google Ads or Facebook, your website needs to be able to convert the traffic you send to it. A slow, generic, or poorly structured site will silently kill your ROI — no matter how good the campaign.
-              </p>
-              <p style={{ color: '#6b849a', lineHeight: '1.85', marginBottom: '2rem', fontWeight: 300, fontSize: '0.98rem' }}>
-                We build fast, conversion-focused websites for local service businesses — with booking integration, local SEO structure, and copy written to convert. Built to rank, built to grow.
-              </p>
-
-              {/* Feature bullets */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '2rem' }}>
-                {['Next.js — faster than WordPress, better Core Web Vitals', 'Online booking integration built in', 'Local SEO structure from page one', 'Copy written for your business included', 'Mobile-first, conversion-optimised layouts'].map(item => (
-                  <div key={item} style={{ display: 'flex', gap: '0.6rem', alignItems: 'flex-start' }}>
-                    <span style={{ color: '#5bc4f5', fontWeight: 700, flexShrink: 0, marginTop: '0.1rem' }}>✓</span>
-                    <span style={{ color: '#6b849a', fontSize: '0.88rem', fontWeight: 300 }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Price + CTA */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
-                <div>
-                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6b849a', marginBottom: '0.2rem' }}>Starting from</div>
-                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 900, color: '#0d1f35', lineHeight: 1 }}>$2,500</div>
-                </div>
-                <Link href="/website-development" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.85rem 1.8rem', background: '#5bc4f5', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.8rem', color: '#0d1f35', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none' }}>
-                  View Packages →
-                </Link>
-              </div>
-            </div>
-
-            {/* Portfolio screenshots */}
-            <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-              {/* Main screenshot */}
-              <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 16px 48px rgba(13,31,53,0.12)', border: '1px solid #e2eaf4' }}>
-                <img src="/work-move-physio.png" alt="Move Physiotherapy website" style={{ width: '100%', display: 'block' }} />
-                <div style={{ padding: '0.75rem 1rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                  <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.78rem', color: '#0d1f35' }}>Move Physiotherapy & Fitness</span>
-                  <span style={{ fontSize: '0.72rem', color: '#6b849a', fontWeight: 300 }}>Perth, WA</span>
-                </div>
-              </div>
-              {/* Second screenshot — offset */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem' }}>
-                <div style={{ borderRadius: '10px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
-                  <img src="/work-hexa-1.png" alt="Hexa Health Hub website" style={{ width: '100%', display: 'block' }} />
-                  <div style={{ padding: '0.5rem 0.75rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
-                    <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.72rem', color: '#0d1f35' }}>Hexa Health Hub</span>
-                  </div>
-                </div>
-                <div style={{ borderRadius: '10px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
-                  <img src="/work-hexa-2.png" alt="Hexa Health Hub interior" style={{ width: '100%', display: 'block' }} />
-                  <div style={{ padding: '0.5rem 0.75rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
-                    <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.72rem', color: '#0d1f35' }}>Hexa — Services</span>
-                  </div>
-                </div>
-                <div style={{ borderRadius: '10px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
-                  <div style={{ background: 'linear-gradient(135deg, #1a0a00, #3a1500)', height: '120px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <span style={{ color: '#d4a862', fontFamily: 'Georgia, serif', fontSize: '0.9rem', textAlign: 'center', padding: '0 1rem', fontStyle: 'italic' }}>Le Trevie<br/>Taormina</span>
-                  </div>
-                  <div style={{ padding: '0.5rem 0.75rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
-                    <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.72rem', color: '#0d1f35' }}>Le Trevie — Restaurant</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <style>{`@media (max-width: 900px) { .why-grid { grid-template-columns: 1fr !important; gap: 3rem !important; } }`}</style>
-      </section>
-
-      {/* ── HOW IT WORKS (dark, space feel) ── */}
       <section style={{ padding: '6rem 2rem', background: '#080f1a', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '700px', height: '300px', background: 'radial-gradient(ellipse, rgba(74,158,218,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
