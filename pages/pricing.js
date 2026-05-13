@@ -374,13 +374,40 @@ export default function Pricing() {
                     </div>
                   ))}
                   {/* CTA */}
-      <section style={{ padding: '4rem 2rem 8rem', textAlign: 'center', }}>
+                  <Link href="/contact" className="btn-primary" style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem', fontSize: '0.78rem' }}>
+                    Get Started →
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: '4rem 2rem 6rem', background: 'rgba(15,37,64,0.2)' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div className="section-label" style={{ justifyContent: 'center' }}>FAQ</div>
+            <h2 className="section-title" style={{ textAlign: 'center' }}>Pricing <span>Questions</span></h2>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            {faqs.map(faq => (
+              <div key={faq.q} className="card">
+                <h4 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.78rem', letterSpacing: '0.05em', marginBottom: '0.75rem', color: '#5bc4f5' }}>{faq.q}</h4>
+                <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.9rem', lineHeight: '1.7', fontWeight: 300 }}>{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: '4rem 2rem 8rem', textAlign: 'center' }}>
         <div style={{ maxWidth: '600px', margin: '0 auto' }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>
             Not sure which<br /><span>package is right?</span>
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.55)', lineHeight: '1.8', marginBottom: '2rem', fontWeight: 300 }}>
-            Book a free strategy session and we'll recommend the right package based on your practice size, goals, and current marketing.
+            Book a free strategy session and we'll recommend the right package based on your business size, goals, and current marketing.
           </p>
           <Link href="/contact" className="btn-primary" style={{ fontSize: '0.85rem', padding: '1.1rem 2.5rem' }}>
             Book a Free Session →
@@ -390,28 +417,3 @@ export default function Pricing() {
     </>
   );
 }
-
-const thStyle = {
-  padding: '1rem 1.25rem',
-  textAlign: 'center',
-  borderBottom: '1px solid #1a3a5c',
-  fontWeight: 600,
-  color: 'white',
-};
-
-const tdStyle = {
-  padding: '0.85rem 1.25rem',
-  textAlign: 'center',
-  borderBottom: '1px solid rgba(26,58,92,0.3)',
-  fontSize: '0.85rem',
-  fontWeight: 300,
-};
-
-const tdLabelStyle = {
-  padding: '0.85rem 1.25rem',
-  textAlign: 'left',
-  borderBottom: '1px solid rgba(26,58,92,0.3)',
-  fontSize: '0.85rem',
-  color: 'rgba(255,255,255,0.5)',
-  fontWeight: 300,
-};
