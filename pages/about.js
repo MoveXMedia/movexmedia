@@ -82,7 +82,7 @@ export default function About() {
               />
               <div style={{ position: 'absolute', bottom: '16px', left: '16px', zIndex: 2, background: 'rgba(8,15,26,0.85)', backdropFilter: 'blur(12px)', border: '1px solid rgba(91,196,245,0.2)', borderRadius: '8px', padding: '0.6rem 1rem' }}>
                 <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.78rem', color: 'white' }}>Daniel Ryan</div>
-                <div style={{ fontSize: '0.68rem', color: 'rgba(255,255,255,0.5)', marginTop: '0.1rem' }}>Physiotherapist & Founder</div>
+                <div style={{ fontSize: '0.68rem', color: 'rgba(255,255,255,0.5)', marginTop: '0.1rem' }}>Founder & Head IT</div>
               </div>
             </div>
 
@@ -93,12 +93,12 @@ export default function About() {
                 Daniel Ryan
               </h2>
               <p style={{ color: '#5bc4f5', fontFamily: 'Poppins, sans-serif', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
-                Principal Physiotherapist — Move Physiotherapy & Fitness<br />
+                Founder — Move Physiotherapy & Fitness<br />
                 Founder — MoveX Media
               </p>
               <div style={{ width: '50px', height: '3px', background: 'linear-gradient(90deg, #5bc4f5, transparent)', borderRadius: '2px', marginBottom: '1.75rem' }} />
               <p style={{ color: '#6b849a', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.1rem', fontSize: '0.98rem' }}>
-                Daniel&apos;s background in digital marketing started over 15 years ago during his studies, building websites before most small businesses had one. When he founded Move Physiotherapy &amp; Fitness — now a multi-clinic practice across Perth — he did what most practice owners do: wore every marketing hat himself.
+                Daniel&apos;s background in digital marketing started over 15 years ago during his studies, building websites before most small businesses had one. When he founded Move Physiotherapy &amp; Fitness — now a multi-location business across Perth — he did what most business owners do: wore every marketing hat himself.
               </p>
               <p style={{ color: '#6b849a', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.1rem', fontSize: '0.98rem' }}>
                 Social media, Google Ads, email campaigns, website management — he ran it all in-house. When he eventually engaged external agencies, the results didn&apos;t stack up. So he went deeper, upskilling across paid search, Meta advertising, and conversion strategy until his own campaigns were consistently outperforming what agencies had delivered.
@@ -109,7 +109,7 @@ export default function About() {
 
               {/* Credential pills */}
               <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-                {['Principal Physiotherapist', 'Google Ads Certified', 'Meta Advertising', 'Move Physio Founder', '15+ yrs Digital Marketing'].map(tag => (
+                {['Multi-industry Experience', 'Google Ads Certified', 'Meta Advertising', 'Move Physio Founder', '15+ yrs Digital Marketing'].map(tag => (
                   <span key={tag} style={{ background: '#f4f7fb', border: '1px solid #e2eaf4', borderRadius: '20px', padding: '0.35rem 0.85rem', fontFamily: 'Poppins, sans-serif', fontSize: '0.75rem', fontWeight: 600, color: '#1a3a5c' }}>{tag}</span>
                 ))}
               </div>

@@ -245,16 +245,6 @@ export default function WebsiteDevelopment() {
               </a>
             </div>
           </div>
-
-          {/* Hexa — two-up */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }} className="portfolio-grid">
-            <div style={{ borderRadius: '14px', overflow: 'hidden', boxShadow: '0 12px 40px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
-              <img src="/work-hexa-1.png" alt="Hexa Health Hub homepage" style={{ width: '100%', display: 'block' }} />
-              <div style={{ padding: '1rem 1.25rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>
-                <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.88rem', color: '#0d1f35' }}>Hexa Health Hub</div>
-                <div style={{ color: '#6b849a', fontSize: '0.78rem', fontWeight: 300, marginTop: '0.15rem' }}>North Perth · Physiotherapy & Sport Performance</div>
-              </div>
-            </div>
             <div style={{ borderRadius: '14px', overflow: 'hidden', boxShadow: '0 12px 40px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4' }}>
               <img src="/work-hexa-2.png" alt="Hexa Health Hub interior section" style={{ width: '100%', display: 'block' }} />
               <div style={{ padding: '1rem 1.25rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4' }}>

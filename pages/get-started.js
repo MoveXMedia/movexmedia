@@ -279,8 +279,7 @@ export default function GetStarted() {
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }} className="portfolio-grid-lp">
             {[
-              { src: '/work-hexa-1.png', alt: 'Hexa Health Hub', title: 'Hexa Health Hub', desc: 'Allied health · Perth, WA', url: null },
-              { src: '/work-hexa-2.png', alt: 'Hexa Service Pages', title: 'Hexa — Service Pages', desc: 'Custom service page structure', url: null },
+              
             ].map(item => (
               <div key={item.title} style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)', background: '#0a1628' }}>
                 <Image src={item.src} alt={item.alt} width={600} height={380} style={{ width: '100%', height: 'auto', display: 'block' }} />
@@ -291,29 +290,6 @@ export default function GetStarted() {
               </div>
             ))}
           </div>
-
-          {/* Le Trevie */}
-          <div style={{ marginTop: '1.5rem', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)', background: '#0a1628', display: 'flex', flexWrap: 'wrap' }}>
-            <div style={{ flex: 1, minWidth: '280px', padding: '3rem 2.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-              <div style={{ fontSize: '0.68rem', fontWeight: 700, color: '#5bc4f5', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>International Work</div>
-              <h3 style={{ fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>Le Trevie</h3>
-              <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.88rem', fontWeight: 300, lineHeight: 1.65, marginBottom: '1.25rem' }}>
-                Fine dining restaurant in Taormina, Sicily. Custom website designed to reflect the premium experience and drive reservations.
-              </p>
-              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
-                {['Custom design', 'Multi-language', 'Reservation focus'].map(t => (
-                  <span key={t} style={{ background: 'rgba(91,196,245,0.1)', border: '1px solid rgba(91,196,245,0.2)', color: '#5bc4f5', fontSize: '0.72rem', fontWeight: 600, padding: '0.25rem 0.75rem', borderRadius: '20px' }}>{t}</span>
-                ))}
-              </div>
-              <a href="https://www.letrevietaormina.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: 'rgba(91,196,245,0.15)', border: '1px solid rgba(91,196,245,0.4)', color: '#5bc4f5', padding: '0.6rem 1.4rem', borderRadius: '6px', fontWeight: 600, fontSize: '0.78rem', textDecoration: 'none', width: 'fit-content' }}>
-                Visit Site →
-              </a>
-            </div>
-            <div style={{ flex: 1, minWidth: '280px', background: 'linear-gradient(135deg, #1a0d00, #2a1a00)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '3rem', minHeight: '200px' }}>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ color: '#d4a030', fontFamily: 'Georgia, serif', fontSize: '2.2rem', fontStyle: 'italic', marginBottom: '0.5rem' }}>Le Trevie</div>
-                <div style={{ color: 'rgba(212,160,48,0.6)', fontSize: '0.75rem', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Taormina · Sicily</div>
-              </div>
             </div>
           </div>
           <style>{`@media (max-width: 640px) { .portfolio-grid-lp { grid-template-columns: 1fr !important; } }`}</style>

@@ -7,7 +7,7 @@ const services = [
     title: 'Google Ads',
     tag: 'Search & Display',
     href: '/google-ads',
-    desc: 'Get in front of patients the moment they search for your services. We build, manage, and optimise Google Ads campaigns that generate real bookings — not just clicks.',
+    desc: 'Get in front of customers the moment they search for what you offer. We build, manage, and optimise Google Ads campaigns that generate real leads — not just clicks.',
     features: [
       'Search campaign setup & management',
       'Condition and service-specific ad groups',
@@ -23,7 +23,7 @@ const services = [
     title: 'Facebook & Instagram Marketing',
     tag: 'Social Ads',
     href: '/facebook-marketing',
-    desc: 'Build awareness in your local community and re-engage past patients with precision-targeted social media advertising across Meta platforms.',
+    desc: 'Build awareness in your local community and re-engage past customers with precision-targeted social media advertising across Meta platforms.',
     features: [
       'Facebook & Instagram campaign management',
       'Audience building & lookalike targeting',
@@ -39,11 +39,11 @@ const services = [
     title: 'Social Media Management',
     tag: 'Organic Social',
     href: '/social-media',
-    desc: 'Consistent, professional content that builds trust, educates your community, and keeps your clinic visible between patient visits.',
+    desc: 'Consistent, professional content that builds trust, educates your audience, and keeps your business visible and top of mind.',
     features: [
       'Content calendar planning',
       'Condition and education posts',
-      'Staff spotlights & clinic culture',
+      'Staff spotlights & business culture',
       'Story and reel creation',
       'Community engagement',
       'Monthly analytics',
@@ -55,7 +55,7 @@ const services = [
     title: 'Email Marketing',
     tag: 'Retention & Nurture',
     href: '/email-marketing',
-    desc: 'Turn your patient database into a reliable re-booking engine. Automated campaigns that keep past patients connected and coming back.',
+    desc: 'Turn your customer database into a reliable re-engagement engine. Automated campaigns that keep past customers connected and coming back.',
     features: [
       'Email platform setup (Birdeye, Mailchimp etc.)',
       'Re-engagement campaigns',
@@ -71,7 +71,7 @@ const services = [
     title: 'Website Development',
     tag: 'Web & SEO',
     href: '/website-development',
-    desc: 'Fast, mobile-first websites built to convert visitors into patients and rank on Google. Every site includes on-page SEO as standard.',
+    desc: 'Fast, mobile-first websites built to convert visitors into customers and rank on Google. Every site includes on-page SEO as standard.',
     features: [
       'Custom Next.js or WordPress sites',
       'Mobile-first design',
@@ -89,20 +89,20 @@ export default function Services() {
     <>
       <Head>
         <title>Services — MoveX Media</title>
-        <meta name="description" content="Digital marketing services for health and allied health practices. Google Ads, Facebook, social media, email marketing, and website development." />
+        <meta name="description" content="Digital marketing services for local service businesses. Google Ads, Facebook, social media, email marketing, and website development." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://movex.media/services" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="MoveX Media" />
         <meta property="og:title" content="Services — MoveX Media" />
-        <meta property="og:description" content="Digital marketing services for health and allied health practices. Google Ads, Facebook, social media, email marketing, and website development." />
+        <meta property="og:description" content="Digital marketing services for local service businesses. Google Ads, Facebook, social media, email marketing, and website development." />
         <meta property="og:url" content="https://movex.media/services" />
         <meta property="og:image" content="https://movex.media/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Services — MoveX Media" />
-        <meta name="twitter:description" content="Digital marketing services for health and allied health practices. Google Ads, Facebook, social media, email marketing, and website development." />
+        <meta name="twitter:description" content="Digital marketing services for local service businesses. Google Ads, Facebook, social media, email marketing, and website development." />
         <meta name="twitter:image" content="https://movex.media/og-image.png" />
       </Head>
 
@@ -120,7 +120,7 @@ export default function Services() {
             margin: '0 auto',
             fontWeight: 300,
           }}>
-            Every service is designed around one outcome: more booked appointments for your practice.
+            Every service is designed around one outcome: more customers and leads for your business.
           </p>
         </div>
       </section>
