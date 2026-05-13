@@ -132,7 +132,7 @@ export default function Services() {
               padding: '2.5rem',
               borderColor: s.highlight ? 'rgba(91,196,245,0.3)' : undefined,
             }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '2rem', alignItems: 'start' }}>
+              <div>
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.75rem' }}>
                     <div className="icon-wrap" style={{ marginBottom: 0, width: '50px', height: '50px', fontSize: '1.3rem' }}>
@@ -165,9 +165,10 @@ export default function Services() {
                   }}>{s.desc}</p>
 
                   <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+                    display: 'flex',
+                    flexDirection: 'column',
                     gap: '0.5rem',
+                    marginBottom: s.href && s.highlight ? '1.5rem' : 0,
                   }}>
                     {s.features.map(f => (
                       <div key={f} style={{
@@ -183,13 +184,13 @@ export default function Services() {
                       </div>
                     ))}
                   </div>
-                </div>
 
-                {s.href && s.highlight && (
-                  <Link href={s.href} className="btn-outline" style={{ whiteSpace: 'nowrap' }}>
-                    Learn More →
-                  </Link>
-                )}
+                  {s.href && s.highlight && (
+                    <Link href={s.href} className="btn-outline" style={{ display: 'inline-block', marginTop: '0.5rem' }}>
+                      Learn More →
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
           ))}

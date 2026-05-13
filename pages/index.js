@@ -13,7 +13,7 @@ const whyItems = [
   { title: 'Built for small business', desc: 'We work with local service businesses — not enterprise. Our strategies are scaled to your budget and built to grow with you.' },
   { title: 'Intent-based targeting', desc: 'We target by search intent, behaviour, and location — so your ads reach people actively looking for what you offer.' },
   { title: 'Founder-run, not account managed', desc: 'You deal directly with Daniel — not a junior account manager. Strategy, execution, and results, without the agency overhead.' },
-  { title: 'Cost-effective from day one', desc: 'No lock-in contracts, no bloated retainers. Every dollar is tracked and accountable from the first campaign.' },
+  { title: 'Cost-effective from day one', desc: 'No bloated retainers. Every dollar is tracked and accountable from the first campaign — with transparent reporting.' },
 ];
 
 const steps = [
@@ -28,7 +28,7 @@ export default function Home() {
     <>
       <Head>
         <title>MoveX Media — Digital Marketing for Local Businesses</title>
-        <meta name="description" content="Digital marketing agency specialising in Google Ads, Facebook, social media, email marketing, and websites for local service businesses. Cost-effective, no lock-in." />
+        <meta name="description" content="Digital marketing agency specialising in Google Ads, Facebook, social media, email marketing, and websites for local service businesses." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://movex.media/" />
         <meta property="og:type" content="website" />
@@ -78,7 +78,7 @@ export default function Home() {
                 <Link href="/services" className="btn-outline">View Services</Link>
               </div>
               <div style={{ display: 'flex', gap: '2.5rem', marginTop: '3.5rem', paddingTop: '2.5rem', borderTop: '1px solid rgba(26,58,92,0.5)', flexWrap: 'wrap' }}>
-                {[['$10k → $M+', 'Founder-proven business growth'], ['No lock-in', 'Flexible, cancel anytime'], ['48hr', 'Campaign launch time']].map(([val, label]) => (
+                {[['$10k → $M+', 'Founder-proven business growth'], ['Any Industry', 'Trades, hospitality & more'], ['48hr', 'Campaign launch time']].map(([val, label]) => (
                   <div key={label}>
                     <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.8rem', fontWeight: 800, color: '#5bc4f5' }}>{val}</div>
                     <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)', marginTop: '0.25rem', fontWeight: 300 }}>{label}</div>
@@ -200,15 +200,9 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
-                <div>
-                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6b849a', marginBottom: '0.2rem' }}>Starting from</div>
-                  <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 900, color: '#0d1f35', lineHeight: 1 }}>$2,500 USD</div>
-                </div>
-                <Link href="/website-development" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.85rem 1.8rem', background: '#5bc4f5', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.8rem', color: '#0d1f35', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none' }}>
-                  View Packages →
-                </Link>
-              </div>
+              <Link href="/get-started" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.85rem 1.8rem', background: 'rgba(91,196,245,0.1)', border: '1px solid rgba(91,196,245,0.4)', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.88rem', color: '#5bc4f5', textDecoration: 'none' }}>
+                🌟 View our special offer →
+              </Link>
             </div>
 
             {/* Stats */}

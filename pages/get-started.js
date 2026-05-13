@@ -61,7 +61,7 @@ export default function GetStarted() {
         <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: '700px', height: '400px', background: 'radial-gradient(ellipse, rgba(91,196,245,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div style={{ position: 'relative', maxWidth: '860px', margin: '0 auto' }}>
           <div style={{ marginBottom: '1.5rem' }}>
-            <span className="tag">No lock-in · Live in 7 days</span>
+            <span className="tag">3-page website · Live in 7 days</span>
           </div>
           <h1 style={{ fontWeight: 900, fontSize: 'clamp(2.4rem, 6vw, 4rem)', lineHeight: 1.1, marginBottom: '1.25rem', letterSpacing: '-0.02em' }}>
             A professional website<br />
@@ -244,7 +244,7 @@ export default function GetStarted() {
             <div style={{ flex: 1 }}>
               <div style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.2rem' }}>Hosting — $20 USD/month</div>
               <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem', fontWeight: 300, lineHeight: 1.6 }}>
-                Includes hosting, CDN delivery, SSL certificate, and ongoing maintenance. Cancel any time — you own the site.
+                Includes hosting, CDN delivery, and SSL certificate. Minimum 2-year hosting term at $20 USD/month. You own the site.
               </p>
             </div>
             <div style={{ fontWeight: 900, fontSize: '1.5rem', color: '#5bc4f5', whiteSpace: 'nowrap' }}>$20 USD/mo</div>
@@ -295,7 +295,7 @@ export default function GetStarted() {
           </p>
           <a href={BOOKING_URL} className="btn btn-lg pulse">Book My Free Call with Daniel →</a>
           <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '2rem' }}>
-            {['USD $499 one-off', '$20 USD/month hosting', 'Live in 7 days', 'You own the site'].map(item => (
+            {['$499 USD one-off', '$20 USD/month (2yr min)', 'Live in 7 days', 'You own the site'].map(item => (
               <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'rgba(255,255,255,0.35)', fontSize: '0.8rem', fontWeight: 300 }}>
                 <span style={{ color: '#5bc4f5', fontSize: '0.7rem' }}>✓</span> {item}
               </div>

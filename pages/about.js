@@ -51,7 +51,7 @@ export default function About() {
         <div className="container">
           <div className="section-label" style={{ justifyContent: 'center' }}>About MoveX Media</div>
           <h1 style={{ fontFamily: 'Poppins, sans-serif', marginBottom: '1.5rem' }}>
-            Built for <span style={{ color: '#5bc4f5' }}>Health</span>.<br />
+            Built to <span style={{ color: '#5bc4f5' }}>Convert</span>.
             Made to <span style={{ color: '#5bc4f5' }}>Move</span>.
           </h1>
           <p style={{
@@ -149,7 +149,7 @@ export default function About() {
                 <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
                   <div style={{ width: '70px', height: '70px', background: 'linear-gradient(135deg, #4a9eda, #5bc4f5)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem', flexShrink: 0, borderRadius: '10px' }}>🚀</div>
                   <div>
-                    <h3 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1rem', marginBottom: '0.5rem' }}>Perth-Based. Health-Focused.</h3>
+                    <h3 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1rem', marginBottom: '0.5rem' }}>Perth-Based. Worldwide Reach.</h3>
                     <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.9rem', lineHeight: '1.7', fontWeight: 300 }}>
                       Nationwide reach, local focus. We work with service businesses across Australia and internationally — from solo operators to multi-location businesses.
                     </p>
@@ -158,9 +158,9 @@ export default function About() {
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 {[
-                  { val: '100%', label: 'Health clients only' },
+                  { val: 'Any Industry', label: 'All business types welcome' },
                   { val: '48hr', label: 'Campaign launch' },
-                  { val: 'No lock-in', label: 'Flexible contracts' },
+                  { val: '7 days', label: 'Website launch time' },
                   { val: 'Local', label: 'Perth-based team' },
                 ].map(s => (
                   <div key={s.label} className="card" style={{ textAlign: 'center', padding: '1.5rem 1rem' }}>
@@ -175,7 +175,7 @@ export default function About() {
       </section>
 
       {/* ── OUR VALUES ── */}
-      <section style={{ padding: '6rem 2rem', background: 'rgba(15,37,64,0.3)' }}>
+      <section style={{ padding: '6rem 2rem', background: '#f4f7fb' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ marginBottom: '3rem', textAlign: 'center' }}>
             <div className="section-label" style={{ justifyContent: 'center' }}>How We Work</div>
@@ -185,10 +185,10 @@ export default function About() {
           </div>
           <div className="grid-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
             {values.map(v => (
-              <div className="card" key={v.title}>
-                <div className="icon-wrap">{v.icon}</div>
-                <h3 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.85rem', letterSpacing: '0.08em', marginBottom: '0.75rem' }}>{v.title}</h3>
-                <p style={{ color: 'rgba(255,255,255,0.55)', lineHeight: '1.7', fontWeight: 300, fontSize: '0.95rem' }}>{v.desc}</p>
+              <div key={v.title} style={{ background: 'white', border: '1px solid #e2eaf4', borderRadius: '16px', padding: '2rem', boxShadow: '0 4px 20px rgba(13,31,53,0.06)' }}>
+                <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{v.icon}</div>
+                <h3 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.9rem', fontWeight: 700, letterSpacing: '0.05em', marginBottom: '0.75rem', color: '#0d1f35' }}>{v.title}</h3>
+                <p style={{ color: '#6b849a', lineHeight: '1.7', fontWeight: 300, fontSize: '0.9rem' }}>{v.desc}</p>
               </div>
             ))}
           </div>
