@@ -200,9 +200,6 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <Link href="/get-started" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.85rem 1.8rem', background: 'rgba(91,196,245,0.1)', border: '1px solid rgba(91,196,245,0.4)', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.88rem', color: '#5bc4f5', textDecoration: 'none' }}>
-                🌟 View our special offer →
-              </Link>
             </div>
 
             {/* Stats */}
@@ -229,28 +226,33 @@ export default function Home() {
 
           </div>
 
-          {/* Dark CTA bar above portfolio */}
-          <div style={{ background: '#0d1f35', borderRadius: '14px', padding: '1.75rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.25rem', marginBottom: '1.5rem' }}>
-            <div>
-              <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: '0.3rem' }}>
-                3-page website · Live in 7 days · $20 USD/month hosting · 2-year minimum term
-              </div>
-              <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900, fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)', color: 'white', lineHeight: 1.1 }}>
-                🌟 Limited time — <span style={{ color: '#5bc4f5' }}>$499 USD special offer</span>
-              </div>
-            </div>
-            <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-              <Link href="/website-development" style={{ display: 'inline-flex', alignItems: 'center', padding: '0.7rem 1.4rem', background: 'rgba(91,196,245,0.15)', border: '1px solid rgba(91,196,245,0.4)', borderRadius: '7px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.8rem', color: '#5bc4f5', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-                View Packages →
-              </Link>
-              <Link href="/get-started" style={{ display: 'inline-flex', alignItems: 'center', padding: '0.7rem 1.4rem', background: '#5bc4f5', borderRadius: '7px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.8rem', color: '#0d1f35', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-                Get Started →
-              </Link>
-            </div>
-          </div>
+        </div>
+      </section>
 
-          {/* Portfolio — equal size, clickable, opens in new tab */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', alignItems: 'start' }} className="portfolio-grid-home">
+      {/* ── WEBSITE OFFER CTA BAR (full-width, dark) ── */}
+      <div style={{ background: '#0d1f35', padding: '2.5rem 3rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem' }}>
+        <div>
+          <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '0.5rem' }}>
+            3-page website · Live in 7 days · $20 USD/month · 2-year minimum term
+          </div>
+          <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900, fontSize: 'clamp(1.4rem, 3vw, 2rem)', color: 'white', lineHeight: 1.1 }}>
+            🌟 Limited time — <span style={{ color: '#5bc4f5' }}>$499 USD special offer</span>
+          </div>
+        </div>
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <Link href="/website-development" style={{ display: 'inline-flex', alignItems: 'center', padding: '0.9rem 1.8rem', background: 'rgba(91,196,245,0.12)', border: '1px solid rgba(91,196,245,0.4)', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.85rem', color: '#5bc4f5', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+            View Packages →
+          </Link>
+          <Link href="/get-started" style={{ display: 'inline-flex', alignItems: 'center', padding: '0.9rem 1.8rem', background: '#5bc4f5', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '0.85rem', color: '#040c18', textDecoration: 'none', whiteSpace: 'nowrap', boxShadow: '0 4px 20px rgba(91,196,245,0.35)' }}>
+            Get Started →
+          </Link>
+        </div>
+      </div>
+
+      {/* ── PORTFOLIO ── */}
+      <section style={{ padding: '3rem 2rem 5rem', background: '#f4f7fb' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }} className="portfolio-grid-home">
             <a href="https://movephysio.com.au" target="_blank" rel="noopener noreferrer" style={{ display: 'block', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 16px 48px rgba(13,31,53,0.12)', border: '1px solid #e2eaf4', textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s' }} className="portfolio-link">
               <div style={{ aspectRatio: '16/9', overflow: 'hidden' }}>
                 <img src="/work-move-physio.png" alt="Move Physiotherapy website" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
@@ -270,12 +272,11 @@ export default function Home() {
               </div>
             </a>
           </div>
-
         </div>
         <style>{`
-          @media (max-width: 900px) { .website-top-grid { grid-template-columns: 1fr !important; gap: 3rem !important; } }
           @media (max-width: 700px) { .portfolio-grid-home { grid-template-columns: 1fr !important; } }
           .portfolio-link:hover { transform: translateY(-3px); box-shadow: 0 24px 60px rgba(13,31,53,0.18) !important; }
+          @media (max-width: 900px) { .website-top-grid { grid-template-columns: 1fr !important; gap: 3rem !important; } }
         `}</style>
       </section>
 
@@ -306,9 +307,9 @@ export default function Home() {
           </div>
         </div>
         <style>{`
-          .service-card:hover { background: #ffffff !important; border-color: #ffffff !important; box-shadow: 0 16px 48px rgba(0,0,0,0.3); transform: translateY(-3px); }
-          .service-card:hover .service-card-title { color: #0d1f35 !important; }
-          .service-card:hover .service-card-desc { color: #6b849a !important; }
+          .service-card:hover { border-color: rgba(91,196,245,0.6) !important; box-shadow: 0 0 0 1px rgba(91,196,245,0.3), 0 8px 24px rgba(0,0,0,0.2); transform: translateY(-2px); }
+          .service-card:hover .service-card-title { color: white !important; }
+          .service-card:hover .service-card-desc { color: rgba(255,255,255,0.6) !important; }
         `}</style>
       </section>
       <section style={{ padding: '6rem 2rem', background: '#080f1a', position: 'relative', overflow: 'hidden' }}>

@@ -118,20 +118,26 @@ export default function GetStarted() {
               </div>
             ))}
           </div>
-
-          {/* WordPress callout */}
-          <div style={{ background: 'linear-gradient(135deg, rgba(239,68,68,0.08), rgba(239,68,68,0.03))', border: '1px solid rgba(239,68,68,0.25)', borderRadius: '16px', padding: '2rem 2.5rem', display: 'flex', gap: '1.5rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
-            <div style={{ fontSize: '2rem', flexShrink: 0 }}>⚠️</div>
-            <div>
-              <div style={{ fontWeight: 700, fontSize: '1rem', marginBottom: '0.5rem', color: 'white' }}>Still on WordPress? It's holding you back.</div>
-              <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.9rem', lineHeight: 1.75, fontWeight: 300 }}>
-                WordPress sites average a PageSpeed score of 40–60 — well below Google's recommended 90+. They're slow, plugin-dependent, and require constant security updates. Modern frameworks like Next.js load in under 1 second, score 100/100, and don't need a developer to maintain. Moving off WordPress isn't a luxury — it's table stakes in 2025.
-              </p>
-            </div>
-          </div>
         </div>
         <style>{`@media (max-width: 700px) { .stats-grid-lp { grid-template-columns: 1fr !important; } }`}</style>
       </section>
+
+      {/* ── MONEY BACK GUARANTEE ── */}
+      <div style={{ background: 'linear-gradient(135deg, #0a2010, #0d2a14)', borderTop: '1px solid rgba(34,197,94,0.2)', borderBottom: '1px solid rgba(34,197,94,0.2)', padding: '2.5rem 1.5rem' }}>
+        <div style={{ maxWidth: '860px', margin: '0 auto', display: 'flex', gap: '2rem', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div style={{ fontSize: '3rem', flexShrink: 0 }}>🛡️</div>
+          <div style={{ flex: 1 }}>
+            <div style={{ fontWeight: 800, fontSize: '1.15rem', color: 'white', marginBottom: '0.4rem' }}>30-Day Money Back Guarantee</div>
+            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: 1.7, fontWeight: 300, margin: 0 }}>
+              If you're not happy with your website within 30 days of it going live, we'll refund the build cost in full. No questions, no arguments. We're confident in what we deliver — and we want you to be too.
+            </p>
+          </div>
+          <div style={{ background: 'rgba(34,197,94,0.12)', border: '1px solid rgba(34,197,94,0.3)', borderRadius: '10px', padding: '0.75rem 1.25rem', whiteSpace: 'nowrap', flexShrink: 0 }}>
+            <div style={{ fontWeight: 800, fontSize: '0.82rem', color: '#22c55e', letterSpacing: '0.04em' }}>30-DAY GUARANTEE</div>
+            <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.72rem', fontWeight: 300 }}>Full refund on build cost</div>
+          </div>
+        </div>
+      </div>
 
       {/* ── DANIEL — WORK DIRECTLY WITH ME ── */}
       <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #0a1628 0%, #0d1f35 100%)', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
