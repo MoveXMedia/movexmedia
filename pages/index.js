@@ -255,7 +255,7 @@ export default function Home() {
       <section style={{ padding: '3rem 2rem 5rem', background: '#f4f7fb' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }} className="portfolio-grid-home">
-            <a href="https://movephysio.com.au" target="_blank" rel="noopener noreferrer" style={{ display: 'block', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 16px 48px rgba(13,31,53,0.12)', border: '1px solid #e2eaf4', textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s' }} className="portfolio-link">
+            <a href="https://www.movephysiotherapy.com.au/" target="_blank" rel="noopener noreferrer" style={{ display: 'block', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 16px 48px rgba(13,31,53,0.12)', border: '1px solid #e2eaf4', textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s' }} className="portfolio-link">
               <div style={{ aspectRatio: '16/9', overflow: 'hidden' }}>
                 <img src="/work-move-physio.png" alt="Move Physiotherapy website" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>

@@ -276,7 +276,7 @@ export default function GetStarted() {
                   <div style={{ fontWeight: 800, fontSize: '1.2rem' }}>Move Physiotherapy</div>
                   <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', fontWeight: 300 }}>PageSpeed 100 · #1 Google ranking · 3 locations</div>
                 </div>
-                <a href="https://movephysio.com.au" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: 'rgba(91,196,245,0.15)', border: '1px solid rgba(91,196,245,0.4)', color: '#5bc4f5', padding: '0.55rem 1.2rem', borderRadius: '6px', fontWeight: 600, fontSize: '0.78rem', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+                <a href="https://www.movephysiotherapy.com.au/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: 'rgba(91,196,245,0.15)', border: '1px solid rgba(91,196,245,0.4)', color: '#5bc4f5', padding: '0.55rem 1.2rem', borderRadius: '6px', fontWeight: 600, fontSize: '0.78rem', textDecoration: 'none', whiteSpace: 'nowrap' }}>
                   View Live →
                 </a>
               </div>

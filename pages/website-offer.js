@@ -149,7 +149,7 @@ export default function WebsitePromo() {
                 <div style={{ fontWeight: 800, fontSize: '1.3rem' }}>Move Physiotherapy</div>
                 <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.82rem', fontWeight: 300 }}>High-performance physio site · Full SEO · Cliniko integration</div>
               </div>
-              <a href="https://movephysio.com.au" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: 'rgba(91,196,245,0.15)', border: '1px solid rgba(91,196,245,0.4)', color: '#5bc4f5', padding: '0.6rem 1.4rem', borderRadius: '6px', fontWeight: 600, fontSize: '0.78rem', textDecoration: 'none', whiteSpace: 'nowrap' }}>View Live Site →</a>
+              <a href="https://www.movephysiotherapy.com.au/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: 'rgba(91,196,245,0.15)', border: '1px solid rgba(91,196,245,0.4)', color: '#5bc4f5', padding: '0.6rem 1.4rem', borderRadius: '6px', fontWeight: 600, fontSize: '0.78rem', textDecoration: 'none', whiteSpace: 'nowrap' }}>View Live Site →</a>
             </div>
           </div>
         </div>

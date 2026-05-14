@@ -240,7 +240,7 @@ export default function WebsiteDevelopment() {
                 <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.95rem', color: '#0d1f35' }}>Move Physiotherapy & Fitness</div>
                 <div style={{ color: '#6b849a', fontSize: '0.8rem', fontWeight: 300, marginTop: '0.2rem' }}>Three-location practice · Perth, WA · PageSpeed 100 · Next.js</div>
               </div>
-              <a href="https://movephysiotherapy.com.au" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.78rem', color: '#5bc4f5', textDecoration: 'none', letterSpacing: '0.03em' }}>
+              <a href="https://www.movephysiotherapy.com.au/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.78rem', color: '#5bc4f5', textDecoration: 'none', letterSpacing: '0.03em' }}>
                 Visit site →
               </a>
             </div>
