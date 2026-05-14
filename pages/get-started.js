@@ -139,44 +139,6 @@ export default function GetStarted() {
         </div>
       </div>
 
-      {/* ── WHY SO CHEAP ── */}
-      <section style={{ padding: '6rem 1.5rem', background: '#ffffff', borderTop: '1px solid #e2eaf4' }}>
-        <div style={{ maxWidth: '860px', margin: '0 auto' }}>
-          <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.75rem', fontFamily: 'Poppins, sans-serif' }}>
-            The obvious question
-          </p>
-          <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900, fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', color: '#0d1f35', lineHeight: 1.2, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
-            "$499 for a real website?<br />
-            <span style={{ color: '#5bc4f5' }}>That sounds too cheap."</span>
-          </h2>
-          <p style={{ color: '#6b849a', fontSize: '1.05rem', lineHeight: 1.85, fontWeight: 300, marginBottom: '1.5rem' }}>
-            You're right to wonder. Most agencies charge $3,000–$8,000 for a website at this standard. Here's why we don't.
-          </p>
-          <p style={{ color: '#6b849a', fontSize: '1.05rem', lineHeight: 1.85, fontWeight: 300, marginBottom: '1.5rem' }}>
-            There's no account manager. No project manager. No sales team. No CBD office. No junior developer being supervised by a senior developer who's billing double. It's just Daniel — one person who has been building websites for years and doesn't carry agency overheads. The price reflects that structure, not the quality.
-          </p>
-          <p style={{ color: '#6b849a', fontSize: '1.05rem', lineHeight: 1.85, fontWeight: 300, marginBottom: '2.5rem' }}>
-            The website you get is the same technology, the same PageSpeed score, and the same custom design you'd receive from a full-service agency. You're just not paying for their rent.
-          </p>
-
-          {/* Honest pitch */}
-          <div style={{ background: 'linear-gradient(135deg, #0d1f35, #1a3a5c)', borderRadius: '16px', padding: '2.5rem', position: 'relative', overflow: 'hidden' }}>
-            <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '200px', height: '200px', background: 'radial-gradient(circle, rgba(91,196,245,0.1) 0%, transparent 70%)', pointerEvents: 'none' }} />
-            <div style={{ position: 'relative' }}>
-              <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '1rem' }}>
-                The honest reason
-              </div>
-              <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', lineHeight: 1.85, fontWeight: 300, marginBottom: '1.25rem' }}>
-                Getting your website made is the first step — for both of us. We want to be on board with you throughout your entire marketing journey. If you love the website and want to grow faster, we'd love to run your Facebook or Google Ads.
-              </p>
-              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1rem', lineHeight: 1.85, fontWeight: 300 }}>
-                And if you don't? No stress. You still walk away with a great website — fast, SEO-ready, and built to convert — at a price that made sense. No hard feelings.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── DANIEL — WORK DIRECTLY WITH ME ── */}
       <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(160deg, #0a1628 0%, #0d1f35 100%)', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
         <div style={{ maxWidth: '960px', margin: '0 auto', display: 'grid', gridTemplateColumns: '340px 1fr', gap: '5rem', alignItems: 'center' }} className="daniel-grid-lp">
@@ -205,6 +167,9 @@ export default function GetStarted() {
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', lineHeight: 1.85, fontWeight: 300, marginBottom: '1.25rem' }}>
               I'm Daniel — I built Move Physiotherapy from a single room into a three-location Perth business, then took the digital marketing that drove that growth and turned it into MoveX Media. Since then I've helped businesses across trades, hospitality, health, and marketing get online properly.
+            </p>
+            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', lineHeight: 1.85, fontWeight: 300, marginBottom: '1.25rem' }}>
+              Look, I know $499 is cheap. But for me, getting your website made is the first step — for both of us. If you love your website and want to grow faster, let me run your Facebook and Google Ads. And if you don&apos;t? No stress. You still walk away with a great website.
             </p>
             <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', lineHeight: 1.85, fontWeight: 300, marginBottom: '2rem' }}>
               When you sign up, you speak to me directly. We have a <strong style={{ color: 'white' }}>free 15-minute call</strong>, I understand your business, and I build your site — usually live within 7 days.
