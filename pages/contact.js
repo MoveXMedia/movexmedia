@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Script from 'next/script';
 import { useState } from 'react';
 
 export default function Contact() {
@@ -70,28 +71,30 @@ export default function Contact() {
     <>
       <Head>
         <title>Contact — MoveX Media</title>
-        <meta name="description" content="Book a free strategy session with MoveX Media. Digital marketing for health and allied health practices in Perth." />
+        <meta name="description" content="Book a free strategy session with MoveX Media. Digital marketing for local service businesses." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://movex.media/contact" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="MoveX Media" />
         <meta property="og:title" content="Contact — MoveX Media" />
-        <meta property="og:description" content="Book a free strategy session with MoveX Media. Digital marketing for health and allied health practices in Perth." />
+        <meta property="og:description" content="Book a free strategy session with MoveX Media. Digital marketing for local service businesses." />
         <meta property="og:url" content="https://movex.media/contact" />
         <meta property="og:image" content="https://movex.media/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact — MoveX Media" />
-        <meta name="twitter:description" content="Book a free strategy session with MoveX Media. Digital marketing for health and allied health practices in Perth." />
+        <meta name="twitter:description" content="Book a free strategy session with MoveX Media. Digital marketing for local service businesses." />
         <meta name="twitter:image" content="https://movex.media/og-image.png" />
       </Head>
+
+      <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
 
       <section className="page-hero" style={{ paddingTop: '8rem', paddingBottom: '2rem' }}>
         <div className="container">
           <div className="section-label" style={{ justifyContent: 'center' }}>Mission Control</div>
           <h1 style={{ fontFamily: 'Poppins, sans-serif', marginBottom: '1.5rem' }}>
-            Let's <span style={{ color: '#5bc4f5' }}>Launch</span><br />Your Growth
+            Let&apos;s <span style={{ color: '#5bc4f5' }}>Launch</span><br />Your Growth
           </h1>
           <p style={{
             color: 'rgba(255,255,255,0.6)',
@@ -101,11 +104,30 @@ export default function Contact() {
             margin: '0 auto',
             fontWeight: 300,
           }}>
-            Book a free strategy session. No obligation — just an honest conversation about where your practice is and how we'd grow it.
+            Book a free strategy session. No obligation — just an honest conversation about your business and how we&apos;d grow it.
           </p>
         </div>
       </section>
 
+      {/* ── CALENDLY ── */}
+      <section style={{ padding: '3rem 2rem 0', background: '#f4f7fb' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+            <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#5bc4f5', marginBottom: '0.5rem' }}>Book Instantly</div>
+            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(1.4rem, 3vw, 1.9rem)', color: '#0d1f35', lineHeight: 1.2 }}>
+              Pick a time that works for you
+            </h2>
+          </div>
+          <div style={{ background: '#ffffff', borderRadius: '16px', border: '1px solid #e2eaf4', overflow: 'hidden', boxShadow: '0 4px 24px rgba(13,31,53,0.06)' }}>
+            <div
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/admin-movex/30min"
+              style={{ minWidth: '320px', height: '700px' }}
+            />
+          </div>
+        </div>
+      </section>
+      {/* ── FORM + INFO ── */}
       <section style={{ padding: '3rem 2rem 6rem', background: '#f4f7fb' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '3rem', alignItems: 'start' }}>
