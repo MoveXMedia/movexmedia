@@ -241,9 +241,6 @@ export default function Home() {
           </div>
         </div>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Link href="/website-development" style={{ display: 'inline-flex', alignItems: 'center', padding: '0.9rem 1.8rem', background: 'rgba(91,196,245,0.12)', border: '1px solid rgba(91,196,245,0.4)', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '0.85rem', color: '#5bc4f5', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-            View Packages →
-          </Link>
           <Link href="/get-started" style={{ display: 'inline-flex', alignItems: 'center', padding: '0.9rem 1.8rem', background: '#5bc4f5', borderRadius: '8px', fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '0.85rem', color: '#040c18', textDecoration: 'none', whiteSpace: 'nowrap', boxShadow: '0 4px 20px rgba(91,196,245,0.35)' }}>
             Get Started →
           </Link>
