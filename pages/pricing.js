@@ -138,7 +138,7 @@ export default function Pricing() {
           }}>
             Packages are structured around your ad spend and platform complexity. All packages include dedicated campaign management, reporting, and ongoing optimisation.
           </p>
-          <p style={{ color: 'rgba(255,255,255,0.25)', fontSize: '0.75rem', fontWeight: 300, marginTop: '1.25rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>All prices in USD</p>
+          <p style={{ color: 'rgba(255,255,255,0.25)', fontSize: '0.75rem', fontWeight: 300, marginTop: '1.25rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>All prices in AUD</p>
         </div>
       </section>
 
@@ -153,10 +153,10 @@ export default function Pricing() {
                 <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#ffb400' }}>Limited Time Offer</span>
               </div>
               <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900, fontSize: 'clamp(1.6rem, 3.5vw, 2.6rem)', color: 'white', lineHeight: 1.1, marginBottom: '0.75rem' }}>
-                New website from <span style={{ color: '#5bc4f5' }}>$499 USD</span>
+                New website from <span style={{ color: '#5bc4f5' }}>$999 AUD</span>
               </h2>
               <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', fontWeight: 300, lineHeight: 1.7, maxWidth: '480px' }}>
-                3-page website. Live in 7 days. Work directly with Daniel. Includes all the same quality as our standard packages — $20 USD/month hosting, 2-year minimum term.
+                3-page website. Live in 7 days. Work directly with Daniel. No ongoing costs.
               </p>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', alignItems: 'flex-start', position: 'relative' }}>
@@ -182,7 +182,7 @@ export default function Pricing() {
               Website Design &amp; Build
             </h2>
             <p style={{ color: '#6b849a', fontSize: '0.98rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '580px', margin: '0 auto' }}>
-              One-off builds. Fast, conversion-focused websites for local service businesses — built to rank on Google and turn visitors into customers. All websites include hosting at $20 USD/month (2-year minimum term).
+              One-off builds. Fast, conversion-focused websites for local service businesses — built to rank on Google and turn visitors into customers.
             </p>
           </div>
 
@@ -192,7 +192,7 @@ export default function Pricing() {
                 icon: '🌱',
                 name: 'Starter',
                 price: 'From $2,500',
-                desc: 'A clean, professional site for a solo operator or new business. Includes hosting at $20 USD/month (2-year minimum).',
+                desc: 'A clean, professional site for a solo operator or new business.',
                 pages: '3–6 pages',
                 features: ['Mobile-responsive design', 'Online booking integration', 'Basic SEO setup', 'Google Analytics setup', '30-day post-launch support'],
                 accent: '#6b849a',
@@ -201,7 +201,7 @@ export default function Pricing() {
                 icon: '🚀',
                 name: 'Growth',
                 price: 'From $4,500',
-                desc: 'For established businesses ready to rank on Google and convert more visitors. Includes hosting at $20 USD/month (2-year minimum).',
+                desc: 'For established businesses ready to rank on Google and convert more visitors.',
                 pages: '6–10 pages',
                 features: ['Custom brand-aligned design', 'Individual service pages', 'Advanced SEO + schema markup', 'Conversion tracking setup', 'Blog setup', '60-day support'],
                 accent: '#5bc4f5',
@@ -211,7 +211,7 @@ export default function Pricing() {
                 icon: '⚡',
                 name: 'Authority',
                 price: 'From $7,500',
-                desc: 'Multi-location businesses or operators that want to own their market online. Includes hosting at $20 USD/month (2-year minimum).',
+                desc: 'Multi-location businesses or operators that want to own their market online.',
                 pages: '10+ pages',
                 features: ['Multi-location architecture', 'Individual location pages', 'Full technical SEO', 'Patient resources section', 'Booking system + CRM integration', '90-day support'],
                 accent: '#1656A0',

@@ -18,8 +18,8 @@ export default function GetStarted() {
   return (
     <>
       <Head>
-        <title>New Website from $499 — MoveX Media</title>
-        <meta name="description" content="Professional 3-page website for $499. Fast, SEO-optimised, mobile-first. Live in 7 days. $20 USD/month hosting. Work directly with Daniel." />
+        <title>New Website from $999 AUD — MoveX Media</title>
+        <meta name="description" content="Professional 3-page website for $999 AUD. Fast, SEO-optimised, mobile-first. Live in 7 days. No ongoing costs. Work directly with Daniel." />
         <meta name="robots" content="noindex, nofollow" />
         <style>{`
           @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
@@ -66,24 +66,19 @@ export default function GetStarted() {
           <h1 style={{ fontWeight: 900, fontSize: 'clamp(2.4rem, 6vw, 4rem)', lineHeight: 1.1, marginBottom: '1.25rem', letterSpacing: '-0.02em' }}>
             A professional website<br />
             <span style={{ background: 'linear-gradient(90deg, #5bc4f5, #2dd4bf)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              for $499. Live in 7 days.
+              for $999 AUD. Live in 7 days.
             </span>
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 'clamp(1rem, 2vw, 1.2rem)', lineHeight: 1.75, maxWidth: '620px', margin: '0 auto 2.5rem', fontWeight: 300 }}>
-            3-page website. Fast, SEO-ready, mobile-first, and built to convert visitors into customers. $20 USD/month hosting billed monthly — no hidden costs.
+            3-page website. Fast, SEO-ready, mobile-first, and built to convert visitors into customers. No ongoing costs.
           </p>
 
           {/* Price card */}
           <div style={{ display: 'inline-flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '2.5rem' }}>
             <div style={{ background: 'linear-gradient(135deg, rgba(91,196,245,0.15), rgba(91,196,245,0.05))', border: '1px solid rgba(91,196,245,0.5)', borderRadius: '16px', padding: '1.5rem 2.5rem', textAlign: 'center', minWidth: '180px' }}>
               <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#5bc4f5', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>One-off</div>
-              <div style={{ fontWeight: 900, fontSize: '3rem', lineHeight: 1, color: '#5bc4f5' }}>$499</div>
-              <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.82rem', marginTop: '0.3rem', fontWeight: 300 }}>3-page website</div>
-            </div>
-            <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '16px', padding: '1.5rem 2.5rem', textAlign: 'center', minWidth: '180px' }}>
-              <div style={{ fontSize: '0.7rem', fontWeight: 700, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>Monthly</div>
-              <div style={{ fontWeight: 900, fontSize: '3rem', lineHeight: 1, color: 'white' }}>$20</div>
-              <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.82rem', marginTop: '0.3rem', fontWeight: 300 }}>Hosting only</div>
+              <div style={{ fontWeight: 900, fontSize: '3rem', lineHeight: 1, color: '#5bc4f5' }}>$999</div>
+              <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.82rem', marginTop: '0.3rem', fontWeight: 300 }}>3-page website · AUD</div>
             </div>
           </div>
 
@@ -91,7 +86,7 @@ export default function GetStarted() {
             <a href={BOOKING_URL} className="btn btn-lg pulse">Book a Free Call with Daniel →</a>
           </div>
           <p style={{ color: 'rgba(255,255,255,0.25)', fontSize: '0.78rem', marginTop: '1rem', fontWeight: 300 }}>
-            All prices in USD · 2-year minimum hosting term
+            All prices in AUD · No ongoing costs
           </p>
         </div>
       </section>
@@ -169,7 +164,7 @@ export default function GetStarted() {
               I'm Daniel — I built Move Physiotherapy from a single room into a three-location Perth business, then took the digital marketing that drove that growth and turned it into MoveX Media. Since then I've helped businesses across trades, hospitality, health, and marketing get online properly.
             </p>
             <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', lineHeight: 1.85, fontWeight: 300, marginBottom: '1.25rem' }}>
-              Look, I know $499 is cheap. But for me, getting your website made is the first step — for both of us. If you love your website and want to grow faster, let me run your Facebook and Google Ads. And if you don&apos;t? No stress. You still walk away with a great website.
+              Look, I know $999 AUD is a great deal. But for me, getting your website made is the first step — for both of us. If you love your website and want to grow faster, let me run your Facebook and Google Ads. And if you don&apos;t? No stress. You still walk away with a great website.
             </p>
             <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', lineHeight: 1.85, fontWeight: 300, marginBottom: '2rem' }}>
               When you sign up, you speak to me directly. We have a <strong style={{ color: 'white' }}>free 15-minute call</strong>, I understand your business, and I build your site — usually live within 7 days.
@@ -178,7 +173,7 @@ export default function GetStarted() {
               {[
                 { step: '01', title: 'Free 15-min call', body: 'We discuss your business, your goals, and what the 3 pages need to cover.' },
                 { step: '02', title: 'I build it — fast', body: 'You receive a live preview within 5–7 days. Review it, request any changes.' },
-                { step: '03', title: 'Go live', body: 'Site launches on your domain. $20 USD/month keeps it hosted, fast, and maintained.' },
+                { step: '03', title: 'Go live', body: 'Site launches on your domain. Fast, maintained, and built to convert.' },
               ].map(item => (
                 <div key={item.step} style={{ display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
                   <div style={{ fontWeight: 900, fontSize: '0.68rem', color: '#5bc4f5', letterSpacing: '0.1em', minWidth: '26px', marginTop: '3px', opacity: 0.7 }}>{item.step}</div>
@@ -227,7 +222,7 @@ export default function GetStarted() {
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
             <span className="tag" style={{ marginBottom: '1rem', display: 'inline-block' }}>What You Get</span>
             <h2 style={{ fontWeight: 800, fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', lineHeight: 1.2 }}>
-              Everything in the $499 package
+              Everything in the $999 AUD package
             </h2>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem' }}>
@@ -247,17 +242,6 @@ export default function GetStarted() {
             ))}
           </div>
 
-          {/* Hosting callout */}
-          <div style={{ marginTop: '2rem', background: 'rgba(91,196,245,0.06)', border: '1px solid rgba(91,196,245,0.2)', borderRadius: '12px', padding: '1.5rem 2rem', display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
-            <span style={{ fontSize: '1.5rem' }}>🌐</span>
-            <div style={{ flex: 1 }}>
-              <div style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.2rem' }}>Hosting — $20 USD/month</div>
-              <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem', fontWeight: 300, lineHeight: 1.6 }}>
-                Includes hosting, CDN delivery, and SSL certificate. Minimum 2-year hosting term at $20 USD/month. You own the site.
-              </p>
-            </div>
-            <div style={{ fontWeight: 900, fontSize: '1.5rem', color: '#5bc4f5', whiteSpace: 'nowrap' }}>$20 USD/mo</div>
-          </div>
         </div>
       </section>
 
@@ -296,7 +280,7 @@ export default function GetStarted() {
         <div style={{ position: 'relative', maxWidth: '640px', margin: '0 auto' }}>
           <span className="tag" style={{ marginBottom: '1.5rem', display: 'inline-block' }}>Ready to go?</span>
           <h2 style={{ fontWeight: 900, fontSize: 'clamp(2rem, 5vw, 3rem)', lineHeight: 1.15, marginBottom: '1.25rem', letterSpacing: '-0.02em' }}>
-            $499. Live in 7 days.<br />
+            $999 AUD. Live in 7 days.<br />
             <span style={{ color: '#5bc4f5' }}>Let's get you online properly.</span>
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '1rem', lineHeight: 1.8, fontWeight: 300, marginBottom: '2.5rem' }}>
@@ -304,7 +288,7 @@ export default function GetStarted() {
           </p>
           <a href={BOOKING_URL} className="btn btn-lg pulse">Book My Free Call with Daniel →</a>
           <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '2rem' }}>
-            {['$499 USD one-off', 'Live in 7 days', '$20 USD/mo · 2yr min', 'You own the site'].map(item => (
+            {['$999 AUD one-off', 'Live in 7 days', 'No ongoing costs', 'You own the site'].map(item => (
               <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'rgba(255,255,255,0.35)', fontSize: '0.8rem', fontWeight: 300 }}>
                 <span style={{ color: '#5bc4f5', fontSize: '0.7rem' }}>✓</span> {item}
               </div>
