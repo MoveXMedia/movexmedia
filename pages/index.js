@@ -234,10 +234,10 @@ export default function Home() {
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem' }}>
         <div>
           <div style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '0.5rem' }}>
-            3-page website · Live in 7 days · $20 USD/month · 2-year minimum term
+            3-page website · Live in 7 days · No ongoing hosting costs
           </div>
           <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900, fontSize: 'clamp(1.4rem, 3vw, 2rem)', color: 'white', lineHeight: 1.1 }}>
-            🌟 Limited time — <span style={{ color: '#5bc4f5' }}>$499 USD special offer</span>
+            🌟 Limited time — <span style={{ color: '#5bc4f5' }}>$999 USD</span>
           </div>
         </div>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -248,36 +248,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── PORTFOLIO ── */}
-      <section style={{ padding: '3rem 2rem 5rem', background: '#f4f7fb' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }} className="portfolio-grid-home">
-            <a href="https://www.movephysiotherapy.com.au/" target="_blank" rel="noopener noreferrer" style={{ display: 'block', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 16px 48px rgba(13,31,53,0.12)', border: '1px solid #e2eaf4', textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s' }} className="portfolio-link">
-              <div style={{ aspectRatio: '16/9', overflow: 'hidden' }}>
-                <img src="/work-move-physio.png" alt="Move Physiotherapy website" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-              </div>
-              <div style={{ padding: '0.75rem 1rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.78rem', color: '#0d1f35' }}>Move Physiotherapy & Fitness</span>
-                <span style={{ fontSize: '0.72rem', color: '#5bc4f5', fontWeight: 600 }}>Visit site ↗</span>
-              </div>
-            </a>
-            <a href="https://hexahealthhub.com.au" target="_blank" rel="noopener noreferrer" style={{ display: 'block', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 16px 48px rgba(13,31,53,0.1)', border: '1px solid #e2eaf4', textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s' }} className="portfolio-link">
-              <div style={{ aspectRatio: '16/9', overflow: 'hidden' }}>
-                <img src="/work-hexa-1.png" alt="Hexa Health Hub website" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-              </div>
-              <div style={{ padding: '0.75rem 1rem', background: '#f9fbff', borderTop: '1px solid #e2eaf4', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: '0.78rem', color: '#0d1f35' }}>Hexa Health Hub</span>
-                <span style={{ fontSize: '0.72rem', color: '#5bc4f5', fontWeight: 600 }}>Visit site ↗</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <style>{`
-          @media (max-width: 700px) { .portfolio-grid-home { grid-template-columns: 1fr !important; } }
-          .portfolio-link:hover { transform: translateY(-3px); box-shadow: 0 24px 60px rgba(13,31,53,0.18) !important; }
-          @media (max-width: 900px) { .website-top-grid { grid-template-columns: 1fr !important; gap: 3rem !important; } }
-        `}</style>
-      </section>
+      <style>{`
+        @media (max-width: 900px) { .website-top-grid { grid-template-columns: 1fr !important; gap: 3rem !important; } }
+      `}</style>
 
       {/* ── SERVICES (dark) ── */}
       <section style={{ padding: '6rem 2rem', background: '#080f1a', position: 'relative', overflow: 'hidden' }}>
