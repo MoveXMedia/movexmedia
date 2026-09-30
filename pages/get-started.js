@@ -19,7 +19,7 @@ export default function GetStarted() {
     <>
       <Head>
         <title>New Website from $999 AUD — MoveX Media</title>
-        <meta name="description" content="Professional 3-page website for $999 AUD. Fast, SEO-optimised, mobile-first. Live in 7 days. No ongoing costs. Work directly with Daniel." />
+        <meta name="description" content="Professional 5-page website for $999 AUD. Fast, SEO-optimised, mobile-first. Live in 7 days. No ongoing costs. Work directly with Daniel." />
         <meta name="robots" content="noindex, nofollow" />
         <style>{`
           @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
@@ -61,7 +61,7 @@ export default function GetStarted() {
         <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: '700px', height: '400px', background: 'radial-gradient(ellipse, rgba(91,196,245,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div style={{ position: 'relative', maxWidth: '860px', margin: '0 auto' }}>
           <div style={{ marginBottom: '1.5rem' }}>
-            <span className="tag">3-page website · Live in 7 days</span>
+            <span className="tag">5-page website · Live in 7 days</span>
           </div>
           <h1 style={{ fontWeight: 900, fontSize: 'clamp(2.4rem, 6vw, 4rem)', lineHeight: 1.1, marginBottom: '1.25rem', letterSpacing: '-0.02em' }}>
             A professional website<br />
@@ -70,7 +70,7 @@ export default function GetStarted() {
             </span>
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 'clamp(1rem, 2vw, 1.2rem)', lineHeight: 1.75, maxWidth: '620px', margin: '0 auto 2.5rem', fontWeight: 300 }}>
-            3-page website. Fast, SEO-ready, mobile-first, and built to convert visitors into customers. No ongoing costs.
+            5-page website. Fast, SEO-ready, mobile-first, and built to convert visitors into customers. No ongoing costs.
           </p>
 
           {/* Price card */}
@@ -78,7 +78,7 @@ export default function GetStarted() {
             <div style={{ background: 'linear-gradient(135deg, rgba(91,196,245,0.15), rgba(91,196,245,0.05))', border: '1px solid rgba(91,196,245,0.5)', borderRadius: '16px', padding: '1.5rem 2.5rem', textAlign: 'center', minWidth: '180px' }}>
               <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#5bc4f5', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>One-off</div>
               <div style={{ fontWeight: 900, fontSize: '3rem', lineHeight: 1, color: '#5bc4f5' }}>$999</div>
-              <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.82rem', marginTop: '0.3rem', fontWeight: 300 }}>3-page website · AUD</div>
+              <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.82rem', marginTop: '0.3rem', fontWeight: 300 }}>5-page website · AUD</div>
             </div>
           </div>
 
@@ -171,7 +171,7 @@ export default function GetStarted() {
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem', marginBottom: '2.5rem' }}>
               {[
-                { step: '01', title: 'Free 15-min call', body: 'We discuss your business, your goals, and what the 3 pages need to cover.' },
+                { step: '01', title: 'Free 15-min call', body: 'We discuss your business, your goals, and what the 5 pages need to cover.' },
                 { step: '02', title: 'I build it — fast', body: 'You receive a live preview within 5–7 days. Review it, request any changes.' },
                 { step: '03', title: 'Go live', body: 'Site launches on your domain. Fast, maintained, and built to convert.' },
               ].map(item => (
